@@ -13,23 +13,23 @@ namespace std
 	namespace fs
 	{
 
-		bool			get_file_exists ( const std::string& file );
+		inline bool				get_file_exists ( const std::string& file );
 		
-		off_t			get_file_size ( const int& fileDescriptor );
+		inline off_t			get_file_size ( int fileDescriptor );
 		
-		off_t			get_file_size ( const std::string& filePath );
+		inline off_t			get_file_size ( const std::string& filePath );
 		
-		std::string		get_file_contents ( const std::string& file );
+		inline std::string		get_file_contents ( const std::string& file );
 		
-		void			set_file_contents ( const std::string& file , const std::string& data );
+		inline void				set_file_contents ( const std::string& file , const std::string& data );
 		
-		void			prepend_file_contents ( const std::string& file , const std::string& data );
+		inline void				prepend_file_contents ( const std::string& file , const std::string& data );
 
-		void			append_file_contents ( const std::string& file , const std::string& data );
+		inline void				append_file_contents ( const std::string& file , const std::string& data );
 		
-		void			truncate_file_contents ( const std::string& file );
+		inline void				truncate_file_contents ( const std::string& file );
 		
-		void			check_file_exists ( const std::string& file );
+		inline void				check_file_exists ( const std::string& file );
 	
 	}
 	
@@ -37,4 +37,4 @@ namespace std
 
 #include "file_util.ipp"
 
-#endif	// _FILE_UTIL_HPP_
+#endif // _FILE_UTIL_HPP_

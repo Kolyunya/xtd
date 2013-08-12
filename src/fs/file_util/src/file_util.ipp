@@ -25,7 +25,7 @@ namespace std
 
 		}
 
-		off_t			get_file_size ( const int& fileDescriptor )
+		off_t			get_file_size ( int fileDescriptor )
 		{
 		
 			struct stat fileStatistics;
@@ -42,7 +42,7 @@ namespace std
 			off_t fileSize = fileStatistics.st_size;
 			
 			return fileSize;
-		
+			
 		}
 		
 		off_t			get_file_size ( const std::string& filePath )
