@@ -1,0 +1,294 @@
+namespace std
+{
+
+	long int	string_to_long_int ( const string& string_ref , int number_base )
+	{
+
+		//  Function "strtol" will set this pointer to point to the first character after the numeric part of the original string.
+		//	This pointer will be used in the case when "std::strtol" will returns "0".
+		//	If this pointer will point to the first character of the original string this will mean that the string does not start
+		//	with a numeral and no conversion has been performed.
+		//	If this pointer will not point to the first character of the original string this will mean that the original string
+		//	does start with a numeral equal to "0" and the conersion was performed successfully.
+		char* first_character_after_number = nullptr;
+		
+		long int number = strtol(string_ref.data(),&first_character_after_number,number_base);
+		
+		if ( number == 0 )
+		{
+
+			char* first_character_of_string = &const_cast<char&>(string_ref[0]);
+			
+			if ( first_character_after_number == first_character_of_string )
+			{
+				
+				throw runtime_error("String to number conversion failed. Unknown error.");
+				
+			}
+			
+		}
+		
+		else if ( number == LONG_MAX || number == LONG_MIN )
+		{
+			
+			throw runtime_error("String to number conversion failed. Number exceeds type limits.");
+			
+		}
+		
+		return number;
+
+	}
+	
+	int			string_to_int ( const string& string_ref , int number_base )
+	{
+	
+		return string_to_long_int(string_ref,number_base);
+	
+	}
+
+	double		string_to_double ( const string& string_ref )
+	{
+	
+		//  Function "strtod" will set this pointer to point to the first character after the numeric part of the original string.
+		//	This pointer will be used in the case when "std::strtod" will returns "0".
+		//	If this pointer will point to the first character of the original string this will mean that the string does not start
+		//	with a numeral and no conversion has been performed.
+		//	If this pointer will not point to the first character of the original string this will mean that the original string
+		//	does start with a numeral equal to "0" and the conersion was performed successfully.
+		char* first_character_after_number = nullptr;
+		
+		double number = strtod(string_ref.data(),&first_character_after_number);
+		
+		if ( number == 0 )
+		{
+
+			char* first_character_of_string = &const_cast<char&>(string_ref[0]);
+			
+			if ( first_character_after_number == first_character_of_string )
+			{
+				
+				throw runtime_error("String to number conversion failed. Unknown error.");
+				
+			}
+			
+		}
+		
+		else if ( number == LONG_MAX || number == LONG_MIN )
+		{
+			
+			throw runtime_error("String to number conversion failed. Number exceeds type limits.");
+			
+		}
+		
+		return number;
+	
+	}
+
+	float		string_to_float ( const string& string_ref )
+	{
+	
+		//  Function "strtof" will set this pointer to point to the first character after the numeric part of the original string.
+		//	This pointer will be used in the case when "std::strtof" will returns "0".
+		//	If this pointer will point to the first character of the original string this will mean that the string does not start
+		//	with a numeral and no conversion has been performed.
+		//	If this pointer will not point to the first character of the original string this will mean that the original string
+		//	does start with a numeral equal to "0" and the conersion was performed successfully.
+		char* first_character_after_number = nullptr;
+		
+		float number = strtof(string_ref.data(),&first_character_after_number);
+		
+		if ( number == 0 )
+		{
+
+			char* first_character_of_string = &const_cast<char&>(string_ref[0]);
+			
+			if ( first_character_after_number == first_character_of_string )
+			{
+				
+				throw runtime_error("String to number conversion failed. Unknown error.");
+				
+			}
+			
+		}
+		
+		else if ( number == LONG_MAX || number == LONG_MIN )
+		{
+			
+			throw runtime_error("String to number conversion failed. Number exceeds type limits.");
+			
+		}
+		
+		return number;
+
+	}
+	
+	string		number_to_string ( const int number )
+	{
+
+		stringstream string_stream;
+		string_stream << number;
+		
+		return string_stream.str();
+	}
+	
+	string		number_to_string ( const unsigned int number )
+	{
+		
+		return number_to_string(static_cast<int>(number));
+		
+	}
+	
+	string		number_to_string ( const float number )
+	{
+
+		stringstream string_stream;
+		string_stream << number;
+		
+		return string_stream.str();
+
+	}
+	
+	strings		string_split ( const string& string_ref , char delimiter )
+	{
+
+		//  Create a result vector
+		strings result;
+		
+		//  Calculate te size of the input string
+		string string_copy = string_ref;
+		int string_size = string_copy.size();
+
+		//  Don not process empty strings
+		if ( string_size > 0 )
+		{
+			
+			// searching for the position of the first delimiter.
+			int first_delimiter_position = string_copy.find_first_of(delimiter);
+			
+			//  No delimiters are in the string
+			if ( first_delimiter_position == -1 )
+			{
+				
+				//  The result is the whole string
+				result.push_back(string_copy);
+				
+			}
+
+			//  The only delimiter is the last and not the only character in the string
+			else if ( first_delimiter_position == string_size - 1 && string_size > 1 )
+			{
+				
+				//  The result is the string without the last character
+				string_copy.resize(first_delimiter_position);
+				result.push_back(string_copy);
+
+			}
+
+			//  Delimiter is in the center of the string
+			else
+			{
+				
+				//  If the first character of the input is NOT a `delimiter` - add the first fragment to the output
+				if ( first_delimiter_position > 0 )
+				{
+					
+					string firstFragment = string_copy.substr(0,first_delimiter_position);
+					result.push_back ( firstFragment );
+					
+				}
+				
+				//	Then we cut off the first fragment and the first delimiter and call the `string_split`
+				//	function again with `input` string containing the rest of the string
+				string string_tail = string_copy.substr(first_delimiter_position+1,string_size-first_delimiter_position-1);
+				strings strings_tail = string_split(string_tail,delimiter);
+				
+				//	Add tail strings to result
+				result.insert(result.end(),strings_tail.begin(),strings_tail.end());
+				
+			}
+			
+		}
+		
+		return result;
+
+	}
+	
+	string		string_reverse ( const string& string_ref )
+	{
+		
+		return string(string_ref.rbegin(),string_ref.rend());
+		
+	}
+	
+	string		string_replace ( const string& string_ref , const char search_for , const char replace_with )
+	{
+
+		string string_copy = string_ref;
+
+		for ( auto string_itr = string_copy.begin() ; string_itr != string_copy.end() ; string_itr ++ )
+		{
+		
+			if ( *string_itr == search_for )
+			{
+			
+				*string_itr = replace_with;
+				
+			}
+		
+		}
+		
+		return string_copy;
+
+	}
+	
+	bool		string_is_numeric ( const string& string_ref )
+	{
+
+		//	Empty string is not a number
+		if ( string_ref.empty() )
+		{
+		
+			return false;
+			
+		}
+		
+		//	string containing characters which are not numerals is not a number
+		bool dot_is_already_used = false;
+		auto string_itr = string_ref.begin();
+		for ( ; string_itr < string_ref.end() ; string_itr++ )
+		{
+		
+			//	Numeric character
+			if ( isdigit(*string_itr) )
+			{
+			
+				continue;
+				
+			}
+			
+			//	'-' as the first character of the string
+			if ( string_itr == string_ref.begin() && *string_itr == '-' )
+			{
+			
+				continue;
+				
+			}
+			
+			//	The first usage of a decimal dot
+			if ( ! dot_is_already_used && ( *string_itr == '.' || *string_itr == ',' ) )
+			{
+			
+				dot_is_already_used = true;
+				continue;
+			
+			}
+			
+			return false;
+			
+		}
+		
+		return true;
+
+	}
+
+}

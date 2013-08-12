@@ -1,0 +1,33 @@
+================================================================================
+	ABOUT THIS LIBRARY
+================================================================================
+
+This is an extension of the C++ standard library which contains most common and widely-used tools.
+
+
+
+================================================================================
+	PROJECT STRUCTURE
+================================================================================
+
+Library root directory contains "include", "src" and "sytem" sub-directories. "Include" contans project header files. "Src" contains project sources with tests and build scripts. "System" contains system files used mostly for building the library.
+
+Each library unit is contained in a separate directory. Each unit directory contains "build", "src" and "tests" sub-directories. "Build" directory contains GYP script which is used for building the unit. "Src" directory contains unit source files. "Tests" directory contains unit tests.
+
+
+
+================================================================================
+	BUILDING UNITS
+================================================================================
+
+1. Prerequisites.
+  1. C++11 compatible compiler supported by GYP.
+  2. Python 2.x interpreter.
+  3. GYP build system.
+  4. Google testing framework installed.
+2. Building library.
+  1. Set "GTEST_HOME" environment variable to gtest home directory. That directory must have "include" and "build" sub-directories with gtest header and object file respectively.
+  2. Set "STD_HOME" environment variable to the location of this library. Home directory is one with "src", "include", "system" and others sub-directories
+  3. Set "GYP_GENERATORS" environment variable to value(s) corresponding you compiler(s). Options should be separated by a comma. Available options are "make", "msvs", "ninja", "scons", "eclipse" and others.
+  4. Execute library GYP script by calling "gyp --depth=. %LIBRARY_ROOT%/build/generator.gyp" command. Selected build scripts would be produced in the "build" directory.
+  5. Run build script(s) from "%LIBRARY_ROOT%/build/" directory.
