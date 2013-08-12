@@ -1,6 +1,6 @@
-#ifndef _INCLUDE_FILE_
-#define _INCLUDE_FILE_
+#ifndef _INCLUDE_FS_
+#define _INCLUDE_FS_
 
 #include "fs/file_util.hpp"
 
-#endif // _INCLUDE_FILE_
+#endif // _INCLUDE_FS_
