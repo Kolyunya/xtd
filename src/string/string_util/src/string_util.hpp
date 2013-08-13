@@ -14,30 +14,30 @@ namespace std
 {
 
 	typedef vector<string> strings;
-
-	long int	string_to_long_int ( const string& string_ref , int number_base = 10 );
 	
-	int			string_to_int ( const string& string_ref , int number_base = 10 );
+	inline long int		string_to_long_int ( const string& source_string , int number_base = 10 );
 	
-	double		string_to_double ( const string& string_ref );
-
-	float		string_to_float ( const string& string_ref );
+	inline int			string_to_int ( const string& source_string , int number_base = 10 );
 	
-	string		number_to_string ( const int number );
+	inline double		string_to_double ( const string& source_string );
 	
-	string		number_to_string ( const unsigned int number );
+	inline float		string_to_float ( const string& source_string );
 	
-	string		number_to_string ( const float number );
+	inline string		number_to_string ( const int source_number );
 	
-	string		string_reverse ( const string& string_ref );
+	inline string		number_to_string ( const unsigned int source_number );
 	
-	strings		string_split ( const string& string_ref , char delimiter );
-
-	string		string_replace ( const string& string_ref , const char search_for , const char replace_with );
+	inline string		number_to_string ( const float source_number );
 	
-	bool		string_is_numeric ( const string& string_ref );
-
-	bool		string_is_integer ( const string& string_ref );
+	inline string		string_reverse ( const string& source_string );
+	
+	inline strings		string_split ( const string& source_string , char delimiter );
+	
+	inline string		string_replace ( const string& source_string , const char search_for , const char replace_with );
+	
+	inline bool			string_is_numeric ( const string& source_string );
+	
+	inline bool			string_is_integer ( const string& source_string );
 
 }
 

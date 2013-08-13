@@ -1,7 +1,7 @@
 namespace std
 {
 
-	long int	string_to_long_int ( const string& string_ref , int number_base )
+	long int	string_to_long_int ( const string& source_string , int number_base )
 	{
 
 		//  Function "strtol" will set this pointer to point to the first character after the numeric part of the original string.
@@ -12,12 +12,12 @@ namespace std
 		//	does start with a numeral equal to "0" and the conersion was performed successfully.
 		char* first_character_after_number = nullptr;
 		
-		long int number = strtol(string_ref.data(),&first_character_after_number,number_base);
+		long int number = strtol(source_string.data(),&first_character_after_number,number_base);
 		
 		if ( number == 0 )
 		{
 
-			char* first_character_of_string = &const_cast<char&>(string_ref[0]);
+			char* first_character_of_string = &const_cast<char&>(source_string[0]);
 			
 			if ( first_character_after_number == first_character_of_string )
 			{
@@ -39,14 +39,14 @@ namespace std
 
 	}
 	
-	int			string_to_int ( const string& string_ref , int number_base )
+	int			string_to_int ( const string& source_string , int number_base )
 	{
 	
-		return string_to_long_int(string_ref,number_base);
+		return string_to_long_int(source_string,number_base);
 	
 	}
 
-	double		string_to_double ( const string& string_ref )
+	double		string_to_double ( const string& source_string )
 	{
 	
 		//  Function "strtod" will set this pointer to point to the first character after the numeric part of the original string.
@@ -57,12 +57,12 @@ namespace std
 		//	does start with a numeral equal to "0" and the conersion was performed successfully.
 		char* first_character_after_number = nullptr;
 		
-		double number = strtod(string_ref.data(),&first_character_after_number);
+		double number = strtod(source_string.data(),&first_character_after_number);
 		
 		if ( number == 0 )
 		{
 
-			char* first_character_of_string = &const_cast<char&>(string_ref[0]);
+			char* first_character_of_string = &const_cast<char&>(source_string[0]);
 			
 			if ( first_character_after_number == first_character_of_string )
 			{
@@ -84,7 +84,7 @@ namespace std
 	
 	}
 
-	float		string_to_float ( const string& string_ref )
+	float		string_to_float ( const string& source_string )
 	{
 	
 		//  Function "strtof" will set this pointer to point to the first character after the numeric part of the original string.
@@ -95,12 +95,12 @@ namespace std
 		//	does start with a numeral equal to "0" and the conersion was performed successfully.
 		char* first_character_after_number = nullptr;
 		
-		float number = strtof(string_ref.data(),&first_character_after_number);
+		float number = strtof(source_string.data(),&first_character_after_number);
 		
 		if ( number == 0 )
 		{
 
-			char* first_character_of_string = &const_cast<char&>(string_ref[0]);
+			char* first_character_of_string = &const_cast<char&>(source_string[0]);
 			
 			if ( first_character_after_number == first_character_of_string )
 			{
@@ -122,40 +122,40 @@ namespace std
 
 	}
 	
-	string		number_to_string ( const int number )
+	string		number_to_string ( const int source_number )
 	{
 
 		stringstream string_stream;
-		string_stream << number;
+		string_stream << source_number;
 		
 		return string_stream.str();
 	}
 	
-	string		number_to_string ( const unsigned int number )
+	string		number_to_string ( const unsigned int source_number )
 	{
 		
-		return number_to_string(static_cast<int>(number));
+		return number_to_string(static_cast<int>(source_number));
 		
 	}
 	
-	string		number_to_string ( const float number )
+	string		number_to_string ( const float source_number )
 	{
 
 		stringstream string_stream;
-		string_stream << number;
+		string_stream << source_number;
 		
 		return string_stream.str();
 
 	}
 	
-	strings		string_split ( const string& string_ref , char delimiter )
+	strings		string_split ( const string& source_string , char delimiter )
 	{
 
 		//  Create a result vector
 		strings result;
 		
 		//  Calculate te size of the input string
-		string string_copy = string_ref;
+		string string_copy = source_string;
 		int string_size = string_copy.size();
 
 		//  Don not process empty strings
@@ -213,17 +213,17 @@ namespace std
 
 	}
 	
-	string		string_reverse ( const string& string_ref )
+	string		string_reverse ( const string& source_string )
 	{
 		
-		return string(string_ref.rbegin(),string_ref.rend());
+		return string(source_string.rbegin(),source_string.rend());
 		
 	}
 	
-	string		string_replace ( const string& string_ref , const char search_for , const char replace_with )
+	string		string_replace ( const string& source_string , const char search_for , const char replace_with )
 	{
 
-		string string_copy = string_ref;
+		string string_copy = source_string;
 
 		for ( auto string_itr = string_copy.begin() ; string_itr != string_copy.end() ; string_itr ++ )
 		{
@@ -241,11 +241,11 @@ namespace std
 
 	}
 	
-	bool		string_is_numeric ( const string& string_ref )
+	bool		string_is_numeric ( const string& source_string )
 	{
 
 		//	Empty string is not a number
-		if ( string_ref.empty() )
+		if ( source_string.empty() )
 		{
 		
 			return false;
@@ -254,8 +254,8 @@ namespace std
 		
 		//	string containing characters which are not numerals is not a number
 		bool dot_is_already_used = false;
-		auto string_itr = string_ref.begin();
-		for ( ; string_itr < string_ref.end() ; string_itr++ )
+		auto string_itr = source_string.begin();
+		for ( ; string_itr < source_string.end() ; string_itr++ )
 		{
 		
 			//	Numeric character
@@ -267,7 +267,7 @@ namespace std
 			}
 			
 			//	'-' as the first character of the string
-			if ( string_itr == string_ref.begin() && *string_itr == '-' )
+			if ( string_itr == source_string.begin() && *string_itr == '-' )
 			{
 			
 				continue;
