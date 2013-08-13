@@ -4,19 +4,15 @@ namespace std
 	namespace fs
 	{
 
-		bool			get_file_exists ( const std::string& file )
+		bool		get_file_exists ( const string& file_path )
 		{
 
-			//	Open an input file stream
-			std::ifstream fileStream(file.data());
+			ifstream file_stream(file_path.data());
 			
-			//	Check if a stream is successfully opened
-			if ( fileStream.is_open() )
+			if ( file_stream.is_open() )
 			{
 			
-				//	Close the file stream
-				fileStream.close();
-				
+				file_stream.close();
 				return true;
 				
 			}
@@ -25,135 +21,124 @@ namespace std
 
 		}
 
-		off_t			get_file_size ( int fileDescriptor )
+		off_t		get_file_size ( const string& file_path )
 		{
 		
-			struct stat fileStatistics;
+			struct stat file_statistics;
 			
-			int getFileStatisticsResult = fstat(fileDescriptor,&fileStatistics);
+			int get_file_statistics_result = stat(file_path.c_str(),&file_statistics);
 			
-			if ( getFileStatisticsResult != 0 )
+			if ( get_file_statistics_result != 0 )
 			{
 			
-				throw std::runtime_error("Could no retrieve file statistics");
+				throw runtime_error("Could no retrieve file_path statistics");
 				
 			}
 			
-			off_t fileSize = fileStatistics.st_size;
+			off_t file_size = file_statistics.st_size;
 			
-			return fileSize;
+			return file_size;
+		
+		}
+
+		off_t		get_file_size ( int file_descriptor )
+		{
+		
+			struct stat file_statistics;
+			
+			int get_file_statistics_result = fstat(file_descriptor,&file_statistics);
+			
+			if ( get_file_statistics_result != 0 )
+			{
+			
+				throw runtime_error("Could no retrieve file_path statistics");
+				
+			}
+			
+			off_t file_size = file_statistics.st_size;
+			
+			return file_size;
 			
 		}
 		
-		off_t			get_file_size ( const std::string& filePath )
+		string		get_file_contents ( const string& file_path )
 		{
-		
-			struct stat fileStatistics;
+
+			check_file_exists(file_path);
+
+			ifstream file_stream(file_path.data());
 			
-			int getFileStatisticsResult = stat(filePath.c_str(),&fileStatistics);
-			
-			if ( getFileStatisticsResult != 0 )
+			if ( ! file_stream.is_open() )
 			{
 			
-				throw std::runtime_error("Could no retrieve file statistics");
+				throw runtime_error("Could no open file_path");
 				
 			}
 			
-			off_t fileSize = fileStatistics.st_size;
+			char file_character;
+			string file_contents;
 			
-			return fileSize;
-		
-		}
-		
-		std::string		get_file_contents ( const std::string& file )
-		{
-
-			//	Check if the file does exist
-			check_file_exists(file);
-
-			//	Open an input file stream
-			std::ifstream fileStream(file.data());
-			
-			//	Check if a stream is successfully opened
-			if ( ! fileStream.is_open() )
+			while ( file_stream.good() && ! file_stream.eof() )
 			{
 			
-				throw std::runtime_error("Could no open file");
+				file_character = file_stream.get();
 				
-			}
-			
-			//	Define variables to hold file contents
-			char fileCharacter;
-			std::string fileContents;
-			
-			//	Read file line by line
-			while ( fileStream.good() && ! fileStream.eof() )
-			{
-			
-				fileCharacter = fileStream.get();
-				
-				if ( fileCharacter != -1 )
+				if ( file_character != -1 )
 				{
 
-					fileContents += fileCharacter;
+					file_contents += file_character;
 					
 				}
 				
 			}
 
-			//	Close the file stream
-			fileStream.close();
+			file_stream.close();
 			
-			//	Return file contents
-			return fileContents;
+			return file_contents;
 			
 		}
 
-		void			set_file_contents ( const std::string& file , const std::string& data )
+		void		set_file_contents ( const string& file_path , const string& data )
 		{
 
-			//	Ensure that the file does exist
-			check_file_exists(file);
+			check_file_exists(file_path);
 			
-			//	Create an output stream
-			std::ofstream fileStream(file.data());
+			ofstream output_file_stream(file_path.data());
 			
-			//	Write data to file stream
-			fileStream.write(data.data(),data.size());
+			output_file_stream.write(data.data(),data.size());
 			
-			//	Close the file stream
-			fileStream.close();
+			output_file_stream.close();
 			
 		}
 
-		void			append_file_contents ( const std::string& file , const std::string& data )
+		void		append_file_contents ( const string& file_path , const string& data )
 		{
 
-			set_file_contents(file,get_file_contents(file)+data);
+			set_file_contents(file_path,get_file_contents(file_path)+data);
 
 		}
 		
-		void			prepend_file_contents ( const std::string& file , const std::string& data )
+		void		prepend_file_contents ( const string& file_path , const string& data )
 		{
 		
-			set_file_contents(file,data+get_file_contents(file));
+			set_file_contents(file_path,data+get_file_contents(file_path));
 		
 		}
 
-		void			truncate_file_contents ( const std::string& file )
+		void		truncate_file_contents ( const string& file_path )
 		{
 
-			set_file_contents(file,"");
+			set_file_contents(file_path,"");
 
 		}
 
-		void			check_file_exists ( const std::string& file )
+		void		check_file_exists ( const string& file_path )
 		{
 
-			if ( ! get_file_exists(file) )
+			if ( ! get_file_exists(file_path) )
 			{
 			
-				throw std::runtime_error("File does not exist");
+				throw runtime_error("File does not exist");
 				
 			}
 			
