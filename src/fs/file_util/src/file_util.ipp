@@ -138,7 +138,7 @@ namespace std
 			if ( ! get_file_exists(file_path) )
 			{
 			
-				throw runtime_error("File does not exist");
+				throw runtime_error("File does not exist.");
 				
 			}
 			

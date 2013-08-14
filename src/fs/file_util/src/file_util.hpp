@@ -30,7 +30,7 @@ namespace std
 		inline void			truncate_file_contents ( const string& file_path );
 		
 		inline void			check_file_exists ( const string& file_path );
-	
+
 	}
 	
 }
