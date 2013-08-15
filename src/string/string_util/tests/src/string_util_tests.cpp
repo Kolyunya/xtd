@@ -74,7 +74,7 @@ TEST ( string_1000010001001 , splits_to_0000_000_00_by_delimiter_1 )
 	std::string string = "1000010001001";
 	std::strings strings = std::string_split(string,delimiter);
 	
-	ASSERT_EQ ( strings.size() , 3 );
+	ASSERT_EQ ( strings.size() , 3u );
 	ASSERT_EQ ( strings[0] , "0000" );
 	ASSERT_EQ ( strings[1] , "000" );
 	ASSERT_EQ ( strings[2] , "00" );
@@ -88,7 +88,7 @@ TEST ( string_0100001000100100 , splits_to_0_0000_000_00_00_by_delimiter_1 )
 	std::string string = "0100001000100100";
 	std::strings strings = std::string_split(string,delimiter);
 	
-	ASSERT_EQ ( strings.size() , 5 );
+	ASSERT_EQ ( strings.size() , 5u );
 	ASSERT_EQ ( strings[0] , "0" );
 	ASSERT_EQ ( strings[1] , "0000" );
 	ASSERT_EQ ( strings[2] , "000" );
@@ -104,7 +104,7 @@ TEST ( string_UaaaUaaUUa , splits_to_aaa_aa_a_by_delimiter_U )
 	std::string string = "UaaaUaaUUa";
 	std::strings strings = std::string_split(string,delimiter);
 	
-	ASSERT_EQ ( strings.size() , 3 );
+	ASSERT_EQ ( strings.size() , 3u );
 	ASSERT_EQ ( strings[0] , "aaa" );
 	ASSERT_EQ ( strings[1] , "aa" );
 	ASSERT_EQ ( strings[2] , "a" );

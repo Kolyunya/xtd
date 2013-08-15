@@ -3,6 +3,13 @@ namespace std
 
 	long int	string_to_long_int ( const string& source_string , int number_base )
 	{
+	
+		//	@description		Converts "source_string" string to a long integer with base equal to "number_base"
+		//	@throw_guarantee	strong no-throw guarantee
+		//	@throws				std::runtime_error - If "source_string" does not represent a valid_number.
+		//	@throws				std::runtime_error - If "source_string" represents a number which is out of range of "long int".
+		
+
 
 		//  Function "strtol" will set this pointer to point to the first character after the numeric part of the original string.
 		//	This pointer will be used in the case when "std::strtol" will returns "0".
@@ -16,7 +23,8 @@ namespace std
 		
 		if ( number == 0 )
 		{
-
+		
+			//	No-throw guarantee of const_cast shall be found-out
 			char* first_character_of_string = &const_cast<char&>(source_string[0]);
 			
 			if ( first_character_after_number == first_character_of_string )
