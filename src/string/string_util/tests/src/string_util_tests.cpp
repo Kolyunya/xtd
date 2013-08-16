@@ -1,6 +1,44 @@
 #include <gtest/gtest.h>
 #include <std/string/string_util.hpp>
 
+
+
+TEST ( std_string_to_int , converts_5667859_dec_to_5667859_dec )
+{
+
+	std::string source_string = "5667859";
+	int result_number_correct = 5667859;
+	int result_number_actual = std::string_to_int(source_string,10);
+	
+	ASSERT_EQ ( result_number_correct , result_number_actual );
+
+}
+
+TEST ( std_string_to_int , converts_111_bin_to_7_dec )
+{
+
+	std::string source_string = "111";
+	int result_number_correct = 7;
+	int result_number_actual = std::string_to_int(source_string,2);
+	
+	ASSERT_EQ ( result_number_correct , result_number_actual );
+
+}
+
+TEST ( std_string_to_int , converts_111_hex_to_273_dec )
+{
+
+	std::string source_string = "111";
+	int result_number_correct = 273;
+	int result_number_actual = std::string_to_int(source_string,16);
+	
+	ASSERT_EQ ( result_number_correct , result_number_actual );
+
+}
+
+
+
+
 TEST ( string_5667859 , converts_to_integer_5667859 )
 {
 

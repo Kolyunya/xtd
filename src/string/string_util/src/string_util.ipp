@@ -4,13 +4,13 @@ namespace std
 	long int	string_to_long_int ( const string& source_string , int number_base )
 	{
 	
-		//	@description		Converts "source_string" string to a long integer with base equal to "number_base"
-		//	@throw_guarantee	strong no-throw guarantee
+		//	@description		Converts "source_string" to a "long int" treeting "source_string" as a numeral with the base equal to "number_base".
+		//	@throw_guarantee	Strong no-throw guarantee.
 		//	@throws				std::runtime_error - If "source_string" does not represent a valid_number.
 		//	@throws				std::runtime_error - If "source_string" represents a number which is out of range of "long int".
 		
-
-
+		
+		
 		//  Function "strtol" will set this pointer to point to the first character after the numeric part of the original string.
 		//	This pointer will be used in the case when "std::strtol" will returns "0".
 		//	If this pointer will point to the first character of the original string this will mean that the string does not start
@@ -24,13 +24,12 @@ namespace std
 		if ( number == 0 )
 		{
 		
-			//	No-throw guarantee of const_cast shall be found-out
 			char* first_character_of_string = &const_cast<char&>(source_string[0]);
 			
 			if ( first_character_after_number == first_character_of_string )
 			{
 				
-				throw runtime_error("String to number conversion failed. Unknown error.");
+				throw runtime_error("String to number conversion failed.");
 				
 			}
 			
@@ -50,7 +49,16 @@ namespace std
 	int			string_to_int ( const string& source_string , int number_base )
 	{
 	
-		return string_to_long_int(source_string,number_base);
+		long int number = string_to_long_int(source_string,number_base);
+		
+		if ( number < INT_MIN || number > INT_MAX )
+		{
+		
+			throw runtime_error("String to number conversion failed. Number exceeds type limits.");
+		
+		}
+	
+		return number;
 	
 	}
 
@@ -75,7 +83,7 @@ namespace std
 			if ( first_character_after_number == first_character_of_string )
 			{
 				
-				throw runtime_error("String to number conversion failed. Unknown error.");
+				throw runtime_error("String to number conversion failed.");
 				
 			}
 			
