@@ -15,7 +15,7 @@ namespace std
 
 	typedef vector<string> strings;
 	
-	inline long int		string_to_long_int ( const string& source_string , int number_base = 10 );
+	inline long int	   	string_to_long_int ( const string& source_string , int number_base = 10 );
 	
 	inline int			string_to_int ( const string& source_string , int number_base = 10 );
 	
