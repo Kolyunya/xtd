@@ -1,10 +1,11 @@
 import shutil
+import sys
 import os
 
 # Script deletes GYP build artifacts.
 
-# "generator.gyp", ".gitignore" and "README" files should not be deleted
-files_ignore = ['generator.gyp','.gitignore','README']
+# "unit_name.gyp" and ".gitignore" files should not be deleted
+files_ignore = [sys.argv[1],'.gitignore']
 
 # Get a list of all files in current directory
 files_all = os.listdir('./')
@@ -12,6 +13,8 @@ files_all = os.listdir('./')
 # Iterate over all files
 for file_current in files_all :
 
+	print file_current
+	
 	# All directories should be deleted
 	if os.path.isdir(file_current) :
 		continue
