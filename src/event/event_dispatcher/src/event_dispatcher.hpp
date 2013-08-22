@@ -23,18 +23,24 @@ namespace std
 
 			virtual					~event_dispatcher ( void );
 
-									template <typename listener>
-			bool					add_event_listener ( int event_id , listener* listener_ptr , void(listener::*method_ptr)(void*) , bool throw_on_fail = 0 );
+									template <typename listener_type>
+			bool					add_event_listener ( int event_id , listener_type* listener , void(listener_type::*method)(void*) , bool throw_on_fail = 0 );
+			
+//									template <typename listener_type>
+//			bool					add_event_listener ( int event_id , const functor<listener_type>& listener , bool throw_on_fail = 0 );
 
-									template <typename listener>
-			bool					remove_event_listener ( int event_id , listener* listener_ptr , void(listener::*method_ptr)(void*) , bool throw_on_fail = 0 );
+									template <typename listener_type>
+			bool					remove_event_listener ( int event_id , listener_type* listener , void(listener_type::*method)(void*) , bool throw_on_fail = 0 );
+
+//									template <typename listener_type>
+//			bool					remove_event_listener ( int event_id , const functor<listener_type>& listener , bool throw_on_fail = 0 );
 
 		protected:
 
 			void					dispatch_event ( int event_id , void* event_data_ptr );
 
-									template <typename listener>
-			subscription_itr		get_subscription_itr ( int event_id , listener* listener_ptr , void(listener::*method_ptr)(void*) ) noexcept;
+									template <typename listener_type>
+			subscription_itr		get_subscription_itr ( int event_id , listener_type* listener_type_ptr , void(listener_type::*method_ptr)(void*) ) noexcept;
 
 			subscriptions_map		subscriptions;
 
@@ -45,6 +51,7 @@ namespace std
 }
 
 #include "event_dispatcher.ipp"
+
 #include "event_dispatcher.tpp"
 
 #endif	// _EVENT_DISPATCHER_HPP_

@@ -9,13 +9,7 @@ namespace std
 	{
 
 	}
-
-			template <typename object_type>
-			functor<object_type>::~functor ( void )
-	{
 	
-	}
-
 			template <typename object_type>
 	void	functor<object_type>::operator() ( void* data ) const
 	{

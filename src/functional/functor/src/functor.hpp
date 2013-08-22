@@ -9,7 +9,7 @@ namespace std
 	
 		public:
 		
-			virtual			~abstract_functor ( void );
+			virtual			~abstract_functor ( void ) = default;
 			
 			virtual void	operator() ( void* data ) const = 0;
 			
@@ -27,7 +27,7 @@ namespace std
 			
 							functor ( object_type* object , void(object_type::*method)(void*) );
 							
-			virtual			~functor ( void ) override;
+			virtual			~functor ( void ) noexcept override = default;
 							
 			virtual void	operator() ( void* data ) const override final;
 
@@ -41,7 +41,6 @@ namespace std
 
 }
 
-#include "functor.ipp"
 #include "functor.tpp"
 
 #endif	// _FUNCTOR_HPP_
