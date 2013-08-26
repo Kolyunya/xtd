@@ -1,8 +1,8 @@
 namespace std
 {
 
-						template <typename listener>
-	bool				event_dispatcher::add_event_listener ( int event_id , listener* listener_ptr , void(listener::*method_ptr)(void*) , bool throw_on_fail )
+						template <typename listener_type , typename parameter_type>
+	bool				event_dispatcher::add_event_listener ( int event_id , listener_type* listener_ptr , void(listener_type::*method_ptr)(parameter_type*) , bool throw_on_fail )
 	{
 	
 		//	@description:		Registers object pointed by `listener_ptr` to listen to event `event_id` and invoke method pointed by `method_ptr` on this event.
@@ -34,7 +34,7 @@ namespace std
 
 		}
 
-		auto functor_ptr = new functor<listener>(listener_ptr,method_ptr);
+		auto functor_ptr = new functor<listener_type,parameter_type>(listener_ptr,method_ptr);
 		
 		this->subscriptions.insert(subscription(event_id,functor_ptr));
 		
@@ -42,8 +42,16 @@ namespace std
 	
 	}
 
-						template <typename listener>
-	bool				event_dispatcher::remove_event_listener ( int event_id , listener* listener_ptr , void(listener::*method_ptr)(void*) , bool throw_on_fail )
+						template <typename listener_type , typename parameter_type>
+	bool				event_dispatcher::add_event_listener ( int event_id , const functor<listener_type,parameter_type>& listener , bool throw_on_fail )
+	{
+	
+		return this->add_event_listener(event_id,listener.object_ptr,listener.method_ptr,throw_on_fail);
+	
+	}
+	
+						template <typename listener_type , typename parameter_type>
+	bool				event_dispatcher::remove_event_listener ( int event_id , listener_type* listener_ptr , void(listener_type::*method_ptr)(parameter_type*) , bool throw_on_fail )
 	{
 	
 		//	@description:		Removes the subscription defined by object pointed by `listener_ptr`, event `event_id` and method pointed by `method_ptr`.
@@ -82,8 +90,16 @@ namespace std
 
 	}
 
-						template <typename listener>
-	subscription_itr	event_dispatcher::get_subscription_itr ( int event_id , listener* listener_ptr , void(listener::*method_ptr)(void*) ) noexcept
+						template <typename listener_type , typename parameter_type>
+	bool				event_dispatcher::remove_event_listener ( int event_id , const functor<listener_type,parameter_type>& listener , bool throw_on_fail )
+	{
+	
+		return this->remove_event_listener(event_id,listener.object_ptr,listener.method_ptr,throw_on_fail);
+	
+	}
+	
+						template <typename listener_type , typename parameter_type>
+	subscription_itr	event_dispatcher::get_subscription_itr ( int event_id , listener_type* listener_ptr , void(listener_type::*method_ptr)(parameter_type*) ) noexcept
 	{
 	
 		//	@description:	Looks for a subscription defined by object pointed by `listener_ptr`, event `event_id` and method pointed by `method_ptr`.
@@ -101,15 +117,15 @@ namespace std
 		for ( ; subscription_itr != all_subscriptions_for_current_event.second ; subscription_itr++ )
 		{
 		
-			auto functor_current = dynamic_cast <functor<listener>*> ( (*subscription_itr).second );
+			auto functor_current = dynamic_cast <functor<listener_type,parameter_type>*> ( (*subscription_itr).second );
 
 			if
 			(
 				functor_current
 					&&
-				functor_current->object == listener_ptr
+				functor_current->object_ptr == listener_ptr
 					&&
-				functor_current->method == method_ptr
+				functor_current->method_ptr == method_ptr
 			)
 			{
 

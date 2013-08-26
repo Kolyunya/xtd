@@ -25,7 +25,7 @@ namespace std
 
 		public:
 			
-							functor ( object_type* object , void(object_type::*method)(parameter_type*) );
+							functor ( object_type* object_ptr , void(object_type::*method_ptr)(parameter_type*) );
 							
 			virtual			~functor ( void ) noexcept override = default;
 							
@@ -33,9 +33,9 @@ namespace std
 
 			virtual void	invoke ( void* parameter_ptr ) const override final;
 
-			object_type*	object;
+			object_type*	object_ptr;
 
-			void			(object_type::*method)(parameter_type*);
+			void			(object_type::*method_ptr)(parameter_type*);
 
 	};
 

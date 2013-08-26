@@ -2,10 +2,10 @@ namespace std
 {
 
 			template <typename object_type , typename parameter_type>
-			functor<object_type,parameter_type>::functor ( object_type* object , void(object_type::*method)(parameter_type*) )
+			functor<object_type,parameter_type>::functor ( object_type* object_ptr , void(object_type::*method_ptr)(parameter_type*) )
 				:
-					object ( object ),
-					method ( method )
+					object_ptr ( object_ptr ),
+					method_ptr ( method_ptr )
 	{
 
 	}
@@ -15,7 +15,7 @@ namespace std
 	{
 	
 		parameter_type* parameter_ptr = reinterpret_cast<parameter_type*>(parameter_void_ptr);
-		( this->object ->* this->method ) ( parameter_ptr );
+		( this->object_ptr ->* this->method_ptr ) ( parameter_ptr );
 
 	}
 	
