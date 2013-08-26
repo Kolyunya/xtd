@@ -24,7 +24,7 @@ TEST ( functor , does_not_throw_exceptions_while_construction )
 
 	object_type object;
 
-	ASSERT_NO_THROW(std::functor<object_type>(&object,&object_type::method));
+	ASSERT_NO_THROW((std::functor<object_type,void>(&object,&object_type::method)));
 
 }
 
@@ -32,7 +32,7 @@ TEST ( functor , invokes_successfully )
 {
 
 	object_type object;
-	std::functor<object_type> functor(&object,&object_type::method);
+	std::functor<object_type,void> functor(&object,&object_type::method);
 
 	ASSERT_THROW(functor(nullptr),success);
 
@@ -43,7 +43,7 @@ TEST ( functor , recieves_data_successfully )
 
 	object_type object;
 	int data = 42;
-	std::functor<object_type> functor(&object,&object_type::method);
+	std::functor<object_type,void> functor(&object,&object_type::method);
 	
 	try
 	{
@@ -69,7 +69,7 @@ TEST ( functor , invokes_successfully_by_invoke_method )
 
 	object_type object;
 	int data = 42;
-	std::functor<object_type> functor(&object,&object_type::method);
+	std::functor<object_type,void> functor(&object,&object_type::method);
 	
 	try
 	{

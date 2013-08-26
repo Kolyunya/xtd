@@ -11,13 +11,13 @@ namespace std
 		
 			virtual			~abstract_functor ( void ) = default;
 			
-			virtual void	operator() ( void* data ) const = 0;
-			
-			virtual void	invoke ( void* data ) const = 0;
+			virtual void	operator() ( void* parameter_ptr ) const = 0;
+
+			virtual void	invoke ( void* parameter_ptr ) const = 0;
 			
 	};
 
-	template <typename object_type>
+	template <typename object_type , typename parameter_type>
 	class functor
 		:
 			public abstract_functor
@@ -25,17 +25,17 @@ namespace std
 
 		public:
 			
-							functor ( object_type* object , void(object_type::*method)(void*) );
+							functor ( object_type* object , void(object_type::*method)(parameter_type*) );
 							
 			virtual			~functor ( void ) noexcept override = default;
 							
-			virtual void	operator() ( void* data ) const override final;
+			virtual void	operator() ( void* parameter_ptr ) const override final;
 
-			virtual void	invoke ( void* data ) const override final;
+			virtual void	invoke ( void* parameter_ptr ) const override final;
 
 			object_type*	object;
 
-			void			(object_type::*method)(void*);
+			void			(object_type::*method)(parameter_type*);
 
 	};
 
