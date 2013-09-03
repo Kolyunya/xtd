@@ -1,5 +1,5 @@
 #include <gtest/gtest.h>
-#include <std/cmath>
+#include <std/cmath.hpp>
 #include <stdlib.h>			//	abs
 
 TEST ( get_int_1_2 , returns_1_or_2 )
