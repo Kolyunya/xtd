@@ -14,7 +14,7 @@
 						],
 	'targets'		:	[
 							{
-								'target_name'		:	'test',
+								'target_name'		:	'tests',
 								'type'				:	'executable',
 								'ldflags'			:	[
 															'<(GTEST_OBJECT_FILE)',

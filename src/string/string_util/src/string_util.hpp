@@ -1,7 +1,7 @@
 #ifndef _STRING_UTIL_HPP_
 #define _STRING_UTIL_HPP_
 
-#include <stdexcept     // std::runtime_error
+#include <stdexcept>    // std::runtime_error
 #include <vector>       // std::vector
 #include <sstream>      // std::string
                         // std::stringstream
@@ -16,7 +16,7 @@ namespace std
     typedef vector<string> strings;
 
     inline long int     string_to_long_int ( const string& source_string , int number_base = 10 );
-   
+
     inline int          string_to_int ( const string& source_string , int number_base = 10 );
 
     inline double       string_to_double ( const string& source_string );
