@@ -9,14 +9,14 @@ namespace o__O
 				:
 					AbstractLogger(addNewLine,addTimeStamp)
 	{
-	
+
 	}
 
 	void	ConsoleLogger::logData ( const std::string& data ) const noexcept
 	{
-	
+
 		std::cout << data;
-	
+
 	}
-	
+
 }

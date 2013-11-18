@@ -1,1 +1,0 @@
-#ifndef _INCLUDE_EVENT_DISPATCHER_HPP_#define _INCLUDE_EVENT_DISPATCHER_HPP_#include "./../../../src/event/event_dispatcher/src/event_dispatcher.hpp"#endif // _INCLUDE_EVENT_DISPATCHER_HPP_
