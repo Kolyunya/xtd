@@ -45,24 +45,25 @@
                                                     ],
                             },
                             #{
-                            #    'target_name'  :   'clean',
-                            #    'type'         :   'none',
-                            #    'actions'      :   [
-                            #                           {
-                            #                               'action_name'   :   'delete_build_artifacts',
-                            #                               'inputs'        :   [
-                            #                                                       'targets.gypi',
-                            #                                                   ],
-                            #                               'outputs'       :   [
-                            #                                                       'phony',
-                            #                                                   ],
-                            #                               'action'        :   [
-                            #                                                       'python',
-                            #                                                       '<(SCRIPTS_DIR)/delete_build_artifacts.py',
-                            #                                                   ],
-                            #                               'message'       :   'Deleting build artifacts',
-                            #                           },
-                            #                       ],
+                            #    'target_name'   :   'clean',
+                            #    'type'          :   'none',
+                            #    'actions'       :   [
+                            #                            {
+                            #                                'action_name'   :   'delete_build_artifacts',
+                            #                                'inputs'        :   [
+                            #                                                        'targets.gypi',
+                            #                                                    ],
+                            #                                'outputs'       :   [
+                            #                                                        'phony',
+                            #                                                    ],
+                            #                                'action'        :   [
+                            #                                                        'python',
+                            #                                                        '<(SCRIPTS_DIR)/delete_build_artifacts.py',
+                            #                                                        '<(UNIT_NAME).gyp',
+                            #                                                    ],
+                            #                                'message'       :   'Deleting build artifacts',
+                            #                            },
+                            #                        ],
                             #},
                         ],
 }
