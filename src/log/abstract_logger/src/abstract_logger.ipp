@@ -1,10 +1,10 @@
-namespace std
+﻿namespace std
 {
 
                 abstract_logger::abstract_logger ( bool add_new_line , bool add_time_stamp ) noexcept
                     :
-                        add_new_line ( add_new_line ),
-                        add_time_stamp ( add_time_stamp )
+                        add_new_line(add_new_line),
+                        add_time_stamp(add_time_stamp)
     {
 
     }

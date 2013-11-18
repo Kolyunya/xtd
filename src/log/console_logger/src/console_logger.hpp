@@ -1,30 +1,32 @@
-#ifndef _CONSOLE_LOGGER_HPP_
+﻿#ifndef _CONSOLE_LOGGER_HPP_
 #define _CONSOLE_LOGGER_HPP_
 
 #include <iostream>
-#include <o__O/AbstractLogger.hpp>
+#include <logger/abstract_logger.hpp>
 
 
 
-namespace o__O
+namespace std
 {
 
-    class ConsoleLogger
+    class console_logger
         :
-            public AbstractLogger
+            public abstract_logger
     {
 
         public:
 
-            explicit        ConsoleLogger ( const bool addNewLine = true , const bool addTimeStamp = true ) noexcept;
+            explicit        console_logger ( bool add_new_line = true , bool add_time_stamp = true ) noexcept;
 
         protected:
 
-            virtual void    logData ( const std::string& data ) const noexcept override;
+            virtual void    log_data ( const std::string& data ) const noexcept override;
 
     };
 
 }
 
 // Include implementation file
+#include "console_logger.ipp"
+
 #endif  // _CONSOLE_LOGGER_HPP_

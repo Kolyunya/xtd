@@ -1,34 +1,37 @@
 #ifndef _LOGGER_CLIENT_HPP_
 #define _LOGGER_CLIENT_HPP_
 
-#include <o__O/AbstractLogger.hpp>
+#include <logger/abstract_logger.hpp>
 
 
 
-namespace o__O
+namespace std
 {
 
-	class LoggerClient
-	{
-	
-		public:
-	
-								LoggerClient ( AbstractLogger* logger = nullptr );
-								
-			AbstractLogger&		getLoggerRef ( void );
-			
-			AbstractLogger*		getLoggerPtr ( void );
+    class logger_client
+    {
+    
+        public:
+    
+                                logger_client ( abstract_logger* logger_ptr = nullptr );
+                                
+            abstract_logger&    get_logger_ref ( void );
+            
+            abstract_logger*    get_logger_ptr ( void );
 
-			void				setLogger ( AbstractLogger* logger = nullptr );
+            void                set_logger ( abstract_logger* logger_ptr = nullptr );
 
-			void				log ( const std::string& data ) const;
-	
-		protected:
-			
-			AbstractLogger*		logger;
-			
-	};
+            void                log ( const std::string& data ) const;
+    
+        protected:
+            
+            abstract_logger*    logger_ptr;
+            
+    };
 
 }
 
-#endif	// _LOGGER_CLIENT_HPP_
+// Include implementation file
+#include "logger_client.ipp"
+
+#endif      // _LOGGER_CLIENT_HPP_

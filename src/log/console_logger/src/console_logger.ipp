@@ -1,22 +1,18 @@
-#include "ConsoleLogger.hpp"
-
-
-
-namespace o__O
+﻿namespace std
 {
 
-			ConsoleLogger::ConsoleLogger ( const bool addNewLine , const bool addTimeStamp ) noexcept
-				:
-					AbstractLogger(addNewLine,addTimeStamp)
-	{
+            console_logger::console_logger ( bool add_new_line , bool addTimeStamp ) noexcept
+                :
+                    AbstractLogger(addNewLine,addTimeStamp)
+    {
 
-	}
+    }
 
-	void	ConsoleLogger::logData ( const std::string& data ) const noexcept
-	{
+    void    console_logger::log_data ( const std::string& data ) const noexcept
+    {
 
-		std::cout << data;
+        std::cout << data;
 
-	}
+    }
 
 }

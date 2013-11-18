@@ -1,48 +1,44 @@
-#include "LoggerClient.hpp"
-
-
-
-namespace o__O
+namespace std
 {
 
-						LoggerClient::LoggerClient ( AbstractLogger* logger )
-	{
-	
-		this->setLogger(logger);
+                        logger_client::logger_client ( abstract_logger* logger_ptr )
+    {
+    
+        this->setLogger(logger_ptr);
 
-	}
-	
-	AbstractLogger&		LoggerClient::getLoggerRef ( void )
-	{
-	
-		return * this->logger;
-	
-	}
-	
-	AbstractLogger*		LoggerClient::getLoggerPtr ( void )
-	{
-	
-		return this->logger;
-	
-	}
-	
-	void				LoggerClient::setLogger ( AbstractLogger* logger )
-	{
-	
-		this->logger = logger;
-	
-	}
-	
-	void				LoggerClient::log ( const std::string& data ) const
-	{
-	
-		if ( this->logger )
-		{
-		
-			this->logger->log(data);
-			
-		}
+    }
+    
+    abstract_logger&    logger_client::get_logger_ref ( void )
+    {
+    
+        return * this->logger_ptr;
+    
+    }
+    
+    abstract_logger*    logger_client::get_logger_ptr ( void )
+    {
+    
+        return this->logger_ptr;
+    
+    }
+    
+    void                logger_client::set_logger ( abstract_logger* logger_ptr )
+    {
+    
+        this->logger_ptr = logger_ptr;
+    
+    }
+    
+    void                logger_client::log ( const std::string& data ) const
+    {
+    
+        if ( this->logger_ptr )
+        {
+        
+            this->logger_ptr->log(data);
+            
+        }
 
-	}
-	
+    }
+    
 }

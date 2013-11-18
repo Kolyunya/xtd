@@ -1,5 +1,5 @@
 ================================================================================
-	ABOUT THE LIBRARY
+    ABOUT THE LIBRARY
 ================================================================================
 
 This library is an extension of the C++ standard library which contains general 
@@ -7,7 +7,7 @@ purpose, commonly used tools.
 
 
 ================================================================================
-	LIBRARY STRUCTURE
+    LIBRARY STRUCTURE
 ================================================================================
 
 Library root directory contains "include", "src" and "sytem" sub-directories. 
@@ -23,7 +23,7 @@ source files. "Tests" directory contains unit tests.
 
 
 ================================================================================
-	HOW TO USE LIBRARY
+    HOW TO USE LIBRARY
 ================================================================================
 
 1. Prerequisites.
@@ -37,7 +37,7 @@ source files. "Tests" directory contains unit tests.
 
 
 ================================================================================
-	HOW TO TEST LIBRARY
+    HOW TO TEST LIBRARY
 ================================================================================
 
 1. Prerequisites.
@@ -49,7 +49,7 @@ source files. "Tests" directory contains unit tests.
 2. Testing library.
   1. Set "GTEST_HOME" environment variable to gtest home directory. That 
      directory must have "include" and "build" sub-directories with gtest header
-	 and object file respectively.
+     and object file respectively.
   2. Set "STD_HOME" environment variable to the location of this library. Home 
      directory is one with "src", "include", "system" and others sub-directories
   3. Set "GYP_GENERATORS" environment variable to value(s) corresponding you 

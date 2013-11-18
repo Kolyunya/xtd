@@ -1,4 +1,4 @@
-#ifndef _ABSTRACT_LOGGER_HPP_
+﻿#ifndef _ABSTRACT_LOGGER_HPP_
 #define _ABSTRACT_LOGGER_HPP_
 
 #include <string.hpp>
