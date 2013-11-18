@@ -42,10 +42,12 @@
 
     }
 
-    string      abstract_logger::make_time_stamp ( void  ) const noexcept
+    string      abstract_logger::make_time_stamp ( void  ) noexcept
     {
 
-        return UnixTime::current().getAsFormattedString("[%Y/%m/%d-%H:%M:%S]");
+        return "";
+
+        //return UnixTime::current().getAsFormattedString("[%Y/%m/%d-%H:%M:%S]");
 
     }
 

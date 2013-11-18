@@ -1,47 +1,42 @@
-#include <o__O/Test.hpp>
-#include <o__O/ConsoleLogger.hpp>
-#include <o__O/LoggerClient.hpp>
+#include <gtest/gtest.h>
+#include <log/console_logger.hpp>
+#include <log/logger_client.hpp>
 
 
 
-using namespace o__O;
-
-int main ( void )
+TEST ( logger_client , does_not_throw_while_construction )
 {
-	
-	TEST::TRUE([]()
-	{
-	
-		LoggerClient loggerClient;
-		
-		return 1;
-	
-	});
-	
-	TEST::TRUE([]()
-	{
-	
-		LoggerClient loggerClient;
-		loggerClient.log("Hello world!");
-		
-		return 1;
-	
-	});
-	
-	TEST::TRUE([]()
-	{
-	
-		ConsoleLogger logger;
-		LoggerClient loggerClient(&logger);
-		loggerClient.getLoggerRef().addNewLine = false;
-		loggerClient.getLoggerRef().addTimeStamp = false;
-		
-		loggerClient.log("");
-		
-		return 1;
-	
-	});
-	
-	return 	TEST_RUN() ? 0 : 1;
+
+    std::logger_client();
+    ASSERT_TRUE(true);
+
+}
+
+TEST ( logger_client , does_not_throw_while_logging_0 )
+{
+
+    std::logger_client logger_client_obj;
+    logger_client_obj.log("Hello world!");
+    ASSERT_TRUE(true);
+
+}
+
+TEST ( logger_client , does_not_throw_while_logging_1 )
+{
+
+    std::console_logger logger;
+    std::logger_client logger_client(&logger);
+    logger_client.get_logger_ref().add_new_line = false;
+    logger_client.get_logger_ref().add_time_stamp = false;
+    logger_client.log("");
+    ASSERT_TRUE(true);
+
+}
+
+int main ( int argc , char** argv )
+{
+
+    ::testing::InitGoogleTest(&argc, argv);
+    return RUN_ALL_TESTS();
 
 }

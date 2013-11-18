@@ -1,19 +1,19 @@
 ﻿namespace std
 {
 
-            file_logger::file_logger ( const std::string& file , const bool addNewLine , const bool addTimeStamp ) noexcept
+            file_logger::file_logger ( const std::string& file , bool add_new_line , bool add_time_stamp ) noexcept
                 :
-                    AbstractLogger(addNewLine,addTimeStamp),
+                    abstract_logger(add_new_line,add_time_stamp),
                     file(file)
     {
 
     }
 
-    void    file_logger::logData ( const std::string& data ) const noexcept
+    void    file_logger::log_data ( const std::string& data ) const noexcept
     {
 
-        FileUtil::appendFileContents(file,data);
+        fs::append_file_contents(file,data);
 
     }
-    
+
 }

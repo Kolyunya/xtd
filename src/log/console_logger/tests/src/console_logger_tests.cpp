@@ -1,23 +1,29 @@
 ﻿#include <gtest/gtest.h>
-#include <o__O/ConsoleLogger.hpp>
+#include <log/console_logger.hpp>
 
 
 
-using namespace o__O;
-
-int main ( void )
+TEST ( console_logger , does_not_throw_while_construction )
 {
 
-	TEST_TRUE
-	(
-	
-		const AbstractLogger& logger = ConsoleLogger(false,false);
-		logger.log("");
-		
-		return true;
-	
-	);
-	
-	return 	TEST_RUN() ? 0 : 1;
+    std::console_logger(false,false);
+    ASSERT_TRUE(true);
+
+}
+
+TEST ( console_logger , does_not_throw_while_logging )
+{
+
+    const std::abstract_logger& logger = std::console_logger(false,false);
+    logger.log("");
+    ASSERT_TRUE(true);
+
+}
+
+int main ( int argc , char** argv )
+{
+
+    ::testing::InitGoogleTest(&argc, argv);
+    return RUN_ALL_TESTS();
 
 }

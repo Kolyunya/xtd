@@ -30,7 +30,7 @@ namespace std
 
             void                log_time_stamp ( void ) const noexcept;
 
-            static string       make_time_stamp ( void  ) const noexcept;
+            static string       make_time_stamp ( void  ) noexcept;
 
     };
 
