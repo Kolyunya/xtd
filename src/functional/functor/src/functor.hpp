@@ -4,43 +4,44 @@
 namespace std
 {
 
-	class abstract_functor
-	{
-	
-		public:
-		
-			virtual			~abstract_functor ( void ) = default;
-			
-			virtual void	operator() ( void* parameter_ptr ) const = 0;
+    class abstract_functor
+    {
 
-			virtual void	invoke ( void* parameter_ptr ) const = 0;
-			
-	};
+        public:
 
-	template <typename object_type , typename parameter_type>
-	class functor
-		:
-			public abstract_functor
-	{
+            virtual         ~abstract_functor ( void ) = default;
 
-		public:
-			
-							functor ( object_type* object_ptr , void(object_type::*method_ptr)(parameter_type*) );
-							
-			virtual			~functor ( void ) noexcept override = default;
-							
-			virtual void	operator() ( void* parameter_ptr ) const override final;
+            virtual void    operator() ( void* parameter_ptr ) const = 0;
 
-			virtual void	invoke ( void* parameter_ptr ) const override final;
+            virtual void    invoke ( void* parameter_ptr ) const = 0;
 
-			object_type*	object_ptr;
+    };
 
-			void			(object_type::*method_ptr)(parameter_type*);
+    template <typename object_type , typename parameter_type>
+    class functor
+        :
+            public abstract_functor
+    {
 
-	};
+        public:
+
+                            functor ( object_type* object_ptr , void(object_type::*method_ptr)(parameter_type*) );
+
+            virtual         ~functor ( void ) noexcept override = default;
+
+            virtual void    operator() ( void* parameter_ptr ) const override final;
+
+            virtual void    invoke ( void* parameter_ptr ) const override final;
+
+            object_type*    object_ptr;
+
+            void            (object_type::*method_ptr)(parameter_type*);
+
+    };
 
 }
 
+// Include implementation file
 #include "functor.tpp"
 
-#endif	// _FUNCTOR_HPP_
+#endif    // _FUNCTOR_HPP_
