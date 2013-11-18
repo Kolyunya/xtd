@@ -42,12 +42,13 @@
 
     }
 
-    string      abstract_logger::make_time_stamp ( void  ) noexcept
+    string      abstract_logger::make_time_stamp ( void ) noexcept
     {
 
-        return "";
+        std::chrono::time_point<std::chrono::steady_clock> time_current = std::chrono::steady_clock::now();
+        std::string time_current_string = std::chrono::time_point_to_formatted_string(time_current);
 
-        //return UnixTime::current().getAsFormattedString("[%Y/%m/%d-%H:%M:%S]");
+        return time_current_string;
 
     }
 
