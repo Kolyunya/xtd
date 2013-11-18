@@ -1,6 +1,8 @@
 #include <gtest/gtest.h>
 #include <chrono.hpp>
 
+
+
 class timer_client
 {
     public:
@@ -38,7 +40,7 @@ TEST ( timer_constructor , sets_tick_limit_effectively )
 
     std::chrono::timer timer(std::chrono::timer::precision(42),42);
 
-    ASSERT_EQ ( timer.get_tick_limit() , 42 );
+    ASSERT_EQ ( timer.get_tick_limit() , (unsigned char)42 );
 
 }
 
@@ -56,7 +58,7 @@ TEST ( timer_constructor , defaults_tick_limit_to_zero )
 
     std::chrono::timer timer;
 
-    ASSERT_EQ ( timer.get_tick_limit() , 0 );
+    ASSERT_EQ ( timer.get_tick_limit() , (unsigned char)0 );
 
 }
 
@@ -65,7 +67,7 @@ TEST ( timer_constructor , initializes_last_tick_id_with_zero )
 
     std::chrono::timer timer;
 
-    ASSERT_EQ ( timer.get_last_tick_id() , 0 );
+    ASSERT_EQ ( timer.get_last_tick_id() , (unsigned char)0 );
 
 }
 

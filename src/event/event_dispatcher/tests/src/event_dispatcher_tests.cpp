@@ -1,5 +1,5 @@
 #include <gtest/gtest.h>
-#include <std/event/event_dispatcher.hpp>
+#include <event/event_dispatcher.hpp>
 
 class event_dispatcher : public std::event_dispatcher
 {
