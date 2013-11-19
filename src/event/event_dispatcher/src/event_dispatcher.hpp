@@ -19,9 +19,11 @@ namespace std
     class event_dispatcher
     {
 
+        //  Header-only class hence non-template methods must be declared as inline
+
         public:
 
-            virtual                 ~event_dispatcher ( void );
+            inline virtual          ~event_dispatcher ( void );
 
                                     template <typename listener_type , typename parameter_type>
             bool                    add_event_listener ( int event_id , listener_type* listener_ptr , void(listener_type::*method)(parameter_type*) , bool throw_on_fail = 0 );
@@ -37,7 +39,7 @@ namespace std
 
         protected:
 
-            void                    dispatch_event ( int event_id , void* event_data_ptr );
+            inline void             dispatch_event ( int event_id , void* event_data_ptr );
 
                                     template <typename listener_type , typename parameter_type>
             subscription_itr        get_subscription_itr ( int event_id , listener_type* listener_ptr , void(listener_type::*method_ptr)(parameter_type*) ) noexcept;
