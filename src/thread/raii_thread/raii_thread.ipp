@@ -1,18 +1,18 @@
 namespace std
 {
                 template <typename object_type>
-                raii_thread::raii_thread ( object_type* object_ptr , void(object_type::method_ptr*)(object_type*) )
+                raii_thread<object_type>::raii_thread ( object_type* object_ptr , void(*method_ptr)(object_type*) )
                     :
                         object_ptr(object_ptr),
                         method_ptr(method_ptr),
                         terminate_flag(terminate_flag),
-                        thread(std::thread(this))
+                        thread(std::thread(raii_thread::routine,this))
     {
 
     }
 
                 template <typename object_type>
-                raii_thread::~raii_thread ( void ) noexcept
+                raii_thread<object_type>::~raii_thread ( void ) noexcept
     {
         try
         {
@@ -28,14 +28,15 @@ namespace std
     }
 
                 template <typename object_type>
-    void        raii_thread::routine ( raii_thread* raii_thread_ptr )
+    void        raii_thread<object_type>::routine ( raii_thread* raii_thread_ptr )
     {
-        while
+
+        while ( true )
         {
             try
             {
                 //	Check if the thread is supposed to be terminated
-                std::unique_lock<std::mutex> terminate_flag_unique_lock(this->terminate_flag_mutex,std::defer_lock);
+                std::unique_lock<std::mutex> terminate_flag_unique_lock(raii_thread_ptr->terminate_flag_mutex,std::defer_lock);
                 terminate_flag_unique_lock.try_lock();
                 if ( raii_thread_ptr->terminate_flag )
                 {
@@ -43,16 +44,17 @@ namespace std
                 }
 
                 //	Run client code
-                (this->object_ptr)->*(this->method_ptr)(this->object_ptr);
+                (raii_thread_ptr->method_ptr)(raii_thread_ptr->object_ptr);
 
                 //	Yield to other threads
-                std::this_thread.yield();
+                std::this_thread::yield();
             }
             catch ( ... )
             {
                 //	Ignore errors
             }
         }
+
     }
 
 }
