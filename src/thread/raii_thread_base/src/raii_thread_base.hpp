@@ -11,7 +11,7 @@ namespace std
     class raii_thread_base
     {
         public:
-            explicit                        raii_thread_base ( function_type* function_ptr , arguments_type... arguments );
+            explicit                        raii_thread_base ( function_type function , arguments_type... arguments );
             virtual                         ~raii_thread_base ( void ) noexcept;
         protected:
             void                            initializeRoutine ( void );
@@ -19,7 +19,7 @@ namespace std
             static void                     routine ( raii_thread_base* raii_thread_base_ptr );
             bool                            terminate_flag;
             std::mutex                      terminate_mutex;
-            std::function<function_type>    functor;
+            std::function<void()>           functor;
             std::thread                     thread;
         private:
             explicit                        raii_thread_base ( const raii_thread_base& rhs ) = delete;
