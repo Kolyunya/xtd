@@ -2,10 +2,10 @@ namespace std
 {
 
             template <typename function_type , typename... arguments_type>
-            raii_thread_base<function_type,arguments_type...>::raii_thread_base ( function_type function , arguments_type... arguments )
+            raii_thread_base<function_type,arguments_type...>::raii_thread_base ( function_type* function_ptr , arguments_type... arguments )
                 :
                     terminate_flag(false),
-                    functor(std::bind(function,arguments...))
+                    functor(std::bind(function_ptr,arguments...))
     {
 
     }
@@ -13,7 +13,29 @@ namespace std
             template <typename function_type , typename... arguments_type>
             raii_thread_base<function_type,arguments_type...>::~raii_thread_base ( void ) noexcept
     {
+        this->deinitializeRoutine();
+    }
 
+            template <typename function_type , typename... arguments_type>
+    void    raii_thread_base<function_type,arguments_type...>::initializeRoutine ( void )
+    {
+        this->thread = std::thread(raii_thread_base<function_type,arguments_type...>::routine,this);
+    }
+
+            template <typename function_type , typename... arguments_type>
+    void    raii_thread_base<function_type,arguments_type...>::deinitializeRoutine ( void )
+    {
+        try
+        {
+            std::unique_lock<std::mutex> terminate_unique_lock(this->terminate_mutex);
+            this->terminate_flag = true;
+            terminate_unique_lock.unlock();
+            this->thread.join();
+        }
+        catch ( ... )
+        {
+            //	Destructor must not throw
+        }
     }
 
             template <typename function_type , typename... arguments_type>

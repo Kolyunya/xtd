@@ -11,7 +11,7 @@ namespace std
             public raii_thread_base<function_type,arguments_type...>
     {
         public:
-            explicit                        raii_thread_manual ( function_type function , arguments_type... arguments );
+            explicit                        raii_thread_manual ( function_type* function_ptr , arguments_type... arguments );
             virtual                         ~raii_thread_manual ( void ) noexcept override;
             void                            launch ( void );
             void                            stop ( void );
