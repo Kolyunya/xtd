@@ -1,7 +1,7 @@
 namespace std
 {
                 template <typename object_type>
-                raii_thread<object_type>::raii_thread ( object_type* object_ptr , void(*method_ptr)(object_type*) )
+                raii_thread<object_type>::raii_thread ( object_type* object_ptr , void(object_type::*method_ptr)(object_type*) )
                     :
                         object_ptr(object_ptr),
                         method_ptr(method_ptr),
