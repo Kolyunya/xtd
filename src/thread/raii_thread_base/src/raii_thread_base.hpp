@@ -15,9 +15,9 @@ namespace std
             virtual                         ~raii_thread_base ( void ) noexcept;
         protected:
             static void                     routine ( raii_thread_base* raii_thread_base_ptr );
-            std::function<function_type>    functor;
             bool                            terminate_flag;
             std::mutex                      terminate_mutex;
+            std::function<function_type>    functor;
             std::thread                     thread;
         private:
             explicit                        raii_thread_base ( const raii_thread_base& rhs ) = delete;

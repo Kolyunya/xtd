@@ -32,7 +32,7 @@ namespace std
                 }
 
                 //	Run client code
-                //(raii_thread_base_ptr->functor)();
+                (raii_thread_base_ptr->functor)();
 
                 //	Yield to other threads
                 std::this_thread::yield();
