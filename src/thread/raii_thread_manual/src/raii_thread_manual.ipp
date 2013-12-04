@@ -13,6 +13,11 @@ namespace std
 
     }
 
+    bool    raii_thread_manual::isActive ( void ) const
+    {
+        return this->thread.joinable();
+    }
+
     void    raii_thread_manual::launch ( void )
     {
         this->initializeRoutine();

@@ -12,6 +12,7 @@ namespace std
         public:
             inline explicit     raii_thread_manual ( std::function<void()> client_routine );
             inline virtual      ~raii_thread_manual ( void ) noexcept override;
+            inline bool         isActive ( void ) const;
             inline void         launch ( void );
             inline void         stop ( void );
     };
