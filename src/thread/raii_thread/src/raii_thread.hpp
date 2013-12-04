@@ -5,14 +5,13 @@
 
 namespace std
 {
-    template <typename function_type , typename... arguments_type>
     class raii_thread
         :
-            public raii_thread_base<function_type,arguments_type...>
+            public raii_thread_base
     {
         public:
-            explicit    raii_thread ( function_type function , arguments_type... arguments );
-            virtual     ~raii_thread ( void ) noexcept override;
+            inline explicit     raii_thread ( std::function<void()> client_routine );
+            inline virtual      ~raii_thread ( void ) noexcept override;
     };
 }
 

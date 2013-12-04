@@ -7,23 +7,22 @@
 
 namespace std
 {
-    template <typename function_type , typename... arguments_type>
     class raii_thread_base
     {
         public:
-            explicit                        raii_thread_base ( function_type function , arguments_type... arguments );
-            virtual                         ~raii_thread_base ( void ) noexcept;
+            inline explicit             raii_thread_base ( std::function<void()> client_routine );
+            inline virtual              ~raii_thread_base ( void ) noexcept;
         protected:
-            void                            initializeRoutine ( void );
-            void                            deinitializeRoutine ( void );
-            static void                     routine ( raii_thread_base* raii_thread_base_ptr );
-            bool                            terminate_flag;
-            std::mutex                      terminate_mutex;
-            std::function<void()>           functor;
-            std::thread                     thread;
+            inline void                 initializeRoutine ( void );
+            inline void                 deinitializeRoutine ( void );
+            inline static void          routine ( raii_thread_base* raii_thread_base_ptr );
+            bool                        terminate_flag;
+            std::mutex                  terminate_mutex;
+            std::function<void()>       client_routine;
+            std::thread                 thread;
         private:
-            explicit                        raii_thread_base ( const raii_thread_base& rhs ) = delete;
-            raii_thread_base&               operator= ( const raii_thread_base& rhs ) = delete;
+            inline explicit             raii_thread_base ( const raii_thread_base& rhs ) = delete;
+            inline raii_thread_base&    operator= ( const raii_thread_base& rhs ) = delete;
     };
 }
 

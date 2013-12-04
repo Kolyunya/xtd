@@ -1,29 +1,25 @@
 namespace std
 {
 
-            template <typename function_type , typename... arguments_type>
-            raii_thread_base<function_type,arguments_type...>::raii_thread_base ( function_type function , arguments_type... arguments )
+            raii_thread_base::raii_thread_base ( std::function<void()> client_routine )
                 :
                     terminate_flag(false),
-                    functor(std::bind(function,arguments...))
+                    client_routine(client_routine)
     {
 
     }
 
-            template <typename function_type , typename... arguments_type>
-            raii_thread_base<function_type,arguments_type...>::~raii_thread_base ( void ) noexcept
+            raii_thread_base::~raii_thread_base ( void ) noexcept
     {
         this->deinitializeRoutine();
     }
 
-            template <typename function_type , typename... arguments_type>
-    void    raii_thread_base<function_type,arguments_type...>::initializeRoutine ( void )
+    void    raii_thread_base::initializeRoutine ( void )
     {
-        this->thread = std::thread(raii_thread_base<function_type,arguments_type...>::routine,this);
+        this->thread = std::thread(raii_thread_base::routine,this);
     }
 
-            template <typename function_type , typename... arguments_type>
-    void    raii_thread_base<function_type,arguments_type...>::deinitializeRoutine ( void )
+    void    raii_thread_base::deinitializeRoutine ( void )
     {
         try
         {
@@ -38,8 +34,7 @@ namespace std
         }
     }
 
-            template <typename function_type , typename... arguments_type>
-    void    raii_thread_base<function_type,arguments_type...>::routine ( raii_thread_base* raii_thread_base_ptr )
+    void    raii_thread_base::routine ( raii_thread_base* raii_thread_base_ptr )
     {
         while ( true )
         {
@@ -54,7 +49,7 @@ namespace std
                 }
 
                 //	Run client code
-                (raii_thread_base_ptr->functor)();
+                (raii_thread_base_ptr->client_routine)();
 
                 //	Yield to other threads
                 std::this_thread::yield();

@@ -3,7 +3,8 @@
 
 TEST ( raii_thread_constructor , does_not_throw_0 )
 {
-    std::raii_thread<void()> foo([](){});
+    std::function<void()> foo = [](){};
+    std::raii_thread bar(foo);
 }
 /*
 TEST ( raii_thread_constructor , does_not_throw_1 )
