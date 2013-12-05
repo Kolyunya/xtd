@@ -1,14 +1,19 @@
 #include <gtest/gtest.h>
 #include <iostream.hpp>
 
-TEST ( coutmt_singleton_get_instance , does_not_throw )
-{
-    ASSERT_NO_THROW(std::coutmt_singleton::get_instance());
-}
-
 TEST ( coutmt_operator_out , does_not_throw )
 {
-    ASSERT_NO_THROW(std::coutmt << "Hello world!\n";);
+    ASSERT_NO_THROW(std::coutmt << "Hello world!\n");
+}
+
+TEST ( coutmt_operator_out , does_not_throw_when_passing_std_endl )
+{
+    ASSERT_NO_THROW(std::coutmt << std::endl);
+}
+
+TEST ( coutmt_operator_out , does_not_throw_when_passing_std_endl_std_endl )
+{
+    ASSERT_NO_THROW(std::coutmt << std::endl << std::endl);
 }
 
 int main ( int argc , char** argv )
