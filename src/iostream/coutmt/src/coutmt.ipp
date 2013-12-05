@@ -9,7 +9,21 @@ namespace std
         return coutmt_singleton_instance;
     }
 
-    coutmt_singleton&       operator<< ( coutmt_singleton& coutmt_singleton_instance ,  std::ostream& (*function_ptr)(std::ostream&) )
+    coutmt_singleton&       operator<< ( coutmt_singleton& coutmt_singleton_instance ,  std::ostream&(*function_ptr)(std::ostream&) )
+    {
+        lock_guard<std::mutex> lock_guard(coutmt_singleton_instance.coutmt_mutex);
+        cout << function_ptr;
+        return coutmt_singleton_instance;
+    }
+
+    coutmt_singleton&       operator<< ( coutmt_singleton& coutmt_singleton_instance ,  ios&(*function_ptr)(ios&) )
+    {
+        lock_guard<std::mutex> lock_guard(coutmt_singleton_instance.coutmt_mutex);
+        cout << function_ptr;
+        return coutmt_singleton_instance;
+    }
+
+    coutmt_singleton&       operator<< ( coutmt_singleton& coutmt_singleton_instance ,  ios_base& (*function_ptr)(ios_base&) )
     {
         lock_guard<std::mutex> lock_guard(coutmt_singleton_instance.coutmt_mutex);
         cout << function_ptr;

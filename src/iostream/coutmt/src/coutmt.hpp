@@ -15,7 +15,9 @@ namespace std
         public:
                                         template <typename Type>
             friend coutmt_singleton&    operator<< ( coutmt_singleton& coutmt_singleton_instance , Type object );
-            friend coutmt_singleton&    operator<< ( coutmt_singleton& coutmt_singleton_instance ,  std::ostream& (*func)(std::ostream&) );
+            friend coutmt_singleton&    operator<< ( coutmt_singleton& coutmt_singleton_instance ,  std::ostream&(*function_ptr)(std::ostream&) );
+            friend coutmt_singleton&    operator<< ( coutmt_singleton& coutmt_singleton_instance ,  ios&(*function_ptr)(ios&) );
+            friend coutmt_singleton&    operator<< ( coutmt_singleton& coutmt_singleton_instance ,  ios_base& (*function_ptr)(ios_base&) );
             static coutmt_singleton&    get_instance ( void );
         private:
             inline explicit             coutmt_singleton ( void ) = default;
