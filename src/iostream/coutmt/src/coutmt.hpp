@@ -19,7 +19,7 @@ namespace std
             static coutmt_singleton&    get_instance ( void );
         private:
             inline explicit             coutmt_singleton ( void ) = default;
-            virtual                     ~coutmt_singleton ( void ) noexcept;
+            inline virtual              ~coutmt_singleton ( void ) noexcept;
             mutex                       coutmt_mutex;
             static coutmt_singleton*    instance_ptr;
     };
