@@ -32,28 +32,15 @@ namespace std
 
     coutmt_singleton&       coutmt_singleton::get_instance ( void )
     {
-        if ( coutmt_singleton::instance_ptr == nullptr )
+
+        static std::unique_ptr<coutmt_singleton> coutmt_instance_unique_prt;
+
+        if ( coutmt_instance_unique_prt == nullptr )
         {
-            coutmt_singleton::instance_ptr = new coutmt_singleton();
+            coutmt_instance_unique_prt.reset(new coutmt_singleton());
         }
-        return *coutmt_singleton::instance_ptr;
+
+        return *coutmt_instance_unique_prt;
     }
-
-                            coutmt_singleton::~coutmt_singleton ( void ) noexcept
-    {
-        try
-        {
-            if ( coutmt_singleton::instance_ptr != nullptr )
-            {
-                delete coutmt_singleton::instance_ptr;
-            }
-        }
-        catch ( ... )
-        {
-
-        }
-    }
-
-    coutmt_singleton*       coutmt_singleton::instance_ptr = nullptr;
 
 }
