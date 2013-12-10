@@ -21,19 +21,19 @@ namespace std
             public abstract_functor<arguments_type...>
     {
         public:
-            explicit        functor ( object_type* objectPtr , void(object_type::*methodPtr)(arguments_type...) )
+            explicit        functor ( object_type* object_ptr , void(object_type::*method_ptr)(arguments_type...) )
             {
                 if
                 (
-                    objectPtr == nullptr
+                    object_ptr == nullptr
                         ||
-                    methodPtr == nullptr
+                    method_ptr == nullptr
                 )
                 {
                     throw -1;
                 }
-                this->objectPtr = objectPtr;
-                this->methodPtr = methodPtr;
+                this->object_ptr = object_ptr;
+                this->method_ptr = method_ptr;
             }
             virtual         ~functor ( void ) noexcept override = default;
             virtual void    operator() ( arguments_type... arguments ) const override final
@@ -42,10 +42,10 @@ namespace std
             }
             virtual void    invoke ( arguments_type... arguments ) const override final
             {
-                ((this->objectPtr)->*(this->methodPtr))(arguments...);
+                ((this->object_ptr)->*(this->method_ptr))(arguments...);
             }
-            void            (object_type::*methodPtr)(arguments_type...);
-            object_type*    objectPtr;
+            void            (object_type::*method_ptr)(arguments_type...);
+            object_type*    object_ptr;
     };
 }
 

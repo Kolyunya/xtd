@@ -191,7 +191,7 @@ namespace std
 
             mutable functor_listeners_collection    functor_listeners;
 
-            std::recursive_mutex                    master_mutex;
+            mutable std::recursive_mutex            master_mutex;
 
     };
 }
