@@ -6,10 +6,11 @@
                                 // std::lock_guard
 #include <stdexcept>            // std::runtime_error
 #include <functional.hpp>       // std::functor
+#include <event/event.hpp>      // std::event
 
 namespace std
 {
-
+/*
     typedef std::pair<int,abstract_functor*>        subscription;
 
     typedef std::multimap<int,abstract_functor*>    subscriptions_map;
@@ -49,13 +50,13 @@ namespace std
             std::recursive_mutex    mutex;
 
     };
-
+*/
 }
 
 // Include implementation file
-#include "event_dispatcher.ipp"
+//#include "event_dispatcher.ipp"
 
 // Include templates implementation file
-#include "event_dispatcher.tpp"
+//#include "event_dispatcher.tpp"
 
 #endif  // _EVENT_DISPATCHER_HPP_

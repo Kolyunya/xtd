@@ -2,6 +2,7 @@
 #define _STD_EVENT_HPP_
 
 #include <vector>
+#include <thread>
 #include <functional.hpp>
 
 namespace std
@@ -10,175 +11,187 @@ namespace std
     class event
     {
         public:
-            using FreeListener = void(*)(data_type...);
-            using FreeListeners = std::vector<FreeListener>;
-            using FreeListenersCitr = typename FreeListeners::const_iterator;
-            using FreeListenersItr = typename FreeListeners::iterator;
+            using free_listener = void(*)(data_type...);
+            using free_listeners_collection = std::vector<free_listener>;
+            using free_listeners_collection_citr = typename free_listeners_collection::const_iterator;
+            using free_listeners_collection_itr = typename free_listeners_collection::iterator;
 
-            template <typename Object>
-            using FunctorListener = std::functor<Object,data_type...>;
-            using AbstractFunctorListener = typename std::abstract_functor<data_type...>;
-            using FunctorListeners = std::vector<AbstractFunctorListener*>;
-            using FunctorListenersCitr = typename FunctorListeners::const_iterator;
-            using FunctorListenersItr = typename FunctorListeners::iterator;
+            template <typename object_type>
+            using functor_listener = std::functor<object_type,data_type...>;
+            using abstract_functor_listener = typename std::abstract_functor<data_type...>;
+            using functor_listeners_collection = std::vector<abstract_functor_listener*>;
+            using functor_listeners_collection_citr = typename functor_listeners_collection::const_iterator;
+            using functor_listeners_collection_itr = typename functor_listeners_collection::iterator;
 
-            unsigned int                    getListenersCount ( void ) const
+            unsigned int                            get_listeners_count ( void ) const
             {
+                std::lock_guard<std::recursive_mutex> master_lock_guard(this->master_mutex);
                 return
                 (
-                    this->getFreeListenersCount()
+                    this->get_free_listeners_count()
                         +
-                    this->getFunctorListenersCount()
+                    this->get_functor_listeners_count()
                 );
             }
 
-            unsigned int                    getFreeListenersCount ( void ) const
+            unsigned int                            get_free_listeners_count ( void ) const
             {
-                return this->freeListeners.size();
+                std::lock_guard<std::recursive_mutex> master_lock_guard(this->master_mutex);
+                return this->free_listeners.size();
             }
 
-            unsigned int                    getFunctorListenersCount ( void ) const
+            unsigned int                            get_functor_listeners_count ( void ) const
             {
-                return this->functorListeners.size();
+                std::lock_guard<std::recursive_mutex> master_lock_guard(this->master_mutex);
+                return this->functor_listeners.size();
             }
 
-            bool                            hasListener ( FreeListener freeListener ) const
+            bool                                    has_listener ( free_listener free_listener_instance ) const
             {
-                return this->getListenerItr(freeListener) != this->freeListeners.end();
+                std::lock_guard<std::recursive_mutex> master_lock_guard(this->master_mutex);
+                return this->get_listener_itr(free_listener_instance) != this->free_listeners.end();
             }
 
-                                            template <typename Object>
-            bool                            hasListener ( Object* objectPtr , void(Object::*methodPtr)(data_type...) ) const
+                                                    template <typename object_type>
+            bool                                    has_listener ( object_type* object_ptr , void(object_type::*method_ptr)(data_type...) ) const
             {
-                return this->getListenerItr(objectPtr,methodPtr) != this->functorListeners.end();
+                std::lock_guard<std::recursive_mutex> master_lock_guard(this->master_mutex);
+                return this->get_listener_itr(object_ptr,method_ptr) != this->functor_listeners.end();
             }
 
-            void                            addListener ( FreeListener freeListener )
+            void                                    add_listener ( free_listener free_listener_instance )
             {
-                this->checkHasNoListener(freeListener);
-                this->freeListeners.push_back(freeListener);
+                std::lock_guard<std::recursive_mutex> master_lock_guard(this->master_mutex);
+                this->check_has_no_listener(free_listener_instance);
+                this->free_listeners.push_back(free_listener_instance);
             }
 
-                                            template <typename Object>
-            void                            addListener ( Object* objectPtr , void(Object::*methodPtr)(data_type...) )
+                                                    template <typename object_type>
+            void                                    add_listener ( object_type* object_ptr , void(object_type::*method_ptr)(data_type...) )
             {
-                this->checkHasNoListener(objectPtr,methodPtr);
-                this->functorListeners.push_back(new FunctorListener<Object>(objectPtr,methodPtr));
+                std::lock_guard<std::recursive_mutex> master_lock_guard(this->master_mutex);
+                this->check_has_no_listener(object_ptr,method_ptr);
+                this->functor_listeners.push_back(new functor_listener<object_type>(object_ptr,method_ptr));
             }
 
-            void                            removeListener ( FreeListener freeListener )
+            void                                    remove_listener ( free_listener free_listener_instance )
             {
-                this->checkHasListener(freeListener);
-                this->freeListeners.erase(this->getListenerItr(freeListener));
+                std::lock_guard<std::recursive_mutex> master_lock_guard(this->master_mutex);
+                this->check_has_listener(free_listener_instance);
+                this->free_listeners.erase(this->get_listener_itr(free_listener_instance));
             }
 
-                                            template <typename Object>
-            void                            removeListener ( Object* objectPtr , void(Object::*methodPtr)(data_type...) )
+                                                    template <typename object_type>
+            void                                    remove_listener ( object_type* object_ptr , void(object_type::*method_ptr)(data_type...) )
             {
-                this->checkHasListener(objectPtr,methodPtr);
-                this->functorListeners.erase(this->getListenerItr(objectPtr,methodPtr));
-            }
-
-            void                            dispatch ( data_type... data ) const
-            {
-                this->dispatchFreeListeners(data...);
-                this->dispatchFunctorListeners(data...);
+                std::lock_guard<std::recursive_mutex> master_lock_guard(this->master_mutex);
+                this->check_has_listener(object_ptr,method_ptr);
+                this->functor_listeners.erase(this->get_listener_itr(object_ptr,method_ptr));
             }
 
         protected:
 
-            void                            checkHasListener ( FreeListener freeListener ) const
+            void                                    check_has_listener ( free_listener free_listener_instance ) const
             {
-                if ( this->hasListener(freeListener) == false )
+                if ( this->has_listener(free_listener_instance) == false )
                 {
                     throw -1;
                 }
             }
 
-                                            template <typename Object>
-            void                            checkHasListener ( Object* objectPtr , void(Object::*methodPtr)(data_type...) ) const
+                                                    template <typename object_type>
+            void                                    check_has_listener ( object_type* object_ptr , void(object_type::*method_ptr)(data_type...) ) const
             {
-                if ( this->hasListener(objectPtr,methodPtr) == false )
+                if ( this->has_listener(object_ptr,method_ptr) == false )
                 {
                     throw -1;
                 }
             }
 
-            void                            checkHasNoListener ( FreeListener freeListener ) const
+            void                                    check_has_no_listener ( free_listener free_listener_instance ) const
             {
-                if ( this->hasListener(freeListener) == true )
+                if ( this->has_listener(free_listener_instance) == true )
                 {
                     throw -1;
                 }
             }
 
-                                            template <typename Object>
-            void                            checkHasNoListener ( Object* objectPtr , void(Object::*methodPtr)(data_type...) ) const
+                                                    template <typename object_type>
+            void                                    check_has_no_listener ( object_type* object_ptr , void(object_type::*method_ptr)(data_type...) ) const
             {
-                if ( this->hasListener(objectPtr,methodPtr) == true )
+                if ( this->has_listener(object_ptr,method_ptr) == true )
                 {
                     throw -1;
                 }
             }
 
-            FreeListenersItr                getListenerItr ( FreeListener freeListener ) const
+            free_listeners_collection_itr           get_listener_itr ( free_listener free_listener_instance ) const
             {
-                FreeListenersItr freeListenersItr = this->freeListeners.begin();
-                while ( freeListenersItr != this->freeListeners.end() )
+                free_listeners_collection_itr free_listeners_itr = this->free_listeners.begin();
+                while ( free_listeners_itr != this->free_listeners.end() )
                 {
-                    if ( *freeListenersItr == freeListener )
+                    if ( *free_listeners_itr == free_listener_instance )
                     {
                         break;
                     }
-                    freeListenersItr++;
+                    free_listeners_itr++;
                 }
-                return freeListenersItr;
+                return free_listeners_itr;
             }
 
-                                            template <typename Object>
-            FunctorListenersItr             getListenerItr ( Object* objectPtr , void(Object::*methodPtr)(data_type...) ) const
+                                                    template <typename object_type>
+            functor_listeners_collection_itr        get_listener_itr ( object_type* object_ptr , void(object_type::*method_ptr)(data_type...) ) const
             {
-                FunctorListenersItr functorListenersItr = this->functorListeners.begin();
-                while ( functorListenersItr != this->functorListeners.end() )
+                functor_listeners_collection_itr functor_listeners_itr = this->functor_listeners.begin();
+                while ( functor_listeners_itr != this->functor_listeners.end() )
                 {
-                    FunctorListener<Object>* functorListenerPtr = dynamic_cast<FunctorListener<Object>*>(*functorListenersItr);
+                    functor_listener<object_type>* functor_listener_ptr = dynamic_cast<functor_listener<object_type>*>(*functor_listeners_itr);
                     if
                     (
-                        functorListenerPtr != nullptr
+                        functor_listener_ptr != nullptr
                             &&
-                        functorListenerPtr->objectPtr == objectPtr
+                        functor_listener_ptr->object_ptr == object_ptr
                             &&
-                        functorListenerPtr->methodPtr == methodPtr
+                        functor_listener_ptr->method_ptr == method_ptr
                     )
                     {
                         break;
                     }
-                    functorListenersItr++;
+                    functor_listeners_itr++;
                 }
-                return functorListenersItr;
+                return functor_listeners_itr;
             }
 
-            void                            dispatchFreeListeners ( data_type... data ) const
+            void                                    dispatch ( data_type... data ) const
             {
-                for ( FreeListener freeListener : this->freeListeners )
+                std::lock_guard<std::recursive_mutex> master_lock_guard(this->master_mutex);
+                this->dispatch_free_listeners(data...);
+                this->dispatch_functor_listeners(data...);
+            }
+
+            void                                    dispatch_free_listeners ( data_type... data ) const
+            {
+                free_listeners_collection freeListeners_copy = this->free_listeners;
+                for ( free_listener free_listener_instance : freeListeners_copy )
                 {
-                    std::cout << "FREE LISTENER" << std::endl;
-                    freeListener(data...);
+                    free_listener_instance(data...);
                 }
             }
 
-            void                            dispatchFunctorListeners ( data_type... data ) const
+            void                                    dispatch_functor_listeners ( data_type... data ) const
             {
-                for ( AbstractFunctorListener* abstractFunctorListenerPtr : this->functorListeners )
+                functor_listeners_collection functorListeners_copy = this->functor_listeners;
+                for ( abstract_functor_listener* abstractFunctorListenerPtr : functorListeners_copy )
                 {
-                    std::cout << "FUNCTOR LISTENER" << std::endl;
                     (*abstractFunctorListenerPtr)(data...);
                 }
             }
 
-            mutable FreeListeners           freeListeners;
+            mutable free_listeners_collection       free_listeners;
 
-            mutable FunctorListeners        functorListeners;
+            mutable functor_listeners_collection    functor_listeners;
+
+            std::recursive_mutex                    master_mutex;
 
     };
 }
