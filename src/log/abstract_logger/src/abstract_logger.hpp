@@ -14,23 +14,23 @@ namespace std
 
         public:
 
-            explicit            abstract_logger ( bool add_new_line = true , bool add_time_stamp = true ) noexcept;
+            inline explicit         abstract_logger ( bool add_new_line = true , bool add_time_stamp = true ) noexcept;
 
-            void                log ( const string& data ) const noexcept;
+            inline void             log ( const string& data ) const noexcept;
 
-            bool                add_new_line;
+            bool                    add_new_line;
 
-            bool                add_time_stamp;
+            bool                    add_time_stamp;
 
         protected:
 
-            virtual void        log_data ( const string& data ) const noexcept = 0 ;
+            virtual void            log_data ( const string& data ) const noexcept = 0;
 
-            void                log_new_line ( void ) const noexcept;
+            inline void             log_new_line ( void ) const noexcept;
 
-            void                log_time_stamp ( void ) const noexcept;
+            inline void             log_time_stamp ( void ) const noexcept;
 
-            static string       make_time_stamp ( void ) noexcept;
+            inline static string    make_time_stamp ( void ) noexcept;
 
     };
 

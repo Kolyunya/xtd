@@ -13,19 +13,19 @@ namespace std
 
         public:
 
-                                logger_client ( abstract_logger* logger_ptr = nullptr );
+            inline explicit             logger_client ( abstract_logger* logger_ptr = nullptr );
 
-            abstract_logger&    get_logger_ref ( void );
+            inline abstract_logger&     get_logger_ref ( void );
 
-            abstract_logger*    get_logger_ptr ( void );
+            inline abstract_logger*     get_logger_ptr ( void );
 
-            void                set_logger ( abstract_logger* logger_ptr = nullptr );
+            inline void                 set_logger ( abstract_logger* logger_ptr = nullptr );
 
-            void                log ( const std::string& data ) const;
+            inline void                 log ( const std::string& data ) const;
 
         protected:
 
-            abstract_logger*    logger_ptr;
+            abstract_logger*            logger_ptr;
 
     };
 

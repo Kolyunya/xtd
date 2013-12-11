@@ -16,11 +16,11 @@ namespace std
 
         public:
 
-            explicit        console_logger ( bool add_new_line = true , bool add_time_stamp = true ) noexcept;
+            inline explicit         console_logger ( bool add_new_line = true , bool add_time_stamp = true ) noexcept;
 
         protected:
 
-            virtual void    log_data ( const std::string& data ) const noexcept override;
+            inline virtual void     log_data ( const std::string& data ) const noexcept override;
 
     };
 

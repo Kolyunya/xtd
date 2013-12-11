@@ -16,13 +16,13 @@ namespace std
 
         public:
 
-                            file_logger ( const std::string& file , bool add_new_line = true , bool add_time_stamp = true ) noexcept;
+            inline explicit         file_logger ( const std::string& file , bool add_new_line = true , bool add_time_stamp = true ) noexcept;
 
         protected:
 
-            virtual void    log_data ( const std::string& data ) const noexcept override;
+            inline virtual void     log_data ( const std::string& data ) const noexcept override;
 
-            std::string     file;
+            std::string             file;
 
     };
 
