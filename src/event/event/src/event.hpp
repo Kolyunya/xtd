@@ -3,6 +3,7 @@
 
 #include <vector>
 #include <thread>
+#include <mutex>
 #include <functional.hpp>
 
 namespace std
@@ -89,6 +90,13 @@ namespace std
                 this->functor_listeners.erase(this->get_listener_itr(object_ptr,method_ptr));
             }
 
+            void                                    dispatch ( data_type... data ) const
+            {
+                std::lock_guard<std::recursive_mutex> master_lock_guard(this->master_mutex);
+                this->dispatch_free_listeners(data...);
+                this->dispatch_functor_listeners(data...);
+            }
+
         protected:
 
             void                                    check_has_listener ( free_listener free_listener_instance ) const
@@ -160,13 +168,6 @@ namespace std
                     functor_listeners_itr++;
                 }
                 return functor_listeners_itr;
-            }
-
-            void                                    dispatch ( data_type... data ) const
-            {
-                std::lock_guard<std::recursive_mutex> master_lock_guard(this->master_mutex);
-                this->dispatch_free_listeners(data...);
-                this->dispatch_functor_listeners(data...);
             }
 
             void                                    dispatch_free_listeners ( data_type... data ) const

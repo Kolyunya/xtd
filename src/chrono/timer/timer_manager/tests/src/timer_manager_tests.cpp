@@ -1,5 +1,10 @@
 #include <gtest/gtest.h>
-#include <chrono/timer.hpp>
+#include <chrono/timer_manager.hpp>
+
+TEST ( foo , bar )
+{
+
+}
 
 int main ( int argc , char** argv )
 {

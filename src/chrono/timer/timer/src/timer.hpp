@@ -1,11 +1,9 @@
-#ifndef _TIMER_HPP_
-#define _TIMER_HPP_
+#ifndef _STD_TIMER_HPP_
+#define _STD_TIMER_HPP_
 
-#include <stdexcept>
-#include <thread>
-#include <mutex>
-#include <chrono.hpp>
+#include <vector>
 #include <event.hpp>
+#include <chrono/timer_manager.hpp>
 
 namespace std
 {
@@ -13,76 +11,140 @@ namespace std
     namespace chrono
     {
 
+        template <typename clock = high_resolution_clock>
         class timer
-            :
-                public std::event_dispatcher
         {
-
             public:
 
-                typedef std::chrono::high_resolution_clock          clock;
+                using duration = typename clock::duration;
 
-                typedef std::chrono::milliseconds                   precision;
+                using time_point = typename clock::time_point;
 
-                typedef std::chrono::time_point<clock,precision>    time_point;
+                using event_start_type = typename std::event<>;
 
-                explicit                        timer ( const precision& tick_interval = precision(0) , const unsigned long& tick_limit = 0 );
+                using event_tick_type = typename std::event <unsigned int>;
 
-                virtual                         ~timer ( void );
+                using event_complete_type = typename std::event<>;
 
-                bool                            get_is_active ( void ) const;
+                using event_stop_type = typename std::event<>;
 
-                precision                       get_tick_interval ( void ) const;
 
-                unsigned long                   get_tick_limit ( void ) const;
+                explicit                timer ( void )
+                                            :
+                                                is_active(false),
+                                                ticks_done(0)
+                {
 
-                unsigned long                   get_last_tick_id ( void ) const;
+                }
 
-                void                            set_tick_interval ( const precision& tick_interval );
+                virtual                 ~timer ( void ) noexcept
+                {
+                    this->stop();
+                }
 
-                void                            set_tick_limit ( const unsigned long& tick_limit );
+                void                    get_is_active ( void ) const
+                {
+                    return this->is_active;
+                }
 
-                bool                            start ( bool throw_on_fail = false );
+                void                    get_ticks_done ( void ) const
+                {
+                    return this->ticks_done();
+                }
 
-                bool                            stop ( bool throw_on_fail = false );
+                void                    start ( void )
+                {
+                    this->check_is_ready_to_start();
+                    timer_manager::get_instance().add_timer(this);
+                    this->update_next_tick_time_point();
+                    this->is_active = true;
+                    this->event_start.dispatch();
+                }
+
+                void                    stop ( void )
+                {
+                    this->check_is_ready_to_stop();
+                    timer_manager::get_instance().remove_timer(this);
+                    this->is_active = false;
+                    this->ticks_done = 0;
+                    this->event_stop.dispatch();
+                }
+
+                duration                tick_interval;
+
+                unsigned int            tick_limit;
+
+                event_start_type        event_start;
+
+                event_tick_type         event_tick;
+
+                event_complete_type     event_complete;
+
+                event_stop_type         event_stop;
+
 
             protected:
 
-                time_point                      get_time_point_current ( void ) const;
+                bool                    requires_tick ( void )
+                {
+                    return clock::now() >= this->next_tick_time_point;
+                }
 
-                bool                            get_reached_tick_limit ( void ) const;
+                void                    tick ( void )
+                {
 
-                bool                            get_tick_required( void ) const;
+                    if ( this->requires_tick() == true )
+                    {
 
-                void                            update_last_tick_time_point ( void );
+                        this->last_tick_id++;
+                        this->update_next_tick_time_point();
+                        this->event_tick.dispatch(this->last_tick_id);
 
-                void                            update_next_tick_time_point ( void );
+                        if ( this->last_tick_id == this->tick_limit )
+                        {
+                            this->event_complete.dispatch();
+                            this->stop();
+                            return;
+                        }
 
-                void                            tick ( void );
+                    }
 
-                void                            check_is_ready_to_start ( void ) const;
+                }
 
-                void                            check_is_ready_to_stop ( void ) const;
+                void                    update_next_tick_time_point ( void )
+                {
 
-                static void                     service_thread_routine ( timer* timer );
 
-                precision                       tick_interval;
+                }
 
-                unsigned long                   tick_limit;
+                void                    check_is_ready_to_start ( void ) const
+                {
+                    if
+                    (
+                        this->tick_interval.count() == 0
+                            ||
+                        this->is_active == true
+                    )
+                    {
+                        throw std::runtime_error("Timer is not ready to start");
+                    }
+                }
 
-                unsigned long                   last_tick_id;
+                void                    check_is_ready_to_stop ( void ) const
+                {
+                    if ( this->is_active == false )
+                    {
 
-                time_point                      last_tick_time_point;
+                        throw std::runtime_error("Timer is already stopped");
 
-                time_point                      next_tick_time_point;
+                    }
+                }
 
-                bool                            is_active;
+                bool                    is_active;
 
-                std::thread                     service_thread;
+                unsigned int            ticks_done;
 
-                mutable std::recursive_mutex    data_mutex;         // This mutex is used to restrict simultaneous access to timer data
-
-                mutable std::recursive_mutex    command_mutex;      // This mutex is used to restric simultaneous execution of timer commands
+                time_point              next_tick_time_point;
 
         };
 
@@ -90,7 +152,4 @@ namespace std
 
 }
 
-// Include implementation file
-#include "timer.ipp"
-
-#endif    // _TIMER_HPP_
+#endif  //  _STD_TIMER_HPP_
