@@ -34,11 +34,6 @@ namespace std
 
                 }
 
-                bool                        has_timer ( timer_base* timer_ptr )
-                {
-                    return this->get_timer_itr(timer_ptr) != this->timers.cend();
-                }
-
                 void                        add_timer ( timer_base* timer_ptr )
                 {
                     this->check_has_no_timer(timer_ptr);
@@ -61,7 +56,12 @@ namespace std
 
                 }
 
-                void                        check_has_timer ( timer_base* timer_ptr )
+                bool                        has_timer ( const timer_base* timer_ptr ) const
+                {
+                    return this->get_timer_itr(timer_ptr) != this->timers.cend();
+                }
+
+                void                        check_has_timer ( const timer_base* timer_ptr ) const
                 {
                     if ( this->has_timer(timer_ptr) == false )
                     {
@@ -69,7 +69,7 @@ namespace std
                     }
                 }
 
-                void                        check_has_no_timer ( timer_base* timer_ptr )
+                void                        check_has_no_timer ( const timer_base* timer_ptr ) const
                 {
                     if ( this->has_timer(timer_ptr) == true )
                     {
@@ -77,7 +77,7 @@ namespace std
                     }
                 }
 
-                timers_vector_itr           get_timer_itr ( timer_base* timer_ptr )
+                timers_vector_itr           get_timer_itr ( const timer_base* timer_ptr ) const
                 {
 
                     timers_vector_itr timers_vector_itr_obj = this->timers.begin();
@@ -98,7 +98,7 @@ namespace std
 
                 }
 
-                static void                 thread_routine ( timer_manager* timer_manager_ptr )
+                static void                 thread_routine ( const timer_manager* timer_manager_ptr )
                 {
 
                     for ( timer_base* timer_ptr : timer_manager_ptr->timers )
@@ -126,7 +126,7 @@ namespace std
 
                 raii_thread_manual          thread;
 
-                timers_vector               timers;
+                mutable timers_vector       timers;
 
         };
 
