@@ -13,6 +13,8 @@ namespace std
 
         template <typename clock = high_resolution_clock>
         class timer
+            :
+                public timer_base
         {
             public:
 
@@ -39,7 +41,14 @@ namespace std
 
                 virtual                 ~timer ( void ) noexcept
                 {
-                    this->stop();
+                    try
+                    {
+                        this->stop();
+                    }
+                    catch ( ... )
+                    {
+                        //  timer may be already stopped
+                    }
                 }
 
                 void                    get_is_active ( void ) const
@@ -90,17 +99,17 @@ namespace std
                     return clock::now() >= this->next_tick_time_point;
                 }
 
-                void                    tick ( void )
+                virtual void            tick ( void ) override
                 {
 
                     if ( this->requires_tick() == true )
                     {
 
-                        this->last_tick_id++;
+                        this->ticks_done++;
                         this->update_next_tick_time_point();
-                        this->event_tick.dispatch(this->last_tick_id);
+                        this->event_tick.dispatch(this->ticks_done);
 
-                        if ( this->last_tick_id == this->tick_limit )
+                        if ( this->ticks_done == this->tick_limit )
                         {
                             this->event_complete.dispatch();
                             this->stop();
@@ -113,8 +122,7 @@ namespace std
 
                 void                    update_next_tick_time_point ( void )
                 {
-
-
+                    this->next_tick_time_point = clock::now() + this->tick_interval;
                 }
 
                 void                    check_is_ready_to_start ( void ) const

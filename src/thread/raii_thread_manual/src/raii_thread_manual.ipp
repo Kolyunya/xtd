@@ -18,7 +18,7 @@ namespace std
         return this->thread.joinable();
     }
 
-    void    raii_thread_manual::launch ( void )
+    void    raii_thread_manual::start ( void )
     {
         this->initializeRoutine();
     }

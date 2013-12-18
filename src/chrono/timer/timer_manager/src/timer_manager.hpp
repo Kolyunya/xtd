@@ -34,16 +34,21 @@ namespace std
 
                 }
 
-                void                        add_timer ( timer_base* timer_ptr )
+                void                        add_timer ( timer_base* const timer_ptr )
                 {
                     this->check_has_no_timer(timer_ptr);
                     this->timers.push_back(timer_ptr);
+                    this->thread.start();
                 }
 
-                void                        remove_timer ( timer_base* timer_ptr )
+                void                        remove_timer ( timer_base* const timer_ptr )
                 {
                     this->check_has_timer(timer_ptr);
                     this->timers.erase(this->get_timer_itr(timer_ptr));
+                    if ( this->timers.empty() )
+                    {
+                        this->thread.stop();
+                    }
                 }
 
             private:
@@ -52,7 +57,6 @@ namespace std
                                                 :
                                                     thread(std::bind(timer_manager::thread_routine,this))
                 {
-
 
                 }
 
