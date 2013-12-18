@@ -4,7 +4,7 @@
 #include <vector>
 #include <thread.hpp>
 #include <chrono/timer_base.hpp>
-
+#include <iostream>
 namespace std
 {
 
@@ -17,7 +17,14 @@ namespace std
 
                 virtual                     ~timer_manager ( void ) noexcept
                 {
+                    try
+                    {
+                        delete &(this->get_instance());
+                    }
+                    catch ( ... )
+                    {
 
+                    }
                 }
 
                 static timer_manager&       get_instance ( void )
