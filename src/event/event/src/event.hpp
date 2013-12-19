@@ -24,6 +24,28 @@ namespace std
             using functor_listeners_collection_citr = typename functor_listeners_collection::const_iterator;
             using functor_listeners_collection_itr = typename functor_listeners_collection::iterator;
 
+            virtual                                 ~event ( void ) noexcept
+            {
+                try
+                {
+                    for ( abstract_functor_listener* abstract_functor_listener_ptr : this->functor_listeners )
+                    {
+                        try
+                        {
+                            delete abstract_functor_listener_ptr;
+                        }
+                        catch ( ... )
+                        {
+
+                        }
+                    }
+                }
+                catch ( ... )
+                {
+
+                }
+            }
+
             unsigned int                            get_listeners_count ( void ) const
             {
                 std::lock_guard<std::recursive_mutex> master_lock_guard(this->master_mutex);
