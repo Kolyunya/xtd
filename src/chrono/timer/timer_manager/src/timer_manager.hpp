@@ -1,10 +1,11 @@
 #ifndef _STD_TIMER_MANAGER_HPP_
 #define _STD_TIMER_MANAGER_HPP_
 
+#include <memory>
 #include <vector>
 #include <thread.hpp>
 #include <chrono/timer_base.hpp>
-#include <iostream>
+
 namespace std
 {
 
@@ -43,6 +44,7 @@ namespace std
 
                 void                        add_timer ( timer_base* const timer_ptr )
                 {
+                    std::lock_guard<std::mutex> lock_guard(this->mutex);
                     this->check_has_no_timer(timer_ptr);
                     this->timers.push_back(timer_ptr);
                     this->thread.start();
@@ -50,6 +52,7 @@ namespace std
 
                 void                        remove_timer ( timer_base* const timer_ptr )
                 {
+                    std::lock_guard<std::mutex> lock_guard(this->mutex);
                     this->check_has_timer(timer_ptr);
                     this->timers.erase(this->get_timer_itr(timer_ptr));
                     if ( this->timers.empty() )
@@ -136,6 +139,8 @@ namespace std
                 timer_manager&              operator= ( timer_manager& ) = delete;
 
                 raii_thread_manual          thread;
+
+                std::mutex                  mutex;
 
                 mutable timers_vector       timers;
 
