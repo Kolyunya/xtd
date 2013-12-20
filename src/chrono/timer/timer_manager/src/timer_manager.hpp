@@ -18,6 +18,8 @@ namespace std
 
                 static timer_manager&       get_instance ( void )
                 {
+                    //  No mutex needed here because local statics are initialized in a thread-safe manner in C++11
+                    //  and the "instance" is not modified after the instantiation
                     static timer_manager instance;
                     return instance;
                 }
