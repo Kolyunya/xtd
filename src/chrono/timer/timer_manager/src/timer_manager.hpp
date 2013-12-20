@@ -27,10 +27,7 @@ namespace std
                     std::lock_guard<std::recursive_mutex> lock_guard(this->mutex);
                     this->check_has_no_timer(timer_ptr);
                     this->timers.push_back(timer_ptr);
-                    if ( this->timers.size() == 1 )
-                    {
-                        //this->thread.start();
-                    }
+                    this->start_thread_if_needed();
                 }
 
                 void                        remove_timer ( timer_base* const timer_ptr )
@@ -38,10 +35,7 @@ namespace std
                     std::lock_guard<std::recursive_mutex> lock_guard(this->mutex);
                     this->check_has_timer(timer_ptr);
                     this->timers.erase(this->get_timer_itr(timer_ptr));
-                    if ( this->timers.empty() )
-                    {
-                        //this->thread.stop();
-                    }
+                    this->stop_thread_if_needed();
                 }
 
             private:
@@ -50,13 +44,12 @@ namespace std
                                                 :
                                                     thread(std::bind(timer_manager::thread_routine,this))
                 {
-                    std::cout << "timer_manager::timer_manager" << std::endl;
-                    this->thread.start();
+
                 }
 
                 virtual                     ~timer_manager ( void ) noexcept
                 {
-                    std::cout << "timer_manager::~timer_manager" << std::endl;
+
                 }
 
                 bool                        has_timer ( const timer_base* timer_ptr ) const
@@ -78,6 +71,31 @@ namespace std
                     {
                         throw std::runtime_error("Timer is already being managed");
                     }
+                }
+
+                void                        start_thread_if_needed ( void )
+                {
+
+                    //  Starts the thread if there is exactly one active timer
+                    //  If there are more than one timer the thread is already started
+                    //  This function is called from "timer_manager::add_timer"
+                    if ( this->timers.size() == 1 )
+                    {
+                        this->thread.start();
+                    }
+
+                }
+
+                void                        stop_thread_if_needed ( void )
+                {
+
+                    //  Stops the thread if there are no active timers
+                    //  This function is called from "timer_manager::add_timer"
+                    if ( this->timers.empty() )
+                    {
+                        this->thread.stop();
+                    }
+
                 }
 
                 timers_vector_itr           get_timer_itr ( const timer_base* timer_ptr ) const

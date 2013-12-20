@@ -4,7 +4,7 @@
 #include <functional>
 #include <thread>
 #include <mutex>
-#include <iostream>
+
 namespace std
 {
     class raii_thread_base
@@ -22,7 +22,7 @@ namespace std
             bool                        terminate_flag;
             std::function<void()>       client_routine;
             std::thread                 thread;
-            std::mutex                  mutex;
+            std::recursive_mutex        mutex;
         private:
             inline explicit             raii_thread_base ( const raii_thread_base& rhs ) = delete;
             inline raii_thread_base&    operator= ( const raii_thread_base& rhs ) = delete;

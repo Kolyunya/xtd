@@ -16,8 +16,7 @@ namespace std
 
     void    raii_thread_base::initialize_routine ( void )
     {
-        std::lock_guard<std::mutex> lock(this->mutex);
-        std::cout << "raii_thread_base::initialize_routine" << std::endl;
+        std::lock_guard<std::recursive_mutex> lock(this->mutex);
         this->check_is_not_initialized();
         this->terminate_flag = false;
         this->thread = std::thread(raii_thread_base::routine,this);
@@ -25,12 +24,18 @@ namespace std
 
     void    raii_thread_base::deinitialize_routine ( void )
     {
-        std::unique_lock<std::mutex> lock(this->mutex);
-        std::cout << "raii_thread_base::deinitialize_routine" << std::endl;
+        std::unique_lock<std::recursive_mutex> lock(this->mutex);
         this->check_is_initialized();
         this->terminate_flag = true;
         lock.unlock();
-        this->thread.join();
+
+        //  Join the "thread" only if this function is not executed from it
+        //  Omitting the condition will leed to a frees if this function is executed from the "thread"
+        if ( this_thread::get_id() != this->thread.get_id() )
+        {
+            this->thread.join();
+        }
+
     }
 
     bool    raii_thread_base::get_is_initialized ( void ) const
@@ -61,7 +66,7 @@ namespace std
             try
             {
                 //	Check if the thread is supposed to be terminated
-                std::unique_lock<std::mutex> terminate_unique_lock(raii_thread_base_ptr->mutex,std::defer_lock);
+                std::unique_lock<std::recursive_mutex> terminate_unique_lock(raii_thread_base_ptr->mutex,std::defer_lock);
                 terminate_unique_lock.try_lock();
                 if ( raii_thread_base_ptr->terminate_flag )
                 {

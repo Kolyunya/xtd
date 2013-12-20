@@ -2,7 +2,7 @@
 #define _STD_RAII_THREAD_MANUAL_HPP_
 
 #include <thread/raii_thread_base.hpp>
-#include <iostream>
+
 namespace std
 {
     class raii_thread_manual

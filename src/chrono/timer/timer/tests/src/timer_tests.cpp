@@ -23,16 +23,11 @@ TEST ( timer , does_not_throw_while_starting )
         }
     );
     timer.tick_interval = std::chrono::seconds(1);
-    timer.tick_limit = 10;
+    timer.tick_limit = 3;
 
     timer.start();
+
     while (  timer.get_is_active() == true )
-    {
-
-    }
-
-    timer.start();
-    while ( timer.get_is_active() == true )
     {
 
     }
