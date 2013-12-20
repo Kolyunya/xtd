@@ -5,12 +5,12 @@ namespace std
         :
             raii_thread_base(client_routine)
     {
-        this->initializeRoutine();
+        this->initialize_routine();
     }
 
     raii_thread::~raii_thread ( void ) noexcept
     {
-
+        this->deinitialize_routine();
     }
 
 }

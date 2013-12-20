@@ -2,7 +2,7 @@
 #define _STD_RAII_THREAD_MANUAL_HPP_
 
 #include <thread/raii_thread_base.hpp>
-
+#include <iostream>
 namespace std
 {
     class raii_thread_manual
@@ -12,7 +12,6 @@ namespace std
         public:
             inline explicit     raii_thread_manual ( std::function<void()> client_routine );
             inline virtual      ~raii_thread_manual ( void ) noexcept override;
-            inline bool         isActive ( void ) const;
             inline void         start ( void );
             inline void         stop ( void );
     };

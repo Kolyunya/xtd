@@ -4,7 +4,7 @@
 #include <vector>
 #include <event.hpp>
 #include <chrono/timer_manager.hpp>
-
+#include <iostream>
 namespace std
 {
 
@@ -51,7 +51,7 @@ namespace std
                     }
                 }
 
-                void                    get_is_active ( void ) const
+                bool                    get_is_active ( void ) const
                 {
                     return this->is_active;
                 }
@@ -90,7 +90,6 @@ namespace std
                 event_complete_type     event_complete;
 
                 event_stop_type         event_stop;
-
 
             protected:
 

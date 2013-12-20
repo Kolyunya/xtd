@@ -4,7 +4,7 @@
 #include <functional>
 #include <thread>
 #include <mutex>
-
+#include <iostream>
 namespace std
 {
     class raii_thread_base
@@ -13,13 +13,16 @@ namespace std
             inline explicit             raii_thread_base ( std::function<void()> client_routine );
             inline virtual              ~raii_thread_base ( void ) noexcept;
         protected:
-            inline void                 initializeRoutine ( void );
-            inline void                 deinitializeRoutine ( void );
+            inline void                 initialize_routine ( void );
+            inline void                 deinitialize_routine ( void );
+            inline bool                 get_is_initialized ( void ) const;
+            inline void                 check_is_initialized ( void ) const;
+            inline void                 check_is_not_initialized ( void ) const;
             inline static void          routine ( raii_thread_base* raii_thread_base_ptr );
             bool                        terminate_flag;
-            std::mutex                  terminate_mutex;
             std::function<void()>       client_routine;
             std::thread                 thread;
+            std::mutex                  mutex;
         private:
             inline explicit             raii_thread_base ( const raii_thread_base& rhs ) = delete;
             inline raii_thread_base&    operator= ( const raii_thread_base& rhs ) = delete;

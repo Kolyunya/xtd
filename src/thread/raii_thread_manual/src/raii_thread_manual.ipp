@@ -5,27 +5,36 @@ namespace std
                 :
                     raii_thread_base(client_routine)
     {
+        std::cout << "raii_thread_manual::raii_thread_manual" <<std::endl;
 
     }
 
             raii_thread_manual::~raii_thread_manual ( void ) noexcept
     {
+        std::cout << "raii_thread_manual::~raii_thread_manual" <<std::endl;
+        try
+        {
+            if ( this->get_is_initialized() == true )
+            {
+                this->stop();
+            }
+        }
+        catch ( ... )
+        {
 
-    }
-
-    bool    raii_thread_manual::isActive ( void ) const
-    {
-        return this->thread.joinable();
+        }
     }
 
     void    raii_thread_manual::start ( void )
     {
-        this->initializeRoutine();
+        std::cout << "raii_thread_manual::start" << std::endl;
+        this->initialize_routine();
     }
 
     void    raii_thread_manual::stop ( void )
     {
-        this->deinitializeRoutine();
+        std::cout << "raii_thread_manual::stop" << std::endl;
+        this->deinitialize_routine();
     }
 
 }

@@ -11,26 +11,46 @@ namespace std
 
             raii_thread_base::~raii_thread_base ( void ) noexcept
     {
-        this->deinitializeRoutine();
+
     }
 
-    void    raii_thread_base::initializeRoutine ( void )
+    void    raii_thread_base::initialize_routine ( void )
     {
+        std::lock_guard<std::mutex> lock(this->mutex);
+        std::cout << "raii_thread_base::initialize_routine" << std::endl;
+        this->check_is_not_initialized();
+        this->terminate_flag = false;
         this->thread = std::thread(raii_thread_base::routine,this);
     }
 
-    void    raii_thread_base::deinitializeRoutine ( void )
+    void    raii_thread_base::deinitialize_routine ( void )
     {
-        try
+        std::unique_lock<std::mutex> lock(this->mutex);
+        std::cout << "raii_thread_base::deinitialize_routine" << std::endl;
+        this->check_is_initialized();
+        this->terminate_flag = true;
+        lock.unlock();
+        this->thread.join();
+    }
+
+    bool    raii_thread_base::get_is_initialized ( void ) const
+    {
+        return ( this->thread.joinable() == true );
+    }
+
+    void    raii_thread_base::check_is_initialized ( void ) const
+    {
+        if ( this->get_is_initialized() == false )
         {
-            std::unique_lock<std::mutex> terminate_unique_lock(this->terminate_mutex);
-            this->terminate_flag = true;
-            terminate_unique_lock.unlock();
-            this->thread.join();
+            throw std::runtime_error("Thread is not initialized");
         }
-        catch ( ... )
+    }
+
+    void    raii_thread_base::check_is_not_initialized ( void ) const
+    {
+        if ( this->get_is_initialized() == true )
         {
-            //	Destructor must not throw
+            throw std::runtime_error("Thread is already initialized");
         }
     }
 
@@ -41,7 +61,7 @@ namespace std
             try
             {
                 //	Check if the thread is supposed to be terminated
-                std::unique_lock<std::mutex> terminate_unique_lock(raii_thread_base_ptr->terminate_mutex,std::defer_lock);
+                std::unique_lock<std::mutex> terminate_unique_lock(raii_thread_base_ptr->mutex,std::defer_lock);
                 terminate_unique_lock.try_lock();
                 if ( raii_thread_base_ptr->terminate_flag )
                 {

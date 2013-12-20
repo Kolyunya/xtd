@@ -16,48 +16,31 @@ namespace std
         {
             public:
 
-                virtual                     ~timer_manager ( void ) noexcept
-                {
-                    try
-                    {
-                        delete &(this->get_instance());
-                    }
-                    catch ( ... )
-                    {
-
-                    }
-                }
-
                 static timer_manager&       get_instance ( void )
                 {
-
-                    static timer_manager* instance_ptr = nullptr;
-
-                    if ( instance_ptr == nullptr )
-                    {
-                        instance_ptr = new timer_manager();
-                    }
-
-                    return *instance_ptr;
-
+                    static timer_manager instance;
+                    return instance;
                 }
 
                 void                        add_timer ( timer_base* const timer_ptr )
                 {
-                    std::lock_guard<std::mutex> lock_guard(this->mutex);
+                    std::lock_guard<std::recursive_mutex> lock_guard(this->mutex);
                     this->check_has_no_timer(timer_ptr);
                     this->timers.push_back(timer_ptr);
-                    this->thread.start();
+                    if ( this->timers.size() == 1 )
+                    {
+                        //this->thread.start();
+                    }
                 }
 
                 void                        remove_timer ( timer_base* const timer_ptr )
                 {
-                    std::lock_guard<std::mutex> lock_guard(this->mutex);
+                    std::lock_guard<std::recursive_mutex> lock_guard(this->mutex);
                     this->check_has_timer(timer_ptr);
                     this->timers.erase(this->get_timer_itr(timer_ptr));
                     if ( this->timers.empty() )
                     {
-                        this->thread.stop();
+                        //this->thread.stop();
                     }
                 }
 
@@ -67,7 +50,13 @@ namespace std
                                                 :
                                                     thread(std::bind(timer_manager::thread_routine,this))
                 {
+                    std::cout << "timer_manager::timer_manager" << std::endl;
+                    this->thread.start();
+                }
 
+                virtual                     ~timer_manager ( void ) noexcept
+                {
+                    std::cout << "timer_manager::~timer_manager" << std::endl;
                 }
 
                 bool                        has_timer ( const timer_base* timer_ptr ) const
@@ -140,7 +129,7 @@ namespace std
 
                 raii_thread_manual          thread;
 
-                std::mutex                  mutex;
+                std::recursive_mutex        mutex;
 
                 mutable timers_vector       timers;
 
