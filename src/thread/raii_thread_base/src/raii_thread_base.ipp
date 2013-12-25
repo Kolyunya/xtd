@@ -14,6 +14,11 @@ namespace std
 
     }
 
+    bool    raii_thread_base::get_is_initialized ( void ) const
+    {
+        return ( this->thread.joinable() == true );
+    }
+
     void    raii_thread_base::initialize_routine ( void )
     {
         std::lock_guard<std::recursive_mutex> lock(this->mutex);
@@ -36,11 +41,6 @@ namespace std
             this->thread.join();
         }
 
-    }
-
-    bool    raii_thread_base::get_is_initialized ( void ) const
-    {
-        return ( this->thread.joinable() == true );
     }
 
     void    raii_thread_base::check_is_initialized ( void ) const

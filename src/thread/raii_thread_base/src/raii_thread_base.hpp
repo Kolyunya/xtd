@@ -12,10 +12,10 @@ namespace std
         public:
             inline explicit             raii_thread_base ( std::function<void()> client_routine );
             inline virtual              ~raii_thread_base ( void ) noexcept;
+            inline bool                 get_is_initialized ( void ) const;
         protected:
             inline void                 initialize_routine ( void );
             inline void                 deinitialize_routine ( void );
-            inline bool                 get_is_initialized ( void ) const;
             inline void                 check_is_initialized ( void ) const;
             inline void                 check_is_not_initialized ( void ) const;
             inline static void          routine ( raii_thread_base* raii_thread_base_ptr );
