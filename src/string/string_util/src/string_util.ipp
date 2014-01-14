@@ -168,7 +168,7 @@ namespace std
         // Create a result vector
         strings result;
 
-        // Calculate te size of the input string
+        // Calculate the size of the input string
         string string_copy = source_string;
         int string_size = string_copy.size();
 
@@ -214,6 +214,64 @@ namespace std
                 // Then we cut off the first fragment and the first delimiter and call the `string_split`
                 // function again with `input` string containing the rest of the string
                 string string_tail = string_copy.substr(first_delimiter_position+1,string_size-first_delimiter_position-1);
+                strings strings_tail = string_split(string_tail,delimiter);
+
+                // Add tail strings to result
+                result.insert(result.end(),strings_tail.begin(),strings_tail.end());
+
+            }
+
+        }
+
+        return result;
+
+    }
+
+    strings     string_split ( const string& source_string , const std::string& delimiter )
+    {
+
+        // Create a result vector
+        strings result;
+
+        // Calculate the size of the input string
+        string string_copy = source_string;
+        size_t string_size = string_copy.size();
+
+        // Calculate the size of the delimiter
+        size_t delimiter_size = delimiter.size();
+
+        // Don not process empty strings
+        if ( string_size > 0 )
+        {
+
+            // Search the position of the first delimiter.
+            int first_delimiter_position = string_copy.find_first_of(delimiter);
+
+            // No delimiters are in the string
+            if ( first_delimiter_position == -1 )
+            {
+
+                // The result is the whole string
+                result.push_back(string_copy);
+
+            }
+
+            // There is a delimiter in the string
+            else
+            {
+
+                // If the string does not start with a delimiter
+                if ( first_delimiter_position > 0 )
+                {
+
+                    string first_element = string_copy.substr(0,first_delimiter_position);
+                    result.push_back ( first_element );
+
+                }
+
+                // Cut off the first fragment and the first delimiter and call the `string_split`
+                // function again with `input` string containing the rest of the string
+                string string_tail = string_copy.substr(first_delimiter_position+delimiter_size,string_size-first_delimiter_position-delimiter_size);
                 strings strings_tail = string_split(string_tail,delimiter);
 
                 // Add tail strings to result

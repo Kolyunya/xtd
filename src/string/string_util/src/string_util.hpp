@@ -33,6 +33,8 @@ namespace std
 
     inline strings      string_split ( const string& source_string , char delimiter );
 
+    inline strings      string_split ( const string& source_string , const std::string& delimiter );
+
     inline string       string_replace ( const string& source_string , const char search_for , const char replace_with );
 
     inline bool         string_is_numeric ( const string& source_string );

@@ -132,6 +132,22 @@ TEST ( string_0100001000100100 , splits_to_0_0000_000_00_00_by_delimiter_1 )
 
 }
 
+TEST ( string_01_100001_10001_1001_100 , splits_to_0_0000_000_00_00_by_delimiter_1_1 )
+{
+
+    std::string delimiter = "1_1";
+    std::string string = "01_100001_10001_1001_100";
+    std::strings strings = std::string_split(string,delimiter);
+
+    ASSERT_EQ ( strings.size() , 5u );
+    ASSERT_EQ ( strings[0] , "0" );
+    ASSERT_EQ ( strings[1] , "0000" );
+    ASSERT_EQ ( strings[2] , "000" );
+    ASSERT_EQ ( strings[3] , "00" );
+    ASSERT_EQ ( strings[4] , "00" );
+
+}
+
 TEST ( string_UaaaUaaUUa , splits_to_aaa_aa_a_by_delimiter_U )
 {
 
