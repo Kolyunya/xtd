@@ -165,65 +165,8 @@ namespace std
     strings     string_split ( const string& source_string , char delimiter )
     {
 
-        // Create a result vector
-        strings result;
-
-        // Calculate the size of the input string
-        string string_copy = source_string;
-        int string_size = string_copy.size();
-
-        // Don not process empty strings
-        if ( string_size > 0 )
-        {
-
-            // searching for the position of the first delimiter.
-            int first_delimiter_position = string_copy.find_first_of(delimiter);
-
-            // No delimiters are in the string
-            if ( first_delimiter_position == -1 )
-            {
-
-                // The result is the whole string
-                result.push_back(string_copy);
-
-            }
-
-            // The only delimiter is the last and not the only character in the string
-            else if ( first_delimiter_position == string_size - 1 && string_size > 1 )
-            {
-
-                // The result is the string without the last character
-                string_copy.resize(first_delimiter_position);
-                result.push_back(string_copy);
-
-            }
-
-            // Delimiter is in the center of the string
-            else
-            {
-
-                // If the first character of the input is NOT a `delimiter` - add the first fragment to the output
-                if ( first_delimiter_position > 0 )
-                {
-
-                    string firstFragment = string_copy.substr(0,first_delimiter_position);
-                    result.push_back ( firstFragment );
-
-                }
-
-                // Then we cut off the first fragment and the first delimiter and call the `string_split`
-                // function again with `input` string containing the rest of the string
-                string string_tail = string_copy.substr(first_delimiter_position+1,string_size-first_delimiter_position-1);
-                strings strings_tail = string_split(string_tail,delimiter);
-
-                // Add tail strings to result
-                result.insert(result.end(),strings_tail.begin(),strings_tail.end());
-
-            }
-
-        }
-
-        return result;
+        std::string delimiter_string = string(1,delimiter);
+        return string_split(source_string,delimiter_string);
 
     }
 
