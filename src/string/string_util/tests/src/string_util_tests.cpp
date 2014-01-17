@@ -169,7 +169,7 @@ TEST ( string_FOOBAR , splits_to_F_O_O_B_A_R_by_empty_delimiter)
     std::string string = "FOOBAR";
     std::strings strings = std::string_split(string,delimiter);
 
-//    ASSERT_EQ ( strings.size() , 6u );
+    ASSERT_EQ ( strings.size() , 6u );
     ASSERT_EQ ( strings[0] , "F" );
     ASSERT_EQ ( strings[1] , "O" );
     ASSERT_EQ ( strings[2] , "O" );
