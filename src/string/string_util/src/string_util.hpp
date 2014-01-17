@@ -2,6 +2,7 @@
 #define _STRING_UTIL_HPP_
 
 #include <stdexcept>    // std::runtime_error
+#include <algorithm>    // std::for_each
 #include <vector>       // std::vector
 #include <sstream>      // std::string
                         // std::stringstream

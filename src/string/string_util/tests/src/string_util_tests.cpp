@@ -162,6 +162,23 @@ TEST ( string_UaaaUaaUUa , splits_to_aaa_aa_a_by_delimiter_U )
 
 }
 
+TEST ( string_FOOBAR , splits_to_F_O_O_B_A_R_by_empty_delimiter)
+{
+
+    std::string delimiter = "";
+    std::string string = "FOOBAR";
+    std::strings strings = std::string_split(string,delimiter);
+
+//    ASSERT_EQ ( strings.size() , 6u );
+    ASSERT_EQ ( strings[0] , "F" );
+    ASSERT_EQ ( strings[1] , "O" );
+    ASSERT_EQ ( strings[2] , "O" );
+    ASSERT_EQ ( strings[3] , "B" );
+    ASSERT_EQ ( strings[4] , "A" );
+    ASSERT_EQ ( strings[5] , "R" );
+
+}
+
 TEST ( string_0101010100100001010 , transforms_into_5151515155155551515_after_replacing_0_with_5 )
 {
 

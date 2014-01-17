@@ -176,12 +176,28 @@ namespace std
         // Create a result vector
         strings result;
 
+        // Calculate the size of the delimiter
+        size_t delimiter_size = delimiter.size();
+
+        if ( delimiter_size == 0 )
+        {
+            for_each
+            (
+                source_string.begin(),
+                source_string.end(),
+                [&result]
+                ( char character)
+                {
+                    string characterString = string(1,character);
+                    result.push_back(characterString);
+                }
+            );
+            return result;
+        }
+
         // Calculate the size of the input string
         string string_copy = source_string;
         size_t string_size = string_copy.size();
-
-        // Calculate the size of the delimiter
-        size_t delimiter_size = delimiter.size();
 
         // Don not process empty strings
         if ( string_size > 0 )
