@@ -1,6 +1,8 @@
 #ifndef _STD_PARAMETER_PACK_HPP_
 #define _STD_PARAMETER_PACK_HPP_
 
+#include <type_traits>
+
 namespace std
 {
 
@@ -45,13 +47,53 @@ namespace std
 
 
 
-    #pragma region DETECTION_OF_HOMOGENEOUS_PARAMETER_PACKS
+    #pragma region DETECTION_OF_HOMO_AND_HETERO_GENEOUS_PARAMETER_PACKS
 
-        template < typename... parameters >
-        bool is_homogeneous_parameter_pack ( void )
+        template < typename... parameters_types >
+        auto parameter_pack_is_homogeneous ( void )
+            ->
+                typename std::enable_if<(sizeof...(parameters_types) < 2),bool>::type
         {
             return true;
         }
+
+        template < typename first_parameter_type , typename second_parameter_type , typename... other_parameters_types >
+        bool parameter_pack_is_homogeneous ( void )
+        {
+
+            std::size_t first_parameter_type_hash_code = typeid(first_parameter_type).hash_code();
+            std::size_t second_parameter_type_hash_code = typeid(second_parameter_type).hash_code();
+            bool first_and_second_parameters_types_hash_codes_are_equal = first_parameter_type_hash_code == second_parameter_type_hash_code;
+
+            if ( first_and_second_parameters_types_hash_codes_are_equal == false )
+            {
+                return false;
+            }
+
+            std::size_t parameters_pack_size = sizeof...(other_parameters_types);
+            if ( parameters_pack_size == 0 )
+            {
+                return true;
+            }
+
+            return parameter_pack_is_homogeneous<second_parameter_type,other_parameters_types...>();
+
+        }
+
+        template < typename... parameters_types >
+        auto parameter_pack_is_heterogeneous ( void )
+            ->
+                typename std::enable_if<(sizeof...(parameters_types) < 2),bool>::type
+        {
+            return ! parameter_pack_is_homogeneous<parameters_types...>();
+        }
+
+        template < typename first_parameter_type , typename second_parameter_type , typename... other_parameters_types >
+        bool parameter_pack_is_heterogeneous ( void )
+        {
+            return ! parameter_pack_is_homogeneous<first_parameter_type,second_parameter_type,other_parameters_types...>();
+        }
+
 
     #pragma endregion
 
