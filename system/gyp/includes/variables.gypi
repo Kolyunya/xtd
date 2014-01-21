@@ -30,6 +30,7 @@
                                                             '-pedantic',                # Issue all the mandatory diagnostics listed in the C standard. Some of them are left out by default, since they trigger frequently on harmless code.
                                                             '-pedantic-errors',         # Issue all the mandatory diagnostics, and make all mandatory diagnostics into errors. This includes mandatory diagnostics that GCC issues without -pedantic but treats as warnings.
                                                             '-Wno-unused-function',     # Allow unused functions.
+                                                            '-Wno-unknown-pragmas',     # Allow unknown pragmas.
                                                         ],
                         'CFLAGS_DEBUG'              :   [
                                                             '-O0',                      # Reduce compilation time and make debugging produce the expected results. This is the default.
