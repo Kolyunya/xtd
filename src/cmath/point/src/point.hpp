@@ -350,6 +350,6 @@ namespace std
 }
 
 // Include implementation file
-#include "point.ipp"
+#include "point.tpp"
 
 #endif  //  _STD_POINT_HPP_
