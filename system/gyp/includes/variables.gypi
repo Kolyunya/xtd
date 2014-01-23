@@ -23,14 +23,16 @@
                         'GTEST_OBJECT_FILE'         :   '$(GTEST_HOME)/build/gtest-all.o',
                         'SCRIPTS_DIR'               :   '$(STD_HOME)/system/gyp/scripts',
                         'CFLAGS_STANDARD'           :   [
-                                                            '-std=<(UNIT_STANDARD)',    # Use c++11 standard
-                                                            '-Wall',                    # Turns on all optional warnings which are desirable for normal code.
-                                                            '-Wextra',                  # This enables some extra warning flags that are not enabled by -Wall
-                                                            '-Werror',                  # Make all warnings into hard errors. Source code which triggers warnings will be rejected.
-                                                            '-pedantic',                # Issue all the mandatory diagnostics listed in the C standard. Some of them are left out by default, since they trigger frequently on harmless code.
-                                                            '-pedantic-errors',         # Issue all the mandatory diagnostics, and make all mandatory diagnostics into errors. This includes mandatory diagnostics that GCC issues without -pedantic but treats as warnings.
-                                                            '-Wno-unused-function',     # Allow unused functions.
-                                                            '-Wno-unknown-pragmas',     # Allow unknown pragmas.
+                                                            '-std=<(UNIT_STANDARD)',        # Use c++11 standard
+                                                            '-Wall',                        # Turns on all optional warnings which are desirable for normal code.
+                                                            '-Wextra',                      # This enables some extra warning flags that are not enabled by -Wall
+                                                            '-Werror',                      # Make all warnings into hard errors. Source code which triggers warnings will be rejected.
+                                                            '-pedantic',                    # Issue all the mandatory diagnostics listed in the C standard. Some of them are left out by default, since they trigger frequently on harmless code.
+                                                            '-pedantic-errors',             # Issue all the mandatory diagnostics, and make all mandatory diagnostics into errors. This includes mandatory diagnostics that GCC issues without -pedantic but treats as warnings.
+                                                            '-Wno-unused-function',         # Allow unused functions.
+                                                            '-Wno-unused-parameter',        # Allow unused parameters.
+                                                            '-Wno-unused-variable',         # Allow unused variables.
+                                                            '-Wno-unused-but-set-variable', # Allow unused variables.
                                                         ],
                         'CFLAGS_DEBUG'              :   [
                                                             '-O0',                      # Reduce compilation time and make debugging produce the expected results. This is the default.

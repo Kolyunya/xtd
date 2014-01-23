@@ -4,7 +4,7 @@
 
 TEST ( first_parameter_pack_element_type , is_retrieved_correctly_000 )
 {
-    using first_parameter_type = typename std::parameter_pack::type_of_first<>::type;
+    using first_parameter_type = typename std::parameter_pack::first_type<>::type;
     std::size_t first_parameter_type_hash_expected = typeid(std::parameter_pack::null_type).hash_code();
     std::size_t first_parameter_type_hash_actual = typeid(first_parameter_type).hash_code();
     bool first_parameter_is_recognized_correctly = first_parameter_type_hash_expected == first_parameter_type_hash_actual;
@@ -13,7 +13,7 @@ TEST ( first_parameter_pack_element_type , is_retrieved_correctly_000 )
 
 TEST ( first_parameter_pack_element_type , is_retrieved_correctly_001 )
 {
-    using first_parameter_type = typename std::parameter_pack::type_of_first<std::string,bool,int,double>::type;
+    using first_parameter_type = typename std::parameter_pack::first_type<std::string,bool,int,double>::type;
     std::size_t first_parameter_type_hash_expected = typeid(std::string).hash_code();
     std::size_t first_parameter_type_hash_actual = typeid(first_parameter_type).hash_code();
     bool first_parameter_is_recognized_correctly = first_parameter_type_hash_expected == first_parameter_type_hash_actual;
@@ -22,7 +22,7 @@ TEST ( first_parameter_pack_element_type , is_retrieved_correctly_001 )
 
 TEST ( first_parameter_pack_element_type , is_retrieved_correctly_002 )
 {
-    using first_parameter_type = typename std::parameter_pack::type_of_first<double,std::string,bool,int>::type;
+    using first_parameter_type = typename std::parameter_pack::first_type<double,std::string,bool,int>::type;
     std::size_t first_parameter_type_hash_expected = typeid(double).hash_code();
     std::size_t first_parameter_type_hash_actual = typeid(first_parameter_type).hash_code();
     bool first_parameter_is_recognized_correctly = first_parameter_type_hash_expected == first_parameter_type_hash_actual;
@@ -31,7 +31,7 @@ TEST ( first_parameter_pack_element_type , is_retrieved_correctly_002 )
 
 TEST ( last_parameter_pack_element_type , is_retrieved_correctly_000 )
 {
-    using first_parameter_type = typename std::parameter_pack::type_of_last<std::string,bool,int,double>::type;
+    using first_parameter_type = typename std::parameter_pack::last_type<std::string,bool,int,double>::type;
     std::size_t first_parameter_type_hash_expected = typeid(double).hash_code();
     std::size_t first_parameter_type_hash_actual = typeid(first_parameter_type).hash_code();
     bool first_parameter_is_recognized_correctly = first_parameter_type_hash_expected == first_parameter_type_hash_actual;
@@ -40,7 +40,7 @@ TEST ( last_parameter_pack_element_type , is_retrieved_correctly_000 )
 
 TEST ( last_parameter_pack_element_type , is_retrieved_correctly_001 )
 {
-    using first_parameter_type = typename std::parameter_pack::type_of_last<double,std::string,bool,int>::type;
+    using first_parameter_type = typename std::parameter_pack::last_type<double,std::string,bool,int>::type;
     std::size_t first_parameter_type_hash_expected = typeid(int).hash_code();
     std::size_t first_parameter_type_hash_actual = typeid(first_parameter_type).hash_code();
     bool first_parameter_is_recognized_correctly = first_parameter_type_hash_expected == first_parameter_type_hash_actual;
@@ -105,6 +105,36 @@ TEST ( parameter_pack_consisting_of_three_integers_and_boolean , is_heterogeneou
 {
     bool parameter_pack_consisting_of_three_integers_and_boolean_is_heterogeneous = std::parameter_pack::is_heterogeneous<int,int,int,bool>::value;
     ASSERT_TRUE(parameter_pack_consisting_of_three_integers_and_boolean_is_heterogeneous);
+}
+
+TEST ( first_value_of_parameter_pack , is_retrieved_correctly_000 )
+{
+    int parameter_pack_element_value_expected = 42;
+    int parameter_pack_element_value_actual = std::parameter_pack::nth_value<0>(42);
+    ASSERT_EQ(parameter_pack_element_value_actual,parameter_pack_element_value_expected);
+}
+
+TEST ( first_value_of_parameter_pack , is_retrieved_correctly_001 )
+{
+    int parameter_pack_element_value_expected = 42;
+    int parameter_pack_element_value_actual = std::parameter_pack::nth_value<0>(42,true);
+    ASSERT_EQ(parameter_pack_element_value_actual,parameter_pack_element_value_expected);
+}
+
+TEST ( first_value_of_parameter_pack , is_retrieved_correctly_002 )
+{
+    std::string parameter_pack_element_value_expected = "foo";
+    std::string parameter_pack_element_value_actual = std::parameter_pack::nth_value<1,int,std::string>(42,"foo");
+    ASSERT_EQ(parameter_pack_element_value_actual,parameter_pack_element_value_expected);
+}
+
+TEST ( retrieving_value_from_empty_parameter_pack , throws_runtime_error )
+{
+    ASSERT_THROW
+    (
+        std::parameter_pack::nth_value<42>(),
+        std::runtime_error
+    );
 }
 
 int main ( int argc , char** argv )
