@@ -88,8 +88,6 @@ TEST ( coin_flip_10 , returns_true_in_10_percents_of_cases )
 
     }
 
-    std::cout << wins << std::endl;
-
     ASSERT_TRUE ( abs(wins-wins_expected) < threshold );
 
 }

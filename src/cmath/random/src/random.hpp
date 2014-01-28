@@ -24,4 +24,4 @@ namespace std
 // Include implementation file
 #include "random.ipp"
 
-#endif    // _RANDOM_HPP_
+#endif  //  _RANDOM_HPP_
