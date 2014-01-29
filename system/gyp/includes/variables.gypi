@@ -2,8 +2,8 @@
     'make_global_settings': [
                                 [
                                     'CXX',
-                                    '/usr/bin/clang++',
-                                    #'/usr/bin/g++',
+                                    #'/usr/bin/clang++',
+                                    '/usr/bin/g++',
                                 ],
                                 [
                                     'LINK',
