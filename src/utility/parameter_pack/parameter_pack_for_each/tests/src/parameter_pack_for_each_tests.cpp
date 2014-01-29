@@ -2,14 +2,18 @@
 #include <utility/parameter_pack.hpp>
 #include <iostream>
 
-void printer ( int integer )
+struct printer
 {
-    std::cout << integer << std::endl;
-}
+    template < typename type >
+    static void process ( type object )
+    {
+        std::cout << object << std::endl;
+    }
+};
 
 TEST ( foo , bar )
 {
-    std::pp::for_each<printer,int,int,int>(4,2,42);
+    std::pp::for_each<printer>(4,2,42);
 }
 
 int main ( int argc , char** argv )
