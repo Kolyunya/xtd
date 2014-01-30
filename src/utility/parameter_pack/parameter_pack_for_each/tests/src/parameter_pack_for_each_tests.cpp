@@ -11,9 +11,31 @@ struct printer
     }
 };
 
+/*
+
+template < typename type >
+void foo ( type object )
+{
+    //  foo the object
+}
+
+template < typename type >
+void bar ( type object )
+{
+    //  bar the object
+}
+
+template < typename type >
+void baz ( type object )
+{
+    //  baz the object
+}
+
+*/
+
 TEST ( foo , bar )
 {
-    std::pp::for_each<printer>(4,2,42);
+    std::pp::for_each<printer,int,int,int>(4,2,42);
 }
 
 int main ( int argc , char** argv )
