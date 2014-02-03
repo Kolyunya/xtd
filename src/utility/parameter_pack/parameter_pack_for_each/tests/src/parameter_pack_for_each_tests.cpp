@@ -2,10 +2,36 @@
 #include <utility/parameter_pack.hpp>
 #include <iostream>
 
-void printer ( int integer )
+struct printer
 {
-    std::cout << integer << std::endl;
+    template < typename type >
+    static void process ( type object )
+    {
+        std::cout << object << std::endl;
+    }
+};
+
+/*
+
+template < typename type >
+void foo ( type object )
+{
+    //  foo the object
 }
+
+template < typename type >
+void bar ( type object )
+{
+    //  bar the object
+}
+
+template < typename type >
+void baz ( type object )
+{
+    //  baz the object
+}
+
+*/
 
 TEST ( foo , bar )
 {
