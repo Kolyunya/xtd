@@ -7,11 +7,6 @@ namespace std
     namespace pp
     {
 
-        //  Doesn't compile in gcc, but compiles well in clang
-
-        template < typename type >
-        using parameter_processor = void(*)(type);
-
         template < typename parameter_processor , typename... parameters_types >
         void for_each ( parameters_types... parameters )
         {
