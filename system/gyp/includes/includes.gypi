@@ -1,7 +1,8 @@
 {
     'includes'  :   [
+                        'settings.gypi',
                         'variables.gypi',
-                        'targets.gypi',
                         'target_defaults.gypi',
+                        'targets.gypi',
                     ],
 }
