@@ -29,9 +29,9 @@
                                                             '-Werror',                      # Make all warnings into hard errors. Source code which triggers warnings will be rejected.
                                                             '-pedantic',                    # Issue all the mandatory diagnostics listed in the C standard. Some of them are left out by default, since they trigger frequently on harmless code.
                                                             '-pedantic-errors',             # Issue all the mandatory diagnostics, and make all mandatory diagnostics into errors. This includes mandatory diagnostics that GCC issues without -pedantic but treats as warnings.
-                                                            '-Wno-unused-function',         # Allow unused functions.
-                                                            '-Wno-unused-parameter',        # Allow unused parameters.
-                                                            '-Wno-unused-variable',         # Allow unused variables.
+                                                            #'-Wno-unused-function',         # Allow unused functions.
+                                                            #'-Wno-unused-parameter',        # Allow unused parameters.
+                                                            #'-Wno-unused-variable',         # Allow unused variables.
                                                             #'-Wno-unused-but-set-variable', # Allow unused variables.
                                                         ],
                         'CFLAGS_DEBUG'              :   [
