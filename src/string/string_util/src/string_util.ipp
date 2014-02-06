@@ -136,7 +136,7 @@ namespace std
 
     }
 
-    string      number_to_string ( const int source_number )
+    string      number_to_string ( int source_number )
     {
 
         stringstream string_stream;
@@ -145,14 +145,14 @@ namespace std
         return string_stream.str();
     }
 
-    string      number_to_string ( const unsigned int source_number )
+    string      number_to_string ( unsigned int source_number )
     {
 
         return number_to_string(static_cast<int>(source_number));
 
     }
 
-    string      number_to_string ( const float source_number )
+    string      number_to_string ( float source_number )
     {
 
         stringstream string_stream;
@@ -162,15 +162,14 @@ namespace std
 
     }
 
-    strings     string_split ( const string& source_string , char delimiter )
+    string      string_reverse ( const string& source_string )
     {
 
-        std::string delimiter_string = string(1,delimiter);
-        return string_split(source_string,delimiter_string);
+        return string(source_string.rbegin(),source_string.rend());
 
     }
 
-    strings     string_split ( const string& source_string , const std::string& delimiter )
+    strings     string_split ( const string& source_string , const string& delimiter )
     {
 
         // Create a result vector
@@ -244,32 +243,56 @@ namespace std
 
     }
 
-    string      string_reverse ( const string& source_string )
+    strings     string_split ( const string& source_string , char delimiter )
+    {
+        string delimiter_string = string(1,delimiter);
+        return string_split(source_string,delimiter_string);
+    }
+
+    strings     string_split ( const char* source_string_ptr , const char* delimiter_ptr )
+    {
+        string source_string = string(source_string_ptr);
+        string delimiter_string = string(delimiter_ptr);
+        return string_split(source_string,delimiter_string);
+    }
+
+    string      string_replace ( const string& source_string , const string& search_for , const string& replace_with )
     {
 
-        return string(source_string.rbegin(),source_string.rend());
+        size_t search_for_size = search_for.size();
+        string substring;
+        string resulting_string = source_string;
+        size_t resulting_string_character_id = 0;
+        size_t resulting_string_size = resulting_string.size();
+
+        while ( resulting_string_character_id < resulting_string_size )
+        {
+            substring = resulting_string.substr(resulting_string_character_id,search_for_size);
+            if ( substring == search_for )
+            {
+                resulting_string.replace(resulting_string_character_id,search_for_size,replace_with);
+                resulting_string_character_id = 0;
+            }
+            resulting_string_character_id++;
+        }
+
+        return resulting_string;
 
     }
 
     string      string_replace ( const string& source_string , const char search_for , const char replace_with )
     {
+        string search_for_string = string(1,search_for);
+        string replace_with_string = string(1,replace_with);
+        return string_replace(source_string,search_for_string,replace_with_string);
+    }
 
-        string string_copy = source_string;
-
-        for ( auto string_itr = string_copy.begin() ; string_itr != string_copy.end() ; string_itr ++ )
-        {
-
-            if ( *string_itr == search_for )
-            {
-
-                *string_itr = replace_with;
-
-            }
-
-        }
-
-        return string_copy;
-
+    string      string_replace ( const char* source_string_ptr , const char* search_for_ptr , const char* replace_with_ptr )
+    {
+        string source_string = string(source_string_ptr);
+        string search_for_string = string(search_for_ptr);
+        string replace_with_string = string(replace_with_ptr);
+        return string_replace(source_string,search_for_string,replace_with_string);
     }
 
     bool        string_is_numeric ( const string& source_string )

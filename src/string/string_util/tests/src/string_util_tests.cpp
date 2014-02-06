@@ -303,15 +303,41 @@ TEST ( really_long_string , causes_string_split_to_fail )
                             0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 \
                             0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 \
                             ";
-    std::strings strings = std::string_split(string,delimiter);
+    //std::strings strings = std::string_split(string,delimiter);
 
 }
 
-TEST ( string_0101010100100001010 , transforms_into_5151515155155551515_after_replacing_0_with_5 )
+TEST ( string_0101010100100001010 , transforms_into_5151515155155551515_after_replacing_0_with_5_000 )
 {
 
     char search_for = '0';
     char replace_with = '5';
+    std::string string = "0101010100100001010";
+    std::string string_transformed_correct = "5151515155155551515";
+    std::string string_transformed_actual = std::string_replace(string,search_for,replace_with);
+
+    ASSERT_EQ ( string_transformed_correct , string_transformed_actual );
+
+}
+
+TEST ( string_0101010100100001010 , transforms_into_5151515155155551515_after_replacing_0_with_5_001 )
+{
+
+    const char* search_for = "0";
+    const char* replace_with = "5";
+    const char* string = "0101010100100001010";
+    std::string string_transformed_correct = "5151515155155551515";
+    std::string string_transformed_actual = std::string_replace(string,search_for,replace_with);
+
+    ASSERT_EQ ( string_transformed_correct , string_transformed_actual );
+
+}
+
+TEST ( string_0101010100100001010 , transforms_into_5151515155155551515_after_replacing_0_with_5_002 )
+{
+
+    std::string search_for = "0";
+    std::string replace_with = "5";
     std::string string = "0101010100100001010";
     std::string string_transformed_correct = "5151515155155551515";
     std::string string_transformed_actual = std::string_replace(string,search_for,replace_with);
