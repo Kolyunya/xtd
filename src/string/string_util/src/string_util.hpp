@@ -14,7 +14,7 @@
 namespace std
 {
 
-    typedef vector<string> strings;
+    using strings = vector<string>;
 
     inline long int     string_to_long_int ( const string& source_string , int number_base = 10 );
 
@@ -53,4 +53,4 @@ namespace std
 // Include implementation file
 #include "string_util.ipp"
 
-#endif    // _STRING_UTIL_HPP_
+#endif  // _STRING_UTIL_HPP_
