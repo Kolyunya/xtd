@@ -5,9 +5,12 @@
 #include <array>
 #include <math.h>
 #include <iostream>
+#include <stdexcept>
 
 namespace std
 {
+
+    struct dimension_mismatch { };
 
     template <typename type , int dimension>
     class point
@@ -23,36 +26,20 @@ namespace std
 
             using coordinates_initializer_list_citr = typename coordinates_initializer_list::const_iterator;
 
-                                    point ( void )
-            {
+            inline                          point ( void );
 
-                //	Check if the dimension of the point_object is legal
-                this->validate_dimension();
+            inline                          point ( const coordinates_initializer_list& coordinates_object );
 
-                //	 Set coordinates_object values to zero
-                this->set_coordinates_values(0);
-
-            }
-
-                                    point ( const coordinates_initializer_list& coordinates_object )
-            {
-
-                this->validate_dimension_match(coordinates_object);
-
-                this->set_coordinates_values(coordinates_object);
-
-            }
-
-                                    template <typename _type>
-                                    point ( const point<_type,dimension>& point_object )
+                                            template <typename _type>
+            inline                          point ( const point<_type,dimension>& point_object )
             {
 
                 this->set_coordinates_values(point_object.get_coordinates_ref());
 
             }
 
-                                    template <typename _type>
-            point&				    operator= ( const point<_type,dimension>& point_object )
+                                            template <typename _type>
+            point&				            operator= ( const point<_type,dimension>& point_object )
             {
 
                 this->set_coordinates_values(point_object.get_coordinates_ref());
@@ -61,7 +48,7 @@ namespace std
 
             }
 
-            friend std::ostream&    operator<< ( std::ostream& outputStream , const point& point_object )
+            friend std::ostream&            operator<< ( std::ostream& outputStream , const point& point_object )
             {
 
                 outputStream << "point(";
@@ -86,7 +73,7 @@ namespace std
 
             }
 
-            type&					operator[] ( const int coordinateId )
+            type&					        operator[] ( const int coordinateId )
             {
 
                 this->validate_coordinate_id(coordinateId);
@@ -95,7 +82,7 @@ namespace std
 
             }
 
-            const type&				operator[] ( const int coordinateId ) const
+            const type&				        operator[] ( const int coordinateId ) const
             {
 
                 this->validate_coordinate_id(coordinateId);
@@ -104,8 +91,8 @@ namespace std
 
             }
 
-                                    template <typename _type>
-            bool					operator== ( const point<_type,dimension>& point_object ) const
+                                            template <typename _type>
+            bool					        operator== ( const point<_type,dimension>& point_object ) const
             {
 
                 for ( int key = 0 ; key < dimension ; key++ )
@@ -124,16 +111,16 @@ namespace std
 
             }
 
-                                    template <typename _type>
-            bool					operator!= ( const point<_type,dimension>& point_object ) const
+                                            template <typename _type>
+            bool					        operator!= ( const point<_type,dimension>& point_object ) const
             {
 
                 return ! ( *this == point_object );
 
             }
 
-                                    template <typename _type>
-            point					operator+ ( const point<_type,dimension>& point_object ) const
+                                            template <typename _type>
+            point					        operator+ ( const point<_type,dimension>& point_object ) const
             {
 
                 point pointResult = *this;
@@ -149,69 +136,28 @@ namespace std
 
             }
 
-                                    template <typename _type>
-            point					operator- ( const point<_type,dimension>& point_object ) const
+                                            template <typename _type>
+            point					        operator- ( const point<_type,dimension>& point_object ) const
             {
 
                 return (*this)+(point_object*(-1));
 
             }
 
-            point					operator* ( const float multiplier ) const
-            {
+            inline point					operator* ( const float multiplier ) const;
 
-                point pointResult = *this;
+            inline point					operator/ ( const float multiplier ) const;
 
-                for ( int key = 0 ; key < dimension ; key++ )
-                {
+            inline int						get_dimension ( void ) const;
 
-                    pointResult[key] *= multiplier;
+            inline type					    get_coordinate_value ( const int coordinateId ) const;
 
-                }
+            inline coordinates&			    get_coordinates_ref ( void );
 
-                return pointResult;
+            inline const coordinates&	    get_coordinates_ref ( void ) const;
 
-            }
-
-            point					operator/ ( const float multiplier ) const
-            {
-
-                return (*this)*(1/multiplier);
-
-            }
-
-            int						get_dimension ( void ) const
-            {
-
-                return dimension;
-
-            }
-
-            type					get_coordinate_value ( const int coordinateId ) const
-            {
-
-                this->validate_coordinate_id(coordinateId);
-
-                return this->coordinates_object[coordinateId];
-
-            }
-
-            coordinates&			get_coordinates_ref ( void )
-            {
-
-                return this->coordinates_object;
-
-            }
-
-            const coordinates&	    get_coordinates_ref ( void ) const
-            {
-
-                return this->coordinates_object;
-
-            }
-
-                                    template <typename _type>
-            float					get_distance_to ( const point<_type,dimension>& point_object ) const
+                                            template <typename _type>
+            float					        get_distance_to ( const point<_type,dimension>& point_object ) const
             {
 
                 float distanceSquared = 0;
@@ -232,8 +178,8 @@ namespace std
 
             }
 
-                                    template <typename _type>
-            void					set_coordinates_values ( const _type& coordinatesValue )
+                                            template <typename _type>
+            void					        set_coordinates_values ( const _type& coordinatesValue )
             {
 
                 /*
@@ -246,7 +192,7 @@ namespace std
 
             }
 
-            void					set_coordinates_values ( const coordinates_initializer_list& coordinates_object )
+            void					        set_coordinates_values ( const coordinates_initializer_list& coordinates_object )
             {
 
                 coordinates_initializer_list_itr coordinatesItr = coordinates_object.begin();
@@ -261,8 +207,8 @@ namespace std
 
             }
 
-                                    template <typename _type>
-            void					set_coordinates_values ( const std::array<_type,dimension>& coordinates_object )
+                                            template <typename _type>
+            void					        set_coordinates_values ( const std::array<_type,dimension>& coordinates_object )
             {
 
                 for ( int key = 0 ; key < dimension ; key++ )
@@ -274,68 +220,38 @@ namespace std
 
             }
 
-            void					validate_dimension_match ( const coordinates_initializer_list& coordinates_object ) const
+            void					        validate_dimension_match ( const coordinates_initializer_list& coordinates_object ) const
             {
 
                 if ( coordinates_object.size() != dimension )
                 {
 
-                    //throw ExcDimensionMismatch();
-                    throw -1;
+                    throw dimension_mismatch();
 
                 }
 
             }
 
-                                    template <typename _type , int _dimension>
-            void					validate_dimension_match ( const point<_type,_dimension>& ) const
+                                            template <typename _type , int _dimension>
+            void					        validate_dimension_match ( const point<_type,_dimension>& ) const
             {
 
                 if ( dimension != _dimension )
                 {
 
-                    //throw ExcDimensionMismatch();
-                    throw -1;
+                    throw dimension_mismatch();
 
                 }
 
             }
 
-            void					validate_coordinate_id ( const int coordinateId ) const
-            {
+            void					        validate_coordinate_id ( const int coordinateId ) const;
 
-                if ( coordinateId >= 0 && dimension <= coordinateId )
-                {
-
-                    //throw ExcDimensionMismatch();
-                    throw -1;
-
-                }
-
-            }
-
-            void					validate_dimension ( void ) const
-            {
-
-                /*
-
-                    Throws an `ExcIllegalDimension` Exceptioneption if the dimension of the point_object is illegal
-
-                */
-
-                if ( dimension <= 0 )
-                {
-
-                    //throw ExcInvalidDimension();
-                    throw -1;
-
-                }
-
-            }
+            void					        validate_dimension ( void ) const;
 
         protected:
 
-            coordinates				coordinates_object;
+            coordinates				        coordinates_object;
 
     };
 

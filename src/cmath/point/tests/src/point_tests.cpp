@@ -32,7 +32,7 @@ TEST ( constructor_from_initializer_list , 000 )
 
 TEST ( constructor_from_initializer_list , 001 )
 {
-    ASSERT_THROW(std::point_f3({1.5,2,5,6}),int);
+    ASSERT_THROW(std::point_f3({1.5,2,5,6}),std::dimension_mismatch);
 }
 
 TEST ( constructor_from_initializer_list , 002 )
@@ -69,12 +69,12 @@ TEST ( constructor_from_coordinates , 001 )
 
 TEST ( constructor_from_coordinates , 002 )
 {
-    ASSERT_THROW((std::point<float,5>({4.1,5.43,6.56})),int);
+    ASSERT_THROW((std::point<float,5>({4.1,5.43,6.56})),std::dimension_mismatch);
 }
 
 TEST ( constructor_from_coordinates , 003 )
 {
-    ASSERT_THROW((std::point<float,5>({4.1,5.43,6.56,65,6,6,6,6,66})),int);
+    ASSERT_THROW((std::point<float,5>({4.1,5.43,6.56,65,6,6,6,6,66})),std::dimension_mismatch);
 }
 
 TEST ( constructor_from_point , 000 )
