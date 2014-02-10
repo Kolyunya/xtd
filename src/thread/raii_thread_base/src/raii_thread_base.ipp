@@ -35,10 +35,16 @@ namespace std
         lock.unlock();
 
         //  Join the "thread" only if this function is not executed from it
-        //  Omitting the condition will leed to a frees if this function is executed from the "thread"
+        //  Omitting the condition will lead to a freeze if this function is executed from the "thread"
         if ( this_thread::get_id() != this->thread.get_id() )
         {
             this->thread.join();
+        }
+
+        //  Thread must be joined or detached before termination
+        else
+        {
+            this->thread.detach();
         }
 
     }
