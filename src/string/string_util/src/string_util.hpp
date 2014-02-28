@@ -48,6 +48,8 @@ namespace std
 
     inline bool         string_is_integer ( const string& source_string );
 
+    inline bool         string_is_fractional ( const string& source_string );
+
 }
 
 // Include implementation file

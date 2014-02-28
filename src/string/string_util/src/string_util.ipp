@@ -345,4 +345,39 @@ namespace std
 
     }
 
+    bool        string_is_integer ( const string& source_string )
+    {
+        bool source_string_is_numeric = string_is_numeric(source_string);
+        bool source_string_is_not_numeric = ! source_string_is_numeric;
+        if ( source_string_is_not_numeric )
+        {
+            return false;
+        }
+        bool source_string_contains_dot = source_string.find('.') != source_string.npos;
+        bool source_string_contains_comma = source_string.find(',') != source_string.npos;
+        bool source_string_contains_dot_or_comma = source_string_contains_dot || source_string_contains_comma;
+        if ( source_string_contains_dot_or_comma )
+        {
+            return false;
+        }
+        return true;
+    }
+
+    bool        string_is_fractional ( const string& source_string )
+    {
+        bool source_string_is_numeric = string_is_numeric(source_string);
+        bool source_string_is_not_numeric = ! source_string_is_numeric;
+        if ( source_string_is_not_numeric )
+        {
+            return false;
+        }
+        bool source_string_is_integer = string_is_integer(source_string);
+        bool source_string_is_not_integer = ! source_string_is_integer;
+        if ( source_string_is_not_integer )
+        {
+            return false;
+        }
+        return true;
+    }
+
 }
