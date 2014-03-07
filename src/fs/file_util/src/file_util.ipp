@@ -1,13 +1,31 @@
-namespace std
+//  xstd - extension of the C++ standard library
+//  Copyright (C) 2013 Oleynikov Nikolay
+//
+//  This program is free software: you can redistribute it and/or modify
+//  it under the terms of the GNU General Public License as published by
+//  the Free Software Foundation, either version 3 of the License, or
+//  (at your option) any later version.
+//
+//  This program is distributed in the hope that it will be useful,
+//  but WITHOUT ANY WARRANTY; without even the implied warranty of
+//  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+//  GNU General Public License for more details.
+//
+//  You should have received a copy of the GNU General Public License
+//  along with this program.  If not, see <http://www.gnu.org/licenses/>.
+//
+//  Author email: OleynikovNY@mail.ru
+
+namespace xstd
 {
 
     namespace fs
     {
 
-        bool        get_file_exists ( const string& file_path )
+        bool            get_file_exists ( const std::string& file_path )
         {
 
-            ifstream file_stream(file_path.data());
+            std::ifstream file_stream(file_path.data());
 
             if ( file_stream.is_open() )
             {
@@ -21,7 +39,7 @@ namespace std
 
         }
 
-        off_t       get_file_size ( const string& file_path )
+        off_t           get_file_size ( const std::string& file_path )
         {
 
             struct stat file_statistics;
@@ -31,7 +49,7 @@ namespace std
             if ( get_file_statistics_result != 0 )
             {
 
-                throw runtime_error("Could no retrieve file_path statistics");
+                throw std::runtime_error("Could no retrieve file_path statistics");
 
             }
 
@@ -41,7 +59,7 @@ namespace std
 
         }
 
-        off_t       get_file_size ( int file_descriptor )
+        off_t           get_file_size ( int file_descriptor )
         {
 
             struct stat file_statistics;
@@ -51,7 +69,7 @@ namespace std
             if ( get_file_statistics_result != 0 )
             {
 
-                throw runtime_error("Could no retrieve file_path statistics");
+                throw std::runtime_error("Could no retrieve file_path statistics");
 
             }
 
@@ -61,22 +79,22 @@ namespace std
 
         }
 
-        string      get_file_contents ( const string& file_path )
+        std::string     get_file_contents ( const std::string& file_path )
         {
 
             check_file_exists(file_path);
 
-            ifstream file_stream(file_path.data());
+            std::ifstream file_stream(file_path.data());
 
             if ( ! file_stream.is_open() )
             {
 
-                throw runtime_error("Could no open file_path");
+                throw std::runtime_error("Could no open file_path");
 
             }
 
             char file_character;
-            string file_contents;
+            std::string file_contents;
 
             while ( file_stream.good() && ! file_stream.eof() )
             {
@@ -98,12 +116,12 @@ namespace std
 
         }
 
-        void        set_file_contents ( const string& file_path , const string& data )
+        void            set_file_contents ( const std::string& file_path , const std::string& data )
         {
 
             check_file_exists(file_path);
 
-            ofstream output_file_stream(file_path.data());
+            std::ofstream output_file_stream(file_path.data());
 
             output_file_stream.write(data.data(),data.size());
 
@@ -111,34 +129,34 @@ namespace std
 
         }
 
-        void        append_file_contents ( const string& file_path , const string& data )
+        void            append_file_contents ( const std::string& file_path , const std::string& data )
         {
 
             set_file_contents(file_path,get_file_contents(file_path)+data);
 
         }
 
-        void        prepend_file_contents ( const string& file_path , const string& data )
+        void            prepend_file_contents ( const std::string& file_path , const std::string& data )
         {
 
             set_file_contents(file_path,data+get_file_contents(file_path));
 
         }
 
-        void        truncate_file_contents ( const string& file_path )
+        void            truncate_file_contents ( const std::string& file_path )
         {
 
             set_file_contents(file_path,"");
 
         }
 
-        void        check_file_exists ( const string& file_path )
+        void            check_file_exists ( const std::string& file_path )
         {
 
             if ( ! get_file_exists(file_path) )
             {
 
-                throw runtime_error("File does not exist.");
+                throw std::runtime_error("File does not exist.");
 
             }
 
