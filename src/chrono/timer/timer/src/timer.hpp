@@ -30,7 +30,7 @@ namespace xstd
     namespace chrono
     {
 
-        template <typename clock = high_resolution_clock>
+        template <typename clock = std::chrono::high_resolution_clock>
         class timer
             :
                 public timer_base
@@ -42,13 +42,13 @@ namespace xstd
 
                 using time_point = typename clock::time_point;
 
-                using event_start_type = typename std::event<>;
+                using event_start_type = typename xstd::event<>;
 
-                using event_tick_type = typename std::event <unsigned int>;
+                using event_tick_type = typename xstd::event <unsigned int>;
 
-                using event_complete_type = typename std::event<>;
+                using event_complete_type = typename xstd::event<>;
 
-                using event_stop_type = typename std::event<>;
+                using event_stop_type = typename xstd::event<>;
 
 
                 explicit                timer ( void )

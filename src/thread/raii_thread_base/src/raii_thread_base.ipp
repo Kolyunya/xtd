@@ -1,4 +1,4 @@
-namespace std
+namespace xstd
 {
 
             raii_thread_base::raii_thread_base ( std::function<void()> client_routine )
@@ -36,7 +36,7 @@ namespace std
 
         //  Join the "thread" only if this function is not executed from it
         //  Omitting the condition will lead to a freeze if this function is executed from the "thread"
-        if ( this_thread::get_id() != this->thread.get_id() )
+        if ( std::this_thread::get_id() != this->thread.get_id() )
         {
             this->thread.join();
         }

@@ -29,7 +29,7 @@ TEST ( timer_default_constuctor , does_not_throw )
 
 TEST ( timer , does_not_throw_while_starting )
 {
-    std::chrono::timer<std::chrono::high_resolution_clock> timer;
+    xstd::chrono::timer<std::chrono::high_resolution_clock> timer;
     timer.event_tick.add_listener
     (
         [
