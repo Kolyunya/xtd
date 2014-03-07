@@ -11,11 +11,11 @@ namespace std
     namespace random
     {
 
-        static void     randomize ( void );
+        inline void     randomize ( void );
 
-        static int      get_int ( const int minimum , const int maximum );
+        inline int      get_int ( const int minimum , const int maximum );
 
-        static bool     coin_flip ( float win_rate_percent = 50 );
+        inline bool     coin_flip ( float win_rate_percent = 50 );
 
     }
 
