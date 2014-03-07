@@ -1,9 +1,27 @@
+//  xstd - extension of the C++ standard library
+//  Copyright (C) 2013 Oleynikov Nikolay
+//
+//  This program is free software: you can redistribute it and/or modify
+//  it under the terms of the GNU General Public License as published by
+//  the Free Software Foundation, either version 3 of the License, or
+//  (at your option) any later version.
+//
+//  This program is distributed in the hope that it will be useful,
+//  but WITHOUT ANY WARRANTY; without even the implied warranty of
+//  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+//  GNU General Public License for more details.
+//
+//  You should have received a copy of the GNU General Public License
+//  along with this program.  If not, see <http://www.gnu.org/licenses/>.
+//
+//  Author email: OleynikovNY@mail.ru
+
 #ifndef _XSTD_PARAMETER_PACK_ELEMENT_VALUE_HPP_
 #define _XSTD_PARAMETER_PACK_ELEMENT_VALUE_HPP_
 
 #include <stdexcept>
 
-namespace std
+namespace xstd
 {
 
     namespace pp
@@ -18,9 +36,9 @@ namespace std
         }
 
         template < unsigned int parameter_id , typename first_parameter_type , typename... other_parameters_types >
-        static auto nth_value ( first_parameter_type&& first_parameter , other_parameters_types&&... other_parameters )
+        static auto nth_value ( first_parameter_type&& first_parameter , other_parameters_types&&... /* other_parameters */ )
             ->
-                typename enable_if
+                typename std::enable_if
                 <
                     ( parameter_id == 0 ),
                     decltype
@@ -36,7 +54,7 @@ namespace std
                 >
                 ::type
         {
-            return forward
+            return std::forward
             <
                 first_parameter_type
             >
@@ -46,7 +64,7 @@ namespace std
         }
 
         template < unsigned int parameter_id , typename first_parameter_type , typename... other_parameters_types >
-        static auto nth_value ( first_parameter_type&& first_parameter , other_parameters_types&&... other_parameters )
+        static auto nth_value ( first_parameter_type&& /* first_parameter */ , other_parameters_types&&... other_parameters )
             ->
                 typename std::enable_if
                 <
