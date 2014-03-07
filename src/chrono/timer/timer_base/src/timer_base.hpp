@@ -1,5 +1,5 @@
-#ifndef _STD_TIMER_BASE_HPP_
-#define _STD_TIMER_BASE_HPP_
+#ifndef _XSTD_TIMER_BASE_HPP_
+#define _XSTD_TIMER_BASE_HPP_
 
 #include <vector>
 
@@ -30,4 +30,4 @@ namespace std
 
 }
 
-#endif  //  _STD_TIMER_BASE_HPP_
+#endif  //  _XSTD_TIMER_BASE_HPP_

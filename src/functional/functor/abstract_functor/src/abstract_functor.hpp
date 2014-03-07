@@ -1,5 +1,5 @@
-#ifndef _STD_ABSTRACT_FUNCTOR_HPP_
-#define _STD_ABSTRACT_FUNCTOR_HPP_
+#ifndef _XSTD_ABSTRACT_FUNCTOR_HPP_
+#define _XSTD_ABSTRACT_FUNCTOR_HPP_
 
 namespace std
 {
@@ -13,4 +13,4 @@ namespace std
     };
 }
 
-#endif  //  _STD_ABSTRACT_FUNCTOR_HPP_
+#endif  //  _XSTD_ABSTRACT_FUNCTOR_HPP_

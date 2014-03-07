@@ -17,13 +17,14 @@
                                 'target_name'   :   'tests',
                                 'type'          :   'executable',
                                 'ldflags'       :   [
-                                                        '<(GTEST_OBJECT_FILE)',
+                                                        #'<(GTEST_OBJECT_FILE)',
                                                     ],
                                 'sources'       :   [
                                                         '<(UNIT_TESTS_SOURCE_FILE)',
+                                                        '<(GTEST_SOURCE_FILE)',
                                                     ],
                                 'include_dirs'  :   [
-                                                        '$(GTEST_HOME)/include/',
+                                                        '<(GTEST_HOME)',
                                                     ],
                                 'conditions'    :   [
                                                         [

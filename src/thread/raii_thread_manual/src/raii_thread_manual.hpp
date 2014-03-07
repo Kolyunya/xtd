@@ -1,5 +1,5 @@
-#ifndef _STD_RAII_THREAD_MANUAL_HPP_
-#define _STD_RAII_THREAD_MANUAL_HPP_
+#ifndef _XSTD_RAII_THREAD_MANUAL_HPP_
+#define _XSTD_RAII_THREAD_MANUAL_HPP_
 
 #include <thread/raii_thread_base.hpp>
 
@@ -19,4 +19,4 @@ namespace std
 
 #include "raii_thread_manual.ipp"
 
-#endif  //  _STD_RAII_THREAD_MANUAL_HPP_
+#endif  //  _XSTD_RAII_THREAD_MANUAL_HPP_

@@ -1,5 +1,5 @@
-#ifndef _STD_TIMER_MANAGER_HPP_
-#define _STD_TIMER_MANAGER_HPP_
+#ifndef _XSTD_TIMER_MANAGER_HPP_
+#define _XSTD_TIMER_MANAGER_HPP_
 
 #include <memory>
 #include <vector>
@@ -159,4 +159,4 @@ namespace std
 
 }
 
-#endif  //  _STD_TIMER_MANAGER_HPP_
+#endif  //  _XSTD_TIMER_MANAGER_HPP_

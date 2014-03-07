@@ -1,5 +1,5 @@
-#ifndef _STD_TIMER_HPP_
-#define _STD_TIMER_HPP_
+#ifndef _XSTD_TIMER_HPP_
+#define _XSTD_TIMER_HPP_
 
 #include <vector>
 #include <event.hpp>
@@ -159,4 +159,4 @@ namespace std
 
 }
 
-#endif  //  _STD_TIMER_HPP_
+#endif  //  _XSTD_TIMER_HPP_

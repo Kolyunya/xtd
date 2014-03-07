@@ -1,5 +1,5 @@
-#ifndef _STD_FUNCTOR_HPP_
-#define _STD_FUNCTOR_HPP_
+#ifndef _XSTD_FUNCTOR_HPP_
+#define _XSTD_FUNCTOR_HPP_
 
 //#include <functional/abstract_functor.hpp>
 
@@ -52,4 +52,4 @@ namespace std
 // Include implementation file
 //#include "functor.tpp"
 
-#endif  // _STD_FUNCTOR_HPP_
+#endif  // _XSTD_FUNCTOR_HPP_

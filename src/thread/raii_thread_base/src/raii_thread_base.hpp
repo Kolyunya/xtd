@@ -1,5 +1,5 @@
-#ifndef _STD_RAII_THREAD_BASE_HPP_
-#define _STD_RAII_THREAD_BASE_HPP_
+#ifndef _XSTD_RAII_THREAD_BASE_HPP_
+#define _XSTD_RAII_THREAD_BASE_HPP_
 
 #include <functional>
 #include <thread>
@@ -31,4 +31,4 @@ namespace std
 
 #include "raii_thread_base.ipp"
 
-#endif  //  _STD_RAII_THREAD_BASE_HPP_
+#endif  //  _XSTD_RAII_THREAD_BASE_HPP_

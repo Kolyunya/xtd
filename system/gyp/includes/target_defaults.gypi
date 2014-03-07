@@ -4,11 +4,11 @@
                                                             '<@(CFLAGS_STANDARD)',
                                                         ],
                                 'include_dirs'      :   [
-                                                            '$(STD_HOME)/include',
-                                                            '$(UNET_HOME)/include',
+                                                            '$(XSTD_HOME)/include',
                                                         ],
                                 'sources'           :   [
                                                             '<@(UNIT_SOURCES)',
+
                                                         ],
                                 'configurations'    :   {
                                                             'debug'     :   {

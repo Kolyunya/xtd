@@ -1,5 +1,5 @@
-#ifndef _STD_PARAMETER_PACK_FOR_EACH_HPP_
-#define _STD_PARAMETER_PACK_FOR_EACH_HPP_
+#ifndef _XSTD_PARAMETER_PACK_FOR_EACH_HPP_
+#define _XSTD_PARAMETER_PACK_FOR_EACH_HPP_
 
 namespace std
 {
@@ -24,4 +24,4 @@ namespace std
 
 }
 
-#endif  //  _STD_PARAMETER_PACK_FOR_EACH_HPP_
+#endif  //  _XSTD_PARAMETER_PACK_FOR_EACH_HPP_

@@ -1,6 +1,6 @@
-#ifndef _INCLUDE_STD_EVENT_
-#define _INCLUDE_STD_EVENT_
+#ifndef _INCLUDE_XSTD_EVENT_
+#define _INCLUDE_XSTD_EVENT_
 
 #include "event/event.hpp"
 
-#endif // _INCLUDE_STD_EVENT_
+#endif // _INCLUDE_XSTD_EVENT_

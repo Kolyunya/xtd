@@ -1,5 +1,5 @@
-#ifndef _STD_EVENT_HPP_
-#define _STD_EVENT_HPP_
+#ifndef _XSTD_EVENT_HPP_
+#define _XSTD_EVENT_HPP_
 
 #include <vector>
 #include <thread>
@@ -219,4 +219,4 @@ namespace std
     };
 }
 
-#endif  //  _STD_EVENT_HPP_
+#endif  //  _XSTD_EVENT_HPP_

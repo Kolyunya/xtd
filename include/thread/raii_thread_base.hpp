@@ -1,6 +1,6 @@
-#ifndef _INCLUDE_STD_RAII_THREAD_BASE_HPP_
-#define _INCLUDE_STD_RAII_THREAD_BASE_HPP_
+#ifndef _INCLUDE_XSTD_RAII_THREAD_BASE_HPP_
+#define _INCLUDE_XSTD_RAII_THREAD_BASE_HPP_
 
 #include "./../../src/thread/raii_thread_base/src/raii_thread_base.hpp"
 
-#endif // _INCLUDE_STD_RAII_THREAD_BASE_HPP_
+#endif // _INCLUDE_XSTD_RAII_THREAD_BASE_HPP_

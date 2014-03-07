@@ -1,5 +1,5 @@
-#ifndef _STD_POINT_HPP_
-#define _STD_POINT_HPP_
+#ifndef _XSTD_POINT_HPP_
+#define _XSTD_POINT_HPP_
 
 #include <initializer_list>
 #include <array>
@@ -268,4 +268,4 @@ namespace std
 // Include implementation file
 #include "point.tpp"
 
-#endif  //  _STD_POINT_HPP_
+#endif  //  _XSTD_POINT_HPP_

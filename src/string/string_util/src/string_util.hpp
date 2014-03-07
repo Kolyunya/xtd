@@ -1,5 +1,23 @@
-#ifndef _STRING_UTIL_HPP_
-#define _STRING_UTIL_HPP_
+//  xstd - extension of the C++ standard library
+//  Copyright (C) 2013 Oleynikov Nikolay
+//
+//  This program is free software: you can redistribute it and/or modify
+//  it under the terms of the GNU General Public License as published by
+//  the Free Software Foundation, either version 3 of the License, or
+//  (at your option) any later version.
+//
+//  This program is distributed in the hope that it will be useful,
+//  but WITHOUT ANY WARRANTY; without even the implied warranty of
+//  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+//  GNU General Public License for more details.
+//
+//  You should have received a copy of the GNU General Public License
+//  along with this program.  If not, see <http://www.gnu.org/licenses/>.
+//
+//  Author email: OleynikovNY@mail.ru
+
+#ifndef _XSTD_STRING_UTIL_HPP_
+#define _XSTD_STRING_UTIL_HPP_
 
 #include <stdexcept>    // std::runtime_error
 #include <algorithm>    // std::for_each
@@ -11,48 +29,48 @@
 #include <cstdlib>      // std::strtol
                         // std::strtof
 
-namespace std
+namespace xstd
 {
 
-    using strings = vector<string>;
+    using strings = std::vector<std::string>;
 
-    inline long int     string_to_long_int ( const string& source_string , int number_base = 10 );
+    inline long int         string_to_long_int ( const std::string& source_string , int number_base = 10 );
 
-    inline int          string_to_int ( const string& source_string , int number_base = 10 );
+    inline int              string_to_int ( const std::string& source_string , int number_base = 10 );
 
-    inline double       string_to_double ( const string& source_string );
+    inline double           string_to_double ( const std::string& source_string );
 
-    inline float        string_to_float ( const string& source_string );
+    inline float            string_to_float ( const std::string& source_string );
 
-    inline string       number_to_string ( int source_number );
+    inline std::string      number_to_string ( int source_number );
 
-    inline string       number_to_string ( unsigned int source_number );
+    inline std::string      number_to_string ( unsigned int source_number );
 
-    inline string       number_to_string ( float source_number );
+    inline std::string      number_to_string ( float source_number );
 
-    inline string       string_reverse ( const string& source_string );
+    inline std::string      string_reverse ( const std::string& source_string );
 
-    inline strings      string_split ( const string& source_string , const string& delimiter );
+    inline strings          string_split ( const std::string& source_string , const std::string& delimiter );
 
-    inline strings      string_split ( const string& source_string , char delimiter );
+    inline strings          string_split ( const std::string& source_string , char delimiter );
 
-    inline strings      string_split ( const char* source_string_ptr , const char* delimiter_ptr );
+    inline strings          string_split ( const char* source_string_ptr , const char* delimiter_ptr );
 
-    inline string       string_replace ( const string& source_string , const string& search_for , const string& replace_with );
+    inline std::string      string_replace ( const std::string& source_string , const std::string& search_for , const std::string& replace_with );
 
-    inline string       string_replace ( const string& source_string , char search_for , char replace_with );
+    inline std::string      string_replace ( const std::string& source_string , char search_for , char replace_with );
 
-    inline string       string_replace ( const char* source_string_ptr , const char* search_for_ptr , const char* replace_with_ptr );
+    inline std::string      string_replace ( const char* source_string_ptr , const char* search_for_ptr , const char* replace_with_ptr );
 
-    inline bool         string_is_numeric ( const string& source_string );
+    inline bool             string_is_numeric ( const std::string& source_string );
 
-    inline bool         string_is_integer ( const string& source_string );
+    inline bool             string_is_integer ( const std::string& source_string );
 
-    inline bool         string_is_fractional ( const string& source_string );
+    inline bool             string_is_fractional ( const std::string& source_string );
 
 }
 
 // Include implementation file
 #include "string_util.ipp"
 
-#endif  // _STRING_UTIL_HPP_
+#endif  // _XSTD_STRING_UTIL_HPP_

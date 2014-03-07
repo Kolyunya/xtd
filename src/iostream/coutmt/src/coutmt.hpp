@@ -1,5 +1,5 @@
-#ifndef _STD_COUTMT_HPP_
-#define _STD_COUTMT_HPP_
+#ifndef _XSTD_COUTMT_HPP_
+#define _XSTD_COUTMT_HPP_
 
 #include <iostream>
 #include <ostream>
@@ -31,4 +31,4 @@ namespace std
 
 #include "coutmt.ipp"
 
-#endif  //  _STD_COUTMT_HPP_
+#endif  //  _XSTD_COUTMT_HPP_
