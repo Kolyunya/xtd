@@ -1,3 +1,21 @@
+//  xstd - extension of the C++ standard library
+//  Copyright (C) 2013 Oleynikov Nikolay
+//
+//  This program is free software: you can redistribute it and/or modify
+//  it under the terms of the GNU General Public License as published by
+//  the Free Software Foundation, either version 3 of the License, or
+//  (at your option) any later version.
+//
+//  This program is distributed in the hope that it will be useful,
+//  but WITHOUT ANY WARRANTY; without even the implied warranty of
+//  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+//  GNU General Public License for more details.
+//
+//  You should have received a copy of the GNU General Public License
+//  along with this program.  If not, see <http://www.gnu.org/licenses/>.
+//
+//  Author email: OleynikovNY@mail.ru
+
 #ifndef _XSTD_EVENT_HPP_
 #define _XSTD_EVENT_HPP_
 
@@ -6,7 +24,7 @@
 #include <mutex>
 #include <functional.hpp>
 
-namespace std
+namespace xstd
 {
     template <typename... data_type>
     class event
@@ -18,8 +36,8 @@ namespace std
             using free_listeners_collection_itr = typename free_listeners_collection::iterator;
 
             template <typename object_type>
-            using functor_listener = std::functor<object_type,data_type...>;
-            using abstract_functor_listener = typename std::abstract_functor<data_type...>;
+            using functor_listener = xstd::functor<object_type,data_type...>;
+            using abstract_functor_listener = typename xstd::abstract_functor<data_type...>;
             using functor_listeners_collection = std::vector<abstract_functor_listener*>;
             using functor_listeners_collection_citr = typename functor_listeners_collection::const_iterator;
             using functor_listeners_collection_itr = typename functor_listeners_collection::iterator;
