@@ -19,15 +19,15 @@
 namespace xstd
 {
 
-                abstract_logger::abstract_logger ( bool add_new_line , bool add_time_stamp ) noexcept
-                    :
-                        add_new_line(add_new_line),
-                        add_time_stamp(add_time_stamp)
+                    abstract_logger::abstract_logger ( bool add_new_line , bool add_time_stamp ) noexcept
+                        :
+                            add_new_line(add_new_line),
+                            add_time_stamp(add_time_stamp)
     {
 
     }
 
-    void        abstract_logger::log ( const std::string& data ) const noexcept
+    void            abstract_logger::log ( const std::string& data ) const noexcept
     {
 
         this->log_time_stamp();
@@ -36,7 +36,7 @@ namespace xstd
 
     }
 
-    void        abstract_logger::log_new_line ( void ) const noexcept
+    void            abstract_logger::log_new_line ( void ) const noexcept
     {
 
         if ( this->add_new_line )
@@ -48,7 +48,7 @@ namespace xstd
 
     }
 
-    void        abstract_logger::log_time_stamp ( void ) const noexcept
+    void            abstract_logger::log_time_stamp ( void ) const noexcept
     {
 
         if ( this->add_time_stamp )
@@ -60,11 +60,11 @@ namespace xstd
 
     }
 
-    string      abstract_logger::make_time_stamp ( void ) noexcept
+    std::string     abstract_logger::make_time_stamp ( void ) noexcept
     {
 
         std::chrono::time_point<std::chrono::steady_clock> time_current = std::chrono::steady_clock::now();
-        std::string time_current_string = std::chrono::time_point_to_formatted_string(time_current);
+        std::string time_current_string = xstd::chrono::time_point_to_formatted_string(time_current);
 
         return time_current_string;
 

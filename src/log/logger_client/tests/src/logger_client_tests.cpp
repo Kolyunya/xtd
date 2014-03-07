@@ -23,7 +23,7 @@
 TEST ( logger_client , does_not_throw_while_construction )
 {
 
-    std::logger_client();
+    xstd::logger_client();
     ASSERT_TRUE(true);
 
 }
@@ -31,7 +31,7 @@ TEST ( logger_client , does_not_throw_while_construction )
 TEST ( logger_client , does_not_throw_while_logging_0 )
 {
 
-    std::logger_client logger_client_obj;
+    xstd::logger_client logger_client_obj;
     logger_client_obj.log("Hello world!");
     ASSERT_TRUE(true);
 
@@ -40,8 +40,8 @@ TEST ( logger_client , does_not_throw_while_logging_0 )
 TEST ( logger_client , does_not_throw_while_logging_1 )
 {
 
-    std::console_logger logger;
-    std::logger_client logger_client(&logger);
+    xstd::console_logger logger;
+    xstd::logger_client logger_client(&logger);
     logger_client.get_logger_ref().add_new_line = false;
     logger_client.get_logger_ref().add_time_stamp = false;
     logger_client.log("");

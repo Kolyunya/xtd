@@ -24,12 +24,12 @@ TEST ( file_logger , logs )
 
     std::string log_file = "../tests/data/log";
     std::string log_data = "Hello world!";
-    std::fs::truncate_file_contents(log_file);
+    xstd::fs::truncate_file_contents(log_file);
 
-    const std::abstract_logger& logger = std::file_logger(log_file,false,false);
+    const xstd::abstract_logger& logger = xstd::file_logger(log_file,false,false);
     logger.log(log_data);
 
-    ASSERT_EQ ( std::fs::get_file_contents(log_file) , log_data );
+    ASSERT_EQ ( xstd::fs::get_file_contents(log_file) , log_data );
 
 }
 

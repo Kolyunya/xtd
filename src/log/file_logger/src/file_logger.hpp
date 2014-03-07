@@ -22,7 +22,7 @@
 #include <fs.hpp>
 #include <log/abstract_logger.hpp>
 
-namespace std
+namespace xstd
 {
 
     class file_logger
