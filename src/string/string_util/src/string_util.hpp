@@ -42,6 +42,20 @@ namespace xstd
 namespace xstd
 {
 
+
+     /**
+     *  @brief Converts a number from string to numeric representation.
+     *
+     *  @param [in] source_string A string representation of a number.
+     *  @param [in] number_base A base of a number.
+     *  @return A numeric representation of a number.
+     *  @no-throw-guarantee Strong no-throw guarantee.
+     *  @throw std::runtime_error Throws if `source_string` does not represent a valid_number.
+     *                            Also throws if `source_string` represents a number which is out of range of `long int`.
+     *
+     *  @details Converts a number represented by a `source_string` to a `long int`.
+     *           Treats a `source_string` as a numeral with a base of `number_base`.
+     */
     inline long int         string_to_long_int ( const std::string& source_string , int number_base = 10 );
 
     inline int              string_to_int ( const std::string& source_string , int number_base = 10 );

@@ -22,11 +22,6 @@ namespace xstd
     long int        string_to_long_int ( const std::string& source_string , int number_base )
     {
 
-        // @description         Converts "source_string" to a "long int" treeting "source_string" as a numeral with the base equal to "number_base".
-        // @throw_guarantee     Strong no-throw guarantee.
-        // @throws              std::runtime_error - If "source_string" does not represent a valid_number.
-        // @throws              std::runtime_error - If "source_string" represents a number which is out of range of "long int".
-
         // Function "strtol" will set this pointer to point to the first character after the numeric part of the original string.
         // This pointer will be used in the case when "std::strtol" will returns "0".
         // If this pointer will point to the first character of the original std::string this will mean that the std::string does not start
