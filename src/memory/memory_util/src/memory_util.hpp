@@ -32,4 +32,4 @@ namespace xstd
 // Include implementation file
 #include "memory_util.tpp"
 
-#endif  //  _XSTD_MEMORY_UTIL_HPP_
+#endif  // _XSTD_MEMORY_UTIL_HPP_

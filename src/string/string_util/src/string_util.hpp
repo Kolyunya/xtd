@@ -29,10 +29,18 @@
 #include <cstdlib>      // std::strtol
                         // std::strtof
 
+// Type declarations
 namespace xstd
 {
 
+    // A commonly used type representing a collection of strings
     using strings = std::vector<std::string>;
+
+}
+
+// Utility functions
+namespace xstd
+{
 
     inline long int         string_to_long_int ( const std::string& source_string , int number_base = 10 );
 
