@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<title>XSTD: Main Page</title>
+<title>XSTD: /home/kolyunya/projects/xstd/src/chrono/chrono_util/src/chrono_util.hpp File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -36,10 +36,10 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </script>
   <div id="navrow1" class="tabs">
     <ul class="tablist">
-      <li class="current"><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="index.html"><span>Main&#160;Page</span></a></li>
       <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li><a href="annotated.html"><span>Classes</span></a></li>
-      <li><a href="files.html"><span>Files</span></a></li>
+      <li class="current"><a href="files.html"><span>Files</span></a></li>
       <li>
         <div id="MSearchBox" class="MSearchBoxInactive">
         <span class="left">
@@ -58,7 +58,12 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
       </li>
     </ul>
   </div>
-</div><!-- top -->
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>File&#160;List</span></a></li>
+      <li><a href="globals.html"><span>File&#160;Members</span></a></li>
+    </ul>
+  </div>
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -73,11 +78,40 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </iframe>
 </div>
 
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_1a62434e32a59ca5cbd146c8db775256.html">chrono</a></li><li class="navelem"><a class="el" href="dir_a74761c79925b989846e233b4d5a2d9f.html">chrono_util</a></li><li class="navelem"><a class="el" href="dir_b48245a0c2819d962d718189299a4a96.html">src</a></li>  </ul>
+</div>
+</div><!-- top -->
 <div class="header">
+  <div class="summary">
+<a href="#namespaces">Namespaces</a> &#124;
+<a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
-<div class="title">XSTD Documentation</div>  </div>
+<div class="title">chrono_util.hpp File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+<div class="textblock"><code>#include &lt;stdexcept&gt;</code><br/>
+<code>#include &lt;chrono&gt;</code><br/>
+<code>#include &lt;ctime&gt;</code><br/>
+<code>#include &lt;string&gt;</code><br/>
+<code>#include &lt;mutex&gt;</code><br/>
+<code>#include &quot;<a class="el" href="chrono__util_8ipp_source.html">chrono_util.ipp</a>&quot;</code><br/>
+</div>
+<p><a href="chrono__util_8hpp_source.html">Go to the source code of this file.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2><a name="namespaces"></a>
+Namespaces</h2></td></tr>
+<tr class="memitem:namespacexstd"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacexstd.html">xstd</a></td></tr>
+<tr class="memitem:namespacexstd_1_1chrono"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacexstd_1_1chrono.html">xstd::chrono</a></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2><a name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:af3f86d799ca227d2bf0ac8ff5a08df3b"><td class="memItemLeft" align="right" valign="top">time_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacexstd_1_1chrono.html#af3f86d799ca227d2bf0ac8ff5a08df3b">xstd::chrono::time_point_to_time_t</a> (const std::chrono::time_point&lt; std::chrono::steady_clock &gt; &amp;time_point)</td></tr>
+<tr class="memitem:a1f31cb15f2e74489fc0f98fa38758067"><td class="memItemLeft" align="right" valign="top">tm&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacexstd_1_1chrono.html#a1f31cb15f2e74489fc0f98fa38758067">xstd::chrono::time_point_to_tm</a> (const std::chrono::time_point&lt; std::chrono::steady_clock &gt; &amp;time_point)</td></tr>
+<tr class="memitem:a5fd95ee0963d407c39528b3f48790842"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacexstd_1_1chrono.html#a5fd95ee0963d407c39528b3f48790842">xstd::chrono::time_point_to_formatted_string</a> (const std::chrono::time_point&lt; std::chrono::steady_clock &gt; &amp;time_point, const std::string &amp;time_format=&quot;[%Y/%m/%d-%H:%M:%S]&quot;)</td></tr>
+<tr class="memitem:a07cd40fda33f294f91510fe6895ce6c7"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacexstd_1_1chrono.html#a07cd40fda33f294f91510fe6895ce6c7">xstd::chrono::time_point_to_formatted_string_mt</a> (const std::chrono::time_point&lt; std::chrono::steady_clock &gt; &amp;time_point, const std::string &amp;time_format=&quot;[%Y/%m/%d-%H:%M:%S]&quot;)</td></tr>
+</table>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
