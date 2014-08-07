@@ -47,9 +47,11 @@ namespace xtd
     namespace str
     {
 
-        // A commonly used type representing a collection of strings
+        /**
+         *  @typedef
+         *  @brief A collection of strings.
+         */
         using strings = std::vector<std::string>;
-
 
         /**
          *  @brief Converts a number from string to numeric representation.
