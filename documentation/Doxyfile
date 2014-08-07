@@ -16,8 +16,7 @@
 
 # Aliases
 
-ALIASES += sideeffect="\par Side Effects:\n"
-ALIASES += l{1}="\ref \1"
+ALIASES += no-throw-guarantee="\par !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!:\n"
 
 # This tag specifies the encoding used for all characters in the config file
 # that follow. The default is UTF-8 which is also the encoding used for all

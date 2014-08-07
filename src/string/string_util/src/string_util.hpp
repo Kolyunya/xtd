@@ -48,10 +48,10 @@ namespace xstd
      *
      *  @param [in] source_string A string representation of a number.
      *  @param [in] number_base A base of a number.
-     *  @return A numeric representation of a number.
-     *  @no-throw-guarantee Strong no-throw guarantee.
-     *  @throw std::runtime_error Throws if `source_string` does not represent a valid_number.
+     *  @returns A numeric representation of a number.
+     *  @throws std::runtime_error Throws if `source_string` does not represent a valid_number.
      *                            Also throws if `source_string` represents a number which is out of range of `long int`.
+     *  @no-throw-guarantee Strong no-throw guarantee.
      *
      *  @details Converts a number represented by a `source_string` to a `long int`.
      *           Treats a `source_string` as a numeral with a base of `number_base`.
