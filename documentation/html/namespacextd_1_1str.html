@@ -96,6 +96,7 @@ Functions</h2></td></tr>
 <tr class="memitem:a5b160bb9b43d365dc2e3cfd978c42665"><td class="memItemLeft" align="right" valign="top">long int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacextd_1_1str.html#a5b160bb9b43d365dc2e3cfd978c42665">string_to_long_int</a> (const std::string &amp;source_string, int number_base=10)</td></tr>
 <tr class="memdesc:a5b160bb9b43d365dc2e3cfd978c42665"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts a number from string to numeric representation.  <a href="#a5b160bb9b43d365dc2e3cfd978c42665"></a><br/></td></tr>
 <tr class="memitem:a892cfb582e525bf49e2a735ebcc0f85c"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacextd_1_1str.html#a892cfb582e525bf49e2a735ebcc0f85c">string_to_int</a> (const std::string &amp;source_string, int number_base=10)</td></tr>
+<tr class="memdesc:a892cfb582e525bf49e2a735ebcc0f85c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts a number from string to numeric representation.  <a href="#a892cfb582e525bf49e2a735ebcc0f85c"></a><br/></td></tr>
 <tr class="memitem:aaabc2e3834d3052e392cda6140ae5cc2"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacextd_1_1str.html#aaabc2e3834d3052e392cda6140ae5cc2">string_to_double</a> (const std::string &amp;source_string)</td></tr>
 <tr class="memitem:a90f49ec1f4ff29fd05d598f815f9b4e0"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacextd_1_1str.html#a90f49ec1f4ff29fd05d598f815f9b4e0">string_to_float</a> (const std::string &amp;source_string)</td></tr>
 <tr class="memitem:a84c0f8285134f075fde7fbb91ee174ef"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacextd_1_1str.html#a84c0f8285134f075fde7fbb91ee174ef">number_to_string</a> (int source_number)</td></tr>
@@ -933,6 +934,24 @@ Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Converts a number from string to numeric representation. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">source_string</td><td>A string representation of a number. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">number_base</td><td>A base of a number. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A numeric representation of a number. </dd></dl>
+<dl class="section user"><dt>No-throw guarantee</dt><dd>Strong. </dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::runtime_error</td><td>Thrown if <code>source_string</code> does not represent a valid_number. Also thrown if <code>source_string</code> represents a number which is out of range of <code>long int</code>.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Converts a number represented by a <code>source_string</code> to a <code>long int</code>. Treats a <code>source_string</code> as a numeral with a base of <code>number_base</code>. </p>
+
 <p>Definition at line <a class="el" href="string__util_8ipp_source.html#l00063">63</a> of file <a class="el" href="string__util_8ipp_source.html">string_util.ipp</a>.</p>
 
 <p>References <a class="el" href="string__util_8ipp_source.html#l00025">string_to_long_int()</a>.</p>
@@ -1050,7 +1069,7 @@ Functions</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Aug 7 2014 15:14:34 for XTD by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Aug 7 2014 15:16:18 for XTD by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.1.2
 </small></address>
