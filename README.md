@@ -1,4 +1,4 @@
-#XSTD – extension of the C++ standard library
+#XTD – extension of the C++ standard library
 
 ##Description
 
@@ -22,7 +22,7 @@ Each library unit is contained in a separate directory. Each unit directory cont
   + Compile your project.
 
 ##Documentation
-The project employs the [Doxygen](http://www.doxygen.org/) documentation generator. The documentation is available in the `documentation` directory. The HTML version of the library documentation is hosted on GitHub Pages of the project [here](http://kolyunya.github.io/xstd/).
+The project employs the [Doxygen](http://www.doxygen.org/) documentation generator. The documentation is available in the `documentation` directory. The HTML version of the library documentation is hosted on GitHub Pages of the project [here](http://kolyunya.github.io/xtd/).
 
 ##Testing
 
@@ -30,7 +30,7 @@ The project employs the [Doxygen](http://www.doxygen.org/) documentation generat
   + C++11 compatible compiler supported by GYP.
   + GYP build system.
 * Testing library.
-  + Set `XSTD_HOME` environment variable to the location of this library. Home directory is one with `src`, `include`, `system` and others sub-directories
+  + Set `XTD_HOME` environment variable to the location of this library. Home directory is one with `src`, `include`, `system` and others sub-directories
   + Set `GYP_GENERATORS` environment variable to value(s) corresponding you compiler(s). Options should be separated by a comma. Available options are `make`, `msvs`, `ninja`, `scons`, `eclipse` and others.
   + Execute library GYP script by calling `gyp --depth=. %LIBRARY_ROOT%/build/generator.gyp` command. Selected build scripts would be produced in the "build" directory.
   + Run build script(s) from `%LIBRARY_ROOT%/build/` directory.
