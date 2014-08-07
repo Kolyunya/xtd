@@ -35,13 +35,14 @@
 
 /**
  *  @namespace xtd
+ *  @brief A root namespace of the library.
  */
 namespace xtd
 {
 
     /**
      *  @namespace str
-     *  @brief A nam containing tools which help with string operations
+     *  @brief A namespace containing tools for operations which strings.
      */
     namespace str
     {
