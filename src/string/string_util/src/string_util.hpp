@@ -61,7 +61,7 @@ namespace xtd
          *  @returns A numeric representation of a number.
          *  @no_throw_guarantee Strong.
          *  @throws std::runtime_error Thrown if `source_string` does not represent a valid_number.
-         *                             Also thrown if `source_string` represents a number which is out of range of `long int`.
+         *                             Also thrown if `source_string` represents a number which is out of range of `signed long int`.
          *
          *  @details Converts a number represented by a `source_string` to a `long int`.
          *           Treats a `source_string` as a numeral with a base of `number_base`.
@@ -76,15 +76,39 @@ namespace xtd
          *  @returns A numeric representation of a number.
          *  @no_throw_guarantee Strong.
          *  @throws std::runtime_error Thrown if `source_string` does not represent a valid_number.
-         *                             Also thrown if `source_string` represents a number which is out of range of `long int`.
+         *                             Also thrown if `source_string` represents a number which is out of range of `signed int`.
          *
          *  @details Converts a number represented by a `source_string` to a `long int`.
          *           Treats a `source_string` as a numeral with a base of `number_base`.
          */
         inline signed int           string_to_int ( const std::string& source_string , int number_base = 10 );
 
+        /**
+         *  @brief Converts a number from string to numeric representation.
+         *
+         *  @param [in] source_string A string representation of a number.
+         *  @returns A numeric representation of a number.
+         *  @no_throw_guarantee Strong.
+         *  @throws std::runtime_error Thrown if `source_string` does not represent a valid_number.
+         *                             Also thrown if `source_string` represents a number which is out of range of `double`.
+         *
+         *  @details Converts a number represented by a `source_string` to a `long int`.
+         *           Treats a `source_string` as a numeral with a base of `number_base`.
+         */
         inline double               string_to_double ( const std::string& source_string );
 
+        /**
+         *  @brief Converts a number from string to numeric representation.
+         *
+         *  @param [in] source_string A string representation of a number.
+         *  @returns A numeric representation of a number.
+         *  @no_throw_guarantee Strong.
+         *  @throws std::runtime_error Thrown if `source_string` does not represent a valid_number.
+         *                             Also thrown if `source_string` represents a number which is out of range of `float`.
+         *
+         *  @details Converts a number represented by a `source_string` to a `long int`.
+         *           Treats a `source_string` as a numeral with a base of `number_base`.
+         */
         inline float                string_to_float ( const std::string& source_string );
 
         inline std::string          number_to_string ( int source_number );
