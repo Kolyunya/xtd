@@ -15,6 +15,5 @@ var searchData=
   ['string_5fsplit',['string_split',['../namespacextd_1_1str.html#a94ab05421170b46d98baffd7fbd04ae5',1,'xtd::str::string_split(const std::string &amp;source_string, const std::string &amp;delimiter)'],['../namespacextd_1_1str.html#a06656216ad0df88bb608e00aaa18eb82',1,'xtd::str::string_split(const std::string &amp;source_string, char delimiter)'],['../namespacextd_1_1str.html#a1e141ef588bb3f2a3f586306377c0ad0',1,'xtd::str::string_split(const char *source_string_ptr, const char *delimiter_ptr)']]],
   ['string_5fto_5fdouble',['string_to_double',['../namespacextd_1_1str.html#aaabc2e3834d3052e392cda6140ae5cc2',1,'xtd::str']]],
   ['string_5fto_5ffloat',['string_to_float',['../namespacextd_1_1str.html#a90f49ec1f4ff29fd05d598f815f9b4e0',1,'xtd::str']]],
-  ['string_5fto_5fint',['string_to_int',['../namespacextd_1_1str.html#a4c8c7aa55d1f5637474424b9abab6467',1,'xtd::str']]],
-  ['string_5fto_5flong_5fint',['string_to_long_int',['../namespacextd_1_1str.html#a0dce7c929afcd50ffbdb542a5aeaf37a',1,'xtd::str']]]
+  ['string_5fto_5fint',['string_to_int',['../namespacextd_1_1str.html#a4c8c7aa55d1f5637474424b9abab6467',1,'xtd::str']]]
 ];

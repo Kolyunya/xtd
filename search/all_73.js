@@ -17,7 +17,6 @@ var searchData=
   ['string_5fto_5fdouble',['string_to_double',['../namespacextd_1_1str.html#aaabc2e3834d3052e392cda6140ae5cc2',1,'xtd::str']]],
   ['string_5fto_5ffloat',['string_to_float',['../namespacextd_1_1str.html#a90f49ec1f4ff29fd05d598f815f9b4e0',1,'xtd::str']]],
   ['string_5fto_5fint',['string_to_int',['../namespacextd_1_1str.html#a4c8c7aa55d1f5637474424b9abab6467',1,'xtd::str']]],
-  ['string_5fto_5flong_5fint',['string_to_long_int',['../namespacextd_1_1str.html#a0dce7c929afcd50ffbdb542a5aeaf37a',1,'xtd::str']]],
   ['string_5futil_2ehpp',['string_util.hpp',['../string__util_8hpp.html',1,'']]],
   ['string_5futil_2eipp',['string_util.ipp',['../string__util_8ipp.html',1,'']]],
   ['string_5futil_5ftests_2ecpp',['string_util_tests.cpp',['../string__util__tests_8cpp.html',1,'']]]

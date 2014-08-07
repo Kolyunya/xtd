@@ -1,0 +1,1 @@
+cmd_out/debug/tests := flock out/debug/linker.lock /usr/bin/g++ -lpthread  -o out/debug/tests -Wl,--start-group out/debug/obj.target/tests/../tests/src/string_util_tests.o /home/kolyunya/projects/xtd/dependencies/gtest/gtest-all.o -Wl,--end-group 
