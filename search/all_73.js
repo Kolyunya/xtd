@@ -5,6 +5,7 @@ var searchData=
   ['set_5flogger',['set_logger',['../classxstd_1_1logger__client.html#a058f72e775905783e79721ecb2a65349',1,'xstd::logger_client']]],
   ['start',['start',['../classxstd_1_1chrono_1_1timer.html#a66a27994093e3a8cd5be70e82e577e25',1,'xstd::chrono::timer::start()'],['../classxstd_1_1raii__thread__manual.html#a4998457f902ae8515ba0a37a8c78e37a',1,'xstd::raii_thread_manual::start()']]],
   ['stop',['stop',['../classxstd_1_1chrono_1_1timer.html#acb361a9fbbafe351513ee6251feb1000',1,'xstd::chrono::timer::stop()'],['../classxstd_1_1raii__thread__manual.html#a00dc2a5fc7895b700a88afcdb9fa0f23',1,'xstd::raii_thread_manual::stop()']]],
+  ['str',['str',['../namespacestr.html',1,'']]],
   ['string_5fis_5ffractional',['string_is_fractional',['../namespacextd_1_1str.html#a96ed87d80d055426e2a127049168552c',1,'xtd::str']]],
   ['string_5fis_5finteger',['string_is_integer',['../namespacextd_1_1str.html#a3b3cf2660283d567c5c46bafd478123e',1,'xtd::str']]],
   ['string_5fis_5fnumeric',['string_is_numeric',['../namespacextd_1_1str.html#a6d1ae5acb732d24d3be7d1bc4baa7c47',1,'xtd::str']]],
