@@ -5,7 +5,7 @@ var searchData=
   ['raii_5fthread_2ehpp',['raii_thread.hpp',['../raii__thread_8hpp.html',1,'']]],
   ['raii_5fthread_2eipp',['raii_thread.ipp',['../raii__thread_8ipp.html',1,'']]],
   ['raii_5fthread_5fbase',['raii_thread_base',['../classxstd_1_1raii__thread__base.html',1,'xstd']]],
-  ['raii_5fthread_5fbase',['raii_thread_base',['../classxstd_1_1raii__thread__base.html#a8f6cf744a47869c0e28a5e8a127c172b',1,'xstd::raii_thread_base']]],
+  ['raii_5fthread_5fbase',['raii_thread_base',['../classxstd_1_1raii__thread__base.html#a8f6cf744a47869c0e28a5e8a127c172b',1,'xstd::raii_thread_base::raii_thread_base(std::function&lt; void()&gt; client_routine)'],['../classxstd_1_1raii__thread__base.html#abcff331991c469d9749a533324a1347c',1,'xstd::raii_thread_base::raii_thread_base(const raii_thread_base &amp;rhs)']]],
   ['raii_5fthread_5fbase_2ehpp',['raii_thread_base.hpp',['../raii__thread__base_8hpp.html',1,'']]],
   ['raii_5fthread_5fbase_2eipp',['raii_thread_base.ipp',['../raii__thread__base_8ipp.html',1,'']]],
   ['raii_5fthread_5fbase_5ftests_2ecpp',['raii_thread_base_tests.cpp',['../raii__thread__base__tests_8cpp.html',1,'']]],
