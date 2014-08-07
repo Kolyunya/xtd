@@ -52,7 +52,6 @@ namespace xstd
      *  @no-throw-guarantee Strong no-throw guarantee.
      *  @throw std::runtime_error Throws if `source_string` does not represent a valid_number.
      *                            Also throws if `source_string` represents a number which is out of range of `long int`.
-     *  @sideeffect fosdfjsdkjfskldjf
      *
      *  @details Converts a number represented by a `source_string` to a `long int`.
      *           Treats a `source_string` as a numeral with a base of `number_base`.
