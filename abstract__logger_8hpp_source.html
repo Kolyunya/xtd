@@ -61,6 +61,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow2" class="tabs2">
     <ul class="tablist">
       <li><a href="files.html"><span>File&#160;List</span></a></li>
+      <li><a href="globals.html"><span>File&#160;Members</span></a></li>
     </ul>
   </div>
 <!-- window showing the filter options -->
@@ -68,7 +69,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Friends</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -87,7 +88,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">abstract_logger.hpp</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;﻿<span class="comment">//  xstd - extension of the C++ standard library</span></div>
+<a href="abstract__logger_8hpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;﻿<span class="comment">//  xstd - extension of the C++ standard library</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">//  Copyright (C) 2013 Oleynikov Nikolay</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">//</span></div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">//  This program is free software: you can redistribute it and/or modify</span></div>
@@ -119,23 +120,23 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;</div>
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        <span class="keyword">public</span>:</div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;            <span class="keyword">inline</span> <span class="keyword">explicit</span>                 <a class="code" href="classxstd_1_1abstract__logger.html">abstract_logger</a> ( <span class="keywordtype">bool</span> add_new_line = <span class="keyword">true</span> , <span class="keywordtype">bool</span> add_time_stamp = <span class="keyword">true</span> ) noexcept;</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;            <span class="keyword">inline</span> <span class="keyword">explicit</span>                 <a class="code" href="classxstd_1_1abstract__logger.html#a57d17bcf4d3260fab819d98643671c78">abstract_logger</a> ( <span class="keywordtype">bool</span> <a class="code" href="classxstd_1_1abstract__logger.html#a5216ec0a18fea2571db19d5a55d8700f">add_new_line</a> = <span class="keyword">true</span> , <span class="keywordtype">bool</span> <a class="code" href="classxstd_1_1abstract__logger.html#a534b4f6a3dcdd3b7f18abfcb1bb5b937">add_time_stamp</a> = <span class="keyword">true</span> ) noexcept;</div>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;            <span class="keyword">inline</span> <span class="keywordtype">void</span>                     log ( <span class="keyword">const</span> std::string&amp; data ) <span class="keyword">const</span> noexcept;</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;            <span class="keyword">inline</span> <span class="keywordtype">void</span>                     <a class="code" href="classxstd_1_1abstract__logger.html#ad470970ac4726355f3423017f434ace8">log</a> ( <span class="keyword">const</span> std::string&amp; data ) <span class="keyword">const</span> noexcept;</div>
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;            <span class="keywordtype">bool</span>                            add_new_line;</div>
+<div class="line"><a name="l00037"></a><span class="lineno"><a class="code" href="classxstd_1_1abstract__logger.html#a5216ec0a18fea2571db19d5a55d8700f">   37</a></span>&#160;            <span class="keywordtype">bool</span>                            <a class="code" href="classxstd_1_1abstract__logger.html#a5216ec0a18fea2571db19d5a55d8700f">add_new_line</a>;</div>
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;            <span class="keywordtype">bool</span>                            add_time_stamp;</div>
+<div class="line"><a name="l00039"></a><span class="lineno"><a class="code" href="classxstd_1_1abstract__logger.html#a534b4f6a3dcdd3b7f18abfcb1bb5b937">   39</a></span>&#160;            <span class="keywordtype">bool</span>                            <a class="code" href="classxstd_1_1abstract__logger.html#a534b4f6a3dcdd3b7f18abfcb1bb5b937">add_time_stamp</a>;</div>
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;</div>
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        <span class="keyword">protected</span>:</div>
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;            <span class="keyword">virtual</span> <span class="keywordtype">void</span>                    log_data ( <span class="keyword">const</span> std::string&amp; data ) <span class="keyword">const</span> noexcept = 0;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;            <span class="keyword">virtual</span> <span class="keywordtype">void</span>                    <a class="code" href="classxstd_1_1abstract__logger.html#a8cf4f5fd1490b54680060022a2f8ac91">log_data</a> ( <span class="keyword">const</span> std::string&amp; data ) <span class="keyword">const</span> noexcept = 0;</div>
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;            <span class="keyword">inline</span> <span class="keywordtype">void</span>                     log_new_line ( <span class="keywordtype">void</span> ) <span class="keyword">const</span> noexcept;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;            <span class="keyword">inline</span> <span class="keywordtype">void</span>                     <a class="code" href="classxstd_1_1abstract__logger.html#a106b39652dd0d1efb32d8ad52ae6555c">log_new_line</a> ( <span class="keywordtype">void</span> ) const noexcept;</div>
 <div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;            <span class="keyword">inline</span> <span class="keywordtype">void</span>                     log_time_stamp ( <span class="keywordtype">void</span> ) <span class="keyword">const</span> noexcept;</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;            inline <span class="keywordtype">void</span>                     <a class="code" href="classxstd_1_1abstract__logger.html#a8bed4dfa79399f58146700adfd1ac06f">log_time_stamp</a> ( <span class="keywordtype">void</span> ) const noexcept;</div>
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;            <span class="keyword">inline</span> <span class="keyword">static</span> std::string       make_time_stamp ( <span class="keywordtype">void</span> ) noexcept;</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;            inline static std::<span class="keywordtype">string</span>       <a class="code" href="classxstd_1_1abstract__logger.html#a1077a739173ed39b8f71f0ef69ada29f">make_time_stamp</a> ( <span class="keywordtype">void</span> ) noexcept;</div>
 <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;</div>
 <div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    };</div>
 <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;</div>
@@ -143,12 +144,12 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;</div>
 <div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="comment">// Include implementation file</span></div>
 <div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="preprocessor">#include &quot;abstract_logger.ipp&quot;</span></div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;<span class="preprocessor"></span></div>
 <div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;<span class="preprocessor">#endif  // _XSTD_ABSTRACT_LOGGER_HPP_</span></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Aug 7 2014 15:49:56 for XTD by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Aug 7 2014 15:57:05 for XTD by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.1.2
 </small></address>

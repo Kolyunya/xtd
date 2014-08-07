@@ -61,6 +61,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow2" class="tabs2">
     <ul class="tablist">
       <li><a href="files.html"><span>File&#160;List</span></a></li>
+      <li><a href="globals.html"><span>File&#160;Members</span></a></li>
     </ul>
   </div>
 <!-- window showing the filter options -->
@@ -68,7 +69,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Friends</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -87,7 +88,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">parameter_pack_homogeneity.hpp</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">//  xstd - extension of the C++ standard library</span></div>
+<a href="parameter__pack__homogeneity_8hpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">//  xstd - extension of the C++ standard library</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">//  Copyright (C) 2013 Oleynikov Nikolay</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">//</span></div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">//  This program is free software: you can redistribute it and/or modify</span></div>
@@ -119,14 +120,14 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        <span class="keyword">template</span> &lt; <span class="keyword">typename</span>... parameters_types &gt;</div>
 <div class="line"><a name="l00031"></a><span class="lineno"><a class="code" href="structxstd_1_1pp_1_1is__homogeneous.html">   31</a></span>&#160;        <span class="keyword">struct </span><a class="code" href="structxstd_1_1pp_1_1is__homogeneous.html">is_homogeneous</a></div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        {</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;            <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">bool</span> value = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00033"></a><span class="lineno"><a class="code" href="structxstd_1_1pp_1_1is__homogeneous.html#a104d1888e8f39e2d57ab27c7c3fb7383">   33</a></span>&#160;            <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">bool</span> <a class="code" href="structxstd_1_1pp_1_1is__homogeneous.html#a104d1888e8f39e2d57ab27c7c3fb7383">value</a> = <span class="keyword">true</span>;</div>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;            <span class="keyword">using</span> type = <a class="code" href="structxstd_1_1pp_1_1null__type.html">null_type</a>;</div>
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        };</div>
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;</div>
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        <span class="keyword">template</span> &lt; <span class="keyword">typename</span> parameter_type &gt;</div>
 <div class="line"><a name="l00038"></a><span class="lineno"><a class="code" href="structxstd_1_1pp_1_1is__homogeneous_3_01parameter__type_01_4.html">   38</a></span>&#160;        <span class="keyword">struct </span><a class="code" href="structxstd_1_1pp_1_1is__homogeneous.html">is_homogeneous</a> &lt; parameter_type &gt;</div>
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        {</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;            <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">bool</span> value = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00040"></a><span class="lineno"><a class="code" href="structxstd_1_1pp_1_1is__homogeneous_3_01parameter__type_01_4.html#a827e8f99e9ec9a203c3851ecd58dddb6">   40</a></span>&#160;            <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">bool</span> <a class="code" href="structxstd_1_1pp_1_1is__homogeneous.html#a104d1888e8f39e2d57ab27c7c3fb7383">value</a> = <span class="keyword">true</span>;</div>
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;            <span class="keyword">using</span> type = parameter_type;</div>
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        };</div>
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;</div>
@@ -136,14 +137,14 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;            <span class="keyword">private</span>:</div>
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;                <span class="keyword">using</span> other_parameters_type = <span class="keyword">typename</span> <a class="code" href="structxstd_1_1pp_1_1is__homogeneous.html">is_homogeneous</a>&lt;other_parameters_types...&gt;::type;</div>
 <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;            <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;                <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">bool</span> value = std::is_same&lt;first_parameter_type,other_parameters_type&gt;::value;</div>
+<div class="line"><a name="l00050"></a><span class="lineno"><a class="code" href="structxstd_1_1pp_1_1is__homogeneous_3_01first__parameter__type_00_01other__parameters__types_8_8_8_01_4.html#a7cb56d449b90e1ffbc9e9332d1faaa94">   50</a></span>&#160;                <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">bool</span> <a class="code" href="structxstd_1_1pp_1_1is__homogeneous.html#a104d1888e8f39e2d57ab27c7c3fb7383">value</a> = std::is_same&lt;first_parameter_type,other_parameters_type&gt;::value;</div>
 <div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;                <span class="keyword">using</span> type = <span class="keyword">typename</span> std::conditional&lt;value,first_parameter_type,null_type&gt;::type;</div>
 <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        };</div>
 <div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;</div>
 <div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        <span class="keyword">template</span> &lt; <span class="keyword">typename</span>... parameters_types &gt;</div>
 <div class="line"><a name="l00055"></a><span class="lineno"><a class="code" href="structxstd_1_1pp_1_1is__heterogeneous.html">   55</a></span>&#160;        <span class="keyword">struct </span><a class="code" href="structxstd_1_1pp_1_1is__heterogeneous.html">is_heterogeneous</a></div>
 <div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        {</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;            <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">bool</span> value = ! <a class="code" href="structxstd_1_1pp_1_1is__homogeneous.html">is_homogeneous</a>&lt;parameters_types...&gt;::value;</div>
+<div class="line"><a name="l00057"></a><span class="lineno"><a class="code" href="structxstd_1_1pp_1_1is__heterogeneous.html#a790c8cb5a84cf3da91bf1602e181105b">   57</a></span>&#160;            <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">bool</span> <a class="code" href="structxstd_1_1pp_1_1is__heterogeneous.html#a790c8cb5a84cf3da91bf1602e181105b">value</a> = ! <a class="code" href="structxstd_1_1pp_1_1is__homogeneous.html">is_homogeneous</a>&lt;parameters_types...&gt;<a class="code" href="structxstd_1_1pp_1_1is__heterogeneous.html#a790c8cb5a84cf3da91bf1602e181105b">::value</a>;</div>
 <div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        };</div>
 <div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;</div>
 <div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    }</div>
@@ -154,7 +155,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Aug 7 2014 15:49:56 for XTD by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Aug 7 2014 15:57:05 for XTD by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.1.2
 </small></address>
