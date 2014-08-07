@@ -1,5 +1,5 @@
-//  xstd - extension of the C++ standard library
-//  Copyright (C) 2013 Oleynikov Nikolay
+//  XTD - extension of the C++ standard library
+//  Copyright (C) 2013-2014 Oleynikov Nikolay
 //
 //  This program is free software: you can redistribute it and/or modify
 //  it under the terms of the GNU General Public License as published by
@@ -23,15 +23,15 @@
 #ifndef _XSTD_STRING_UTIL_HPP_
 #define _XSTD_STRING_UTIL_HPP_
 
-#include <stdexcept>    // std::runtime_error
-#include <algorithm>    // std::for_each
-#include <vector>       // std::vector
-#include <sstream>      // std::string
-                        // std::stringstream
-#include <climits>      // LONG_MIN
-                        // LONG_MAX
-#include <cstdlib>      // std::strtol
-                        // std::strtof
+#include <stdexcept>    //  std::runtime_error
+#include <algorithm>    //  std::for_each
+#include <vector>       //  std::vector
+#include <sstream>      //  std::string
+                        //  std::stringstream
+#include <climits>      //  LONG_MIN
+                        //  LONG_MAX
+#include <cstdlib>      //  std::strtol
+                        //  std::strtof
 
 /**
  *  @namespace xtd
@@ -141,7 +141,7 @@ namespace xtd
 
 }
 
-// Include implementation file
+//  Include implementation file
 #include "string_util.ipp"
 
-#endif  // _XSTD_STRING_UTIL_HPP_
+#endif  //  _XSTD_STRING_UTIL_HPP_
