@@ -22,7 +22,7 @@ Each library unit is contained in a separate directory. Each unit directory cont
   + Compile your project.
 
 ##Documentation
-The library documentation is available [here](http://kolyunya.github.io/xstd/index.html)
+The library documentation is available [here](http://kolyunya.github.io/xstd/index.html).
 
 ##Testing
 
