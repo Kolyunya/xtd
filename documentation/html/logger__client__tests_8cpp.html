@@ -93,7 +93,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="textblock"><code>#include &lt;gtest/gtest.h&gt;</code><br/>
 <code>#include &lt;log/console_logger.hpp&gt;</code><br/>
 <code>#include &lt;log/logger_client.hpp&gt;</code><br/>
-</div><table class="memberdecls">
+</div>
+<p><a href="logger__client__tests_8cpp_source.html">Go to the source code of this file.</a></p>
+<table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2><a name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:a0d6f68dde6eb6d59beee29c5e01a6110"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="logger__client__tests_8cpp.html#a0d6f68dde6eb6d59beee29c5e01a6110">TEST</a> (logger_client, does_not_throw_while_construction)</td></tr>
@@ -126,6 +128,11 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Definition at line <a class="el" href="logger__client__tests_8cpp_source.html#l00052">52</a> of file <a class="el" href="logger__client__tests_8cpp_source.html">logger_client_tests.cpp</a>.</p>
+<div class="fragment"><div class="line">{</div>
+<div class="line">    ::testing::InitGoogleTest(&amp;argc, argv);</div>
+<div class="line">    <span class="keywordflow">return</span> RUN_ALL_TESTS();</div>
+<div class="line">}</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="a0d6f68dde6eb6d59beee29c5e01a6110"></a>
@@ -152,6 +159,14 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Definition at line <a class="el" href="logger__client__tests_8cpp_source.html#l00023">23</a> of file <a class="el" href="logger__client__tests_8cpp_source.html">logger_client_tests.cpp</a>.</p>
+<div class="fragment"><div class="line">{</div>
+<div class="line"></div>
+<div class="line">    <a class="code" href="classxstd_1_1logger__client.html">xstd::logger_client</a>();</div>
+<div class="line">    ASSERT_TRUE(<span class="keyword">true</span>);</div>
+<div class="line"></div>
+<div class="line">}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="af08980c2adb64cdcef229cfc6adc0385"></a>
@@ -178,6 +193,17 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Definition at line <a class="el" href="logger__client__tests_8cpp_source.html#l00031">31</a> of file <a class="el" href="logger__client__tests_8cpp_source.html">logger_client_tests.cpp</a>.</p>
+
+<p>References <a class="el" href="logger__client_8ipp_source.html#l00050">xstd::logger_client::log()</a>.</p>
+<div class="fragment"><div class="line">{</div>
+<div class="line"></div>
+<div class="line">    <a class="code" href="classxstd_1_1logger__client.html">xstd::logger_client</a> logger_client_obj;</div>
+<div class="line">    logger_client_obj.<a class="code" href="classxstd_1_1logger__client.html#a7169793d2c5512150d611ae47e0c6b74">log</a>(<span class="stringliteral">&quot;Hello world!&quot;</span>);</div>
+<div class="line">    ASSERT_TRUE(<span class="keyword">true</span>);</div>
+<div class="line"></div>
+<div class="line">}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="aa01d48f78b522ccb36a515ee82868331"></a>
@@ -204,12 +230,26 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Definition at line <a class="el" href="logger__client__tests_8cpp_source.html#l00040">40</a> of file <a class="el" href="logger__client__tests_8cpp_source.html">logger_client_tests.cpp</a>.</p>
+
+<p>References <a class="el" href="abstract__logger_8hpp_source.html#l00037">xstd::abstract_logger::add_new_line</a>, <a class="el" href="abstract__logger_8hpp_source.html#l00039">xstd::abstract_logger::add_time_stamp</a>, <a class="el" href="logger__client_8ipp_source.html#l00029">xstd::logger_client::get_logger_ref()</a>, and <a class="el" href="logger__client_8ipp_source.html#l00050">xstd::logger_client::log()</a>.</p>
+<div class="fragment"><div class="line">{</div>
+<div class="line"></div>
+<div class="line">    <a class="code" href="classxstd_1_1console__logger.html">xstd::console_logger</a> logger;</div>
+<div class="line">    <a class="code" href="classxstd_1_1logger__client.html">xstd::logger_client</a> logger_client(&amp;logger);</div>
+<div class="line">    logger_client.get_logger_ref().add_new_line = <span class="keyword">false</span>;</div>
+<div class="line">    logger_client.get_logger_ref().add_time_stamp = <span class="keyword">false</span>;</div>
+<div class="line">    logger_client.log(<span class="stringliteral">&quot;&quot;</span>);</div>
+<div class="line">    ASSERT_TRUE(<span class="keyword">true</span>);</div>
+<div class="line"></div>
+<div class="line">}</div>
+</div><!-- fragment -->
 </div>
 </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Aug 7 2014 15:57:06 for XTD by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Aug 7 2014 15:59:24 for XTD by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.1.2
 </small></address>

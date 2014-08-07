@@ -129,12 +129,12 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;            <span class="keyword">friend</span> <span class="keyword">inline</span> <a class="code" href="classxstd_1_1coutmt__singleton.html">coutmt_singleton</a>&amp;     <a class="code" href="classxstd_1_1coutmt__singleton.html#aae5812b8fa2d66eaaa921e864e1077d4">operator&lt;&lt; </a>( <a class="code" href="classxstd_1_1coutmt__singleton.html">coutmt_singleton</a>&amp; coutmt_singleton_instance ,  std::ios_base&amp; (*function_ptr)(std::ios_base&amp;) );</div>
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;            <span class="keyword">static</span> <span class="keyword">inline</span> <a class="code" href="classxstd_1_1coutmt__singleton.html">coutmt_singleton</a>&amp;     <a class="code" href="classxstd_1_1coutmt__singleton.html#a0c478170b82e253a79c51160fe7049a2">get_instance</a> ( <span class="keywordtype">void</span> );</div>
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;            <span class="keyword">inline</span> <span class="keyword">explicit</span>                     <a class="code" href="classxstd_1_1coutmt__singleton.html#afbf08c934b4a1c80bd18669f34456a7c">coutmt_singleton</a> ( <span class="keywordtype">void</span> ) = <span class="keywordflow">default</span>;</div>
-<div class="line"><a name="l00043"></a><span class="lineno"><a class="code" href="classxstd_1_1coutmt__singleton.html#a7e9a38b4f7d555718afbc75aaa4de628">   43</a></span>&#160;            std::mutex                          <a class="code" href="classxstd_1_1coutmt__singleton.html#a7e9a38b4f7d555718afbc75aaa4de628">coutmt_mutex</a>;</div>
-<div class="line"><a name="l00044"></a><span class="lineno"><a class="code" href="classxstd_1_1coutmt__singleton.html#aa00e04e689ddfbf12fff7383b465cad2">   44</a></span>&#160;            <span class="keywordtype">bool</span>                                <a class="code" href="classxstd_1_1coutmt__singleton.html#aa00e04e689ddfbf12fff7383b465cad2">instance_initialized</a>;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;            <span class="keyword">inline</span> <span class="keyword">explicit</span>                     <a class="code" href="classxstd_1_1coutmt__singleton.html">coutmt_singleton</a> ( <span class="keywordtype">void</span> ) = <span class="keywordflow">default</span>;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;            std::mutex                          coutmt_mutex;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;            <span class="keywordtype">bool</span>                                instance_initialized;</div>
 <div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    };</div>
 <div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;</div>
-<div class="line"><a name="l00047"></a><span class="lineno"><a class="code" href="namespacexstd.html#a1c69cb70a76dfa8ff13085c781a15f27">   47</a></span>&#160;    <span class="keyword">static</span> <a class="code" href="classxstd_1_1coutmt__singleton.html">coutmt_singleton</a>&amp; <a class="code" href="namespacexstd.html#a1c69cb70a76dfa8ff13085c781a15f27">coutmt</a> = <a class="code" href="classxstd_1_1coutmt__singleton.html#a0c478170b82e253a79c51160fe7049a2">coutmt_singleton::get_instance</a>();</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <span class="keyword">static</span> <a class="code" href="classxstd_1_1coutmt__singleton.html">coutmt_singleton</a>&amp; coutmt = <a class="code" href="classxstd_1_1coutmt__singleton.html#a0c478170b82e253a79c51160fe7049a2">coutmt_singleton::get_instance</a>();</div>
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;}</div>
 <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;</div>
 <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="coutmt_8ipp.html">coutmt.ipp</a>&quot;</span></div>
@@ -143,7 +143,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Aug 7 2014 15:57:05 for XTD by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Aug 7 2014 15:59:23 for XTD by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.1.2
 </small></address>
