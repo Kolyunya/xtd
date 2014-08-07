@@ -1,23 +1,168 @@
 \hypertarget{classxstd_1_1chrono_1_1timer__manager}{\section{xstd\-:\-:chrono\-:\-:timer\-\_\-manager Class Reference}
 \label{classxstd_1_1chrono_1_1timer__manager}\index{xstd\-::chrono\-::timer\-\_\-manager@{xstd\-::chrono\-::timer\-\_\-manager}}
 }
+
+
+{\ttfamily \#include $<$timer\-\_\-manager.\-hpp$>$}
+
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\hypertarget{classxstd_1_1chrono_1_1timer__manager_ae97c0dba8154bace5af93caae4948c8c}{void {\bfseries add\-\_\-timer} (\hyperlink{classxstd_1_1chrono_1_1timer__base}{timer\-\_\-base} $\ast$const timer\-\_\-ptr)}\label{classxstd_1_1chrono_1_1timer__manager_ae97c0dba8154bace5af93caae4948c8c}
-
+void \hyperlink{classxstd_1_1chrono_1_1timer__manager_ae97c0dba8154bace5af93caae4948c8c}{add\-\_\-timer} (\hyperlink{classxstd_1_1chrono_1_1timer__base}{timer\-\_\-base} $\ast$const timer\-\_\-ptr)
 \item 
-\hypertarget{classxstd_1_1chrono_1_1timer__manager_af368bd572a757f8f78e39e4572114a84}{void {\bfseries remove\-\_\-timer} (\hyperlink{classxstd_1_1chrono_1_1timer__base}{timer\-\_\-base} $\ast$const timer\-\_\-ptr)}\label{classxstd_1_1chrono_1_1timer__manager_af368bd572a757f8f78e39e4572114a84}
-
+void \hyperlink{classxstd_1_1chrono_1_1timer__manager_af368bd572a757f8f78e39e4572114a84}{remove\-\_\-timer} (\hyperlink{classxstd_1_1chrono_1_1timer__base}{timer\-\_\-base} $\ast$const timer\-\_\-ptr)
 \end{DoxyCompactItemize}
 \subsection*{Static Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\hypertarget{classxstd_1_1chrono_1_1timer__manager_a8894928f093db753153f2f87dfa511e0}{static \hyperlink{classxstd_1_1chrono_1_1timer__manager}{timer\-\_\-manager} \& {\bfseries get\-\_\-instance} (void)}\label{classxstd_1_1chrono_1_1timer__manager_a8894928f093db753153f2f87dfa511e0}
-
+static \hyperlink{classxstd_1_1chrono_1_1timer__manager}{timer\-\_\-manager} \& \hyperlink{classxstd_1_1chrono_1_1timer__manager_a8894928f093db753153f2f87dfa511e0}{get\-\_\-instance} (void)
 \end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classxstd_1_1chrono_1_1timer__manager_ab54140a0a3d1ababa9fb8953f556b8dc}{timer\-\_\-manager} (void)
+\item 
+virtual \hyperlink{classxstd_1_1chrono_1_1timer__manager_adeca1896ee815f70ed424dd884e94b65}{$\sim$timer\-\_\-manager} (void) noexcept
+\item 
+bool \hyperlink{classxstd_1_1chrono_1_1timer__manager_a88bb334bc67435a46b08a99dc2d45ed1}{has\-\_\-timer} (const \hyperlink{classxstd_1_1chrono_1_1timer__base}{timer\-\_\-base} $\ast$timer\-\_\-ptr) const 
+\item 
+void \hyperlink{classxstd_1_1chrono_1_1timer__manager_ac33f7326e60b3577bbf94c058e5f65d1}{check\-\_\-has\-\_\-timer} (const \hyperlink{classxstd_1_1chrono_1_1timer__base}{timer\-\_\-base} $\ast$timer\-\_\-ptr) const 
+\item 
+void \hyperlink{classxstd_1_1chrono_1_1timer__manager_a5e8e65bcefa980c1fe1dd4ee09007a84}{check\-\_\-has\-\_\-no\-\_\-timer} (const \hyperlink{classxstd_1_1chrono_1_1timer__base}{timer\-\_\-base} $\ast$timer\-\_\-ptr) const 
+\item 
+void \hyperlink{classxstd_1_1chrono_1_1timer__manager_a123733308516d62d9ba95012e407f4ec}{start\-\_\-thread\-\_\-if\-\_\-needed} (void)
+\item 
+void \hyperlink{classxstd_1_1chrono_1_1timer__manager_aaef36381eeb6f3ad92233636fdbb21c3}{stop\-\_\-thread\-\_\-if\-\_\-needed} (void)
+\item 
+timers\-\_\-vector\-\_\-itr \hyperlink{classxstd_1_1chrono_1_1timer__manager_a09e21fff24c5bb05da5f5559b80b3582}{get\-\_\-timer\-\_\-itr} (const \hyperlink{classxstd_1_1chrono_1_1timer__base}{timer\-\_\-base} $\ast$timer\-\_\-ptr) const 
+\item 
+\hyperlink{classxstd_1_1chrono_1_1timer__manager}{timer\-\_\-manager} \& \hyperlink{classxstd_1_1chrono_1_1timer__manager_a535934cf3cd6d1d700689c1f2f406f75}{operator=} (\hyperlink{classxstd_1_1chrono_1_1timer__manager}{timer\-\_\-manager} \&)
+\end{DoxyCompactItemize}
+\subsection*{Static Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \hyperlink{classxstd_1_1chrono_1_1timer__manager_a8bb8b012bb6ec7cbc30b19d259668f0c}{thread\-\_\-routine} (const \hyperlink{classxstd_1_1chrono_1_1timer__manager}{timer\-\_\-manager} $\ast$timer\-\_\-manager\-\_\-ptr)
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classxstd_1_1raii__thread__manual}{raii\-\_\-thread\-\_\-manual} \hyperlink{classxstd_1_1chrono_1_1timer__manager_a8f037197c9a2e80e1d0a38695808766e}{thread}
+\item 
+std\-::recursive\-\_\-mutex \hyperlink{classxstd_1_1chrono_1_1timer__manager_afe2d386a7849d456e6fffda583bb73f2}{mutex}
+\item 
+timers\-\_\-vector \hyperlink{classxstd_1_1chrono_1_1timer__manager_a9eae3cef8d5d2e72a68dfb9e2a0130ee}{timers}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classxstd_1_1chrono_1_1timer__manager_ab54140a0a3d1ababa9fb8953f556b8dc}{\index{xstd\-::chrono\-::timer\-\_\-manager@{xstd\-::chrono\-::timer\-\_\-manager}!timer\-\_\-manager@{timer\-\_\-manager}}
+\index{timer\-\_\-manager@{timer\-\_\-manager}!xstd::chrono::timer_manager@{xstd\-::chrono\-::timer\-\_\-manager}}
+\subsubsection[{timer\-\_\-manager}]{\setlength{\rightskip}{0pt plus 5cm}xstd\-::chrono\-::timer\-\_\-manager\-::timer\-\_\-manager (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}, {\ttfamily [private]}}}\label{classxstd_1_1chrono_1_1timer__manager_ab54140a0a3d1ababa9fb8953f556b8dc}
+\hypertarget{classxstd_1_1chrono_1_1timer__manager_adeca1896ee815f70ed424dd884e94b65}{\index{xstd\-::chrono\-::timer\-\_\-manager@{xstd\-::chrono\-::timer\-\_\-manager}!$\sim$timer\-\_\-manager@{$\sim$timer\-\_\-manager}}
+\index{$\sim$timer\-\_\-manager@{$\sim$timer\-\_\-manager}!xstd::chrono::timer_manager@{xstd\-::chrono\-::timer\-\_\-manager}}
+\subsubsection[{$\sim$timer\-\_\-manager}]{\setlength{\rightskip}{0pt plus 5cm}virtual xstd\-::chrono\-::timer\-\_\-manager\-::$\sim$timer\-\_\-manager (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}, {\ttfamily [virtual]}}}\label{classxstd_1_1chrono_1_1timer__manager_adeca1896ee815f70ed424dd884e94b65}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classxstd_1_1chrono_1_1timer__manager_ae97c0dba8154bace5af93caae4948c8c}{\index{xstd\-::chrono\-::timer\-\_\-manager@{xstd\-::chrono\-::timer\-\_\-manager}!add\-\_\-timer@{add\-\_\-timer}}
+\index{add\-\_\-timer@{add\-\_\-timer}!xstd::chrono::timer_manager@{xstd\-::chrono\-::timer\-\_\-manager}}
+\subsubsection[{add\-\_\-timer}]{\setlength{\rightskip}{0pt plus 5cm}void xstd\-::chrono\-::timer\-\_\-manager\-::add\-\_\-timer (
+\begin{DoxyParamCaption}
+\item[{{\bf timer\-\_\-base} $\ast$const}]{timer\-\_\-ptr}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classxstd_1_1chrono_1_1timer__manager_ae97c0dba8154bace5af93caae4948c8c}
+\hypertarget{classxstd_1_1chrono_1_1timer__manager_a5e8e65bcefa980c1fe1dd4ee09007a84}{\index{xstd\-::chrono\-::timer\-\_\-manager@{xstd\-::chrono\-::timer\-\_\-manager}!check\-\_\-has\-\_\-no\-\_\-timer@{check\-\_\-has\-\_\-no\-\_\-timer}}
+\index{check\-\_\-has\-\_\-no\-\_\-timer@{check\-\_\-has\-\_\-no\-\_\-timer}!xstd::chrono::timer_manager@{xstd\-::chrono\-::timer\-\_\-manager}}
+\subsubsection[{check\-\_\-has\-\_\-no\-\_\-timer}]{\setlength{\rightskip}{0pt plus 5cm}void xstd\-::chrono\-::timer\-\_\-manager\-::check\-\_\-has\-\_\-no\-\_\-timer (
+\begin{DoxyParamCaption}
+\item[{const {\bf timer\-\_\-base} $\ast$}]{timer\-\_\-ptr}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}}\label{classxstd_1_1chrono_1_1timer__manager_a5e8e65bcefa980c1fe1dd4ee09007a84}
+\hypertarget{classxstd_1_1chrono_1_1timer__manager_ac33f7326e60b3577bbf94c058e5f65d1}{\index{xstd\-::chrono\-::timer\-\_\-manager@{xstd\-::chrono\-::timer\-\_\-manager}!check\-\_\-has\-\_\-timer@{check\-\_\-has\-\_\-timer}}
+\index{check\-\_\-has\-\_\-timer@{check\-\_\-has\-\_\-timer}!xstd::chrono::timer_manager@{xstd\-::chrono\-::timer\-\_\-manager}}
+\subsubsection[{check\-\_\-has\-\_\-timer}]{\setlength{\rightskip}{0pt plus 5cm}void xstd\-::chrono\-::timer\-\_\-manager\-::check\-\_\-has\-\_\-timer (
+\begin{DoxyParamCaption}
+\item[{const {\bf timer\-\_\-base} $\ast$}]{timer\-\_\-ptr}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}}\label{classxstd_1_1chrono_1_1timer__manager_ac33f7326e60b3577bbf94c058e5f65d1}
+\hypertarget{classxstd_1_1chrono_1_1timer__manager_a8894928f093db753153f2f87dfa511e0}{\index{xstd\-::chrono\-::timer\-\_\-manager@{xstd\-::chrono\-::timer\-\_\-manager}!get\-\_\-instance@{get\-\_\-instance}}
+\index{get\-\_\-instance@{get\-\_\-instance}!xstd::chrono::timer_manager@{xstd\-::chrono\-::timer\-\_\-manager}}
+\subsubsection[{get\-\_\-instance}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf timer\-\_\-manager}\& xstd\-::chrono\-::timer\-\_\-manager\-::get\-\_\-instance (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}}\label{classxstd_1_1chrono_1_1timer__manager_a8894928f093db753153f2f87dfa511e0}
+\hypertarget{classxstd_1_1chrono_1_1timer__manager_a09e21fff24c5bb05da5f5559b80b3582}{\index{xstd\-::chrono\-::timer\-\_\-manager@{xstd\-::chrono\-::timer\-\_\-manager}!get\-\_\-timer\-\_\-itr@{get\-\_\-timer\-\_\-itr}}
+\index{get\-\_\-timer\-\_\-itr@{get\-\_\-timer\-\_\-itr}!xstd::chrono::timer_manager@{xstd\-::chrono\-::timer\-\_\-manager}}
+\subsubsection[{get\-\_\-timer\-\_\-itr}]{\setlength{\rightskip}{0pt plus 5cm}timers\-\_\-vector\-\_\-itr xstd\-::chrono\-::timer\-\_\-manager\-::get\-\_\-timer\-\_\-itr (
+\begin{DoxyParamCaption}
+\item[{const {\bf timer\-\_\-base} $\ast$}]{timer\-\_\-ptr}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}}\label{classxstd_1_1chrono_1_1timer__manager_a09e21fff24c5bb05da5f5559b80b3582}
+\hypertarget{classxstd_1_1chrono_1_1timer__manager_a88bb334bc67435a46b08a99dc2d45ed1}{\index{xstd\-::chrono\-::timer\-\_\-manager@{xstd\-::chrono\-::timer\-\_\-manager}!has\-\_\-timer@{has\-\_\-timer}}
+\index{has\-\_\-timer@{has\-\_\-timer}!xstd::chrono::timer_manager@{xstd\-::chrono\-::timer\-\_\-manager}}
+\subsubsection[{has\-\_\-timer}]{\setlength{\rightskip}{0pt plus 5cm}bool xstd\-::chrono\-::timer\-\_\-manager\-::has\-\_\-timer (
+\begin{DoxyParamCaption}
+\item[{const {\bf timer\-\_\-base} $\ast$}]{timer\-\_\-ptr}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}}\label{classxstd_1_1chrono_1_1timer__manager_a88bb334bc67435a46b08a99dc2d45ed1}
+\hypertarget{classxstd_1_1chrono_1_1timer__manager_a535934cf3cd6d1d700689c1f2f406f75}{\index{xstd\-::chrono\-::timer\-\_\-manager@{xstd\-::chrono\-::timer\-\_\-manager}!operator=@{operator=}}
+\index{operator=@{operator=}!xstd::chrono::timer_manager@{xstd\-::chrono\-::timer\-\_\-manager}}
+\subsubsection[{operator=}]{\setlength{\rightskip}{0pt plus 5cm}{\bf timer\-\_\-manager}\& xstd\-::chrono\-::timer\-\_\-manager\-::operator= (
+\begin{DoxyParamCaption}
+\item[{{\bf timer\-\_\-manager} \&}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{classxstd_1_1chrono_1_1timer__manager_a535934cf3cd6d1d700689c1f2f406f75}
+\hypertarget{classxstd_1_1chrono_1_1timer__manager_af368bd572a757f8f78e39e4572114a84}{\index{xstd\-::chrono\-::timer\-\_\-manager@{xstd\-::chrono\-::timer\-\_\-manager}!remove\-\_\-timer@{remove\-\_\-timer}}
+\index{remove\-\_\-timer@{remove\-\_\-timer}!xstd::chrono::timer_manager@{xstd\-::chrono\-::timer\-\_\-manager}}
+\subsubsection[{remove\-\_\-timer}]{\setlength{\rightskip}{0pt plus 5cm}void xstd\-::chrono\-::timer\-\_\-manager\-::remove\-\_\-timer (
+\begin{DoxyParamCaption}
+\item[{{\bf timer\-\_\-base} $\ast$const}]{timer\-\_\-ptr}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classxstd_1_1chrono_1_1timer__manager_af368bd572a757f8f78e39e4572114a84}
+\hypertarget{classxstd_1_1chrono_1_1timer__manager_a123733308516d62d9ba95012e407f4ec}{\index{xstd\-::chrono\-::timer\-\_\-manager@{xstd\-::chrono\-::timer\-\_\-manager}!start\-\_\-thread\-\_\-if\-\_\-needed@{start\-\_\-thread\-\_\-if\-\_\-needed}}
+\index{start\-\_\-thread\-\_\-if\-\_\-needed@{start\-\_\-thread\-\_\-if\-\_\-needed}!xstd::chrono::timer_manager@{xstd\-::chrono\-::timer\-\_\-manager}}
+\subsubsection[{start\-\_\-thread\-\_\-if\-\_\-needed}]{\setlength{\rightskip}{0pt plus 5cm}void xstd\-::chrono\-::timer\-\_\-manager\-::start\-\_\-thread\-\_\-if\-\_\-needed (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}}\label{classxstd_1_1chrono_1_1timer__manager_a123733308516d62d9ba95012e407f4ec}
+\hypertarget{classxstd_1_1chrono_1_1timer__manager_aaef36381eeb6f3ad92233636fdbb21c3}{\index{xstd\-::chrono\-::timer\-\_\-manager@{xstd\-::chrono\-::timer\-\_\-manager}!stop\-\_\-thread\-\_\-if\-\_\-needed@{stop\-\_\-thread\-\_\-if\-\_\-needed}}
+\index{stop\-\_\-thread\-\_\-if\-\_\-needed@{stop\-\_\-thread\-\_\-if\-\_\-needed}!xstd::chrono::timer_manager@{xstd\-::chrono\-::timer\-\_\-manager}}
+\subsubsection[{stop\-\_\-thread\-\_\-if\-\_\-needed}]{\setlength{\rightskip}{0pt plus 5cm}void xstd\-::chrono\-::timer\-\_\-manager\-::stop\-\_\-thread\-\_\-if\-\_\-needed (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}}\label{classxstd_1_1chrono_1_1timer__manager_aaef36381eeb6f3ad92233636fdbb21c3}
+\hypertarget{classxstd_1_1chrono_1_1timer__manager_a8bb8b012bb6ec7cbc30b19d259668f0c}{\index{xstd\-::chrono\-::timer\-\_\-manager@{xstd\-::chrono\-::timer\-\_\-manager}!thread\-\_\-routine@{thread\-\_\-routine}}
+\index{thread\-\_\-routine@{thread\-\_\-routine}!xstd::chrono::timer_manager@{xstd\-::chrono\-::timer\-\_\-manager}}
+\subsubsection[{thread\-\_\-routine}]{\setlength{\rightskip}{0pt plus 5cm}static void xstd\-::chrono\-::timer\-\_\-manager\-::thread\-\_\-routine (
+\begin{DoxyParamCaption}
+\item[{const {\bf timer\-\_\-manager} $\ast$}]{timer\-\_\-manager\-\_\-ptr}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [private]}}}\label{classxstd_1_1chrono_1_1timer__manager_a8bb8b012bb6ec7cbc30b19d259668f0c}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classxstd_1_1chrono_1_1timer__manager_afe2d386a7849d456e6fffda583bb73f2}{\index{xstd\-::chrono\-::timer\-\_\-manager@{xstd\-::chrono\-::timer\-\_\-manager}!mutex@{mutex}}
+\index{mutex@{mutex}!xstd::chrono::timer_manager@{xstd\-::chrono\-::timer\-\_\-manager}}
+\subsubsection[{mutex}]{\setlength{\rightskip}{0pt plus 5cm}std\-::recursive\-\_\-mutex xstd\-::chrono\-::timer\-\_\-manager\-::mutex\hspace{0.3cm}{\ttfamily [private]}}}\label{classxstd_1_1chrono_1_1timer__manager_afe2d386a7849d456e6fffda583bb73f2}
+\hypertarget{classxstd_1_1chrono_1_1timer__manager_a8f037197c9a2e80e1d0a38695808766e}{\index{xstd\-::chrono\-::timer\-\_\-manager@{xstd\-::chrono\-::timer\-\_\-manager}!thread@{thread}}
+\index{thread@{thread}!xstd::chrono::timer_manager@{xstd\-::chrono\-::timer\-\_\-manager}}
+\subsubsection[{thread}]{\setlength{\rightskip}{0pt plus 5cm}{\bf raii\-\_\-thread\-\_\-manual} xstd\-::chrono\-::timer\-\_\-manager\-::thread\hspace{0.3cm}{\ttfamily [private]}}}\label{classxstd_1_1chrono_1_1timer__manager_a8f037197c9a2e80e1d0a38695808766e}
+\hypertarget{classxstd_1_1chrono_1_1timer__manager_a9eae3cef8d5d2e72a68dfb9e2a0130ee}{\index{xstd\-::chrono\-::timer\-\_\-manager@{xstd\-::chrono\-::timer\-\_\-manager}!timers@{timers}}
+\index{timers@{timers}!xstd::chrono::timer_manager@{xstd\-::chrono\-::timer\-\_\-manager}}
+\subsubsection[{timers}]{\setlength{\rightskip}{0pt plus 5cm}timers\-\_\-vector xstd\-::chrono\-::timer\-\_\-manager\-::timers\hspace{0.3cm}{\ttfamily [mutable]}, {\ttfamily [private]}}}\label{classxstd_1_1chrono_1_1timer__manager_a9eae3cef8d5d2e72a68dfb9e2a0130ee}
 
 
 The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
 \item 
-src/chrono/timer/timer\-\_\-manager/src/timer\-\_\-manager.\-hpp\end{DoxyCompactItemize}
+src/chrono/timer/timer\-\_\-manager/src/\hyperlink{timer__manager_8hpp}{timer\-\_\-manager.\-hpp}\end{DoxyCompactItemize}

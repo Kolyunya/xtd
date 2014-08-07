@@ -1,6 +1,10 @@
 \hypertarget{classxstd_1_1file__logger}{\section{xstd\-:\-:file\-\_\-logger Class Reference}
 \label{classxstd_1_1file__logger}\index{xstd\-::file\-\_\-logger@{xstd\-::file\-\_\-logger}}
 }
+
+
+{\ttfamily \#include $<$file\-\_\-logger.\-hpp$>$}
+
 Inheritance diagram for xstd\-:\-:file\-\_\-logger\-:\begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -10,25 +14,105 @@ Inheritance diagram for xstd\-:\-:file\-\_\-logger\-:\begin{figure}[H]
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\hypertarget{classxstd_1_1file__logger_a6e43dc8871b62e45550ce6470dcf5477}{{\bfseries file\-\_\-logger} (const std\-::string \&file, bool add\-\_\-new\-\_\-line=true, bool add\-\_\-time\-\_\-stamp=true) noexcept}\label{classxstd_1_1file__logger_a6e43dc8871b62e45550ce6470dcf5477}
-
+\hyperlink{classxstd_1_1file__logger_a6e43dc8871b62e45550ce6470dcf5477}{file\-\_\-logger} (const std\-::string \&\hyperlink{classxstd_1_1file__logger_a0745eaab93df733f6696fa14e74eb068}{file}, bool \hyperlink{classxstd_1_1abstract__logger_a5216ec0a18fea2571db19d5a55d8700f}{add\-\_\-new\-\_\-line}=true, bool \hyperlink{classxstd_1_1abstract__logger_a534b4f6a3dcdd3b7f18abfcb1bb5b937}{add\-\_\-time\-\_\-stamp}=true) noexcept
+\item 
+void \hyperlink{classxstd_1_1abstract__logger_ad470970ac4726355f3423017f434ace8}{log} (const std\-::string \&data) const noexcept
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{classxstd_1_1abstract__logger_a5216ec0a18fea2571db19d5a55d8700f}{add\-\_\-new\-\_\-line}
+\item 
+bool \hyperlink{classxstd_1_1abstract__logger_a534b4f6a3dcdd3b7f18abfcb1bb5b937}{add\-\_\-time\-\_\-stamp}
 \end{DoxyCompactItemize}
 \subsection*{Protected Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\hypertarget{classxstd_1_1file__logger_a806b0a7c20bad624afbddd2346312ca6}{virtual void {\bfseries log\-\_\-data} (const std\-::string \&data) const noexcept override}\label{classxstd_1_1file__logger_a806b0a7c20bad624afbddd2346312ca6}
-
+virtual void \hyperlink{classxstd_1_1file__logger_a806b0a7c20bad624afbddd2346312ca6}{log\-\_\-data} (const std\-::string \&data) const noexcept override
+\item 
+void \hyperlink{classxstd_1_1abstract__logger_a106b39652dd0d1efb32d8ad52ae6555c}{log\-\_\-new\-\_\-line} (void) const noexcept
+\item 
+void \hyperlink{classxstd_1_1abstract__logger_a8bed4dfa79399f58146700adfd1ac06f}{log\-\_\-time\-\_\-stamp} (void) const noexcept
+\end{DoxyCompactItemize}
+\subsection*{Static Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static std\-::string \hyperlink{classxstd_1_1abstract__logger_a1077a739173ed39b8f71f0ef69ada29f}{make\-\_\-time\-\_\-stamp} (void) noexcept
 \end{DoxyCompactItemize}
 \subsection*{Protected Attributes}
 \begin{DoxyCompactItemize}
 \item 
-\hypertarget{classxstd_1_1file__logger_a0745eaab93df733f6696fa14e74eb068}{std\-::string {\bfseries file}}\label{classxstd_1_1file__logger_a0745eaab93df733f6696fa14e74eb068}
-
+std\-::string \hyperlink{classxstd_1_1file__logger_a0745eaab93df733f6696fa14e74eb068}{file}
 \end{DoxyCompactItemize}
-\subsection*{Additional Inherited Members}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classxstd_1_1file__logger_a6e43dc8871b62e45550ce6470dcf5477}{\index{xstd\-::file\-\_\-logger@{xstd\-::file\-\_\-logger}!file\-\_\-logger@{file\-\_\-logger}}
+\index{file\-\_\-logger@{file\-\_\-logger}!xstd::file_logger@{xstd\-::file\-\_\-logger}}
+\subsubsection[{file\-\_\-logger}]{\setlength{\rightskip}{0pt plus 5cm}xstd\-::file\-\_\-logger\-::file\-\_\-logger (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{file, }
+\item[{bool}]{add\-\_\-new\-\_\-line = {\ttfamily true}, }
+\item[{bool}]{add\-\_\-time\-\_\-stamp = {\ttfamily true}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}}\label{classxstd_1_1file__logger_a6e43dc8871b62e45550ce6470dcf5477}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classxstd_1_1abstract__logger_ad470970ac4726355f3423017f434ace8}{\index{xstd\-::file\-\_\-logger@{xstd\-::file\-\_\-logger}!log@{log}}
+\index{log@{log}!xstd::file_logger@{xstd\-::file\-\_\-logger}}
+\subsubsection[{log}]{\setlength{\rightskip}{0pt plus 5cm}void xstd\-::abstract\-\_\-logger\-::log (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{data}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [inherited]}}}\label{classxstd_1_1abstract__logger_ad470970ac4726355f3423017f434ace8}
+\hypertarget{classxstd_1_1file__logger_a806b0a7c20bad624afbddd2346312ca6}{\index{xstd\-::file\-\_\-logger@{xstd\-::file\-\_\-logger}!log\-\_\-data@{log\-\_\-data}}
+\index{log\-\_\-data@{log\-\_\-data}!xstd::file_logger@{xstd\-::file\-\_\-logger}}
+\subsubsection[{log\-\_\-data}]{\setlength{\rightskip}{0pt plus 5cm}void xstd\-::file\-\_\-logger\-::log\-\_\-data (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{data}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}}\label{classxstd_1_1file__logger_a806b0a7c20bad624afbddd2346312ca6}
+
+
+Implements \hyperlink{classxstd_1_1abstract__logger_a8cf4f5fd1490b54680060022a2f8ac91}{xstd\-::abstract\-\_\-logger}.
+
+\hypertarget{classxstd_1_1abstract__logger_a106b39652dd0d1efb32d8ad52ae6555c}{\index{xstd\-::file\-\_\-logger@{xstd\-::file\-\_\-logger}!log\-\_\-new\-\_\-line@{log\-\_\-new\-\_\-line}}
+\index{log\-\_\-new\-\_\-line@{log\-\_\-new\-\_\-line}!xstd::file_logger@{xstd\-::file\-\_\-logger}}
+\subsubsection[{log\-\_\-new\-\_\-line}]{\setlength{\rightskip}{0pt plus 5cm}void xstd\-::abstract\-\_\-logger\-::log\-\_\-new\-\_\-line (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [inherited]}}}\label{classxstd_1_1abstract__logger_a106b39652dd0d1efb32d8ad52ae6555c}
+\hypertarget{classxstd_1_1abstract__logger_a8bed4dfa79399f58146700adfd1ac06f}{\index{xstd\-::file\-\_\-logger@{xstd\-::file\-\_\-logger}!log\-\_\-time\-\_\-stamp@{log\-\_\-time\-\_\-stamp}}
+\index{log\-\_\-time\-\_\-stamp@{log\-\_\-time\-\_\-stamp}!xstd::file_logger@{xstd\-::file\-\_\-logger}}
+\subsubsection[{log\-\_\-time\-\_\-stamp}]{\setlength{\rightskip}{0pt plus 5cm}void xstd\-::abstract\-\_\-logger\-::log\-\_\-time\-\_\-stamp (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [inherited]}}}\label{classxstd_1_1abstract__logger_a8bed4dfa79399f58146700adfd1ac06f}
+\hypertarget{classxstd_1_1abstract__logger_a1077a739173ed39b8f71f0ef69ada29f}{\index{xstd\-::file\-\_\-logger@{xstd\-::file\-\_\-logger}!make\-\_\-time\-\_\-stamp@{make\-\_\-time\-\_\-stamp}}
+\index{make\-\_\-time\-\_\-stamp@{make\-\_\-time\-\_\-stamp}!xstd::file_logger@{xstd\-::file\-\_\-logger}}
+\subsubsection[{make\-\_\-time\-\_\-stamp}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string xstd\-::abstract\-\_\-logger\-::make\-\_\-time\-\_\-stamp (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [protected]}, {\ttfamily [inherited]}}}\label{classxstd_1_1abstract__logger_a1077a739173ed39b8f71f0ef69ada29f}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classxstd_1_1abstract__logger_a5216ec0a18fea2571db19d5a55d8700f}{\index{xstd\-::file\-\_\-logger@{xstd\-::file\-\_\-logger}!add\-\_\-new\-\_\-line@{add\-\_\-new\-\_\-line}}
+\index{add\-\_\-new\-\_\-line@{add\-\_\-new\-\_\-line}!xstd::file_logger@{xstd\-::file\-\_\-logger}}
+\subsubsection[{add\-\_\-new\-\_\-line}]{\setlength{\rightskip}{0pt plus 5cm}bool xstd\-::abstract\-\_\-logger\-::add\-\_\-new\-\_\-line\hspace{0.3cm}{\ttfamily [inherited]}}}\label{classxstd_1_1abstract__logger_a5216ec0a18fea2571db19d5a55d8700f}
+\hypertarget{classxstd_1_1abstract__logger_a534b4f6a3dcdd3b7f18abfcb1bb5b937}{\index{xstd\-::file\-\_\-logger@{xstd\-::file\-\_\-logger}!add\-\_\-time\-\_\-stamp@{add\-\_\-time\-\_\-stamp}}
+\index{add\-\_\-time\-\_\-stamp@{add\-\_\-time\-\_\-stamp}!xstd::file_logger@{xstd\-::file\-\_\-logger}}
+\subsubsection[{add\-\_\-time\-\_\-stamp}]{\setlength{\rightskip}{0pt plus 5cm}bool xstd\-::abstract\-\_\-logger\-::add\-\_\-time\-\_\-stamp\hspace{0.3cm}{\ttfamily [inherited]}}}\label{classxstd_1_1abstract__logger_a534b4f6a3dcdd3b7f18abfcb1bb5b937}
+\hypertarget{classxstd_1_1file__logger_a0745eaab93df733f6696fa14e74eb068}{\index{xstd\-::file\-\_\-logger@{xstd\-::file\-\_\-logger}!file@{file}}
+\index{file@{file}!xstd::file_logger@{xstd\-::file\-\_\-logger}}
+\subsubsection[{file}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string xstd\-::file\-\_\-logger\-::file\hspace{0.3cm}{\ttfamily [protected]}}}\label{classxstd_1_1file__logger_a0745eaab93df733f6696fa14e74eb068}
 
 
 The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
 \item 
-src/log/file\-\_\-logger/src/file\-\_\-logger.\-hpp\item 
-src/log/file\-\_\-logger/src/file\-\_\-logger.\-ipp\end{DoxyCompactItemize}
+src/log/file\-\_\-logger/src/\hyperlink{file__logger_8hpp}{file\-\_\-logger.\-hpp}\item 
+src/log/file\-\_\-logger/src/\hyperlink{file__logger_8ipp}{file\-\_\-logger.\-ipp}\end{DoxyCompactItemize}

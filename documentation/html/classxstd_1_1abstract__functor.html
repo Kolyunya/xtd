@@ -63,6 +63,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
       <li><a href="annotated.html"><span>Class&#160;List</span></a></li>
       <li><a href="classes.html"><span>Class&#160;Index</span></a></li>
       <li><a href="hierarchy.html"><span>Class&#160;Hierarchy</span></a></li>
+      <li><a href="functions.html"><span>Class&#160;Members</span></a></li>
     </ul>
   </div>
 <!-- window showing the filter options -->
@@ -70,7 +71,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Friends</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -81,7 +82,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><b>xstd</b></li><li class="navelem"><a class="el" href="classxstd_1_1abstract__functor.html">abstract_functor</a></li>  </ul>
+<li class="navelem"><a class="el" href="namespacexstd.html">xstd</a></li><li class="navelem"><a class="el" href="classxstd_1_1abstract__functor.html">abstract_functor</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -92,21 +93,106 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">xstd::abstract_functor&lt; arguments_type &gt; Class Template Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p><code>#include &lt;<a class="el" href="abstract__functor_8hpp_source.html">abstract_functor.hpp</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:aa396ab9aba29660208608903e1703359"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa396ab9aba29660208608903e1703359"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>operator()</b> (arguments_type...arguments) const =0</td></tr>
-<tr class="memitem:ae729729f945ed0d871768fc99e76d228"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae729729f945ed0d871768fc99e76d228"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>invoke</b> (arguments_type...arguments) const =0</td></tr>
+<tr class="memitem:a9f6e6b78fe73cc12ef0c2fc1b28cd8fd"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxstd_1_1abstract__functor.html#a9f6e6b78fe73cc12ef0c2fc1b28cd8fd">~abstract_functor</a> (void)</td></tr>
+<tr class="memitem:aa396ab9aba29660208608903e1703359"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxstd_1_1abstract__functor.html#aa396ab9aba29660208608903e1703359">operator()</a> (arguments_type...arguments) const =0</td></tr>
+<tr class="memitem:ae729729f945ed0d871768fc99e76d228"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxstd_1_1abstract__functor.html#ae729729f945ed0d871768fc99e76d228">invoke</a> (arguments_type...arguments) const =0</td></tr>
 </table>
+<h2>Constructor &amp; Destructor Documentation</h2>
+<a class="anchor" id="a9f6e6b78fe73cc12ef0c2fc1b28cd8fd"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename... arguments_type&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="classxstd_1_1abstract__functor.html">xstd::abstract_functor</a>&lt; arguments_type &gt;::~<a class="el" href="classxstd_1_1abstract__functor.html">abstract_functor</a> </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2>Member Function Documentation</h2>
+<a class="anchor" id="ae729729f945ed0d871768fc99e76d228"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename... arguments_type&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void <a class="el" href="classxstd_1_1abstract__functor.html">xstd::abstract_functor</a>&lt; arguments_type &gt;::invoke </td>
+          <td>(</td>
+          <td class="paramtype">arguments_type...&#160;</td>
+          <td class="paramname"><em>arguments</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Implemented in <a class="el" href="classxstd_1_1functor.html#aa40709e615299c2c2d05c8c21c7ace66">xstd::functor&lt; object_type, arguments_type &gt;</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="aa396ab9aba29660208608903e1703359"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename... arguments_type&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void <a class="el" href="classxstd_1_1abstract__functor.html">xstd::abstract_functor</a>&lt; arguments_type &gt;::operator() </td>
+          <td>(</td>
+          <td class="paramtype">arguments_type...&#160;</td>
+          <td class="paramname"><em>arguments</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Implemented in <a class="el" href="classxstd_1_1functor.html#aeb8b8bd83b493e203d526dbf6b0c4920">xstd::functor&lt; object_type, arguments_type &gt;</a>.</p>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>src/functional/functor/abstract_functor/src/<a class="el" href="abstract__functor_8hpp_source.html">abstract_functor.hpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Aug 7 2014 15:49:56 for XTD by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Aug 7 2014 15:57:06 for XTD by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.1.2
 </small></address>

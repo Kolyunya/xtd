@@ -61,6 +61,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow2" class="tabs2">
     <ul class="tablist">
       <li><a href="files.html"><span>File&#160;List</span></a></li>
+      <li><a href="globals.html"><span>File&#160;Members</span></a></li>
     </ul>
   </div>
 <!-- window showing the filter options -->
@@ -68,7 +69,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Friends</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -87,7 +88,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">timer_manager.hpp</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">//  xstd - extension of the C++ standard library</span></div>
+<a href="timer__manager_8hpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">//  xstd - extension of the C++ standard library</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">//  Copyright (C) 2013 Oleynikov Nikolay</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">//</span></div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">//  This program is free software: you can redistribute it and/or modify</span></div>
@@ -123,7 +124,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        {</div>
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;            <span class="keyword">public</span>:</div>
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;                <span class="keyword">static</span> <a class="code" href="classxstd_1_1chrono_1_1timer__manager.html">timer_manager</a>&amp;       get_instance ( <span class="keywordtype">void</span> )</div>
+<div class="line"><a name="l00037"></a><span class="lineno"><a class="code" href="classxstd_1_1chrono_1_1timer__manager.html#a8894928f093db753153f2f87dfa511e0">   37</a></span>&#160;                <span class="keyword">static</span> <a class="code" href="classxstd_1_1chrono_1_1timer__manager.html">timer_manager</a>&amp;       <a class="code" href="classxstd_1_1chrono_1_1timer__manager.html#a8894928f093db753153f2f87dfa511e0">get_instance</a> ( <span class="keywordtype">void</span> )</div>
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;                {</div>
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;                    <span class="comment">//  No mutex needed here because local statics are initialized in a thread-safe manner in C++11</span></div>
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;                    <span class="comment">//  and the &quot;instance&quot; is not modified after the instantiation</span></div>
@@ -131,88 +132,88 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;                    <span class="keywordflow">return</span> instance;</div>
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;                }</div>
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;                <span class="keywordtype">void</span>                        add_timer ( <a class="code" href="classxstd_1_1chrono_1_1timer__base.html">timer_base</a>* <span class="keyword">const</span> timer_ptr )</div>
+<div class="line"><a name="l00045"></a><span class="lineno"><a class="code" href="classxstd_1_1chrono_1_1timer__manager.html#ae97c0dba8154bace5af93caae4948c8c">   45</a></span>&#160;                <span class="keywordtype">void</span>                        <a class="code" href="classxstd_1_1chrono_1_1timer__manager.html#ae97c0dba8154bace5af93caae4948c8c">add_timer</a> ( <a class="code" href="classxstd_1_1chrono_1_1timer__base.html">timer_base</a>* <span class="keyword">const</span> timer_ptr )</div>
 <div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;                {</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;                    std::lock_guard&lt;std::recursive_mutex&gt; lock_guard(this-&gt;mutex);</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;                    this-&gt;check_has_no_timer(timer_ptr);</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;                    this-&gt;timers.push_back(timer_ptr);</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;                    this-&gt;start_thread_if_needed();</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;                    std::lock_guard&lt;std::recursive_mutex&gt; lock_guard(this-&gt;<a class="code" href="classxstd_1_1chrono_1_1timer__manager.html#afe2d386a7849d456e6fffda583bb73f2">mutex</a>);</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;                    this-&gt;<a class="code" href="classxstd_1_1chrono_1_1timer__manager.html#a5e8e65bcefa980c1fe1dd4ee09007a84">check_has_no_timer</a>(timer_ptr);</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;                    this-&gt;<a class="code" href="classxstd_1_1chrono_1_1timer__manager.html#a9eae3cef8d5d2e72a68dfb9e2a0130ee">timers</a>.push_back(timer_ptr);</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;                    this-&gt;<a class="code" href="classxstd_1_1chrono_1_1timer__manager.html#a123733308516d62d9ba95012e407f4ec">start_thread_if_needed</a>();</div>
 <div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;                }</div>
 <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;                <span class="keywordtype">void</span>                        remove_timer ( <a class="code" href="classxstd_1_1chrono_1_1timer__base.html">timer_base</a>* <span class="keyword">const</span> timer_ptr )</div>
+<div class="line"><a name="l00053"></a><span class="lineno"><a class="code" href="classxstd_1_1chrono_1_1timer__manager.html#af368bd572a757f8f78e39e4572114a84">   53</a></span>&#160;                <span class="keywordtype">void</span>                        <a class="code" href="classxstd_1_1chrono_1_1timer__manager.html#af368bd572a757f8f78e39e4572114a84">remove_timer</a> ( <a class="code" href="classxstd_1_1chrono_1_1timer__base.html">timer_base</a>* <span class="keyword">const</span> timer_ptr )</div>
 <div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;                {</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;                    std::lock_guard&lt;std::recursive_mutex&gt; lock_guard(this-&gt;mutex);</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;                    this-&gt;check_has_timer(timer_ptr);</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;                    this-&gt;timers.erase(this-&gt;get_timer_itr(timer_ptr));</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;                    this-&gt;stop_thread_if_needed();</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;                    std::lock_guard&lt;std::recursive_mutex&gt; lock_guard(this-&gt;<a class="code" href="classxstd_1_1chrono_1_1timer__manager.html#afe2d386a7849d456e6fffda583bb73f2">mutex</a>);</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;                    this-&gt;<a class="code" href="classxstd_1_1chrono_1_1timer__manager.html#ac33f7326e60b3577bbf94c058e5f65d1">check_has_timer</a>(timer_ptr);</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;                    this-&gt;<a class="code" href="classxstd_1_1chrono_1_1timer__manager.html#a9eae3cef8d5d2e72a68dfb9e2a0130ee">timers</a>.erase(this-&gt;<a class="code" href="classxstd_1_1chrono_1_1timer__manager.html#a09e21fff24c5bb05da5f5559b80b3582">get_timer_itr</a>(timer_ptr));</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;                    this-&gt;<a class="code" href="classxstd_1_1chrono_1_1timer__manager.html#aaef36381eeb6f3ad92233636fdbb21c3">stop_thread_if_needed</a>();</div>
 <div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;                }</div>
 <div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;</div>
 <div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;            <span class="keyword">private</span>:</div>
 <div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;                <span class="keyword">explicit</span>                    <a class="code" href="classxstd_1_1chrono_1_1timer__manager.html">timer_manager</a> ( <span class="keywordtype">void</span> )</div>
+<div class="line"><a name="l00063"></a><span class="lineno"><a class="code" href="classxstd_1_1chrono_1_1timer__manager.html#ab54140a0a3d1ababa9fb8953f556b8dc">   63</a></span>&#160;                <span class="keyword">explicit</span>                    <a class="code" href="classxstd_1_1chrono_1_1timer__manager.html#ab54140a0a3d1ababa9fb8953f556b8dc">timer_manager</a> ( <span class="keywordtype">void</span> )</div>
 <div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;                                                :</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;                                                    thread(std::bind(timer_manager::thread_routine,<span class="keyword">this</span>))</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;                                                    <a class="code" href="classxstd_1_1chrono_1_1timer__manager.html#a8f037197c9a2e80e1d0a38695808766e">thread</a>(std::bind(<a class="code" href="classxstd_1_1chrono_1_1timer__manager.html">timer_manager</a>::<a class="code" href="classxstd_1_1chrono_1_1timer__manager.html#a8bb8b012bb6ec7cbc30b19d259668f0c">thread_routine</a>,this))</div>
 <div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;                {</div>
 <div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;</div>
 <div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;                }</div>
 <div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;                <span class="keyword">virtual</span>                     ~<a class="code" href="classxstd_1_1chrono_1_1timer__manager.html">timer_manager</a> ( <span class="keywordtype">void</span> ) noexcept</div>
+<div class="line"><a name="l00070"></a><span class="lineno"><a class="code" href="classxstd_1_1chrono_1_1timer__manager.html#adeca1896ee815f70ed424dd884e94b65">   70</a></span>&#160;                <span class="keyword">virtual</span>                     <a class="code" href="classxstd_1_1chrono_1_1timer__manager.html#adeca1896ee815f70ed424dd884e94b65">~timer_manager</a> ( <span class="keywordtype">void</span> ) noexcept</div>
 <div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;                {</div>
 <div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;</div>
 <div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;                }</div>
 <div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;                <span class="keywordtype">bool</span>                        has_timer ( <span class="keyword">const</span> <a class="code" href="classxstd_1_1chrono_1_1timer__base.html">timer_base</a>* timer_ptr )<span class="keyword"> const</span></div>
+<div class="line"><a name="l00075"></a><span class="lineno"><a class="code" href="classxstd_1_1chrono_1_1timer__manager.html#a88bb334bc67435a46b08a99dc2d45ed1">   75</a></span>&#160;                <span class="keywordtype">bool</span>                        <a class="code" href="classxstd_1_1chrono_1_1timer__manager.html#a88bb334bc67435a46b08a99dc2d45ed1">has_timer</a> ( <span class="keyword">const</span> <a class="code" href="classxstd_1_1chrono_1_1timer__base.html">timer_base</a>* timer_ptr )<span class="keyword"> const</span></div>
 <div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;<span class="keyword">                </span>{</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;                    <span class="keywordflow">return</span> this-&gt;get_timer_itr(timer_ptr) != this-&gt;timers.cend();</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;                    <span class="keywordflow">return</span> this-&gt;<a class="code" href="classxstd_1_1chrono_1_1timer__manager.html#a09e21fff24c5bb05da5f5559b80b3582">get_timer_itr</a>(timer_ptr) != this-&gt;<a class="code" href="classxstd_1_1chrono_1_1timer__manager.html#a9eae3cef8d5d2e72a68dfb9e2a0130ee">timers</a>.cend();</div>
 <div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;                }</div>
 <div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;                <span class="keywordtype">void</span>                        check_has_timer ( <span class="keyword">const</span> <a class="code" href="classxstd_1_1chrono_1_1timer__base.html">timer_base</a>* timer_ptr )<span class="keyword"> const</span></div>
+<div class="line"><a name="l00080"></a><span class="lineno"><a class="code" href="classxstd_1_1chrono_1_1timer__manager.html#ac33f7326e60b3577bbf94c058e5f65d1">   80</a></span>&#160;                <span class="keywordtype">void</span>                        <a class="code" href="classxstd_1_1chrono_1_1timer__manager.html#ac33f7326e60b3577bbf94c058e5f65d1">check_has_timer</a> ( <span class="keyword">const</span> <a class="code" href="classxstd_1_1chrono_1_1timer__base.html">timer_base</a>* timer_ptr )<span class="keyword"> const</span></div>
 <div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;<span class="keyword">                </span>{</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;                    <span class="keywordflow">if</span> ( this-&gt;has_timer(timer_ptr) == <span class="keyword">false</span> )</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;                    <span class="keywordflow">if</span> ( this-&gt;<a class="code" href="classxstd_1_1chrono_1_1timer__manager.html#a88bb334bc67435a46b08a99dc2d45ed1">has_timer</a>(timer_ptr) == <span class="keyword">false</span> )</div>
 <div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;                    {</div>
 <div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;                        <span class="keywordflow">throw</span> std::runtime_error(<span class="stringliteral">&quot;Timer is not being managed&quot;</span>);</div>
 <div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;                    }</div>
 <div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;                }</div>
 <div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;                <span class="keywordtype">void</span>                        check_has_no_timer ( <span class="keyword">const</span> <a class="code" href="classxstd_1_1chrono_1_1timer__base.html">timer_base</a>* timer_ptr )<span class="keyword"> const</span></div>
+<div class="line"><a name="l00088"></a><span class="lineno"><a class="code" href="classxstd_1_1chrono_1_1timer__manager.html#a5e8e65bcefa980c1fe1dd4ee09007a84">   88</a></span>&#160;                <span class="keywordtype">void</span>                        <a class="code" href="classxstd_1_1chrono_1_1timer__manager.html#a5e8e65bcefa980c1fe1dd4ee09007a84">check_has_no_timer</a> ( <span class="keyword">const</span> <a class="code" href="classxstd_1_1chrono_1_1timer__base.html">timer_base</a>* timer_ptr )<span class="keyword"> const</span></div>
 <div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;<span class="keyword">                </span>{</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;                    <span class="keywordflow">if</span> ( this-&gt;has_timer(timer_ptr) == <span class="keyword">true</span> )</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;                    <span class="keywordflow">if</span> ( this-&gt;<a class="code" href="classxstd_1_1chrono_1_1timer__manager.html#a88bb334bc67435a46b08a99dc2d45ed1">has_timer</a>(timer_ptr) == <span class="keyword">true</span> )</div>
 <div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;                    {</div>
 <div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;                        <span class="keywordflow">throw</span> std::runtime_error(<span class="stringliteral">&quot;Timer is already being managed&quot;</span>);</div>
 <div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;                    }</div>
 <div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;                }</div>
 <div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;                <span class="keywordtype">void</span>                        start_thread_if_needed ( <span class="keywordtype">void</span> )</div>
+<div class="line"><a name="l00096"></a><span class="lineno"><a class="code" href="classxstd_1_1chrono_1_1timer__manager.html#a123733308516d62d9ba95012e407f4ec">   96</a></span>&#160;                <span class="keywordtype">void</span>                        <a class="code" href="classxstd_1_1chrono_1_1timer__manager.html#a123733308516d62d9ba95012e407f4ec">start_thread_if_needed</a> ( <span class="keywordtype">void</span> )</div>
 <div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;                {</div>
 <div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;</div>
 <div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;                    <span class="comment">//  Starts the thread if there is exactly one active timer</span></div>
 <div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;                    <span class="comment">//  If there are more than one timer the thread is already started</span></div>
 <div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;                    <span class="comment">//  This function is called from &quot;timer_manager::add_timer&quot;</span></div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;                    <span class="keywordflow">if</span> ( this-&gt;timers.size() == 1 )</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;                    <span class="keywordflow">if</span> ( this-&gt;<a class="code" href="classxstd_1_1chrono_1_1timer__manager.html#a9eae3cef8d5d2e72a68dfb9e2a0130ee">timers</a>.size() == 1 )</div>
 <div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;                    {</div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;                        this-&gt;thread.start();</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;                        this-&gt;<a class="code" href="classxstd_1_1chrono_1_1timer__manager.html#a8f037197c9a2e80e1d0a38695808766e">thread</a>.<a class="code" href="classxstd_1_1raii__thread__manual.html#a4998457f902ae8515ba0a37a8c78e37a">start</a>();</div>
 <div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;                    }</div>
 <div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;</div>
 <div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;                }</div>
 <div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;</div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;                <span class="keywordtype">void</span>                        stop_thread_if_needed ( <span class="keywordtype">void</span> )</div>
+<div class="line"><a name="l00109"></a><span class="lineno"><a class="code" href="classxstd_1_1chrono_1_1timer__manager.html#aaef36381eeb6f3ad92233636fdbb21c3">  109</a></span>&#160;                <span class="keywordtype">void</span>                        <a class="code" href="classxstd_1_1chrono_1_1timer__manager.html#aaef36381eeb6f3ad92233636fdbb21c3">stop_thread_if_needed</a> ( <span class="keywordtype">void</span> )</div>
 <div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;                {</div>
 <div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;</div>
 <div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;                    <span class="comment">//  Stops the thread if there are no active timers</span></div>
 <div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;                    <span class="comment">//  This function is called from &quot;timer_manager::add_timer&quot;</span></div>
-<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;                    <span class="keywordflow">if</span> ( this-&gt;timers.empty() )</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;                    <span class="keywordflow">if</span> ( this-&gt;<a class="code" href="classxstd_1_1chrono_1_1timer__manager.html#a9eae3cef8d5d2e72a68dfb9e2a0130ee">timers</a>.empty() )</div>
 <div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;                    {</div>
-<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;                        this-&gt;thread.stop();</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;                        this-&gt;<a class="code" href="classxstd_1_1chrono_1_1timer__manager.html#a8f037197c9a2e80e1d0a38695808766e">thread</a>.<a class="code" href="classxstd_1_1raii__thread__manual.html#a00dc2a5fc7895b700a88afcdb9fa0f23">stop</a>();</div>
 <div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;                    }</div>
 <div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;</div>
 <div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;                }</div>
 <div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;</div>
-<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;                timers_vector_itr           get_timer_itr ( <span class="keyword">const</span> <a class="code" href="classxstd_1_1chrono_1_1timer__base.html">timer_base</a>* timer_ptr )<span class="keyword"> const</span></div>
+<div class="line"><a name="l00121"></a><span class="lineno"><a class="code" href="classxstd_1_1chrono_1_1timer__manager.html#a09e21fff24c5bb05da5f5559b80b3582">  121</a></span>&#160;                timers_vector_itr           <a class="code" href="classxstd_1_1chrono_1_1timer__manager.html#a09e21fff24c5bb05da5f5559b80b3582">get_timer_itr</a> ( <span class="keyword">const</span> <a class="code" href="classxstd_1_1chrono_1_1timer__base.html">timer_base</a>* timer_ptr )<span class="keyword"> const</span></div>
 <div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;<span class="keyword">                </span>{</div>
 <div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;</div>
-<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;                    timers_vector_itr timers_vector_itr_obj = this-&gt;timers.begin();</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;                    timers_vector_itr timers_vector_itr_obj = this-&gt;<a class="code" href="classxstd_1_1chrono_1_1timer__manager.html#a9eae3cef8d5d2e72a68dfb9e2a0130ee">timers</a>.begin();</div>
 <div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;</div>
-<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;                    <span class="keywordflow">for</span> ( ; timers_vector_itr_obj != this-&gt;timers.end() ; timers_vector_itr_obj++ )</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;                    <span class="keywordflow">for</span> ( ; timers_vector_itr_obj != this-&gt;<a class="code" href="classxstd_1_1chrono_1_1timer__manager.html#a9eae3cef8d5d2e72a68dfb9e2a0130ee">timers</a>.end() ; timers_vector_itr_obj++ )</div>
 <div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;                    {</div>
 <div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;</div>
 <div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;                        <span class="keywordflow">if</span> ( *timers_vector_itr_obj == timer_ptr )</div>
@@ -224,20 +225,20 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;</div>
 <div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;                    }</div>
 <div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;</div>
-<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;                    <span class="keywordflow">return</span> this-&gt;timers.end();</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;                    <span class="keywordflow">return</span> this-&gt;<a class="code" href="classxstd_1_1chrono_1_1timer__manager.html#a9eae3cef8d5d2e72a68dfb9e2a0130ee">timers</a>.end();</div>
 <div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;</div>
 <div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;                }</div>
 <div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;</div>
-<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;                <span class="keyword">static</span> <span class="keywordtype">void</span>                 thread_routine ( <span class="keyword">const</span> <a class="code" href="classxstd_1_1chrono_1_1timer__manager.html">timer_manager</a>* timer_manager_ptr )</div>
+<div class="line"><a name="l00142"></a><span class="lineno"><a class="code" href="classxstd_1_1chrono_1_1timer__manager.html#a8bb8b012bb6ec7cbc30b19d259668f0c">  142</a></span>&#160;                <span class="keyword">static</span> <span class="keywordtype">void</span>                 <a class="code" href="classxstd_1_1chrono_1_1timer__manager.html#a8bb8b012bb6ec7cbc30b19d259668f0c">thread_routine</a> ( <span class="keyword">const</span> <a class="code" href="classxstd_1_1chrono_1_1timer__manager.html">timer_manager</a>* timer_manager_ptr )</div>
 <div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;                {</div>
 <div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;</div>
-<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;                    <span class="keywordflow">for</span> ( <a class="code" href="classxstd_1_1chrono_1_1timer__base.html">timer_base</a>* timer_ptr : timer_manager_ptr-&gt;timers )</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;                    <span class="keywordflow">for</span> ( <a class="code" href="classxstd_1_1chrono_1_1timer__base.html">timer_base</a>* timer_ptr : timer_manager_ptr-&gt;<a class="code" href="classxstd_1_1chrono_1_1timer__manager.html#a9eae3cef8d5d2e72a68dfb9e2a0130ee">timers</a> )</div>
 <div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;                    {</div>
 <div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;</div>
 <div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;                        <span class="keywordflow">try</span></div>
 <div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;                        {</div>
 <div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;</div>
-<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;                            timer_ptr-&gt;tick();</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;                            timer_ptr-&gt;<a class="code" href="classxstd_1_1chrono_1_1timer__base.html#a2d7c36af22ff593ca31849531fe23fd8">tick</a>();</div>
 <div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;</div>
 <div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;                        }</div>
 <div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;</div>
@@ -252,13 +253,13 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;</div>
 <div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;                }</div>
 <div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;</div>
-<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;                <a class="code" href="classxstd_1_1chrono_1_1timer__manager.html">timer_manager</a>&amp;              operator= ( <a class="code" href="classxstd_1_1chrono_1_1timer__manager.html">timer_manager</a>&amp; ) = <span class="keyword">delete</span>;</div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;                <a class="code" href="classxstd_1_1chrono_1_1timer__manager.html">timer_manager</a>&amp;              <a class="code" href="classxstd_1_1chrono_1_1timer__manager.html#a535934cf3cd6d1d700689c1f2f406f75">operator= </a>( <a class="code" href="classxstd_1_1chrono_1_1timer__manager.html">timer_manager</a>&amp; ) = <span class="keyword">delete</span>;</div>
 <div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;</div>
-<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;                <a class="code" href="classxstd_1_1raii__thread__manual.html">raii_thread_manual</a>          thread;</div>
+<div class="line"><a name="l00168"></a><span class="lineno"><a class="code" href="classxstd_1_1chrono_1_1timer__manager.html#a8f037197c9a2e80e1d0a38695808766e">  168</a></span>&#160;                <a class="code" href="classxstd_1_1raii__thread__manual.html">raii_thread_manual</a>          <a class="code" href="classxstd_1_1chrono_1_1timer__manager.html#a8f037197c9a2e80e1d0a38695808766e">thread</a>;</div>
 <div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;</div>
-<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;                std::recursive_mutex        mutex;</div>
+<div class="line"><a name="l00170"></a><span class="lineno"><a class="code" href="classxstd_1_1chrono_1_1timer__manager.html#afe2d386a7849d456e6fffda583bb73f2">  170</a></span>&#160;                std::recursive_mutex        <a class="code" href="classxstd_1_1chrono_1_1timer__manager.html#afe2d386a7849d456e6fffda583bb73f2">mutex</a>;</div>
 <div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;</div>
-<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;                <span class="keyword">mutable</span> timers_vector       timers;</div>
+<div class="line"><a name="l00172"></a><span class="lineno"><a class="code" href="classxstd_1_1chrono_1_1timer__manager.html#a9eae3cef8d5d2e72a68dfb9e2a0130ee">  172</a></span>&#160;                <span class="keyword">mutable</span> timers_vector       <a class="code" href="classxstd_1_1chrono_1_1timer__manager.html#a9eae3cef8d5d2e72a68dfb9e2a0130ee">timers</a>;</div>
 <div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;</div>
 <div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;        };</div>
 <div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;</div>
@@ -270,7 +271,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Aug 7 2014 15:49:56 for XTD by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Aug 7 2014 15:57:05 for XTD by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.1.2
 </small></address>
