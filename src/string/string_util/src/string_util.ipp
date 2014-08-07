@@ -22,7 +22,7 @@ namespace xtd
     namespace str
     {
 
-        long int        string_to_long_int ( const std::string& source_string , int number_base )
+        signed long int     string_to_long_int ( const std::string& source_string , int number_base )
         {
 
             // Function "strtol" will set this pointer to point to the first character after the numeric part of the original string.
@@ -60,7 +60,7 @@ namespace xtd
 
         }
 
-        int             string_to_int ( const std::string& source_string , int number_base )
+        signed int          string_to_int ( const std::string& source_string , int number_base )
         {
 
             long int number = string_to_long_int(source_string,number_base);
@@ -76,7 +76,7 @@ namespace xtd
 
         }
 
-        double          string_to_double ( const std::string& source_string )
+        double              string_to_double ( const std::string& source_string )
         {
 
             // Function "strtod" will set this pointer to point to the first character after the numeric part of the original string.
@@ -114,7 +114,7 @@ namespace xtd
 
         }
 
-        float           string_to_float ( const std::string& source_string )
+        float               string_to_float ( const std::string& source_string )
         {
 
             // Function "strtof" will set this pointer to point to the first character after the numeric part of the original string.
@@ -152,7 +152,7 @@ namespace xtd
 
         }
 
-        std::string     number_to_string ( int source_number )
+        std::string         number_to_string ( int source_number )
         {
 
             std::stringstream string_stream;
@@ -161,14 +161,14 @@ namespace xtd
             return string_stream.str();
         }
 
-        std::string     number_to_string ( unsigned int source_number )
+        std::string         number_to_string ( unsigned int source_number )
         {
 
             return number_to_string(static_cast<int>(source_number));
 
         }
 
-        std::string     number_to_string ( float source_number )
+        std::string         number_to_string ( float source_number )
         {
 
             std::stringstream string_stream;
@@ -178,14 +178,14 @@ namespace xtd
 
         }
 
-        std::string     string_reverse ( const std::string& source_string )
+        std::string         string_reverse ( const std::string& source_string )
         {
 
             return std::string(source_string.rbegin(),source_string.rend());
 
         }
 
-        strings         string_split ( const std::string& source_string , const std::string& delimiter )
+        strings             string_split ( const std::string& source_string , const std::string& delimiter )
         {
 
             // Create a result vector
@@ -259,20 +259,20 @@ namespace xtd
 
         }
 
-        strings         string_split ( const std::string& source_string , char delimiter )
+        strings             string_split ( const std::string& source_string , char delimiter )
         {
             std::string delimiter_string = std::string(1,delimiter);
             return string_split(source_string,delimiter_string);
         }
 
-        strings         string_split ( const char* source_string_ptr , const char* delimiter_ptr )
+        strings             string_split ( const char* source_string_ptr , const char* delimiter_ptr )
         {
             std::string source_string = std::string(source_string_ptr);
             std::string delimiter_string = std::string(delimiter_ptr);
             return string_split(source_string,delimiter_string);
         }
 
-        std::string     string_replace ( const std::string& source_string , const std::string& search_for , const std::string& replace_with )
+        std::string         string_replace ( const std::string& source_string , const std::string& search_for , const std::string& replace_with )
         {
 
             size_t search_for_size = search_for.size();
@@ -296,14 +296,14 @@ namespace xtd
 
         }
 
-        std::string     string_replace ( const std::string& source_string , const char search_for , const char replace_with )
+        std::string         string_replace ( const std::string& source_string , const char search_for , const char replace_with )
         {
             std::string search_for_string = std::string(1,search_for);
             std::string replace_with_string = std::string(1,replace_with);
             return string_replace(source_string,search_for_string,replace_with_string);
         }
 
-        std::string     string_replace ( const char* source_string_ptr , const char* search_for_ptr , const char* replace_with_ptr )
+        std::string         string_replace ( const char* source_string_ptr , const char* search_for_ptr , const char* replace_with_ptr )
         {
             std::string source_string = std::string(source_string_ptr);
             std::string search_for_string = std::string(search_for_ptr);
@@ -311,7 +311,7 @@ namespace xtd
             return string_replace(source_string,search_for_string,replace_with_string);
         }
 
-        bool            string_is_numeric ( const std::string& source_string )
+        bool                string_is_numeric ( const std::string& source_string )
         {
 
             // Empty std::string is not a number
@@ -361,7 +361,7 @@ namespace xtd
 
         }
 
-        bool            string_is_integer ( const std::string& source_string )
+        bool                string_is_integer ( const std::string& source_string )
         {
             bool source_string_is_numeric = string_is_numeric(source_string);
             bool source_string_is_not_numeric = ! source_string_is_numeric;
@@ -379,7 +379,7 @@ namespace xtd
             return true;
         }
 
-        bool            string_is_fractional ( const std::string& source_string )
+        bool                string_is_fractional ( const std::string& source_string )
         {
             bool source_string_is_numeric = string_is_numeric(source_string);
             bool source_string_is_not_numeric = ! source_string_is_numeric;

@@ -59,7 +59,7 @@ namespace xtd
          *  @details Converts a number represented by a `source_string` to a `long int`.
          *           Treats a `source_string` as a numeral with a base of `number_base`.
          */
-        inline long int         string_to_long_int ( const std::string& source_string , int number_base = 10 );
+        inline signed long int      string_to_long_int ( const std::string& source_string , int number_base = 10 );
 
          /**
          *  @brief Converts a number from string to numeric representation.
@@ -74,37 +74,37 @@ namespace xtd
          *  @details Converts a number represented by a `source_string` to a `long int`.
          *           Treats a `source_string` as a numeral with a base of `number_base`.
          */
-        inline int              string_to_int ( const std::string& source_string , int number_base = 10 );
+        inline signed int           string_to_int ( const std::string& source_string , int number_base = 10 );
 
-        inline double           string_to_double ( const std::string& source_string );
+        inline double               string_to_double ( const std::string& source_string );
 
-        inline float            string_to_float ( const std::string& source_string );
+        inline float                string_to_float ( const std::string& source_string );
 
-        inline std::string      number_to_string ( int source_number );
+        inline std::string          number_to_string ( int source_number );
 
-        inline std::string      number_to_string ( unsigned int source_number );
+        inline std::string          number_to_string ( unsigned int source_number );
 
-        inline std::string      number_to_string ( float source_number );
+        inline std::string          number_to_string ( float source_number );
 
-        inline std::string      string_reverse ( const std::string& source_string );
+        inline std::string          string_reverse ( const std::string& source_string );
 
-        inline strings          string_split ( const std::string& source_string , const std::string& delimiter );
+        inline strings              string_split ( const std::string& source_string , const std::string& delimiter );
 
-        inline strings          string_split ( const std::string& source_string , char delimiter );
+        inline strings              string_split ( const std::string& source_string , char delimiter );
 
-        inline strings          string_split ( const char* source_string_ptr , const char* delimiter_ptr );
+        inline strings              string_split ( const char* source_string_ptr , const char* delimiter_ptr );
 
-        inline std::string      string_replace ( const std::string& source_string , const std::string& search_for , const std::string& replace_with );
+        inline std::string          string_replace ( const std::string& source_string , const std::string& search_for , const std::string& replace_with );
 
-        inline std::string      string_replace ( const std::string& source_string , char search_for , char replace_with );
+        inline std::string          string_replace ( const std::string& source_string , char search_for , char replace_with );
 
-        inline std::string      string_replace ( const char* source_string_ptr , const char* search_for_ptr , const char* replace_with_ptr );
+        inline std::string          string_replace ( const char* source_string_ptr , const char* search_for_ptr , const char* replace_with_ptr );
 
-        inline bool             string_is_numeric ( const std::string& source_string );
+        inline bool                 string_is_numeric ( const std::string& source_string );
 
-        inline bool             string_is_integer ( const std::string& source_string );
+        inline bool                 string_is_integer ( const std::string& source_string );
 
-        inline bool             string_is_fractional ( const std::string& source_string );
+        inline bool                 string_is_fractional ( const std::string& source_string );
 
     }
 
