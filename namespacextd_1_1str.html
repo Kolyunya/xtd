@@ -98,7 +98,9 @@ Functions</h2></td></tr>
 <tr class="memitem:a4c8c7aa55d1f5637474424b9abab6467"><td class="memItemLeft" align="right" valign="top">signed int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacextd_1_1str.html#a4c8c7aa55d1f5637474424b9abab6467">string_to_int</a> (const std::string &amp;source_string, int number_base=10)</td></tr>
 <tr class="memdesc:a4c8c7aa55d1f5637474424b9abab6467"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts a number from string to numeric representation.  <a href="#a4c8c7aa55d1f5637474424b9abab6467"></a><br/></td></tr>
 <tr class="memitem:aaabc2e3834d3052e392cda6140ae5cc2"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacextd_1_1str.html#aaabc2e3834d3052e392cda6140ae5cc2">string_to_double</a> (const std::string &amp;source_string)</td></tr>
+<tr class="memdesc:aaabc2e3834d3052e392cda6140ae5cc2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts a number from string to numeric representation.  <a href="#aaabc2e3834d3052e392cda6140ae5cc2"></a><br/></td></tr>
 <tr class="memitem:a90f49ec1f4ff29fd05d598f815f9b4e0"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacextd_1_1str.html#a90f49ec1f4ff29fd05d598f815f9b4e0">string_to_float</a> (const std::string &amp;source_string)</td></tr>
+<tr class="memdesc:a90f49ec1f4ff29fd05d598f815f9b4e0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts a number from string to numeric representation.  <a href="#a90f49ec1f4ff29fd05d598f815f9b4e0"></a><br/></td></tr>
 <tr class="memitem:a84c0f8285134f075fde7fbb91ee174ef"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacextd_1_1str.html#a84c0f8285134f075fde7fbb91ee174ef">number_to_string</a> (int source_number)</td></tr>
 <tr class="memitem:a485b63dcd6cac4d8b45712f634a2aaed"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacextd_1_1str.html#a485b63dcd6cac4d8b45712f634a2aaed">number_to_string</a> (unsigned int source_number)</td></tr>
 <tr class="memitem:ae520ea89838af34abca58612baf0ee7d"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacextd_1_1str.html#ae520ea89838af34abca58612baf0ee7d">number_to_string</a> (float source_number)</td></tr>
@@ -798,6 +800,23 @@ Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Converts a number from string to numeric representation. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">source_string</td><td>A string representation of a number. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A numeric representation of a number. </dd></dl>
+<dl class="section user"><dt>No-throw guarantee</dt><dd>Strong. </dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::runtime_error</td><td>Thrown if <code>source_string</code> does not represent a valid_number. Also thrown if <code>source_string</code> represents a number which is out of range of <code>double</code>.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Converts a number represented by a <code>source_string</code> to a <code>long int</code>. Treats a <code>source_string</code> as a numeral with a base of <code>number_base</code>. </p>
+
 <p>Definition at line <a class="el" href="string__util_8ipp_source.html#l00079">79</a> of file <a class="el" href="string__util_8ipp_source.html">string_util.ipp</a>.</p>
 <div class="fragment"><div class="line">        {</div>
 <div class="line"></div>
@@ -859,6 +878,23 @@ Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Converts a number from string to numeric representation. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">source_string</td><td>A string representation of a number. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A numeric representation of a number. </dd></dl>
+<dl class="section user"><dt>No-throw guarantee</dt><dd>Strong. </dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::runtime_error</td><td>Thrown if <code>source_string</code> does not represent a valid_number. Also thrown if <code>source_string</code> represents a number which is out of range of <code>float</code>.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Converts a number represented by a <code>source_string</code> to a <code>long int</code>. Treats a <code>source_string</code> as a numeral with a base of <code>number_base</code>. </p>
 
 <p>Definition at line <a class="el" href="string__util_8ipp_source.html#l00117">117</a> of file <a class="el" href="string__util_8ipp_source.html">string_util.ipp</a>.</p>
 
@@ -946,7 +982,7 @@ Functions</h2></td></tr>
 <dl class="section user"><dt>No-throw guarantee</dt><dd>Strong. </dd></dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">std::runtime_error</td><td>Thrown if <code>source_string</code> does not represent a valid_number. Also thrown if <code>source_string</code> represents a number which is out of range of <code>long int</code>.</td></tr>
+    <tr><td class="paramname">std::runtime_error</td><td>Thrown if <code>source_string</code> does not represent a valid_number. Also thrown if <code>source_string</code> represents a number which is out of range of <code>signed int</code>.</td></tr>
   </table>
   </dd>
 </dl>
@@ -1018,7 +1054,7 @@ Functions</h2></td></tr>
 <dl class="section user"><dt>No-throw guarantee</dt><dd>Strong. </dd></dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">std::runtime_error</td><td>Thrown if <code>source_string</code> does not represent a valid_number. Also thrown if <code>source_string</code> represents a number which is out of range of <code>long int</code>.</td></tr>
+    <tr><td class="paramname">std::runtime_error</td><td>Thrown if <code>source_string</code> does not represent a valid_number. Also thrown if <code>source_string</code> represents a number which is out of range of <code>signed long int</code>.</td></tr>
   </table>
   </dd>
 </dl>
@@ -1069,7 +1105,7 @@ Functions</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Aug 7 2014 16:04:18 for XTD by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Aug 7 2014 16:08:07 for XTD by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.1.2
 </small></address>
