@@ -55,7 +55,7 @@ namespace xtd
          *  @param [in] source_string A string representation of a number.
          *  @param [in] number_base A base of a number.
          *  @returns A numeric representation of a number.
-         *  @no_throw_guarantee Strong.
+         *  @exception_safety Strong exception safety.
          *  @throws std::runtime_error Thrown if `source_string` does not represent a valid_number.
          *                             Also thrown if `source_string` represents a number which is out of range of `signed long int`.
          *
@@ -70,7 +70,7 @@ namespace xtd
          *  @param [in] source_string A string representation of a number.
          *  @param [in] number_base A base of a number.
          *  @returns A numeric representation of a number.
-         *  @no_throw_guarantee Strong.
+         *  @exception_safety Strong exception safety.
          *  @throws std::runtime_error Thrown if `source_string` does not represent a valid_number.
          *                             Also thrown if `source_string` represents a number which is out of range of `signed int`.
          *
@@ -84,7 +84,7 @@ namespace xtd
          *
          *  @param [in] source_string A string representation of a number.
          *  @returns A numeric representation of a number.
-         *  @no_throw_guarantee Strong.
+         *  @exception_safety Strong exception safety.
          *  @throws std::runtime_error Thrown if `source_string` does not represent a valid_number.
          *                             Also thrown if `source_string` represents a number which is out of range of `double`.
          *
@@ -97,7 +97,7 @@ namespace xtd
          *
          *  @param [in] source_string A string representation of a number.
          *  @returns A numeric representation of a number.
-         *  @no_throw_guarantee Strong.
+         *  @exception_safety Strong exception safety.
          *  @throws std::runtime_error Thrown if `source_string` does not represent a valid_number.
          *                             Also thrown if `source_string` represents a number which is out of range of `float`.
          *
