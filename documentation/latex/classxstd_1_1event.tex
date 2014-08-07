@@ -1,0 +1,80 @@
+\hypertarget{classxstd_1_1event}{\section{xstd\-:\-:event$<$ data\-\_\-type $>$ Class Template Reference}
+\label{classxstd_1_1event}\index{xstd\-::event$<$ data\-\_\-type $>$@{xstd\-::event$<$ data\-\_\-type $>$}}
+}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classxstd_1_1event_af5ce6caa7da361833c3098686a28eb4a}{unsigned int {\bfseries get\-\_\-listeners\-\_\-count} (void) const }\label{classxstd_1_1event_af5ce6caa7da361833c3098686a28eb4a}
+
+\item 
+\hypertarget{classxstd_1_1event_a91e77f734b2fe690615a9684446594a9}{unsigned int {\bfseries get\-\_\-free\-\_\-listeners\-\_\-count} (void) const }\label{classxstd_1_1event_a91e77f734b2fe690615a9684446594a9}
+
+\item 
+\hypertarget{classxstd_1_1event_a6aec13f27635f3ad58435337f6063659}{unsigned int {\bfseries get\-\_\-functor\-\_\-listeners\-\_\-count} (void) const }\label{classxstd_1_1event_a6aec13f27635f3ad58435337f6063659}
+
+\item 
+\hypertarget{classxstd_1_1event_a28d29a9104d4e8c3986376b2ffca0a48}{bool {\bfseries has\-\_\-listener} (free\-\_\-listener free\-\_\-listener\-\_\-instance) const }\label{classxstd_1_1event_a28d29a9104d4e8c3986376b2ffca0a48}
+
+\item 
+\hypertarget{classxstd_1_1event_acbfdc5b60687237a2b42bc6e7d00d4a4}{{\footnotesize template$<$typename object\-\_\-type $>$ }\\bool {\bfseries has\-\_\-listener} (object\-\_\-type $\ast$object\-\_\-ptr, void(object\-\_\-type\-::$\ast$method\-\_\-ptr)(data\-\_\-type...)) const }\label{classxstd_1_1event_acbfdc5b60687237a2b42bc6e7d00d4a4}
+
+\item 
+\hypertarget{classxstd_1_1event_a6d7320f608d4f7b072b62a5e66ea8d62}{void {\bfseries add\-\_\-listener} (free\-\_\-listener free\-\_\-listener\-\_\-instance)}\label{classxstd_1_1event_a6d7320f608d4f7b072b62a5e66ea8d62}
+
+\item 
+\hypertarget{classxstd_1_1event_aa58880f86e0e2e5653df91692f221604}{{\footnotesize template$<$typename object\-\_\-type $>$ }\\void {\bfseries add\-\_\-listener} (object\-\_\-type $\ast$object\-\_\-ptr, void(object\-\_\-type\-::$\ast$method\-\_\-ptr)(data\-\_\-type...))}\label{classxstd_1_1event_aa58880f86e0e2e5653df91692f221604}
+
+\item 
+\hypertarget{classxstd_1_1event_a19e40e6d6af2d565ef741ecfbfb2fda7}{void {\bfseries remove\-\_\-listener} (free\-\_\-listener free\-\_\-listener\-\_\-instance)}\label{classxstd_1_1event_a19e40e6d6af2d565ef741ecfbfb2fda7}
+
+\item 
+\hypertarget{classxstd_1_1event_a2ecf3e9a39708db0c28281dbb32d12da}{{\footnotesize template$<$typename object\-\_\-type $>$ }\\void {\bfseries remove\-\_\-listener} (object\-\_\-type $\ast$object\-\_\-ptr, void(object\-\_\-type\-::$\ast$method\-\_\-ptr)(data\-\_\-type...))}\label{classxstd_1_1event_a2ecf3e9a39708db0c28281dbb32d12da}
+
+\item 
+\hypertarget{classxstd_1_1event_a60e1b1471f7c50f764fcb8388ca56b47}{void {\bfseries dispatch} (data\-\_\-type...\-data) const }\label{classxstd_1_1event_a60e1b1471f7c50f764fcb8388ca56b47}
+
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classxstd_1_1event_a3b2ec0fe63b51f0a785663ff1cbaf897}{void {\bfseries check\-\_\-has\-\_\-listener} (free\-\_\-listener free\-\_\-listener\-\_\-instance) const }\label{classxstd_1_1event_a3b2ec0fe63b51f0a785663ff1cbaf897}
+
+\item 
+\hypertarget{classxstd_1_1event_a4c8f61670b0145de08594411dab17b49}{{\footnotesize template$<$typename object\-\_\-type $>$ }\\void {\bfseries check\-\_\-has\-\_\-listener} (object\-\_\-type $\ast$object\-\_\-ptr, void(object\-\_\-type\-::$\ast$method\-\_\-ptr)(data\-\_\-type...)) const }\label{classxstd_1_1event_a4c8f61670b0145de08594411dab17b49}
+
+\item 
+\hypertarget{classxstd_1_1event_a8720bdcd9e0e8588eadbca2750f751e0}{void {\bfseries check\-\_\-has\-\_\-no\-\_\-listener} (free\-\_\-listener free\-\_\-listener\-\_\-instance) const }\label{classxstd_1_1event_a8720bdcd9e0e8588eadbca2750f751e0}
+
+\item 
+\hypertarget{classxstd_1_1event_a38563e182cb13274550c790f6c2d48e1}{{\footnotesize template$<$typename object\-\_\-type $>$ }\\void {\bfseries check\-\_\-has\-\_\-no\-\_\-listener} (object\-\_\-type $\ast$object\-\_\-ptr, void(object\-\_\-type\-::$\ast$method\-\_\-ptr)(data\-\_\-type...)) const }\label{classxstd_1_1event_a38563e182cb13274550c790f6c2d48e1}
+
+\item 
+\hypertarget{classxstd_1_1event_ac5c004598aa8803f901597ade5aec2c2}{free\-\_\-listeners\-\_\-collection\-\_\-itr {\bfseries get\-\_\-listener\-\_\-itr} (free\-\_\-listener free\-\_\-listener\-\_\-instance) const }\label{classxstd_1_1event_ac5c004598aa8803f901597ade5aec2c2}
+
+\item 
+\hypertarget{classxstd_1_1event_a56491edd13a1c81766c8c770464e992a}{{\footnotesize template$<$typename object\-\_\-type $>$ }\\functor\-\_\-listeners\-\_\-collection\-\_\-itr {\bfseries get\-\_\-listener\-\_\-itr} (object\-\_\-type $\ast$object\-\_\-ptr, void(object\-\_\-type\-::$\ast$method\-\_\-ptr)(data\-\_\-type...)) const }\label{classxstd_1_1event_a56491edd13a1c81766c8c770464e992a}
+
+\item 
+\hypertarget{classxstd_1_1event_ac3a4cf6f6d139f3ab31cd3ca1ebb42e0}{void {\bfseries dispatch\-\_\-free\-\_\-listeners} (data\-\_\-type...\-data) const }\label{classxstd_1_1event_ac3a4cf6f6d139f3ab31cd3ca1ebb42e0}
+
+\item 
+\hypertarget{classxstd_1_1event_a3c82e7e9e05c4c44e65b32db7090bd3c}{void {\bfseries dispatch\-\_\-functor\-\_\-listeners} (data\-\_\-type...\-data) const }\label{classxstd_1_1event_a3c82e7e9e05c4c44e65b32db7090bd3c}
+
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classxstd_1_1event_a045873dfdf4fe07af8421d81592d3275}{free\-\_\-listeners\-\_\-collection {\bfseries free\-\_\-listeners}}\label{classxstd_1_1event_a045873dfdf4fe07af8421d81592d3275}
+
+\item 
+\hypertarget{classxstd_1_1event_a3e4c0ca4abd96a0af619cdb96e3cfef2}{functor\-\_\-listeners\-\_\-collection {\bfseries functor\-\_\-listeners}}\label{classxstd_1_1event_a3e4c0ca4abd96a0af619cdb96e3cfef2}
+
+\item 
+\hypertarget{classxstd_1_1event_afaaee3e44989122c9e1db6f4d1547de8}{std\-::recursive\-\_\-mutex {\bfseries master\-\_\-mutex}}\label{classxstd_1_1event_afaaee3e44989122c9e1db6f4d1547de8}
+
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+src/event/event/src/event.\-hpp\end{DoxyCompactItemize}
