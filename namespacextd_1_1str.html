@@ -93,10 +93,10 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a5b160bb9b43d365dc2e3cfd978c42665"><td class="memItemLeft" align="right" valign="top">long int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacextd_1_1str.html#a5b160bb9b43d365dc2e3cfd978c42665">string_to_long_int</a> (const std::string &amp;source_string, int number_base=10)</td></tr>
-<tr class="memdesc:a5b160bb9b43d365dc2e3cfd978c42665"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts a number from string to numeric representation.  <a href="#a5b160bb9b43d365dc2e3cfd978c42665"></a><br/></td></tr>
-<tr class="memitem:a892cfb582e525bf49e2a735ebcc0f85c"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacextd_1_1str.html#a892cfb582e525bf49e2a735ebcc0f85c">string_to_int</a> (const std::string &amp;source_string, int number_base=10)</td></tr>
-<tr class="memdesc:a892cfb582e525bf49e2a735ebcc0f85c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts a number from string to numeric representation.  <a href="#a892cfb582e525bf49e2a735ebcc0f85c"></a><br/></td></tr>
+<tr class="memitem:a0dce7c929afcd50ffbdb542a5aeaf37a"><td class="memItemLeft" align="right" valign="top">signed long int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacextd_1_1str.html#a0dce7c929afcd50ffbdb542a5aeaf37a">string_to_long_int</a> (const std::string &amp;source_string, int number_base=10)</td></tr>
+<tr class="memdesc:a0dce7c929afcd50ffbdb542a5aeaf37a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts a number from string to numeric representation.  <a href="#a0dce7c929afcd50ffbdb542a5aeaf37a"></a><br/></td></tr>
+<tr class="memitem:a4c8c7aa55d1f5637474424b9abab6467"><td class="memItemLeft" align="right" valign="top">signed int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacextd_1_1str.html#a4c8c7aa55d1f5637474424b9abab6467">string_to_int</a> (const std::string &amp;source_string, int number_base=10)</td></tr>
+<tr class="memdesc:a4c8c7aa55d1f5637474424b9abab6467"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts a number from string to numeric representation.  <a href="#a4c8c7aa55d1f5637474424b9abab6467"></a><br/></td></tr>
 <tr class="memitem:aaabc2e3834d3052e392cda6140ae5cc2"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacextd_1_1str.html#aaabc2e3834d3052e392cda6140ae5cc2">string_to_double</a> (const std::string &amp;source_string)</td></tr>
 <tr class="memitem:a90f49ec1f4ff29fd05d598f815f9b4e0"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacextd_1_1str.html#a90f49ec1f4ff29fd05d598f815f9b4e0">string_to_float</a> (const std::string &amp;source_string)</td></tr>
 <tr class="memitem:a84c0f8285134f075fde7fbb91ee174ef"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacextd_1_1str.html#a84c0f8285134f075fde7fbb91ee174ef">number_to_string</a> (int source_number)</td></tr>
@@ -902,7 +902,7 @@ Functions</h2></td></tr>
 </div><!-- fragment -->
 </div>
 </div>
-<a class="anchor" id="a892cfb582e525bf49e2a735ebcc0f85c"></a>
+<a class="anchor" id="a4c8c7aa55d1f5637474424b9abab6467"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -910,7 +910,7 @@ Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">int xtd::str::string_to_int </td>
+          <td class="memname">signed int xtd::str::string_to_int </td>
           <td>(</td>
           <td class="paramtype">const std::string &amp;&#160;</td>
           <td class="paramname"><em>source_string</em>, </td>
@@ -959,7 +959,7 @@ Functions</h2></td></tr>
 <p>Referenced by <a class="el" href="string__util__tests_8cpp_source.html#l00022">TEST()</a>.</p>
 <div class="fragment"><div class="line">        {</div>
 <div class="line"></div>
-<div class="line">            <span class="keywordtype">long</span> <span class="keywordtype">int</span> number = <a class="code" href="namespacextd_1_1str.html#a5b160bb9b43d365dc2e3cfd978c42665" title="Converts a number from string to numeric representation.">string_to_long_int</a>(source_string,number_base);</div>
+<div class="line">            <span class="keywordtype">long</span> <span class="keywordtype">int</span> number = <a class="code" href="namespacextd_1_1str.html#a0dce7c929afcd50ffbdb542a5aeaf37a" title="Converts a number from string to numeric representation.">string_to_long_int</a>(source_string,number_base);</div>
 <div class="line"></div>
 <div class="line">            <span class="keywordflow">if</span> ( number &lt; INT_MIN || number &gt; INT_MAX )</div>
 <div class="line">            {</div>
@@ -974,7 +974,7 @@ Functions</h2></td></tr>
 </div><!-- fragment -->
 </div>
 </div>
-<a class="anchor" id="a5b160bb9b43d365dc2e3cfd978c42665"></a>
+<a class="anchor" id="a0dce7c929afcd50ffbdb542a5aeaf37a"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -982,7 +982,7 @@ Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">long int xtd::str::string_to_long_int </td>
+          <td class="memname">signed long int xtd::str::string_to_long_int </td>
           <td>(</td>
           <td class="paramtype">const std::string &amp;&#160;</td>
           <td class="paramname"><em>source_string</em>, </td>
@@ -1069,7 +1069,7 @@ Functions</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Aug 7 2014 15:16:18 for XTD by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Aug 7 2014 15:18:46 for XTD by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.1.2
 </small></address>
