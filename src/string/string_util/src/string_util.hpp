@@ -56,8 +56,8 @@ namespace xstd
      *
      *  @details Converts a number represented by a `source_string` to a `long int`.
      *           Treats a `source_string` as a numeral with a base of `number_base`.
+     *           See \l{SomeClass} for more information.
      */
-     /** See \l{SomeClass} for more information. */
     inline long int         string_to_long_int ( const std::string& source_string , int number_base = 10 );
 
     inline int              string_to_int ( const std::string& source_string , int number_base = 10 );
