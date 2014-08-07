@@ -1,0 +1,31 @@
+#!/bin/bash
+
+# Only for the "master" branch
+if [ `git rev-parse --abbrev-ref HEAD` == "master" ]; then
+
+    # Switch to Github Pages branch
+    git checkout gh-pages
+
+    # Remove old version of the site
+    git rm -rf .
+
+    # Get the latest version of the site
+    git checkout master -- system/doxygen src
+
+    # Update the documentation
+    doxygen system/doxygen/Doxyfile
+
+    # Remove the documentation directory
+    git rm -rf system src
+
+    # Add all changes to the stage
+    git add .
+    git add . -u
+
+    # Make a new commit
+    git commit -m "Library documentation updated."
+
+    # Return back to the master branch
+    git checkout master
+
+fi
