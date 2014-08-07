@@ -17,5 +17,6 @@ var searchData=
   ['get_5flisteners_5fcount',['get_listeners_count',['../classxstd_1_1event.html#af5ce6caa7da361833c3098686a28eb4a',1,'xstd::event']]],
   ['get_5flogger_5fptr',['get_logger_ptr',['../classxstd_1_1logger__client.html#a436c05e8f5d01fa5ed01aea36d1c5390',1,'xstd::logger_client']]],
   ['get_5flogger_5fref',['get_logger_ref',['../classxstd_1_1logger__client.html#a4567aa30484c31b0d53089d1d08f8fab',1,'xstd::logger_client']]],
-  ['get_5fticks_5fdone',['get_ticks_done',['../classxstd_1_1chrono_1_1timer.html#a6ad3088df2f2ca33ea7246f1c716b65a',1,'xstd::chrono::timer']]]
+  ['get_5fticks_5fdone',['get_ticks_done',['../classxstd_1_1chrono_1_1timer.html#a6ad3088df2f2ca33ea7246f1c716b65a',1,'xstd::chrono::timer']]],
+  ['get_5ftimer_5fitr',['get_timer_itr',['../classxstd_1_1chrono_1_1timer__manager.html#a09e21fff24c5bb05da5f5559b80b3582',1,'xstd::chrono::timer_manager']]]
 ];
