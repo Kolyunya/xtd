@@ -16,6 +16,10 @@
 //
 //  Author email: OleynikovNY@mail.ru
 
+/**
+ *  @file string_util.hpp
+ */
+
 #ifndef _XSTD_STRING_UTIL_HPP_
 #define _XSTD_STRING_UTIL_HPP_
 
@@ -29,24 +33,24 @@
 #include <cstdlib>      // std::strtol
                         // std::strtof
 
+/**
+ *  @namespace xtd
+ */
 namespace xtd
 {
 
-    // Type declarations
+    /**
+     *  @namespace str
+     *  @brief A nam containing tools which help with string operations
+     */
     namespace str
     {
 
         // A commonly used type representing a collection of strings
         using strings = std::vector<std::string>;
 
-    }
 
-    // Utility functions
-    namespace str
-    {
-
-
-         /**
+        /**
          *  @brief Converts a number from string to numeric representation.
          *
          *  @param [in] source_string A string representation of a number.
@@ -61,7 +65,7 @@ namespace xtd
          */
         inline signed long int      string_to_long_int ( const std::string& source_string , int number_base = 10 );
 
-         /**
+        /**
          *  @brief Converts a number from string to numeric representation.
          *
          *  @param [in] source_string A string representation of a number.
