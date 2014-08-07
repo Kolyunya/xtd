@@ -21,6 +21,9 @@ Each library unit is contained in a separate directory. Each unit directory cont
   + Include required unit headers from library "include" directory into your project.
   + Compile your project.
 
+##Documentation
+The library documentation is available [here](http://kolyunya.github.io/xstd/index.html)
+
 ##Testing
 
 * Prerequisites.
