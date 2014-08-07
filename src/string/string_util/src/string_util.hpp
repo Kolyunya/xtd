@@ -50,10 +50,7 @@ namespace xtd
         /**
          *  @typedef
          *  @brief A collection of strings.
-         *  @details A detailed collection of strings.
          */
-        typedef int foo;
-
         using strings = std::vector<std::string>;
 
         /**
