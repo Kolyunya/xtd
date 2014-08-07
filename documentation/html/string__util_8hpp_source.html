@@ -142,54 +142,55 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="comment">     *  @no-throw-guarantee Strong no-throw guarantee.</span></div>
 <div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="comment">     *  @throw std::runtime_error Throws if `source_string` does not represent a valid_number.</span></div>
 <div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;<span class="comment">     *                            Also throws if `source_string` represents a number which is out of range of `long int`.</span></div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="comment">     *</span></div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="comment">     *  @details Converts a number represented by a `source_string` to a `long int`.</span></div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;<span class="comment">     *           Treats a `source_string` as a numeral with a base of `number_base`.</span></div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;<span class="comment">     */</span></div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <span class="keyword">inline</span> <span class="keywordtype">long</span> <span class="keywordtype">int</span>         <a class="code" href="namespacexstd.html#ab63b25101ecb0ba44580b53fde2544a9" title="Converts a number from string to numeric representation.">string_to_long_int</a> ( <span class="keyword">const</span> std::string&amp; source_string , <span class="keywordtype">int</span> number_base = 10 );</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <span class="keyword">inline</span> <span class="keywordtype">int</span>              <a class="code" href="namespacexstd.html#a2195a5273a4c4982cd850b8a0a055fb0">string_to_int</a> ( <span class="keyword">const</span> std::string&amp; source_string , <span class="keywordtype">int</span> number_base = 10 );</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <span class="keyword">inline</span> <span class="keywordtype">double</span>           <a class="code" href="namespacexstd.html#ab78d849bbec3168534c56a17f3e9cc7e">string_to_double</a> ( <span class="keyword">const</span> std::string&amp; source_string );</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    <span class="keyword">inline</span> <span class="keywordtype">float</span>            <a class="code" href="namespacexstd.html#ab01086c31e5dd03a5936c963a7cba611">string_to_float</a> ( <span class="keyword">const</span> std::string&amp; source_string );</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <span class="keyword">inline</span> std::string      <a class="code" href="namespacexstd.html#aff4e0b309003dfe78046116dacb0cd02">number_to_string</a> ( <span class="keywordtype">int</span> source_number );</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <span class="keyword">inline</span> std::string      <a class="code" href="namespacexstd.html#aff4e0b309003dfe78046116dacb0cd02">number_to_string</a> ( <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> source_number );</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    <span class="keyword">inline</span> std::string      <a class="code" href="namespacexstd.html#aff4e0b309003dfe78046116dacb0cd02">number_to_string</a> ( <span class="keywordtype">float</span> source_number );</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    <span class="keyword">inline</span> std::string      <a class="code" href="namespacexstd.html#a00a138834f6baa94888bd6ba3364a703">string_reverse</a> ( <span class="keyword">const</span> std::string&amp; source_string );</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    <span class="keyword">inline</span> strings          <a class="code" href="namespacexstd.html#a4124078b0731dab2fc3531303ba9f9df">string_split</a> ( <span class="keyword">const</span> std::string&amp; source_string , <span class="keyword">const</span> std::string&amp; delimiter );</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    <span class="keyword">inline</span> strings          <a class="code" href="namespacexstd.html#a4124078b0731dab2fc3531303ba9f9df">string_split</a> ( <span class="keyword">const</span> std::string&amp; source_string , <span class="keywordtype">char</span> delimiter );</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    <span class="keyword">inline</span> strings          <a class="code" href="namespacexstd.html#a4124078b0731dab2fc3531303ba9f9df">string_split</a> ( <span class="keyword">const</span> <span class="keywordtype">char</span>* source_string_ptr , <span class="keyword">const</span> <span class="keywordtype">char</span>* delimiter_ptr );</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    <span class="keyword">inline</span> std::string      <a class="code" href="namespacexstd.html#aa222317a51b550658ce74773eb0db89e">string_replace</a> ( <span class="keyword">const</span> std::string&amp; source_string , <span class="keyword">const</span> std::string&amp; search_for , <span class="keyword">const</span> std::string&amp; replace_with );</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    <span class="keyword">inline</span> std::string      <a class="code" href="namespacexstd.html#aa222317a51b550658ce74773eb0db89e">string_replace</a> ( <span class="keyword">const</span> std::string&amp; source_string , <span class="keywordtype">char</span> search_for , <span class="keywordtype">char</span> replace_with );</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    <span class="keyword">inline</span> std::string      <a class="code" href="namespacexstd.html#aa222317a51b550658ce74773eb0db89e">string_replace</a> ( <span class="keyword">const</span> <span class="keywordtype">char</span>* source_string_ptr , <span class="keyword">const</span> <span class="keywordtype">char</span>* search_for_ptr , <span class="keyword">const</span> <span class="keywordtype">char</span>* replace_with_ptr );</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    <span class="keyword">inline</span> <span class="keywordtype">bool</span>             <a class="code" href="namespacexstd.html#aedda858debdf0842c5b76b60e560d63e">string_is_numeric</a> ( <span class="keyword">const</span> std::string&amp; source_string );</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    <span class="keyword">inline</span> <span class="keywordtype">bool</span>             <a class="code" href="namespacexstd.html#a71266524ec90bc46c263265004484480">string_is_integer</a> ( <span class="keyword">const</span> std::string&amp; source_string );</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    <span class="keyword">inline</span> <span class="keywordtype">bool</span>             <a class="code" href="namespacexstd.html#a62a7d22f5f3bc9287f7a8612b36f7d60">string_is_fractional</a> ( <span class="keyword">const</span> std::string&amp; source_string );</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;}</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;<span class="comment">// Include implementation file</span></div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="string__util_8ipp.html">string_util.ipp</a>&quot;</span></div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;<span class="preprocessor">#endif  // _XSTD_STRING_UTIL_HPP_</span></div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="comment">     *  @sideeffect fosdfjsdkjfskldjf</span></div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="comment">     *</span></div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;<span class="comment">     *  @details Converts a number represented by a `source_string` to a `long int`.</span></div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;<span class="comment">     *           Treats a `source_string` as a numeral with a base of `number_base`.</span></div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;<span class="comment">     */</span></div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <span class="keyword">inline</span> <span class="keywordtype">long</span> <span class="keywordtype">int</span>         <a class="code" href="namespacexstd.html#ab63b25101ecb0ba44580b53fde2544a9" title="Converts a number from string to numeric representation.">string_to_long_int</a> ( <span class="keyword">const</span> std::string&amp; source_string , <span class="keywordtype">int</span> number_base = 10 );</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <span class="keyword">inline</span> <span class="keywordtype">int</span>              <a class="code" href="namespacexstd.html#a2195a5273a4c4982cd850b8a0a055fb0">string_to_int</a> ( <span class="keyword">const</span> std::string&amp; source_string , <span class="keywordtype">int</span> number_base = 10 );</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    <span class="keyword">inline</span> <span class="keywordtype">double</span>           <a class="code" href="namespacexstd.html#ab78d849bbec3168534c56a17f3e9cc7e">string_to_double</a> ( <span class="keyword">const</span> std::string&amp; source_string );</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    <span class="keyword">inline</span> <span class="keywordtype">float</span>            <a class="code" href="namespacexstd.html#ab01086c31e5dd03a5936c963a7cba611">string_to_float</a> ( <span class="keyword">const</span> std::string&amp; source_string );</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    <span class="keyword">inline</span> std::string      <a class="code" href="namespacexstd.html#aff4e0b309003dfe78046116dacb0cd02">number_to_string</a> ( <span class="keywordtype">int</span> source_number );</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    <span class="keyword">inline</span> std::string      <a class="code" href="namespacexstd.html#aff4e0b309003dfe78046116dacb0cd02">number_to_string</a> ( <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> source_number );</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    <span class="keyword">inline</span> std::string      <a class="code" href="namespacexstd.html#aff4e0b309003dfe78046116dacb0cd02">number_to_string</a> ( <span class="keywordtype">float</span> source_number );</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    <span class="keyword">inline</span> std::string      <a class="code" href="namespacexstd.html#a00a138834f6baa94888bd6ba3364a703">string_reverse</a> ( <span class="keyword">const</span> std::string&amp; source_string );</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    <span class="keyword">inline</span> strings          <a class="code" href="namespacexstd.html#a4124078b0731dab2fc3531303ba9f9df">string_split</a> ( <span class="keyword">const</span> std::string&amp; source_string , <span class="keyword">const</span> std::string&amp; delimiter );</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    <span class="keyword">inline</span> strings          <a class="code" href="namespacexstd.html#a4124078b0731dab2fc3531303ba9f9df">string_split</a> ( <span class="keyword">const</span> std::string&amp; source_string , <span class="keywordtype">char</span> delimiter );</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    <span class="keyword">inline</span> strings          <a class="code" href="namespacexstd.html#a4124078b0731dab2fc3531303ba9f9df">string_split</a> ( <span class="keyword">const</span> <span class="keywordtype">char</span>* source_string_ptr , <span class="keyword">const</span> <span class="keywordtype">char</span>* delimiter_ptr );</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    <span class="keyword">inline</span> std::string      <a class="code" href="namespacexstd.html#aa222317a51b550658ce74773eb0db89e">string_replace</a> ( <span class="keyword">const</span> std::string&amp; source_string , <span class="keyword">const</span> std::string&amp; search_for , <span class="keyword">const</span> std::string&amp; replace_with );</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    <span class="keyword">inline</span> std::string      <a class="code" href="namespacexstd.html#aa222317a51b550658ce74773eb0db89e">string_replace</a> ( <span class="keyword">const</span> std::string&amp; source_string , <span class="keywordtype">char</span> search_for , <span class="keywordtype">char</span> replace_with );</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    <span class="keyword">inline</span> std::string      <a class="code" href="namespacexstd.html#aa222317a51b550658ce74773eb0db89e">string_replace</a> ( <span class="keyword">const</span> <span class="keywordtype">char</span>* source_string_ptr , <span class="keyword">const</span> <span class="keywordtype">char</span>* search_for_ptr , <span class="keyword">const</span> <span class="keywordtype">char</span>* replace_with_ptr );</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    <span class="keyword">inline</span> <span class="keywordtype">bool</span>             <a class="code" href="namespacexstd.html#aedda858debdf0842c5b76b60e560d63e">string_is_numeric</a> ( <span class="keyword">const</span> std::string&amp; source_string );</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    <span class="keyword">inline</span> <span class="keywordtype">bool</span>             <a class="code" href="namespacexstd.html#a71266524ec90bc46c263265004484480">string_is_integer</a> ( <span class="keyword">const</span> std::string&amp; source_string );</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    <span class="keyword">inline</span> <span class="keywordtype">bool</span>             <a class="code" href="namespacexstd.html#a62a7d22f5f3bc9287f7a8612b36f7d60">string_is_fractional</a> ( <span class="keyword">const</span> std::string&amp; source_string );</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;}</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;<span class="comment">// Include implementation file</span></div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="string__util_8ipp.html">string_util.ipp</a>&quot;</span></div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;<span class="preprocessor">#endif  // _XSTD_STRING_UTIL_HPP_</span></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Aug 7 2014 13:17:07 for XSTD by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Aug 7 2014 13:33:03 for XSTD by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.1.2
 </small></address>
