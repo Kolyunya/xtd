@@ -7,5 +7,6 @@ var searchData=
   ['_7eraii_5fthread_5fbase',['~raii_thread_base',['../classxstd_1_1raii__thread__base.html#a41c504ee2653958528c5e04b3239041e',1,'xstd::raii_thread_base']]],
   ['_7eraii_5fthread_5fmanual',['~raii_thread_manual',['../classxstd_1_1raii__thread__manual.html#a5ec707c32873954c13088de69b38ea95',1,'xstd::raii_thread_manual']]],
   ['_7etimer',['~timer',['../classxstd_1_1chrono_1_1timer.html#a274db25436fb2392246f64395ac4f2dc',1,'xstd::chrono::timer']]],
-  ['_7etimer_5fbase',['~timer_base',['../classxstd_1_1chrono_1_1timer__base.html#a4361db162c3c67a9d06bf45c17f6182b',1,'xstd::chrono::timer_base']]]
+  ['_7etimer_5fbase',['~timer_base',['../classxstd_1_1chrono_1_1timer__base.html#a4361db162c3c67a9d06bf45c17f6182b',1,'xstd::chrono::timer_base']]],
+  ['_7etimer_5fmanager',['~timer_manager',['../classxstd_1_1chrono_1_1timer__manager.html#adeca1896ee815f70ed424dd884e94b65',1,'xstd::chrono::timer_manager']]]
 ];
