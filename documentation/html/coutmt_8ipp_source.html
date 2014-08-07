@@ -112,28 +112,28 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;                            <span class="keyword">template</span> &lt;<span class="keyword">typename</span> Type&gt;</div>
 <div class="line"><a name="l00023"></a><span class="lineno"><a class="code" href="namespacexstd.html#a1e84f1aca8ea660c6b6857dd74e23095">   23</a></span>&#160;    <a class="code" href="classxstd_1_1coutmt__singleton.html">coutmt_singleton</a>&amp;       <a class="code" href="namespacexstd.html#a1e84f1aca8ea660c6b6857dd74e23095">operator&lt;&lt; </a>( <a class="code" href="classxstd_1_1coutmt__singleton.html">coutmt_singleton</a>&amp; coutmt_singleton_instance , Type <span class="keywordtype">object</span> )</div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    {</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        std::lock_guard&lt;std::mutex&gt; lock_guard(coutmt_singleton_instance.coutmt_mutex);</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        std::lock_guard&lt;std::mutex&gt; lock_guard(coutmt_singleton_instance.<a class="code" href="classxstd_1_1coutmt__singleton.html#a7e9a38b4f7d555718afbc75aaa4de628">coutmt_mutex</a>);</div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        std::cout &lt;&lt; object;</div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        <span class="keywordflow">return</span> coutmt_singleton_instance;</div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    }</div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;</div>
 <div class="line"><a name="l00030"></a><span class="lineno"><a class="code" href="namespacexstd.html#a4ca9ff5b467cc2d187627f25fe4becb9">   30</a></span>&#160;    <a class="code" href="classxstd_1_1coutmt__singleton.html">coutmt_singleton</a>&amp;       <a class="code" href="namespacexstd.html#a1e84f1aca8ea660c6b6857dd74e23095">operator&lt;&lt; </a>( <a class="code" href="classxstd_1_1coutmt__singleton.html">coutmt_singleton</a>&amp; coutmt_singleton_instance ,  std::ostream&amp;(*function_ptr)(std::ostream&amp;) )</div>
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    {</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        std::lock_guard&lt;std::mutex&gt; lock_guard(coutmt_singleton_instance.coutmt_mutex);</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        std::lock_guard&lt;std::mutex&gt; lock_guard(coutmt_singleton_instance.<a class="code" href="classxstd_1_1coutmt__singleton.html#a7e9a38b4f7d555718afbc75aaa4de628">coutmt_mutex</a>);</div>
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        std::cout &lt;&lt; function_ptr;</div>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        <span class="keywordflow">return</span> coutmt_singleton_instance;</div>
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    }</div>
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;</div>
 <div class="line"><a name="l00037"></a><span class="lineno"><a class="code" href="namespacexstd.html#ae5a5bddbedf675617d11176fea8fee8b">   37</a></span>&#160;    <a class="code" href="classxstd_1_1coutmt__singleton.html">coutmt_singleton</a>&amp;       <a class="code" href="namespacexstd.html#a1e84f1aca8ea660c6b6857dd74e23095">operator&lt;&lt; </a>( <a class="code" href="classxstd_1_1coutmt__singleton.html">coutmt_singleton</a>&amp; coutmt_singleton_instance ,  std::ios&amp;(*function_ptr)(std::ios&amp;) )</div>
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    {</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        std::lock_guard&lt;std::mutex&gt; lock_guard(coutmt_singleton_instance.coutmt_mutex);</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        std::lock_guard&lt;std::mutex&gt; lock_guard(coutmt_singleton_instance.<a class="code" href="classxstd_1_1coutmt__singleton.html#a7e9a38b4f7d555718afbc75aaa4de628">coutmt_mutex</a>);</div>
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        std::cout &lt;&lt; function_ptr;</div>
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        <span class="keywordflow">return</span> coutmt_singleton_instance;</div>
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    }</div>
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;</div>
 <div class="line"><a name="l00044"></a><span class="lineno"><a class="code" href="namespacexstd.html#a05baea78d624e383708fa5f4ba944f8e">   44</a></span>&#160;    <a class="code" href="classxstd_1_1coutmt__singleton.html">coutmt_singleton</a>&amp;       <a class="code" href="namespacexstd.html#a1e84f1aca8ea660c6b6857dd74e23095">operator&lt;&lt; </a>( <a class="code" href="classxstd_1_1coutmt__singleton.html">coutmt_singleton</a>&amp; coutmt_singleton_instance ,  std::ios_base&amp; (*function_ptr)(std::ios_base&amp;) )</div>
 <div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    {</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        std::lock_guard&lt;std::mutex&gt; lock_guard(coutmt_singleton_instance.coutmt_mutex);</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        std::lock_guard&lt;std::mutex&gt; lock_guard(coutmt_singleton_instance.<a class="code" href="classxstd_1_1coutmt__singleton.html#a7e9a38b4f7d555718afbc75aaa4de628">coutmt_mutex</a>);</div>
 <div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        std::cout &lt;&lt; function_ptr;</div>
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        <span class="keywordflow">return</span> coutmt_singleton_instance;</div>
 <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    }</div>
@@ -145,7 +145,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;</div>
 <div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        <span class="keywordflow">if</span> ( coutmt_instance_unique_prt == <span class="keyword">nullptr</span> )</div>
 <div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        {</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;            coutmt_instance_unique_prt.reset(<span class="keyword">new</span> <a class="code" href="classxstd_1_1coutmt__singleton.html">coutmt_singleton</a>());</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;            coutmt_instance_unique_prt.reset(<span class="keyword">new</span> <a class="code" href="classxstd_1_1coutmt__singleton.html#afbf08c934b4a1c80bd18669f34456a7c">coutmt_singleton</a>());</div>
 <div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        }</div>
 <div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;</div>
 <div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        <span class="keywordflow">return</span> *coutmt_instance_unique_prt;</div>
@@ -155,7 +155,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Aug 7 2014 16:01:46 for XTD by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Aug 7 2014 16:04:17 for XTD by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.1.2
 </small></address>

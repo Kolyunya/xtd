@@ -88,6 +88,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="header">
   <div class="summary">
 <a href="#pub-static-methods">Static Public Member Functions</a> &#124;
+<a href="#pri-methods">Private Member Functions</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="#friends">Friends</a> &#124;
 <a href="classxstd_1_1coutmt__singleton-members.html">List of all members</a>  </div>
   <div class="headertitle">
@@ -101,6 +103,15 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 Static Public Member Functions</h2></td></tr>
 <tr class="memitem:a0c478170b82e253a79c51160fe7049a2"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classxstd_1_1coutmt__singleton.html">coutmt_singleton</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxstd_1_1coutmt__singleton.html#a0c478170b82e253a79c51160fe7049a2">get_instance</a> (void)</td></tr>
 </table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2><a name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:afbf08c934b4a1c80bd18669f34456a7c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxstd_1_1coutmt__singleton.html#afbf08c934b4a1c80bd18669f34456a7c">coutmt_singleton</a> (void)</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2><a name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:a7e9a38b4f7d555718afbc75aaa4de628"><td class="memItemLeft" align="right" valign="top">std::mutex&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxstd_1_1coutmt__singleton.html#a7e9a38b4f7d555718afbc75aaa4de628">coutmt_mutex</a></td></tr>
+<tr class="memitem:aa00e04e689ddfbf12fff7383b465cad2"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxstd_1_1coutmt__singleton.html#aa00e04e689ddfbf12fff7383b465cad2">instance_initialized</a></td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2><a name="friends"></a>
 Friends</h2></td></tr>
 <tr class="memitem:aae5812b8fa2d66eaaa921e864e1077d4"><td class="memTemplParams" colspan="2">template&lt;typename Type &gt; </td></tr>
@@ -112,7 +123,34 @@ Friends</h2></td></tr>
 <a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock">
 <p>Definition at line <a class="el" href="coutmt_8hpp_source.html#l00030">30</a> of file <a class="el" href="coutmt_8hpp_source.html">coutmt.hpp</a>.</p>
-</div><h2>Member Function Documentation</h2>
+</div><h2>Constructor &amp; Destructor Documentation</h2>
+<a class="anchor" id="afbf08c934b4a1c80bd18669f34456a7c"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">xstd::coutmt_singleton::coutmt_singleton </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">explicit</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Referenced by <a class="el" href="coutmt_8ipp_source.html#l00051">get_instance()</a>.</p>
+
+</div>
+</div>
+<h2>Member Function Documentation</h2>
 <a class="anchor" id="a0c478170b82e253a79c51160fe7049a2"></a>
 <div class="memitem">
 <div class="memproto">
@@ -136,13 +174,15 @@ Friends</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Definition at line <a class="el" href="coutmt_8ipp_source.html#l00051">51</a> of file <a class="el" href="coutmt_8ipp_source.html">coutmt.ipp</a>.</p>
+
+<p>References <a class="el" href="classxstd_1_1coutmt__singleton.html#afbf08c934b4a1c80bd18669f34456a7c">coutmt_singleton()</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line"></div>
 <div class="line">        <span class="keyword">static</span> std::unique_ptr&lt;coutmt_singleton&gt; coutmt_instance_unique_prt;</div>
 <div class="line"></div>
 <div class="line">        <span class="keywordflow">if</span> ( coutmt_instance_unique_prt == <span class="keyword">nullptr</span> )</div>
 <div class="line">        {</div>
-<div class="line">            coutmt_instance_unique_prt.reset(<span class="keyword">new</span> coutmt_singleton());</div>
+<div class="line">            coutmt_instance_unique_prt.reset(<span class="keyword">new</span> <a class="code" href="classxstd_1_1coutmt__singleton.html#afbf08c934b4a1c80bd18669f34456a7c">coutmt_singleton</a>());</div>
 <div class="line">        }</div>
 <div class="line"></div>
 <div class="line">        <span class="keywordflow">return</span> *coutmt_instance_unique_prt;</div>
@@ -317,6 +357,53 @@ template&lt;typename Type &gt; </div>
 </div><!-- fragment -->
 </div>
 </div>
+<h2>Member Data Documentation</h2>
+<a class="anchor" id="a7e9a38b4f7d555718afbc75aaa4de628"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::mutex xstd::coutmt_singleton::coutmt_mutex</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="coutmt_8hpp_source.html#l00043">43</a> of file <a class="el" href="coutmt_8hpp_source.html">coutmt.hpp</a>.</p>
+
+<p>Referenced by <a class="el" href="coutmt_8ipp_source.html#l00023">xstd::operator&lt;&lt;()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="aa00e04e689ddfbf12fff7383b465cad2"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool xstd::coutmt_singleton::instance_initialized</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="coutmt_8hpp_source.html#l00044">44</a> of file <a class="el" href="coutmt_8hpp_source.html">coutmt.hpp</a>.</p>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li>src/iostream/coutmt/src/<a class="el" href="coutmt_8hpp_source.html">coutmt.hpp</a></li>
 <li>src/iostream/coutmt/src/<a class="el" href="coutmt_8ipp_source.html">coutmt.ipp</a></li>
@@ -324,7 +411,7 @@ template&lt;typename Type &gt; </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Aug 7 2014 16:01:46 for XTD by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Aug 7 2014 16:04:17 for XTD by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.1.2
 </small></address>
