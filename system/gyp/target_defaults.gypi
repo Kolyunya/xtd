@@ -4,7 +4,7 @@
                                                             '<@(CFLAGS_STANDARD)',
                                                         ],
                                 'include_dirs'      :   [
-                                                            '$(XSTD_HOME)/include',
+                                                            '$(XTD_HOME)/include',
                                                         ],
                                 'sources'           :   [
                                                             '<@(UNIT_SOURCES)',

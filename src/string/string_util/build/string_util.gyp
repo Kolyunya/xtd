@@ -1,6 +1,6 @@
 {
     'includes'  :   [
-                        './../../../../system/gyp/includes/includes.gypi',
+                        './../../../../system/gyp/includes.gypi',
                     ],
     'variables' :   {
                         'UNIT_NAME'     :   'string_util',

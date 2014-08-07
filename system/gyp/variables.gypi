@@ -20,12 +20,12 @@
                         'UNIT_TESTS_SOURCES_DIR'    :   '<(UNIT_TESTS_DIR)/src',
                         'UNIT_TESTS_DATA_DIR'       :   '<(UNIT_TESTS_DIR)/data',
                         'UNIT_TESTS_SOURCE_FILE'    :   '<(UNIT_TESTS_SOURCES_DIR)/<(UNIT_NAME)_tests.cpp',
-                        'LIBRARY_SOURCES_DIR'       :   '$(XSTD_HOME)/src',
-                        'LIBRARY_SCRIPTS_DIR'       :   '$(XSTD_HOME)/system/gyp/scripts',
-                        'DEPENDENCIES_DIR'          :   '$(XSTD_HOME)/dependencies',
+                        'LIBRARY_SOURCES_DIR'       :   '$(XTD_HOME)/src',
+                        'LIBRARY_SCRIPTS_DIR'       :   '$(XTD_HOME)/system/gyp/scripts',
+                        'DEPENDENCIES_DIR'          :   '$(XTD_HOME)/dependencies',
                         'GTEST_HOME'                :   '<(DEPENDENCIES_DIR)/gtest',
                         'GTEST_SOURCE_FILE'         :   '<(GTEST_HOME)/gtest-all.cc',
-                        'SCRIPTS_DIR'               :   '$(XSTD_HOME)/system/gyp/scripts',
+                        'SCRIPTS_DIR'               :   '$(XTD_HOME)/system/gyp/scripts',
                         'CFLAGS_STANDARD'           :   [
                                                             '-std=<(UNIT_STANDARD)',        # Use c++11 standard
                                                             '-Wall',                        # Turns on all optional warnings which are desirable for normal code.
