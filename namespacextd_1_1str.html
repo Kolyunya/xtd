@@ -1065,8 +1065,6 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Converts a number from string to numeric representation. </p>
-<dl class="section note"><dt>Note</dt><dd>This function is a wrapper of a [strtol]() function.</dd></dl>
-<p>Converts a number represented by a <code>source_string</code> to a <code>long int</code>. Treats a <code>source_string</code> as a numeral with a base of <code>number_base</code>. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">source_string</td><td>A string representation of a number. </td></tr>
@@ -1078,10 +1076,12 @@ Functions</h2></td></tr>
 <dl class="section user"><dt>Exception safety</dt><dd>Strong exception safety. </dd></dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">std::runtime_error</td><td>Thrown if <code>source_string</code> does not represent a valid_number. Also thrown if <code>source_string</code> represents a number which is out of range of <code>signed long int</code>. </td></tr>
+    <tr><td class="paramname">std::runtime_error</td><td>Thrown if <code>source_string</code> does not represent a valid_number. Also thrown if <code>source_string</code> represents a number which is out of range of <code>signed long int</code>.</td></tr>
   </table>
   </dd>
 </dl>
+<p>Converts a number represented by a <code>source_string</code> to a <code>long int</code>. Treats a <code>source_string</code> as a numeral with a base of <code>number_base</code>. </p>
+<dl class="section note"><dt>Note</dt><dd>This function is a wrapper of a <a href="http://en.cppreference.com/w/cpp/string/byte/strtol">strtol</a> function. </dd></dl>
 
 <p>Definition at line <a class="el" href="string__util_8ipp_source.html#l00025">25</a> of file <a class="el" href="string__util_8ipp_source.html">string_util.ipp</a>.</p>
 
@@ -1125,7 +1125,7 @@ Functions</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Aug 8 2014 00:50:11 for XTD by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Aug 8 2014 00:53:38 for XTD by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.1.2
 </small></address>
