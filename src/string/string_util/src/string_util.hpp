@@ -51,7 +51,7 @@ namespace xstd
      *  @returns A numeric representation of a number.
      *  @throws std::runtime_error Throws if `source_string` does not represent a valid_number.
      *                            Also throws if `source_string` represents a number which is out of range of `long int`.
-     *  @sideeffect
+     *  @no-throw-guarantee
      *      Strong no-throw guarantee.
      *
      *  @details Converts a number represented by a `source_string` to a `long int`.
