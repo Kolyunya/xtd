@@ -33,6 +33,6 @@ The library documentation is available [here](http://kolyunya.github.io/xstd/ind
   + Set "XSTD_HOME" environment variable to the location of this library. Home directory is one with "src", "include", "system" and others sub-directories
   + Set "GYP_GENERATORS" environment variable to value(s) corresponding you compiler(s). Options should be separated by a comma. Available options are "make", "msvs", "ninja", "scons", "eclipse" and others.
   + Execute library GYP script by calling "gyp --depth=. %LIBRARY_ROOT%/build/generator.gyp" command. Selected build scripts would be produced in the "build" directory.
-  + Run build script(s) from `%LIBRARY_ROOT%/build/` directory.
+  + Run build script(s) from ``%LIBRARY_ROOT%/build/`` directory.
   + Compile test program using selected environment.
   + Run test program.
