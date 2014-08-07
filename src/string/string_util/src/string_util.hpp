@@ -93,7 +93,6 @@ namespace xtd
          *                             Also thrown if `source_string` represents a number which is out of range of `double`.
          *
          *  @details Converts a number represented by a `source_string` to a `long int`.
-         *           Treats a `source_string` as a numeral with a base of `number_base`.
          */
         inline double               string_to_double ( const std::string& source_string );
 
@@ -107,12 +106,27 @@ namespace xtd
          *                             Also thrown if `source_string` represents a number which is out of range of `float`.
          *
          *  @details Converts a number represented by a `source_string` to a `long int`.
-         *           Treats a `source_string` as a numeral with a base of `number_base`.
          */
         inline float                string_to_float ( const std::string& source_string );
 
+        /**
+         *  @brief Converts a number from numeric to string representation.
+         *
+         *  @param [in] source_number A numeric representation of a number.
+         *  @returns A string representation of a number.
+         *
+         *  @details Converts a number represented by a `source_number` to a `std::string`.
+         */
         inline std::string          number_to_string ( int source_number );
 
+        /**
+         *  @brief Converts a number from numeric to string representation.
+         *
+         *  @param [in] source_number A numeric representation of a number.
+         *  @returns A string representation of a number.
+         *
+         *  @details Converts a number represented by a `source_number` to a `std::string`.
+         */
         inline std::string          number_to_string ( unsigned int source_number );
 
         inline std::string          number_to_string ( float source_number );

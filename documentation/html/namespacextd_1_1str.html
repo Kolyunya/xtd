@@ -102,7 +102,9 @@ Functions</h2></td></tr>
 <tr class="memitem:a90f49ec1f4ff29fd05d598f815f9b4e0"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacextd_1_1str.html#a90f49ec1f4ff29fd05d598f815f9b4e0">string_to_float</a> (const std::string &amp;source_string)</td></tr>
 <tr class="memdesc:a90f49ec1f4ff29fd05d598f815f9b4e0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts a number from string to numeric representation.  <a href="#a90f49ec1f4ff29fd05d598f815f9b4e0"></a><br/></td></tr>
 <tr class="memitem:a84c0f8285134f075fde7fbb91ee174ef"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacextd_1_1str.html#a84c0f8285134f075fde7fbb91ee174ef">number_to_string</a> (int source_number)</td></tr>
+<tr class="memdesc:a84c0f8285134f075fde7fbb91ee174ef"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts a number from numeric to string representation.  <a href="#a84c0f8285134f075fde7fbb91ee174ef"></a><br/></td></tr>
 <tr class="memitem:a485b63dcd6cac4d8b45712f634a2aaed"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacextd_1_1str.html#a485b63dcd6cac4d8b45712f634a2aaed">number_to_string</a> (unsigned int source_number)</td></tr>
+<tr class="memdesc:a485b63dcd6cac4d8b45712f634a2aaed"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts a number from numeric to string representation.  <a href="#a485b63dcd6cac4d8b45712f634a2aaed"></a><br/></td></tr>
 <tr class="memitem:ae520ea89838af34abca58612baf0ee7d"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacextd_1_1str.html#ae520ea89838af34abca58612baf0ee7d">number_to_string</a> (float source_number)</td></tr>
 <tr class="memitem:a0e5d3ce0842d8c4a0b42ec6bba6c5b00"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacextd_1_1str.html#a0e5d3ce0842d8c4a0b42ec6bba6c5b00">string_reverse</a> (const std::string &amp;source_string)</td></tr>
 <tr class="memitem:a94ab05421170b46d98baffd7fbd04ae5"><td class="memItemLeft" align="right" valign="top">strings&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacextd_1_1str.html#a94ab05421170b46d98baffd7fbd04ae5">string_split</a> (const std::string &amp;source_string, const std::string &amp;delimiter)</td></tr>
@@ -137,6 +139,16 @@ Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Converts a number from numeric to string representation. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">source_number</td><td>A numeric representation of a number. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A string representation of a number.</dd></dl>
+<p>Converts a number represented by a <code>source_number</code> to a <code>std::string</code>. </p>
 
 <p>Definition at line <a class="el" href="string__util_8ipp_source.html#l00155">155</a> of file <a class="el" href="string__util_8ipp_source.html">string_util.ipp</a>.</p>
 
@@ -173,12 +185,22 @@ Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Converts a number from numeric to string representation. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">source_number</td><td>A numeric representation of a number. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A string representation of a number.</dd></dl>
+<p>Converts a number represented by a <code>source_number</code> to a <code>std::string</code>. </p>
+
 <p>Definition at line <a class="el" href="string__util_8ipp_source.html#l00164">164</a> of file <a class="el" href="string__util_8ipp_source.html">string_util.ipp</a>.</p>
 
 <p>References <a class="el" href="string__util_8ipp_source.html#l00155">number_to_string()</a>.</p>
 <div class="fragment"><div class="line">        {</div>
 <div class="line"></div>
-<div class="line">            <span class="keywordflow">return</span> <a class="code" href="namespacextd_1_1str.html#a84c0f8285134f075fde7fbb91ee174ef">number_to_string</a>(static_cast&lt;int&gt;(source_number));</div>
+<div class="line">            <span class="keywordflow">return</span> <a class="code" href="namespacextd_1_1str.html#a84c0f8285134f075fde7fbb91ee174ef" title="Converts a number from numeric to string representation.">number_to_string</a>(static_cast&lt;int&gt;(source_number));</div>
 <div class="line"></div>
 <div class="line">        }</div>
 </div><!-- fragment -->
@@ -815,7 +837,7 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<p>Converts a number represented by a <code>source_string</code> to a <code>long int</code>. Treats a <code>source_string</code> as a numeral with a base of <code>number_base</code>. </p>
+<p>Converts a number represented by a <code>source_string</code> to a <code>long int</code>. </p>
 
 <p>Definition at line <a class="el" href="string__util_8ipp_source.html#l00079">79</a> of file <a class="el" href="string__util_8ipp_source.html">string_util.ipp</a>.</p>
 <div class="fragment"><div class="line">        {</div>
@@ -894,7 +916,7 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<p>Converts a number represented by a <code>source_string</code> to a <code>long int</code>. Treats a <code>source_string</code> as a numeral with a base of <code>number_base</code>. </p>
+<p>Converts a number represented by a <code>source_string</code> to a <code>long int</code>. </p>
 
 <p>Definition at line <a class="el" href="string__util_8ipp_source.html#l00117">117</a> of file <a class="el" href="string__util_8ipp_source.html">string_util.ipp</a>.</p>
 
@@ -1105,7 +1127,7 @@ Functions</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Aug 7 2014 16:18:21 for XTD by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Aug 7 2014 16:23:54 for XTD by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.1.2
 </small></address>
