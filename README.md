@@ -1,4 +1,4 @@
-#XSTD - extension of the C++ standard library
+#XSTD – extension of the C++ standard library
 
 ##Description
 
