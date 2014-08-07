@@ -143,7 +143,13 @@ Protected Attributes</h2></td></tr>
 Friends</h2></td></tr>
 <tr class="memitem:a26f9c85c349535d8d87c0b2b4dda134e"><td class="memItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxstd_1_1point.html#a26f9c85c349535d8d87c0b2b4dda134e">operator&lt;&lt;</a> (std::ostream &amp;outputStream, const <a class="el" href="classxstd_1_1point.html">point</a> &amp;point_object)</td></tr>
 </table>
-<h2>Constructor &amp; Destructor Documentation</h2>
+<a name="details" id="details"></a><h2>Detailed Description</h2>
+<div class="textblock"><h3>template&lt;typename type, int dimension&gt;<br/>
+class xstd::point&lt; type, dimension &gt;</h3>
+
+
+<p>Definition at line <a class="el" href="point_8hpp_source.html#l00034">34</a> of file <a class="el" href="point_8hpp_source.html">point.hpp</a>.</p>
+</div><h2>Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="a5a68a9cb37fecabf7ece3933687972e4"></a>
 <div class="memitem">
 <div class="memproto">
@@ -222,6 +228,15 @@ template&lt;typename _type &gt; </div>
 </table>
 </div><div class="memdoc">
 
+<p>Definition at line <a class="el" href="point_8hpp_source.html#l00052">52</a> of file <a class="el" href="point_8hpp_source.html">point.hpp</a>.</p>
+
+<p>References <a class="el" href="classxstd_1_1point.html#a812c6e9c6b5e329897fbab3ccce407e7">xstd::point&lt; type, dimension &gt;::get_coordinates_ref()</a>, and <a class="el" href="point_8hpp_source.html#l00200">xstd::point&lt; type, dimension &gt;::set_coordinates_values()</a>.</p>
+<div class="fragment"><div class="line">            {</div>
+<div class="line"></div>
+<div class="line">                this-&gt;<a class="code" href="classxstd_1_1point.html#a468d82213633b70cb8c01f97838e6d49">set_coordinates_values</a>(point_object.get_coordinates_ref());</div>
+<div class="line"></div>
+<div class="line">            }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <h2>Member Function Documentation</h2>
@@ -274,6 +289,8 @@ template&lt;typename type, int dimension&gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Referenced by <a class="el" href="point_8hpp_source.html#l00060">xstd::point&lt; type, dimension &gt;::operator=()</a>, and <a class="el" href="point_8hpp_source.html#l00052">xstd::point&lt; type, dimension &gt;::point()</a>.</p>
 
 </div>
 </div>
@@ -355,6 +372,29 @@ template&lt;typename _type &gt; </div>
 </table>
 </div><div class="memdoc">
 
+<p>Definition at line <a class="el" href="point_8hpp_source.html#l00178">178</a> of file <a class="el" href="point_8hpp_source.html">point.hpp</a>.</p>
+
+<p>References <a class="el" href="point_8hpp_source.html#l00272">xstd::point&lt; type, dimension &gt;::coordinates_object</a>.</p>
+<div class="fragment"><div class="line">            {</div>
+<div class="line"></div>
+<div class="line">                <span class="keywordtype">float</span> distanceSquared = 0;</div>
+<div class="line"></div>
+<div class="line">                <span class="keywordflow">for</span> ( <span class="keywordtype">int</span> key = 0 ; key != dimension ; key++ )</div>
+<div class="line">                {</div>
+<div class="line"></div>
+<div class="line">                    <span class="keywordtype">float</span> coordinateA = this-&gt;<a class="code" href="classxstd_1_1point.html#a6ee0acdc7f3fdd004426279d0d7963e6">coordinates_object</a>[key];</div>
+<div class="line">                    <span class="keywordtype">float</span> coordinateB = point_object.coordinates_object[key];</div>
+<div class="line"></div>
+<div class="line">                    distanceSquared += ( coordinateB - coordinateA ) * ( coordinateB - coordinateA );</div>
+<div class="line"></div>
+<div class="line">                }</div>
+<div class="line"></div>
+<div class="line">                <span class="keywordtype">float</span> distance = sqrt(distanceSquared);</div>
+<div class="line"></div>
+<div class="line">                <span class="keywordflow">return</span> distance;</div>
+<div class="line"></div>
+<div class="line">            }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="a41ffcfd2fbb0420aceb7a3d81950e945"></a>
@@ -383,6 +423,13 @@ template&lt;typename _type &gt; </div>
 </table>
 </div><div class="memdoc">
 
+<p>Definition at line <a class="el" href="point_8hpp_source.html#l00133">133</a> of file <a class="el" href="point_8hpp_source.html">point.hpp</a>.</p>
+<div class="fragment"><div class="line">            {</div>
+<div class="line"></div>
+<div class="line">                <span class="keywordflow">return</span> ! ( *<span class="keyword">this</span> == point_object );</div>
+<div class="line"></div>
+<div class="line">            }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="ac777d5594b34c30fe27bcd549ef89be4"></a>
@@ -437,6 +484,22 @@ template&lt;typename _type &gt; </div>
 </table>
 </div><div class="memdoc">
 
+<p>Definition at line <a class="el" href="point_8hpp_source.html#l00141">141</a> of file <a class="el" href="point_8hpp_source.html">point.hpp</a>.</p>
+<div class="fragment"><div class="line">            {</div>
+<div class="line"></div>
+<div class="line">                <a class="code" href="classxstd_1_1point.html#a5a68a9cb37fecabf7ece3933687972e4">point</a> pointResult = *<span class="keyword">this</span>;</div>
+<div class="line"></div>
+<div class="line">                <span class="keywordflow">for</span> ( <span class="keywordtype">int</span> key = 0 ; key &lt; dimension ; key++ )</div>
+<div class="line">                {</div>
+<div class="line"></div>
+<div class="line">                    pointResult[key] += point_object[key];</div>
+<div class="line"></div>
+<div class="line">                }</div>
+<div class="line"></div>
+<div class="line">                <span class="keywordflow">return</span> pointResult;</div>
+<div class="line"></div>
+<div class="line">            }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="ad1af00d4517e769e7da57cd26732a6ab"></a>
@@ -465,6 +528,13 @@ template&lt;typename _type &gt; </div>
 </table>
 </div><div class="memdoc">
 
+<p>Definition at line <a class="el" href="point_8hpp_source.html#l00158">158</a> of file <a class="el" href="point_8hpp_source.html">point.hpp</a>.</p>
+<div class="fragment"><div class="line">            {</div>
+<div class="line"></div>
+<div class="line">                <span class="keywordflow">return</span> (*<span class="keyword">this</span>)+(point_object*(-1));</div>
+<div class="line"></div>
+<div class="line">            }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="aa96d22aaf0a1687325dadaa832740c3e"></a>
@@ -519,6 +589,17 @@ template&lt;typename _type &gt; </div>
 </table>
 </div><div class="memdoc">
 
+<p>Definition at line <a class="el" href="point_8hpp_source.html#l00060">60</a> of file <a class="el" href="point_8hpp_source.html">point.hpp</a>.</p>
+
+<p>References <a class="el" href="classxstd_1_1point.html#a812c6e9c6b5e329897fbab3ccce407e7">xstd::point&lt; type, dimension &gt;::get_coordinates_ref()</a>, and <a class="el" href="point_8hpp_source.html#l00200">xstd::point&lt; type, dimension &gt;::set_coordinates_values()</a>.</p>
+<div class="fragment"><div class="line">            {</div>
+<div class="line"></div>
+<div class="line">                this-&gt;<a class="code" href="classxstd_1_1point.html#a468d82213633b70cb8c01f97838e6d49">set_coordinates_values</a>(point_object.get_coordinates_ref());</div>
+<div class="line"></div>
+<div class="line">                <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
+<div class="line"></div>
+<div class="line">            }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="a2f98209745efac5775e14315b58d5a1d"></a>
@@ -547,6 +628,25 @@ template&lt;typename _type &gt; </div>
 </table>
 </div><div class="memdoc">
 
+<p>Definition at line <a class="el" href="point_8hpp_source.html#l00113">113</a> of file <a class="el" href="point_8hpp_source.html">point.hpp</a>.</p>
+<div class="fragment"><div class="line">            {</div>
+<div class="line"></div>
+<div class="line">                <span class="keywordflow">for</span> ( <span class="keywordtype">int</span> key = 0 ; key &lt; dimension ; key++ )</div>
+<div class="line">                {</div>
+<div class="line"></div>
+<div class="line">                    <span class="keywordflow">if</span> ( this-&gt;<a class="code" href="classxstd_1_1point.html#a6ee0acdc7f3fdd004426279d0d7963e6">coordinates_object</a>[key] != point_object[key] )</div>
+<div class="line">                    {</div>
+<div class="line"></div>
+<div class="line">                        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"></div>
+<div class="line">                    }</div>
+<div class="line"></div>
+<div class="line">                }</div>
+<div class="line"></div>
+<div class="line">                <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"></div>
+<div class="line">            }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="aaf46d8e0e0676b0fb5e8d86a7742e2a1"></a>
@@ -573,6 +673,17 @@ template&lt;typename type, int dimension&gt; </div>
 </table>
 </div><div class="memdoc">
 
+<p>Definition at line <a class="el" href="point_8hpp_source.html#l00094">94</a> of file <a class="el" href="point_8hpp_source.html">point.hpp</a>.</p>
+
+<p>References <a class="el" href="classxstd_1_1point.html#a9c83662efe0927f03cb9cb1cfab796cd">xstd::point&lt; type, dimension &gt;::validate_coordinate_id()</a>.</p>
+<div class="fragment"><div class="line">            {</div>
+<div class="line"></div>
+<div class="line">                this-&gt;<a class="code" href="classxstd_1_1point.html#a9c83662efe0927f03cb9cb1cfab796cd">validate_coordinate_id</a>(coordinateId);</div>
+<div class="line"></div>
+<div class="line">                <span class="keywordflow">return</span> this-&gt;<a class="code" href="classxstd_1_1point.html#a6ee0acdc7f3fdd004426279d0d7963e6">coordinates_object</a>[coordinateId];</div>
+<div class="line"></div>
+<div class="line">            }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="a39217029d54ae1c115cc79db3edc1e48"></a>
@@ -599,6 +710,17 @@ template&lt;typename type, int dimension&gt; </div>
 </table>
 </div><div class="memdoc">
 
+<p>Definition at line <a class="el" href="point_8hpp_source.html#l00103">103</a> of file <a class="el" href="point_8hpp_source.html">point.hpp</a>.</p>
+
+<p>References <a class="el" href="classxstd_1_1point.html#a9c83662efe0927f03cb9cb1cfab796cd">xstd::point&lt; type, dimension &gt;::validate_coordinate_id()</a>.</p>
+<div class="fragment"><div class="line">            {</div>
+<div class="line"></div>
+<div class="line">                this-&gt;<a class="code" href="classxstd_1_1point.html#a9c83662efe0927f03cb9cb1cfab796cd">validate_coordinate_id</a>(coordinateId);</div>
+<div class="line"></div>
+<div class="line">                <span class="keywordflow">return</span> this-&gt;<a class="code" href="classxstd_1_1point.html#a6ee0acdc7f3fdd004426279d0d7963e6">coordinates_object</a>[coordinateId];</div>
+<div class="line"></div>
+<div class="line">            }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="a468d82213633b70cb8c01f97838e6d49"></a>
@@ -627,6 +749,21 @@ template&lt;typename _type &gt; </div>
 </table>
 </div><div class="memdoc">
 
+<p>Definition at line <a class="el" href="point_8hpp_source.html#l00200">200</a> of file <a class="el" href="point_8hpp_source.html">point.hpp</a>.</p>
+
+<p>Referenced by <a class="el" href="point_8hpp_source.html#l00060">xstd::point&lt; type, dimension &gt;::operator=()</a>, and <a class="el" href="point_8hpp_source.html#l00052">xstd::point&lt; type, dimension &gt;::point()</a>.</p>
+<div class="fragment"><div class="line">            {</div>
+<div class="line"></div>
+<div class="line">                <span class="comment">/*</span></div>
+<div class="line"><span class="comment"></span></div>
+<div class="line"><span class="comment">                    Set all coordinates_object values to `coordinatesValue`</span></div>
+<div class="line"><span class="comment"></span></div>
+<div class="line"><span class="comment">                */</span></div>
+<div class="line"></div>
+<div class="line">                this-&gt;<a class="code" href="classxstd_1_1point.html#a6ee0acdc7f3fdd004426279d0d7963e6">coordinates_object</a>.fill(coordinatesValue);</div>
+<div class="line"></div>
+<div class="line">            }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="a239dbdfe4d96a38b9eacd76e972897c4"></a>
@@ -653,6 +790,21 @@ template&lt;typename type, int dimension&gt; </div>
 </table>
 </div><div class="memdoc">
 
+<p>Definition at line <a class="el" href="point_8hpp_source.html#l00213">213</a> of file <a class="el" href="point_8hpp_source.html">point.hpp</a>.</p>
+<div class="fragment"><div class="line">            {</div>
+<div class="line"></div>
+<div class="line">                coordinates_initializer_list_itr coordinatesItr = <a class="code" href="classxstd_1_1point.html#a6ee0acdc7f3fdd004426279d0d7963e6">coordinates_object</a>.begin();</div>
+<div class="line">                <span class="keywordtype">int</span> coordinateId = 0;</div>
+<div class="line"></div>
+<div class="line">                <span class="keywordflow">for</span> ( ; coordinatesItr != <a class="code" href="classxstd_1_1point.html#a6ee0acdc7f3fdd004426279d0d7963e6">coordinates_object</a>.end() ; coordinatesItr++ , coordinateId++ )</div>
+<div class="line">                {</div>
+<div class="line"></div>
+<div class="line">                    this-&gt;<a class="code" href="classxstd_1_1point.html#a6ee0acdc7f3fdd004426279d0d7963e6">coordinates_object</a>[coordinateId] = *coordinatesItr;</div>
+<div class="line"></div>
+<div class="line">                }</div>
+<div class="line"></div>
+<div class="line">            }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="a16ea81630c6918bca7393e7ce46e1691"></a>
@@ -681,6 +833,18 @@ template&lt;typename _type &gt; </div>
 </table>
 </div><div class="memdoc">
 
+<p>Definition at line <a class="el" href="point_8hpp_source.html#l00229">229</a> of file <a class="el" href="point_8hpp_source.html">point.hpp</a>.</p>
+<div class="fragment"><div class="line">            {</div>
+<div class="line"></div>
+<div class="line">                <span class="keywordflow">for</span> ( <span class="keywordtype">int</span> key = 0 ; key &lt; dimension ; key++ )</div>
+<div class="line">                {</div>
+<div class="line"></div>
+<div class="line">                    this-&gt;<a class="code" href="classxstd_1_1point.html#a6ee0acdc7f3fdd004426279d0d7963e6">coordinates_object</a>[key] = <a class="code" href="classxstd_1_1point.html#a6ee0acdc7f3fdd004426279d0d7963e6">coordinates_object</a>[key];</div>
+<div class="line"></div>
+<div class="line">                }</div>
+<div class="line"></div>
+<div class="line">            }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="a9c83662efe0927f03cb9cb1cfab796cd"></a>
@@ -698,6 +862,8 @@ template&lt;typename type, int dimension&gt; </div>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Referenced by <a class="el" href="point_8hpp_source.html#l00094">xstd::point&lt; type, dimension &gt;::operator[]()</a>.</p>
 
 </div>
 </div>
@@ -743,6 +909,18 @@ template&lt;typename type, int dimension&gt; </div>
 </table>
 </div><div class="memdoc">
 
+<p>Definition at line <a class="el" href="point_8hpp_source.html#l00241">241</a> of file <a class="el" href="point_8hpp_source.html">point.hpp</a>.</p>
+<div class="fragment"><div class="line">            {</div>
+<div class="line"></div>
+<div class="line">                <span class="keywordflow">if</span> ( <a class="code" href="classxstd_1_1point.html#a6ee0acdc7f3fdd004426279d0d7963e6">coordinates_object</a>.size() != dimension )</div>
+<div class="line">                {</div>
+<div class="line"></div>
+<div class="line">                    <span class="keywordflow">throw</span> dimension_mismatch();</div>
+<div class="line"></div>
+<div class="line">                }</div>
+<div class="line"></div>
+<div class="line">            }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="a15edf9d511dcd8d27c98e77b18033573"></a>
@@ -771,6 +949,18 @@ template&lt;typename _type , int _dimension&gt; </div>
 </table>
 </div><div class="memdoc">
 
+<p>Definition at line <a class="el" href="point_8hpp_source.html#l00254">254</a> of file <a class="el" href="point_8hpp_source.html">point.hpp</a>.</p>
+<div class="fragment"><div class="line">            {</div>
+<div class="line"></div>
+<div class="line">                <span class="keywordflow">if</span> ( dimension != _dimension )</div>
+<div class="line">                {</div>
+<div class="line"></div>
+<div class="line">                    <span class="keywordflow">throw</span> dimension_mismatch();</div>
+<div class="line"></div>
+<div class="line">                }</div>
+<div class="line"></div>
+<div class="line">            }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <h2>Friends And Related Function Documentation</h2>
@@ -808,6 +998,31 @@ template&lt;typename type, int dimension&gt; </div>
 </table>
 </div><div class="memdoc">
 
+<p>Definition at line <a class="el" href="point_8hpp_source.html#l00069">69</a> of file <a class="el" href="point_8hpp_source.html">point.hpp</a>.</p>
+<div class="fragment"><div class="line">            {</div>
+<div class="line"></div>
+<div class="line">                outputStream &lt;&lt; <span class="stringliteral">&quot;point(&quot;</span>;</div>
+<div class="line"></div>
+<div class="line">                <span class="keywordflow">for</span> ( <span class="keywordtype">int</span> coordinateKey = 0 ; coordinateKey &lt; dimension ; coordinateKey++ )</div>
+<div class="line">                {</div>
+<div class="line"></div>
+<div class="line">                    outputStream &lt;&lt; point_object.get_coordinate_value(coordinateKey);</div>
+<div class="line"></div>
+<div class="line">                    <span class="keywordflow">if</span> ( coordinateKey &lt; dimension -1 )</div>
+<div class="line">                    {</div>
+<div class="line"></div>
+<div class="line">                        outputStream &lt;&lt; <span class="stringliteral">&quot;,&quot;</span>;</div>
+<div class="line"></div>
+<div class="line">                    }</div>
+<div class="line"></div>
+<div class="line">                }</div>
+<div class="line"></div>
+<div class="line">                outputStream &lt;&lt; <span class="stringliteral">&quot;)&quot;</span>;</div>
+<div class="line"></div>
+<div class="line">                <span class="keywordflow">return</span> outputStream;</div>
+<div class="line"></div>
+<div class="line">            }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <h2>Member Data Documentation</h2>
@@ -831,6 +1046,10 @@ template&lt;typename type, int dimension&gt; </div>
 </table>
 </div><div class="memdoc">
 
+<p>Definition at line <a class="el" href="point_8hpp_source.html#l00272">272</a> of file <a class="el" href="point_8hpp_source.html">point.hpp</a>.</p>
+
+<p>Referenced by <a class="el" href="point_8hpp_source.html#l00178">xstd::point&lt; type, dimension &gt;::get_distance_to()</a>.</p>
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
@@ -839,7 +1058,7 @@ template&lt;typename type, int dimension&gt; </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Aug 7 2014 15:57:06 for XTD by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Aug 7 2014 15:59:24 for XTD by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.1.2
 </small></address>

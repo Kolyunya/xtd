@@ -92,7 +92,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="contents">
 <div class="textblock"><code>#include &lt;gtest/gtest.h&gt;</code><br/>
 <code>#include &lt;utility/parameter_pack.hpp&gt;</code><br/>
-</div><table class="memberdecls">
+</div>
+<p><a href="parameter__pack__element__value__tests_8cpp_source.html">Go to the source code of this file.</a></p>
+<table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2><a name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:af5b8c0a9d164dc0cf92bb621ff5b78ed"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="parameter__pack__element__value__tests_8cpp.html#af5b8c0a9d164dc0cf92bb621ff5b78ed">TEST</a> (retrieving_value_from_an_empty_pack, throws_out_of_range_exception)</td></tr>
@@ -127,6 +129,11 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Definition at line <a class="el" href="parameter__pack__element__value__tests_8cpp_source.html#l00094">94</a> of file <a class="el" href="parameter__pack__element__value__tests_8cpp_source.html">parameter_pack_element_value_tests.cpp</a>.</p>
+<div class="fragment"><div class="line">{</div>
+<div class="line">    ::testing::InitGoogleTest(&amp;argc, argv);</div>
+<div class="line">    <span class="keywordflow">return</span> RUN_ALL_TESTS();</div>
+<div class="line">}</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="af5b8c0a9d164dc0cf92bb621ff5b78ed"></a>
@@ -153,6 +160,15 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Definition at line <a class="el" href="parameter__pack__element__value__tests_8cpp_source.html#l00022">22</a> of file <a class="el" href="parameter__pack__element__value__tests_8cpp_source.html">parameter_pack_element_value_tests.cpp</a>.</p>
+<div class="fragment"><div class="line">{</div>
+<div class="line">    ASSERT_THROW</div>
+<div class="line">    (</div>
+<div class="line">        xstd::pp::nth_value&lt;42&gt;(),</div>
+<div class="line">        std::out_of_range</div>
+<div class="line">    );</div>
+<div class="line">}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="a5dba4d9e833f363b92ce31a66509d68e"></a>
@@ -179,6 +195,13 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Definition at line <a class="el" href="parameter__pack__element__value__tests_8cpp_source.html#l00031">31</a> of file <a class="el" href="parameter__pack__element__value__tests_8cpp_source.html">parameter_pack_element_value_tests.cpp</a>.</p>
+<div class="fragment"><div class="line">{</div>
+<div class="line">    <span class="keywordtype">int</span> pack_element_value_expected = 42;</div>
+<div class="line">    <span class="keywordtype">int</span> pack_element_value_actual = xstd::pp::first_value&lt;&gt;(42);</div>
+<div class="line">    ASSERT_EQ(pack_element_value_expected,pack_element_value_actual);</div>
+<div class="line">}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="ac09bfa20e7c913e50acafe6101a757bb"></a>
@@ -205,6 +228,13 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Definition at line <a class="el" href="parameter__pack__element__value__tests_8cpp_source.html#l00038">38</a> of file <a class="el" href="parameter__pack__element__value__tests_8cpp_source.html">parameter_pack_element_value_tests.cpp</a>.</p>
+<div class="fragment"><div class="line">{</div>
+<div class="line">    <span class="keywordtype">int</span> pack_element_value_expected = 42;</div>
+<div class="line">    <span class="keywordtype">int</span> pack_element_value_actual = xstd::pp::nth_value&lt;1&gt;(4.2,42);</div>
+<div class="line">    ASSERT_EQ(pack_element_value_expected,pack_element_value_actual);</div>
+<div class="line">}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="a6b56495dc7ff89f0a0ab0f59b01ccc5c"></a>
@@ -231,6 +261,13 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Definition at line <a class="el" href="parameter__pack__element__value__tests_8cpp_source.html#l00045">45</a> of file <a class="el" href="parameter__pack__element__value__tests_8cpp_source.html">parameter_pack_element_value_tests.cpp</a>.</p>
+<div class="fragment"><div class="line">{</div>
+<div class="line">    <span class="keywordtype">int</span> pack_element_value_expected = 42;</div>
+<div class="line">    <span class="keywordtype">int</span> pack_element_value_actual = xstd::pp::nth_value&lt;2&gt;(<span class="keyword">true</span>,4.2,42);</div>
+<div class="line">    ASSERT_EQ(pack_element_value_expected,pack_element_value_actual);</div>
+<div class="line">}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="a7c5e39be3f86579cbcef53d6980c9f58"></a>
@@ -257,12 +294,19 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Definition at line <a class="el" href="parameter__pack__element__value__tests_8cpp_source.html#l00052">52</a> of file <a class="el" href="parameter__pack__element__value__tests_8cpp_source.html">parameter_pack_element_value_tests.cpp</a>.</p>
+<div class="fragment"><div class="line">{</div>
+<div class="line">    <span class="keywordtype">bool</span> pack_element_value_expected = <span class="keyword">false</span>;</div>
+<div class="line">    <span class="keywordtype">bool</span> pack_element_value_actual = xstd::pp::last_value&lt;&gt;(<span class="keyword">true</span>,4.2,42,<span class="keyword">false</span>);</div>
+<div class="line">    ASSERT_EQ(pack_element_value_expected,pack_element_value_actual);</div>
+<div class="line">}</div>
+</div><!-- fragment -->
 </div>
 </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Aug 7 2014 15:57:06 for XTD by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Aug 7 2014 15:59:24 for XTD by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.1.2
 </small></address>

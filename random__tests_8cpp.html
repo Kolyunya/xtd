@@ -93,7 +93,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="textblock"><code>#include &lt;gtest/gtest.h&gt;</code><br/>
 <code>#include &lt;stdlib.h&gt;</code><br/>
 <code>#include &lt;cmath.hpp&gt;</code><br/>
-</div><table class="memberdecls">
+</div>
+<p><a href="random__tests_8cpp_source.html">Go to the source code of this file.</a></p>
+<table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2><a name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:a5fad8a757375975953f6c4ccac58793f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="random__tests_8cpp.html#a5fad8a757375975953f6c4ccac58793f">TEST</a> (get_int_1_2, returns_1_or_2)</td></tr>
@@ -129,6 +131,14 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Definition at line <a class="el" href="random__tests_8cpp_source.html#l00111">111</a> of file <a class="el" href="random__tests_8cpp_source.html">random_tests.cpp</a>.</p>
+
+<p>References <a class="el" href="random_8ipp_source.html#l00025">xstd::random::randomize()</a>.</p>
+<div class="fragment"><div class="line">{</div>
+<div class="line">    <a class="code" href="namespacexstd_1_1random.html#aebd951891ee8cc82c7a61482ad3dabc6">xstd::random::randomize</a>();</div>
+<div class="line">    ::testing::InitGoogleTest(&amp;argc, argv);</div>
+<div class="line">    <span class="keywordflow">return</span> RUN_ALL_TESTS();</div>
+<div class="line">}</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="a5fad8a757375975953f6c4ccac58793f"></a>
@@ -155,6 +165,22 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Definition at line <a class="el" href="random__tests_8cpp_source.html#l00023">23</a> of file <a class="el" href="random__tests_8cpp_source.html">random_tests.cpp</a>.</p>
+
+<p>References <a class="el" href="random_8ipp_source.html#l00033">xstd::random::get_int()</a>.</p>
+<div class="fragment"><div class="line">{</div>
+<div class="line"></div>
+<div class="line">    <span class="keywordtype">int</span> random_integer = <a class="code" href="namespacexstd_1_1random.html#a1572ab839ec96ad9a8452c859199230a">xstd::random::get_int</a>(1,2);</div>
+<div class="line"></div>
+<div class="line">    ASSERT_TRUE</div>
+<div class="line">    (</div>
+<div class="line">        random_integer == 1</div>
+<div class="line">            ||</div>
+<div class="line">        random_integer == 2</div>
+<div class="line">    );</div>
+<div class="line"></div>
+<div class="line">}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="ac80f34b5addc247eca609ca6d7476415"></a>
@@ -181,6 +207,24 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Definition at line <a class="el" href="random__tests_8cpp_source.html#l00037">37</a> of file <a class="el" href="random__tests_8cpp_source.html">random_tests.cpp</a>.</p>
+
+<p>References <a class="el" href="random_8ipp_source.html#l00033">xstd::random::get_int()</a>.</p>
+<div class="fragment"><div class="line">{</div>
+<div class="line"></div>
+<div class="line">    <span class="keywordtype">int</span> random_integer = <a class="code" href="namespacexstd_1_1random.html#a1572ab839ec96ad9a8452c859199230a">xstd::random::get_int</a>(-5,-3);</div>
+<div class="line"></div>
+<div class="line">    ASSERT_TRUE</div>
+<div class="line">    (</div>
+<div class="line">        random_integer == -5</div>
+<div class="line">            ||</div>
+<div class="line">        random_integer == -4</div>
+<div class="line">            ||</div>
+<div class="line">        random_integer == -3</div>
+<div class="line">    );</div>
+<div class="line"></div>
+<div class="line">}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="a55332d5ebdafe9875412ad0a0aad4f29"></a>
@@ -207,6 +251,15 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Definition at line <a class="el" href="random__tests_8cpp_source.html#l00053">53</a> of file <a class="el" href="random__tests_8cpp_source.html">random_tests.cpp</a>.</p>
+
+<p>References <a class="el" href="random_8ipp_source.html#l00033">xstd::random::get_int()</a>.</p>
+<div class="fragment"><div class="line">{</div>
+<div class="line"></div>
+<div class="line">    ASSERT_THROW(<a class="code" href="namespacexstd_1_1random.html#a1572ab839ec96ad9a8452c859199230a">xstd::random::get_int</a>(2,1),std::range_error);</div>
+<div class="line"></div>
+<div class="line">}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="a0a49e32d5fa53433e88b5ebc0110a4d8"></a>
@@ -233,6 +286,22 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Definition at line <a class="el" href="random__tests_8cpp_source.html#l00060">60</a> of file <a class="el" href="random__tests_8cpp_source.html">random_tests.cpp</a>.</p>
+
+<p>References <a class="el" href="random_8ipp_source.html#l00060">xstd::random::coin_flip()</a>.</p>
+<div class="fragment"><div class="line">{</div>
+<div class="line"></div>
+<div class="line">    <span class="keywordtype">bool</span> <a class="code" href="namespacexstd_1_1random.html#ae59f15bad38afbe5db860719a262cd8c">coin_flip</a> = <a class="code" href="namespacexstd_1_1random.html#ae59f15bad38afbe5db860719a262cd8c">xstd::random::coin_flip</a>();</div>
+<div class="line"></div>
+<div class="line">    ASSERT_TRUE</div>
+<div class="line">    (</div>
+<div class="line">        coin_flip == <span class="keyword">true</span></div>
+<div class="line">            ||</div>
+<div class="line">        coin_flip == <span class="keyword">false</span></div>
+<div class="line">    );</div>
+<div class="line"></div>
+<div class="line">}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="af023ace5cf5a30be3d5ff013e0a6cfb7"></a>
@@ -259,6 +328,22 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Definition at line <a class="el" href="random__tests_8cpp_source.html#l00074">74</a> of file <a class="el" href="random__tests_8cpp_source.html">random_tests.cpp</a>.</p>
+
+<p>References <a class="el" href="random_8ipp_source.html#l00060">xstd::random::coin_flip()</a>.</p>
+<div class="fragment"><div class="line">{</div>
+<div class="line"></div>
+<div class="line">    <span class="keywordtype">bool</span> <a class="code" href="namespacexstd_1_1random.html#ae59f15bad38afbe5db860719a262cd8c">coin_flip</a> = <a class="code" href="namespacexstd_1_1random.html#ae59f15bad38afbe5db860719a262cd8c">xstd::random::coin_flip</a>(10);</div>
+<div class="line"></div>
+<div class="line">    ASSERT_TRUE</div>
+<div class="line">    (</div>
+<div class="line">        coin_flip == <span class="keyword">true</span></div>
+<div class="line">            ||</div>
+<div class="line">        coin_flip == <span class="keyword">false</span></div>
+<div class="line">    );</div>
+<div class="line"></div>
+<div class="line">}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="a1b73f97072dcfb4159ad97b4f74a6e7b"></a>
@@ -285,12 +370,37 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Definition at line <a class="el" href="random__tests_8cpp_source.html#l00088">88</a> of file <a class="el" href="random__tests_8cpp_source.html">random_tests.cpp</a>.</p>
+
+<p>References <a class="el" href="random_8ipp_source.html#l00060">xstd::random::coin_flip()</a>.</p>
+<div class="fragment"><div class="line">{</div>
+<div class="line"></div>
+<div class="line">    <span class="keywordtype">int</span> wins = 0;</div>
+<div class="line">    <span class="keywordtype">int</span> wins_expected = 1000;</div>
+<div class="line">    <span class="keywordtype">int</span> threshold = 100;</div>
+<div class="line"></div>
+<div class="line">    <span class="keywordflow">for</span> ( <span class="keywordtype">int</span> key = 0 ; key &lt; 10000 ; key++ )</div>
+<div class="line">    {</div>
+<div class="line"></div>
+<div class="line">        <span class="keywordflow">if</span> ( <a class="code" href="namespacexstd_1_1random.html#ae59f15bad38afbe5db860719a262cd8c">xstd::random::coin_flip</a>(10) == <span class="keyword">true</span> )</div>
+<div class="line">        {</div>
+<div class="line"></div>
+<div class="line">            wins++;</div>
+<div class="line"></div>
+<div class="line">        }</div>
+<div class="line"></div>
+<div class="line">    }</div>
+<div class="line"></div>
+<div class="line">    ASSERT_TRUE ( abs(wins-wins_expected) &lt; threshold );</div>
+<div class="line"></div>
+<div class="line">}</div>
+</div><!-- fragment -->
 </div>
 </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Aug 7 2014 15:57:06 for XTD by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Aug 7 2014 15:59:24 for XTD by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.1.2
 </small></address>

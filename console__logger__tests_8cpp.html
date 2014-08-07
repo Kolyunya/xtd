@@ -92,7 +92,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="contents">
 <div class="textblock"><code>#include &lt;gtest/gtest.h&gt;</code><br/>
 <code>#include &lt;log/console_logger.hpp&gt;</code><br/>
-</div><table class="memberdecls">
+</div>
+<p><a href="console__logger__tests_8cpp_source.html">Go to the source code of this file.</a></p>
+<table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2><a name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:a17103e4a70d5068b27058e867fbae641"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="console__logger__tests_8cpp.html#a17103e4a70d5068b27058e867fbae641">TEST</a> (console_logger, does_not_throw_while_construction)</td></tr>
@@ -125,6 +127,11 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Definition at line <a class="el" href="console__logger__tests_8cpp_source.html#l00042">42</a> of file <a class="el" href="console__logger__tests_8cpp_source.html">console_logger_tests.cpp</a>.</p>
+<div class="fragment"><div class="line">{</div>
+<div class="line">    ::testing::InitGoogleTest(&amp;argc, argv);</div>
+<div class="line">    <span class="keywordflow">return</span> RUN_ALL_TESTS();</div>
+<div class="line">}</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="a17103e4a70d5068b27058e867fbae641"></a>
@@ -151,6 +158,12 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Definition at line <a class="el" href="console__logger__tests_8cpp_source.html#l00022">22</a> of file <a class="el" href="console__logger__tests_8cpp_source.html">console_logger_tests.cpp</a>.</p>
+<div class="fragment"><div class="line">{</div>
+<div class="line">    <a class="code" href="classxstd_1_1console__logger.html">xstd::console_logger</a>(<span class="keyword">false</span>,<span class="keyword">false</span>);</div>
+<div class="line">    ASSERT_TRUE(<span class="keyword">true</span>);</div>
+<div class="line">}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="a73920798fe0d2cacecb2130efaade99b"></a>
@@ -177,6 +190,15 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Definition at line <a class="el" href="console__logger__tests_8cpp_source.html#l00028">28</a> of file <a class="el" href="console__logger__tests_8cpp_source.html">console_logger_tests.cpp</a>.</p>
+
+<p>References <a class="el" href="abstract__logger_8ipp_source.html#l00030">xstd::abstract_logger::log()</a>.</p>
+<div class="fragment"><div class="line">{</div>
+<div class="line">    <span class="keyword">const</span> <a class="code" href="classxstd_1_1abstract__logger.html">xstd::abstract_logger</a>&amp; logger = <a class="code" href="classxstd_1_1console__logger.html">xstd::console_logger</a>();</div>
+<div class="line">    logger.<a class="code" href="classxstd_1_1abstract__logger.html#ad470970ac4726355f3423017f434ace8">log</a>(<span class="stringliteral">&quot;Hello world&quot;</span>);</div>
+<div class="line">    ASSERT_TRUE(<span class="keyword">true</span>);</div>
+<div class="line">}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="a0f9e077378f0cb818e8d2965abeb7825"></a>
@@ -203,12 +225,21 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Definition at line <a class="el" href="console__logger__tests_8cpp_source.html#l00035">35</a> of file <a class="el" href="console__logger__tests_8cpp_source.html">console_logger_tests.cpp</a>.</p>
+
+<p>References <a class="el" href="abstract__logger_8ipp_source.html#l00030">xstd::abstract_logger::log()</a>.</p>
+<div class="fragment"><div class="line">{</div>
+<div class="line">    <span class="keyword">const</span> <a class="code" href="classxstd_1_1abstract__logger.html">xstd::abstract_logger</a>&amp; logger = <a class="code" href="classxstd_1_1console__logger.html">xstd::console_logger</a>(<span class="keyword">true</span>,<span class="keyword">false</span>);</div>
+<div class="line">    logger.<a class="code" href="classxstd_1_1abstract__logger.html#ad470970ac4726355f3423017f434ace8">log</a>(<span class="stringliteral">&quot;Hello world&quot;</span>);</div>
+<div class="line">    ASSERT_TRUE(<span class="keyword">true</span>);</div>
+<div class="line">}</div>
+</div><!-- fragment -->
 </div>
 </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Aug 7 2014 15:57:06 for XTD by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Aug 7 2014 15:59:24 for XTD by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.1.2
 </small></address>

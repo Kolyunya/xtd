@@ -109,7 +109,10 @@ Public Member Functions</h2></td></tr>
 Protected Attributes</h2></td></tr>
 <tr class="memitem:a6f1cc6e74cfa370ec516e3fa792b3f1c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classxstd_1_1abstract__logger.html">abstract_logger</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxstd_1_1logger__client.html#a6f1cc6e74cfa370ec516e3fa792b3f1c">logger_ptr</a></td></tr>
 </table>
-<h2>Constructor &amp; Destructor Documentation</h2>
+<a name="details" id="details"></a><h2>Detailed Description</h2>
+<div class="textblock">
+<p>Definition at line <a class="el" href="logger__client_8hpp_source.html#l00027">27</a> of file <a class="el" href="logger__client_8hpp_source.html">logger_client.hpp</a>.</p>
+</div><h2>Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="ae366adb742d038fa072522500d798ce8"></a>
 <div class="memitem">
 <div class="memproto">
@@ -132,6 +135,15 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Definition at line <a class="el" href="logger__client_8ipp_source.html#l00022">22</a> of file <a class="el" href="logger__client_8ipp_source.html">logger_client.ipp</a>.</p>
+
+<p>References <a class="el" href="logger__client_8ipp_source.html#l00043">set_logger()</a>.</p>
+<div class="fragment"><div class="line">    {</div>
+<div class="line"></div>
+<div class="line">        this-&gt;<a class="code" href="classxstd_1_1logger__client.html#a058f72e775905783e79721ecb2a65349">set_logger</a>(<a class="code" href="classxstd_1_1logger__client.html#a6f1cc6e74cfa370ec516e3fa792b3f1c">logger_ptr</a>);</div>
+<div class="line"></div>
+<div class="line">    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <h2>Member Function Documentation</h2>
@@ -157,6 +169,15 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Definition at line <a class="el" href="logger__client_8ipp_source.html#l00036">36</a> of file <a class="el" href="logger__client_8ipp_source.html">logger_client.ipp</a>.</p>
+
+<p>References <a class="el" href="logger__client_8hpp_source.html#l00044">logger_ptr</a>.</p>
+<div class="fragment"><div class="line">    {</div>
+<div class="line"></div>
+<div class="line">        <span class="keywordflow">return</span> this-&gt;<a class="code" href="classxstd_1_1logger__client.html#a6f1cc6e74cfa370ec516e3fa792b3f1c">logger_ptr</a>;</div>
+<div class="line"></div>
+<div class="line">    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="a4567aa30484c31b0d53089d1d08f8fab"></a>
@@ -181,6 +202,17 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Definition at line <a class="el" href="logger__client_8ipp_source.html#l00029">29</a> of file <a class="el" href="logger__client_8ipp_source.html">logger_client.ipp</a>.</p>
+
+<p>References <a class="el" href="logger__client_8hpp_source.html#l00044">logger_ptr</a>.</p>
+
+<p>Referenced by <a class="el" href="logger__client__tests_8cpp_source.html#l00040">TEST()</a>.</p>
+<div class="fragment"><div class="line">    {</div>
+<div class="line"></div>
+<div class="line">        <span class="keywordflow">return</span> * this-&gt;<a class="code" href="classxstd_1_1logger__client.html#a6f1cc6e74cfa370ec516e3fa792b3f1c">logger_ptr</a>;</div>
+<div class="line"></div>
+<div class="line">    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="a7169793d2c5512150d611ae47e0c6b74"></a>
@@ -205,6 +237,22 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Definition at line <a class="el" href="logger__client_8ipp_source.html#l00050">50</a> of file <a class="el" href="logger__client_8ipp_source.html">logger_client.ipp</a>.</p>
+
+<p>References <a class="el" href="abstract__logger_8ipp_source.html#l00030">xstd::abstract_logger::log()</a>, and <a class="el" href="logger__client_8hpp_source.html#l00044">logger_ptr</a>.</p>
+
+<p>Referenced by <a class="el" href="logger__client__tests_8cpp_source.html#l00031">TEST()</a>.</p>
+<div class="fragment"><div class="line">    {</div>
+<div class="line"></div>
+<div class="line">        <span class="keywordflow">if</span> ( this-&gt;<a class="code" href="classxstd_1_1logger__client.html#a6f1cc6e74cfa370ec516e3fa792b3f1c">logger_ptr</a> )</div>
+<div class="line">        {</div>
+<div class="line"></div>
+<div class="line">            this-&gt;<a class="code" href="classxstd_1_1logger__client.html#a6f1cc6e74cfa370ec516e3fa792b3f1c">logger_ptr</a>-&gt;<a class="code" href="classxstd_1_1abstract__logger.html#ad470970ac4726355f3423017f434ace8">log</a>(data);</div>
+<div class="line"></div>
+<div class="line">        }</div>
+<div class="line"></div>
+<div class="line">    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="a058f72e775905783e79721ecb2a65349"></a>
@@ -229,6 +277,17 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Definition at line <a class="el" href="logger__client_8ipp_source.html#l00043">43</a> of file <a class="el" href="logger__client_8ipp_source.html">logger_client.ipp</a>.</p>
+
+<p>References <a class="el" href="logger__client_8hpp_source.html#l00044">logger_ptr</a>.</p>
+
+<p>Referenced by <a class="el" href="logger__client_8ipp_source.html#l00022">logger_client()</a>.</p>
+<div class="fragment"><div class="line">    {</div>
+<div class="line"></div>
+<div class="line">        this-&gt;<a class="code" href="classxstd_1_1logger__client.html#a6f1cc6e74cfa370ec516e3fa792b3f1c">logger_ptr</a> = <a class="code" href="classxstd_1_1logger__client.html#a6f1cc6e74cfa370ec516e3fa792b3f1c">logger_ptr</a>;</div>
+<div class="line"></div>
+<div class="line">    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <h2>Member Data Documentation</h2>
@@ -250,16 +309,20 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Definition at line <a class="el" href="logger__client_8hpp_source.html#l00044">44</a> of file <a class="el" href="logger__client_8hpp_source.html">logger_client.hpp</a>.</p>
+
+<p>Referenced by <a class="el" href="logger__client_8ipp_source.html#l00036">get_logger_ptr()</a>, <a class="el" href="logger__client_8ipp_source.html#l00029">get_logger_ref()</a>, <a class="el" href="logger__client_8ipp_source.html#l00050">log()</a>, and <a class="el" href="logger__client_8ipp_source.html#l00043">set_logger()</a>.</p>
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li>src/log/logger_client/src/<a class="el" href="logger__client_8hpp_source.html">logger_client.hpp</a></li>
-<li>src/log/logger_client/src/<a class="el" href="logger__client_8ipp.html">logger_client.ipp</a></li>
+<li>src/log/logger_client/src/<a class="el" href="logger__client_8ipp_source.html">logger_client.ipp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Aug 7 2014 15:57:06 for XTD by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Aug 7 2014 15:59:24 for XTD by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.1.2
 </small></address>

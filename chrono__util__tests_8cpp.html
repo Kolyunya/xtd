@@ -93,7 +93,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="textblock"><code>#include &lt;gtest/gtest.h&gt;</code><br/>
 <code>#include &lt;cstring&gt;</code><br/>
 <code>#include &lt;chrono/chrono_util.hpp&gt;</code><br/>
-</div><table class="memberdecls">
+</div>
+<p><a href="chrono__util__tests_8cpp_source.html">Go to the source code of this file.</a></p>
+<table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2><a name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:a4d515f066f202870d93427c6823ebeca"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="chrono__util__tests_8cpp.html#a4d515f066f202870d93427c6823ebeca">TEST</a> (one_second_time_point, converts_to_time_t_equal_to_1)</td></tr>
@@ -129,6 +131,11 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Definition at line <a class="el" href="chrono__util__tests_8cpp_source.html#l00086">86</a> of file <a class="el" href="chrono__util__tests_8cpp_source.html">chrono_util_tests.cpp</a>.</p>
+<div class="fragment"><div class="line">{</div>
+<div class="line">    ::testing::InitGoogleTest(&amp;argc, argv);</div>
+<div class="line">    <span class="keywordflow">return</span> RUN_ALL_TESTS();</div>
+<div class="line">}</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="a4d515f066f202870d93427c6823ebeca"></a>
@@ -155,6 +162,18 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Definition at line <a class="el" href="chrono__util__tests_8cpp_source.html#l00023">23</a> of file <a class="el" href="chrono__util__tests_8cpp_source.html">chrono_util_tests.cpp</a>.</p>
+
+<p>References <a class="el" href="chrono__util_8ipp_source.html#l00025">xstd::chrono::time_point_to_time_t()</a>.</p>
+<div class="fragment"><div class="line">{</div>
+<div class="line"></div>
+<div class="line">    std::chrono::time_point&lt;std::chrono::steady_clock&gt; time_point(std::chrono::seconds(1));</div>
+<div class="line">    time_t time_point_in_time_t_format = <a class="code" href="namespacexstd_1_1chrono.html#af3f86d799ca227d2bf0ac8ff5a08df3b">xstd::chrono::time_point_to_time_t</a>(time_point);</div>
+<div class="line"></div>
+<div class="line">    ASSERT_EQ(time_point_in_time_t_format,1);</div>
+<div class="line"></div>
+<div class="line">}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="a69c5ff47696ea16358cdd6057cf7bf17"></a>
@@ -181,6 +200,18 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Definition at line <a class="el" href="chrono__util__tests_8cpp_source.html#l00033">33</a> of file <a class="el" href="chrono__util__tests_8cpp_source.html">chrono_util_tests.cpp</a>.</p>
+
+<p>References <a class="el" href="chrono__util_8ipp_source.html#l00054">xstd::chrono::time_point_to_formatted_string()</a>.</p>
+<div class="fragment"><div class="line">{</div>
+<div class="line"></div>
+<div class="line">    std::chrono::time_point&lt;std::chrono::steady_clock&gt; time_point(std::chrono::seconds(1));</div>
+<div class="line">    std::string time_point_string = <a class="code" href="namespacexstd_1_1chrono.html#a5fd95ee0963d407c39528b3f48790842">xstd::chrono::time_point_to_formatted_string</a>(time_point);</div>
+<div class="line"></div>
+<div class="line">    ASSERT_EQ(time_point_string,<span class="stringliteral">&quot;[1970/01/01-00:00:01]&quot;</span>);</div>
+<div class="line"></div>
+<div class="line">}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="a4a87b4ecd178fc6214a468487a23b311"></a>
@@ -207,6 +238,18 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Definition at line <a class="el" href="chrono__util__tests_8cpp_source.html#l00043">43</a> of file <a class="el" href="chrono__util__tests_8cpp_source.html">chrono_util_tests.cpp</a>.</p>
+
+<p>References <a class="el" href="chrono__util_8ipp_source.html#l00025">xstd::chrono::time_point_to_time_t()</a>.</p>
+<div class="fragment"><div class="line">{</div>
+<div class="line"></div>
+<div class="line">    std::chrono::time_point&lt;std::chrono::steady_clock&gt; time_point(std::chrono::minutes(1));</div>
+<div class="line">    time_t time_point_in_time_t_format = <a class="code" href="namespacexstd_1_1chrono.html#af3f86d799ca227d2bf0ac8ff5a08df3b">xstd::chrono::time_point_to_time_t</a>(time_point);</div>
+<div class="line"></div>
+<div class="line">    ASSERT_EQ(time_point_in_time_t_format,60);</div>
+<div class="line"></div>
+<div class="line">}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="ae6f833f88a5feb486514bc6c944df7a4"></a>
@@ -233,6 +276,21 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Definition at line <a class="el" href="chrono__util__tests_8cpp_source.html#l00053">53</a> of file <a class="el" href="chrono__util__tests_8cpp_source.html">chrono_util_tests.cpp</a>.</p>
+
+<p>References <a class="el" href="chrono__util_8ipp_source.html#l00044">xstd::chrono::time_point_to_tm()</a>.</p>
+<div class="fragment"><div class="line">{</div>
+<div class="line"></div>
+<div class="line">    std::chrono::time_point&lt;std::chrono::steady_clock&gt; time_point(std::chrono::minutes(1));</div>
+<div class="line">    tm time_point_in_tm_format_actual = <a class="code" href="namespacexstd_1_1chrono.html#a1f31cb15f2e74489fc0f98fa38758067">xstd::chrono::time_point_to_tm</a>(time_point);</div>
+<div class="line"></div>
+<div class="line">    time_t time_point_in_time_t_format = 60;</div>
+<div class="line">    tm time_point_in_tm_format_correct = *gmtime(&amp;time_point_in_time_t_format);</div>
+<div class="line"></div>
+<div class="line">    ASSERT_EQ(memcmp(&amp;time_point_in_tm_format_actual,&amp;time_point_in_tm_format_correct,<span class="keyword">sizeof</span>(tm)),0);</div>
+<div class="line"></div>
+<div class="line">}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="a2e5964195ce539f6196eeb962b1b5b84"></a>
@@ -259,6 +317,18 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Definition at line <a class="el" href="chrono__util__tests_8cpp_source.html#l00066">66</a> of file <a class="el" href="chrono__util__tests_8cpp_source.html">chrono_util_tests.cpp</a>.</p>
+
+<p>References <a class="el" href="chrono__util_8ipp_source.html#l00025">xstd::chrono::time_point_to_time_t()</a>.</p>
+<div class="fragment"><div class="line">{</div>
+<div class="line"></div>
+<div class="line">    std::chrono::time_point&lt;std::chrono::steady_clock&gt; time_point(std::chrono::hours(1));</div>
+<div class="line">    time_t time_point_in_time_t_format = <a class="code" href="namespacexstd_1_1chrono.html#af3f86d799ca227d2bf0ac8ff5a08df3b">xstd::chrono::time_point_to_time_t</a>(time_point);</div>
+<div class="line"></div>
+<div class="line">    ASSERT_EQ(time_point_in_time_t_format,3600);</div>
+<div class="line"></div>
+<div class="line">}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="a45abd8310a93e442deef02339580dacc"></a>
@@ -285,12 +355,24 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Definition at line <a class="el" href="chrono__util__tests_8cpp_source.html#l00076">76</a> of file <a class="el" href="chrono__util__tests_8cpp_source.html">chrono_util_tests.cpp</a>.</p>
+
+<p>References <a class="el" href="chrono__util_8ipp_source.html#l00054">xstd::chrono::time_point_to_formatted_string()</a>.</p>
+<div class="fragment"><div class="line">{</div>
+<div class="line"></div>
+<div class="line">    std::chrono::time_point&lt;std::chrono::steady_clock&gt; time_point(std::chrono::seconds(42));</div>
+<div class="line">    std::string time_point_string = <a class="code" href="namespacexstd_1_1chrono.html#a5fd95ee0963d407c39528b3f48790842">xstd::chrono::time_point_to_formatted_string</a>(time_point,<span class="stringliteral">&quot;%Y-%m-%d %H-%M-%S&quot;</span>);</div>
+<div class="line"></div>
+<div class="line">    ASSERT_EQ(time_point_string,<span class="stringliteral">&quot;1970-01-01 00-00-42&quot;</span>);</div>
+<div class="line"></div>
+<div class="line">}</div>
+</div><!-- fragment -->
 </div>
 </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Aug 7 2014 15:57:06 for XTD by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Aug 7 2014 15:59:23 for XTD by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.1.2
 </small></address>

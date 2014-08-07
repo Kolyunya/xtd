@@ -6,5 +6,5 @@ var searchData=
   ['memory_5futil_2ehpp',['memory_util.hpp',['../memory__util_8hpp.html',1,'']]],
   ['memory_5futil_5ftests_2ecpp',['memory_util_tests.cpp',['../memory__util__tests_8cpp.html',1,'']]],
   ['method_5fptr',['method_ptr',['../classxstd_1_1functor.html#a673d0ccf7da14d0d7f4726bbdf8af8a4',1,'xstd::functor']]],
-  ['mutex',['mutex',['../classxstd_1_1chrono_1_1timer__manager.html#afe2d386a7849d456e6fffda583bb73f2',1,'xstd::chrono::timer_manager::mutex()'],['../classxstd_1_1raii__thread__base.html#a9d9e01fced1a4f58ea5a9cc165f54fe3',1,'xstd::raii_thread_base::mutex()']]]
+  ['mutex',['mutex',['../classxstd_1_1raii__thread__base.html#a9d9e01fced1a4f58ea5a9cc165f54fe3',1,'xstd::raii_thread_base']]]
 ];
