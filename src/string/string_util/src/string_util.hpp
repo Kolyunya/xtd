@@ -48,15 +48,15 @@ namespace xtd
 
         /**
          *  @brief Converts a number from string to numeric representation.
-         *  @note This function is a wrapper of a [strtol]() function.
-         *  @details Converts a number represented by a `source_string` to a `long int`.
-         *           Treats a `source_string` as a numeral with a base of `number_base`.
          *  @param [in] source_string A string representation of a number.
          *  @param [in] number_base A base of a number.
          *  @returns A numeric representation of a number.
          *  @exception_safety Strong exception safety.
          *  @throws std::runtime_error Thrown if `source_string` does not represent a valid_number.
          *                             Also thrown if `source_string` represents a number which is out of range of `signed long int`.
+         *  @details Converts a number represented by a `source_string` to a `long int`.
+         *           Treats a `source_string` as a numeral with a base of `number_base`.
+         *  @note This function is a wrapper of a [strtol](http://en.cppreference.com/w/cpp/string/byte/strtol) function.
          */
         inline signed long int to_long ( const std::string& source_string , signed int number_base = 0 );
 
