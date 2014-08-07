@@ -1,4 +1,4 @@
-//  xstd - extension of the C++ standard library
+//   XTD - extension of the C++ standard library
 //  Copyright (C) 2013 Oleynikov Nikolay
 //
 //  This program is free software: you can redistribute it and/or modify
@@ -22,38 +22,35 @@ namespace xtd
     namespace str
     {
 
-        signed long int     string_to_long_int ( const std::string& source_string , int number_base )
+        signed long int to_long ( const std::string& source_string , signed int number_base )
         {
 
-            // Function "strtol" will set this pointer to point to the first character after the numeric part of the original string.
-            // This pointer will be used in the case when "std::strtol" will returns "0".
-            // If this pointer will point to the first character of the original std::string this will mean that the std::string does not start
-            // with a numeral and no conversion has been performed.
-            // If this pointer will not point to the first character of the original std::string this will mean that the original string
-            // does start with a numeral equal to "0" and the conersion was performed successfully.
+            //  Function "strtol" will set this pointer to point to the first character after the numeric part of the original string.
+            //  This pointer will be used in the case when "std::strtol" will returns "0".
+            //  If this pointer will point to the first character of the original std::string this will mean that the std::string does not start
+            //  with a numeral and no conversion has been performed.
+            //  If this pointer will not point to the first character of the original std::string this will mean that the original string
+            //  does start with a numeral equal to "0" and the conersion was performed successfully.
             char* first_character_after_number = nullptr;
 
-            long int number = strtol(source_string.data(),&first_character_after_number,number_base);
+            signed long int number = strtol(source_string.data(),&first_character_after_number,number_base);
 
+            //  Either error occured or the the result number is "0".
+            //  Use "first_character_after_number" to distinguish between those cases.
             if ( number == 0 )
             {
-
                 char* first_character_of_string = &const_cast<char&>(source_string[0]);
-
                 if ( first_character_after_number == first_character_of_string )
                 {
-
                     throw std::runtime_error("String to number conversion failed.");
-
                 }
-
             }
 
+            //  The number either exceeds or equals the limits of "signed long int".
+            //  It is not possible do distinguish those cases because "errno" may be set to "ERANGE" earlyer.
             else if ( number == LONG_MAX || number == LONG_MIN )
             {
-
                 throw std::runtime_error("String to number conversion failed. Number exceeds type limits.");
-
             }
 
             return number;
@@ -63,7 +60,7 @@ namespace xtd
         signed int          string_to_int ( const std::string& source_string , int number_base )
         {
 
-            long int number = string_to_long_int(source_string,number_base);
+            long int number = to_long(source_string,number_base);
 
             if ( number < INT_MIN || number > INT_MAX )
             {

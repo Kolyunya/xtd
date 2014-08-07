@@ -16,18 +16,15 @@
 //
 //  Author email: OleynikovNY@mail.ru
 
-#ifndef _XSTD_STRING_UTIL_HPP_
-#define _XSTD_STRING_UTIL_HPP_
+#ifndef _XTD_STRING_UTIL_HPP_
+#define _XTD_STRING_UTIL_HPP_
 
 #include <stdexcept>    //  std::runtime_error
 #include <algorithm>    //  std::for_each
 #include <vector>       //  std::vector
-#include <sstream>      //  std::string
-                        //  std::stringstream
-#include <climits>      //  LONG_MIN
-                        //  LONG_MAX
-#include <cstdlib>      //  std::strtol
-                        //  std::strtof
+#include <sstream>      //  std::string, std::stringstream
+#include <climits>      //  LONG_MIN, LONG_MAX, INT_MIN, INT_MAX
+#include <cstdlib>      //  std::strtol, std::strtof
 
 /**
  *  @namespace xtd
@@ -51,18 +48,17 @@ namespace xtd
 
         /**
          *  @brief Converts a number from string to numeric representation.
-         *
+         *  @note This function is a wrapper of a [strtol]() function.
+         *  @details Converts a number represented by a `source_string` to a `long int`.
+         *           Treats a `source_string` as a numeral with a base of `number_base`.
          *  @param [in] source_string A string representation of a number.
          *  @param [in] number_base A base of a number.
          *  @returns A numeric representation of a number.
          *  @exception_safety Strong exception safety.
          *  @throws std::runtime_error Thrown if `source_string` does not represent a valid_number.
          *                             Also thrown if `source_string` represents a number which is out of range of `signed long int`.
-         *
-         *  @details Converts a number represented by a `source_string` to a `long int`.
-         *           Treats a `source_string` as a numeral with a base of `number_base`.
          */
-        inline signed long int      string_to_long_int ( const std::string& source_string , int number_base = 10 );
+        inline signed long int to_long ( const std::string& source_string , signed int number_base = 0 );
 
         /**
          *  @brief Converts a number from string to numeric representation.
@@ -154,4 +150,4 @@ namespace xtd
 //  Include implementation file
 #include "string_util.ipp"
 
-#endif  //  _XSTD_STRING_UTIL_HPP_
+#endif  //  _XTD_STRING_UTIL_HPP_
