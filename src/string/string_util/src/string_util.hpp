@@ -44,7 +44,7 @@ namespace xstd
 
 
      /**
-     *  @brief =qweqwdsafdsdfssdfddfsdfdssfdsgdsd=====++++++++++Converts a number from string to numeric representation.
+     *  @brief =qweqwdsafdsdfssdfdsdfdfsdfdssfdsgdsd=====++++++++++Converts a number from string to numeric representation.
      *
      *  @param [in] source_string A string representation of a number.
      *  @param [in] number_base A base of a number.
