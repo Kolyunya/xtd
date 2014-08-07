@@ -16,10 +16,6 @@
 //
 //  Author email: OleynikovNY@mail.ru
 
-/**
- *  @file string_util.hpp
- */
-
 #ifndef _XSTD_STRING_UTIL_HPP_
 #define _XSTD_STRING_UTIL_HPP_
 
