@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<title>XSTD: Main Page</title>
+<title>XSTD: Member List</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -36,9 +36,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </script>
   <div id="navrow1" class="tabs">
     <ul class="tablist">
-      <li class="current"><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="index.html"><span>Main&#160;Page</span></a></li>
       <li><a href="namespaces.html"><span>Namespaces</span></a></li>
-      <li><a href="annotated.html"><span>Classes</span></a></li>
+      <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Files</span></a></li>
       <li>
         <div id="MSearchBox" class="MSearchBoxInactive">
@@ -58,7 +58,14 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
       </li>
     </ul>
   </div>
-</div><!-- top -->
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="annotated.html"><span>Class&#160;List</span></a></li>
+      <li><a href="classes.html"><span>Class&#160;Index</span></a></li>
+      <li><a href="hierarchy.html"><span>Class&#160;Hierarchy</span></a></li>
+      <li><a href="functions.html"><span>Class&#160;Members</span></a></li>
+    </ul>
+  </div>
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -73,15 +80,29 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </iframe>
 </div>
 
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespacexstd.html">xstd</a></li><li class="navelem"><a class="el" href="classxstd_1_1logger__client.html">logger_client</a></li>  </ul>
+</div>
+</div><!-- top -->
 <div class="header">
   <div class="headertitle">
-<div class="title">XSTD Documentation</div>  </div>
+<div class="title">xstd::logger_client Member List</div>  </div>
 </div><!--header-->
 <div class="contents">
-</div><!-- contents -->
+
+<p>This is the complete list of members for <a class="el" href="classxstd_1_1logger__client.html">xstd::logger_client</a>, including all inherited members.</p>
+<table class="directory">
+  <tr class="even"><td class="entry"><a class="el" href="classxstd_1_1logger__client.html#a436c05e8f5d01fa5ed01aea36d1c5390">get_logger_ptr</a>(void)</td><td class="entry"><a class="el" href="classxstd_1_1logger__client.html">xstd::logger_client</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr><td class="entry"><a class="el" href="classxstd_1_1logger__client.html#a4567aa30484c31b0d53089d1d08f8fab">get_logger_ref</a>(void)</td><td class="entry"><a class="el" href="classxstd_1_1logger__client.html">xstd::logger_client</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classxstd_1_1logger__client.html#a7169793d2c5512150d611ae47e0c6b74">log</a>(const std::string &amp;data) const </td><td class="entry"><a class="el" href="classxstd_1_1logger__client.html">xstd::logger_client</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr><td class="entry"><a class="el" href="classxstd_1_1logger__client.html#ae366adb742d038fa072522500d798ce8">logger_client</a>(abstract_logger *logger_ptr=nullptr)</td><td class="entry"><a class="el" href="classxstd_1_1logger__client.html">xstd::logger_client</a></td><td class="entry"><span class="mlabel">inline</span><span class="mlabel">explicit</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classxstd_1_1logger__client.html#a6f1cc6e74cfa370ec516e3fa792b3f1c">logger_ptr</a></td><td class="entry"><a class="el" href="classxstd_1_1logger__client.html">xstd::logger_client</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
+  <tr><td class="entry"><a class="el" href="classxstd_1_1logger__client.html#a058f72e775905783e79721ecb2a65349">set_logger</a>(abstract_logger *logger_ptr=nullptr)</td><td class="entry"><a class="el" href="classxstd_1_1logger__client.html">xstd::logger_client</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+</table></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Aug 7 2014 13:14:39 for XSTD by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Aug 7 2014 13:14:38 for XSTD by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.1.2
 </small></address>
