@@ -33,7 +33,7 @@ namespace xtd
             //  does start with a numeral equal to "0" and the conersion was performed successfully.
             char* first_character_after_number = nullptr;
 
-            signed long long int number = strtoll(source_string.data(),&first_character_after_number,number_base);
+            signed long long int number = std::strtoll(source_string.data(),&first_character_after_number,number_base);
 
             //  Either error occured or the the result number is "0".
             //  Use "first_character_after_number" to distinguish between those cases.
@@ -68,7 +68,7 @@ namespace xtd
             //  does start with a numeral equal to "0" and the conersion was performed successfully.
             char* first_character_after_number = nullptr;
 
-            signed long int number = strtol(source_string.data(),&first_character_after_number,number_base);
+            signed long int number = std::strtol(source_string.data(),&first_character_after_number,number_base);
 
             //  Either error occured or the the result number is "0".
             //  Use "first_character_after_number" to distinguish between those cases.
@@ -108,6 +108,40 @@ namespace xtd
 
         }
 
+        long double to_long_double ( const std::string& source_string )
+        {
+
+            // Function "strtold" will set this pointer to point to the first character after the numeric part of the original string.
+            // This pointer will be used in the case when "std::strtold" will returns "0".
+            // If this pointer will point to the first character of the original std::string this will mean that the std::string does not start
+            // with a numeral and no conversion has been performed.
+            // If this pointer will not point to the first character of the original std::string this will mean that the original string
+            // does start with a numeral equal to "0" and the conersion was performed successfully.
+            char* first_character_after_number = nullptr;
+
+            long double number = std::strtold(source_string.data(),&first_character_after_number);
+
+            //  Either error occured or the the result number is "0".
+            //  Use "first_character_after_number" to distinguish between those cases.
+            if ( number == 0 )
+            {
+                char* first_character_of_string = const_cast<char*>(source_string.data());
+                if ( first_character_after_number == first_character_of_string )
+                {
+                    throw std::runtime_error("String to number conversion failed.");
+                }
+            }
+
+            //  The number exceeds type limits.
+            else if ( number == HUGE_VAL || number == -HUGE_VAL )
+            {
+                throw std::runtime_error("String to number conversion failed. Number exceeds type limits.");
+            }
+
+            return number;
+
+        }
+
         double to_double ( const std::string& source_string )
         {
 
@@ -119,7 +153,7 @@ namespace xtd
             // does start with a numeral equal to "0" and the conersion was performed successfully.
             char* first_character_after_number = nullptr;
 
-            double number = strtod(source_string.data(),&first_character_after_number);
+            double number = std::strtod(source_string.data(),&first_character_after_number);
 
             //  Either error occured or the the result number is "0".
             //  Use "first_character_after_number" to distinguish between those cases.
@@ -153,7 +187,7 @@ namespace xtd
             // does start with a numeral equal to "0" and the conersion was performed successfully.
             char* first_character_after_number = nullptr;
 
-            float number = strtof(source_string.data(),&first_character_after_number);
+            float number = std::strtof(source_string.data(),&first_character_after_number);
 
             //  Either error occured or the the result number is "0".
             //  Use "first_character_after_number" to distinguish between those cases.
@@ -185,84 +219,63 @@ namespace xtd
             return result_string;
         }
 
-        std::string from ( signed int source_number )
-        {
-            std::stringstream string_stream;
-            string_stream << source_number;
-            return string_stream.str();
-        }
-
-        std::string from ( unsigned int source_number )
-        {
-            std::stringstream string_stream;
-            string_stream << source_number;
-            return string_stream.str();
-        }
-
-        std::string from ( float source_number )
-        {
-            std::stringstream string_stream;
-            string_stream << source_number;
-            return string_stream.str();
-        }
-
         std::string reverse ( const std::string& source_string )
         {
-
-            return std::string(source_string.rbegin(),source_string.rend());
-
+            std::string::const_reverse_iterator reversed_begin_itr = source_string.crbegin();
+            std::string::const_reverse_iterator reversed_end_itr = source_string.crend();
+            const std::string result_string(reversed_begin_itr,reversed_end_itr);
+            return result_string;
         }
 
         strings split ( const std::string& source_string , const std::string& delimiter )
         {
 
-            // Create a result vector
+            //  Create a result vector.
             strings result;
 
-            // Calculate the size of the delimiter
-            size_t delimiter_size = delimiter.size();
+            //  Calculate the size of the delimiter.
+            std::size_t delimiter_size = delimiter.size();
 
+            //  If the delimiter is an empty string - split the source string to characters.
             if ( delimiter_size == 0 )
             {
-                for_each
+                std::for_each
                 (
                     source_string.begin(),
                     source_string.end(),
-                    [&result]
+                    [ &result ]
                     ( char character)
                     {
-                        std::string characterString = std::string(1,character);
-                        result.push_back(characterString);
+                        std::string character_string = std::string(1,character);
+                        result.push_back(character_string);
                     }
                 );
                 return result;
             }
 
-            // Calculate the size of the input string
+            //  Calculate the size of the input string.
             std::string string_copy = source_string;
-            size_t string_size = string_copy.size();
+            std::size_t string_size = string_copy.size();
 
-            // Don not process empty strings
+            //  Don not process empty strings.
             if ( string_size > 0 )
             {
 
-                // Search the position of the first delimiter.
-                int first_delimiter_position = string_copy.find_first_of(delimiter);
+                //  Search the position of the first delimiter.
+                std::size_t first_delimiter_position = string_copy.find_first_of(delimiter);
 
-                // No delimiters are in the string
-                if ( first_delimiter_position == -1 )
+                //  There are no delimiters in the source string.
+                if ( first_delimiter_position == std::string::npos )
                 {
-
-                    // The result is the whole string
+                    //  The result is the whole string itself.
                     result.push_back(string_copy);
-
                 }
 
-                // There is a delimiter in the string
+                //  There is a delimiter in the string.
                 else
                 {
 
-                    // If the std::string does not start with a delimiter
+                    //  If the std::string does not start with a delimiter.
                     if ( first_delimiter_position > 0 )
                     {
 
@@ -271,13 +284,13 @@ namespace xtd
 
                     }
 
-                    // Cut off the first fragment and the first delimiter and call the `split`
-                    // function again with `input` std::string containing the rest of the string
+                    //  Cut off the first fragment and the first delimiter and call the `split`
+                    //  function again with `input` std::string containing the rest of the string.
                     std::string string_tail = string_copy.substr(first_delimiter_position+delimiter_size,string_size-first_delimiter_position-delimiter_size);
-                    strings strings_tail = split(string_tail,delimiter);
+                    strings string_reminder_split = split(string_tail,delimiter);
 
-                    // Add tail strings to result
-                    result.insert(result.end(),strings_tail.begin(),strings_tail.end());
+                    //  Add tail strings to result.
+                    result.insert(result.end(),string_reminder_split.begin(),string_reminder_split.end());
 
                 }
 
@@ -290,14 +303,8 @@ namespace xtd
         strings split ( const std::string& source_string , char delimiter )
         {
             std::string delimiter_string = std::string(1,delimiter);
-            return split(source_string,delimiter_string);
-        }
-
-        strings split ( const char* source_string_ptr , const char* delimiter_ptr )
-        {
-            std::string source_string = std::string(source_string_ptr);
-            std::string delimiter_string = std::string(delimiter_ptr);
-            return split(source_string,delimiter_string);
+            xtd::str::strings result_strings = split(source_string,delimiter_string);
+            return result_strings;
         }
 
         std::string replace ( const std::string& source_string , const std::string& search_for , const std::string& replace_with )
@@ -328,14 +335,6 @@ namespace xtd
         {
             std::string search_for_string = std::string(1,search_for);
             std::string replace_with_string = std::string(1,replace_with);
-            return replace(source_string,search_for_string,replace_with_string);
-        }
-
-        std::string replace ( const char* source_string_ptr , const char* search_for_ptr , const char* replace_with_ptr )
-        {
-            std::string source_string = std::string(source_string_ptr);
-            std::string search_for_string = std::string(search_for_ptr);
-            std::string replace_with_string = std::string(replace_with_ptr);
             return replace(source_string,search_for_string,replace_with_string);
         }
 
