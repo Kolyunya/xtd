@@ -103,11 +103,15 @@ Functions</h2></td></tr>
 <tr class="memdesc:a556648e51f28261237c8d4ec28ba9198"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts a number from string to numeric representation.  <a href="#a556648e51f28261237c8d4ec28ba9198"></a><br/></td></tr>
 <tr class="memitem:ae80bc523e87c11b0d108e794ffc40d09"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacextd_1_1str.html#ae80bc523e87c11b0d108e794ffc40d09">to_float</a> (const std::string &amp;source_string)</td></tr>
 <tr class="memdesc:ae80bc523e87c11b0d108e794ffc40d09"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts a number from string to numeric representation.  <a href="#ae80bc523e87c11b0d108e794ffc40d09"></a><br/></td></tr>
+<tr class="memitem:a526a132dfcfac73b37078ead543a47c6"><td class="memTemplParams" colspan="2">template&lt;typename type &gt; </td></tr>
+<tr class="memitem:a526a132dfcfac73b37078ead543a47c6"><td class="memTemplItemLeft" align="right" valign="top">std::string&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacextd_1_1str.html#a526a132dfcfac73b37078ead543a47c6">from</a> (type source)</td></tr>
+<tr class="memdesc:a526a132dfcfac73b37078ead543a47c6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts a number from numeric to string representation.  <a href="#a526a132dfcfac73b37078ead543a47c6"></a><br/></td></tr>
 <tr class="memitem:ae0aeb889864ad86ba2f849f81eea037f"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacextd_1_1str.html#ae0aeb889864ad86ba2f849f81eea037f">from</a> (signed int source_number)</td></tr>
 <tr class="memdesc:ae0aeb889864ad86ba2f849f81eea037f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts a number from numeric to string representation.  <a href="#ae0aeb889864ad86ba2f849f81eea037f"></a><br/></td></tr>
 <tr class="memitem:ad8b97ce76afca4207af26b4bea64a351"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacextd_1_1str.html#ad8b97ce76afca4207af26b4bea64a351">from</a> (unsigned int source_number)</td></tr>
 <tr class="memdesc:ad8b97ce76afca4207af26b4bea64a351"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts a number from numeric to string representation.  <a href="#ad8b97ce76afca4207af26b4bea64a351"></a><br/></td></tr>
 <tr class="memitem:a65aa668fd2fd40e9e3a196f115a35be9"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacextd_1_1str.html#a65aa668fd2fd40e9e3a196f115a35be9">from</a> (float source_number)</td></tr>
+<tr class="memdesc:a65aa668fd2fd40e9e3a196f115a35be9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts a number from numeric to string representation.  <a href="#a65aa668fd2fd40e9e3a196f115a35be9"></a><br/></td></tr>
 <tr class="memitem:afbf12c7921d111a0601de3d1f206850e"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacextd_1_1str.html#afbf12c7921d111a0601de3d1f206850e">reverse</a> (const std::string &amp;source_string)</td></tr>
 <tr class="memitem:a6622349d5ca5c31b72990c30eaf0b587"><td class="memItemLeft" align="right" valign="top">strings&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacextd_1_1str.html#a6622349d5ca5c31b72990c30eaf0b587">split</a> (const std::string &amp;source_string, const std::string &amp;delimiter)</td></tr>
 <tr class="memitem:a3186c20d3d6f96cae15ef43b9d2033aa"><td class="memItemLeft" align="right" valign="top">strings&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacextd_1_1str.html#a3186c20d3d6f96cae15ef43b9d2033aa">split</a> (const std::string &amp;source_string, char delimiter)</td></tr>
@@ -120,6 +124,44 @@ Functions</h2></td></tr>
 <tr class="memitem:ab3819c7b54c2956cdca3e676ef79a581"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacextd_1_1str.html#ab3819c7b54c2956cdca3e676ef79a581">is_fractional</a> (const std::string &amp;source_string)</td></tr>
 </table>
 <h2>Function Documentation</h2>
+<a class="anchor" id="a526a132dfcfac73b37078ead543a47c6"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename type &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string xtd::str::from </td>
+          <td>(</td>
+          <td class="paramtype">type&#160;</td>
+          <td class="paramname"><em>source</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Converts a number from numeric to string representation. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">source_number</td><td>A numeric representation of a number. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A string representation of a number.</dd></dl>
+<p>Converts a number represented by a <code>source_number</code> to a <code>std::string</code>. </p>
+
+<p>Definition at line <a class="el" href="string__util_8ipp_source.html#l00180">180</a> of file <a class="el" href="string__util_8ipp_source.html">string_util.ipp</a>.</p>
+
+<p>Referenced by <a class="el" href="string__util_8cpp_source.html#l00027">TEST()</a>.</p>
+<div class="fragment"><div class="line">        {</div>
+<div class="line">            std::stringstream string_stream;</div>
+<div class="line">            string_stream &lt;&lt; source;</div>
+<div class="line">            std::string result_string = string_stream.str();</div>
+<div class="line">            <span class="keywordflow">return</span> result_string;</div>
+<div class="line">        }</div>
+</div><!-- fragment -->
+</div>
+</div>
 <a class="anchor" id="ae0aeb889864ad86ba2f849f81eea037f"></a>
 <div class="memitem">
 <div class="memproto">
@@ -152,14 +194,10 @@ Functions</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd>A string representation of a number.</dd></dl>
 <p>Converts a number represented by a <code>source_number</code> to a <code>std::string</code>. </p>
 
-<p>Definition at line <a class="el" href="string__util_8ipp_source.html#l00179">179</a> of file <a class="el" href="string__util_8ipp_source.html">string_util.ipp</a>.</p>
-
-<p>Referenced by <a class="el" href="string__util_8ipp_source.html#l00188">from()</a>, and <a class="el" href="string__util_8cpp_source.html#l00027">TEST()</a>.</p>
+<p>Definition at line <a class="el" href="string__util_8ipp_source.html#l00188">188</a> of file <a class="el" href="string__util_8ipp_source.html">string_util.ipp</a>.</p>
 <div class="fragment"><div class="line">        {</div>
-<div class="line"></div>
 <div class="line">            std::stringstream string_stream;</div>
 <div class="line">            string_stream &lt;&lt; source_number;</div>
-<div class="line"></div>
 <div class="line">            <span class="keywordflow">return</span> string_stream.str();</div>
 <div class="line">        }</div>
 </div><!-- fragment -->
@@ -197,13 +235,11 @@ Functions</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd>A string representation of a number.</dd></dl>
 <p>Converts a number represented by a <code>source_number</code> to a <code>std::string</code>. </p>
 
-<p>Definition at line <a class="el" href="string__util_8ipp_source.html#l00188">188</a> of file <a class="el" href="string__util_8ipp_source.html">string_util.ipp</a>.</p>
-
-<p>References <a class="el" href="string__util_8ipp_source.html#l00179">from()</a>.</p>
+<p>Definition at line <a class="el" href="string__util_8ipp_source.html#l00195">195</a> of file <a class="el" href="string__util_8ipp_source.html">string_util.ipp</a>.</p>
 <div class="fragment"><div class="line">        {</div>
-<div class="line"></div>
-<div class="line">            <span class="keywordflow">return</span> <a class="code" href="namespacextd_1_1str.html#ae0aeb889864ad86ba2f849f81eea037f" title="Converts a number from numeric to string representation.">from</a>(static_cast&lt;int&gt;(source_number));</div>
-<div class="line"></div>
+<div class="line">            std::stringstream string_stream;</div>
+<div class="line">            string_stream &lt;&lt; source_number;</div>
+<div class="line">            <span class="keywordflow">return</span> string_stream.str();</div>
 <div class="line">        }</div>
 </div><!-- fragment -->
 </div>
@@ -230,14 +266,21 @@ Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="string__util_8ipp_source.html#l00195">195</a> of file <a class="el" href="string__util_8ipp_source.html">string_util.ipp</a>.</p>
+<p>Converts a number from numeric to string representation. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">source_number</td><td>A numeric representation of a number. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A string representation of a number.</dd></dl>
+<p>Converts a number represented by a <code>source_number</code> to a <code>std::string</code>. </p>
+
+<p>Definition at line <a class="el" href="string__util_8ipp_source.html#l00202">202</a> of file <a class="el" href="string__util_8ipp_source.html">string_util.ipp</a>.</p>
 <div class="fragment"><div class="line">        {</div>
-<div class="line"></div>
 <div class="line">            std::stringstream string_stream;</div>
 <div class="line">            string_stream &lt;&lt; source_number;</div>
-<div class="line"></div>
 <div class="line">            <span class="keywordflow">return</span> string_stream.str();</div>
-<div class="line"></div>
 <div class="line">        }</div>
 </div><!-- fragment -->
 </div>
@@ -264,9 +307,9 @@ Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="string__util_8ipp_source.html#l00406">406</a> of file <a class="el" href="string__util_8ipp_source.html">string_util.ipp</a>.</p>
+<p>Definition at line <a class="el" href="string__util_8ipp_source.html#l00410">410</a> of file <a class="el" href="string__util_8ipp_source.html">string_util.ipp</a>.</p>
 
-<p>References <a class="el" href="string__util_8ipp_source.html#l00388">is_integer()</a>, and <a class="el" href="string__util_8ipp_source.html#l00338">is_numeric()</a>.</p>
+<p>References <a class="el" href="string__util_8ipp_source.html#l00392">is_integer()</a>, and <a class="el" href="string__util_8ipp_source.html#l00342">is_numeric()</a>.</p>
 <div class="fragment"><div class="line">        {</div>
 <div class="line">            <span class="keywordtype">bool</span> source_is_numeric = <a class="code" href="namespacextd_1_1str.html#a34226a1752297bc73e69640ade471f4a">is_numeric</a>(source_string);</div>
 <div class="line">            <span class="keywordtype">bool</span> source_string_is_not_numeric = ! source_is_numeric;</div>
@@ -307,11 +350,11 @@ Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="string__util_8ipp_source.html#l00388">388</a> of file <a class="el" href="string__util_8ipp_source.html">string_util.ipp</a>.</p>
+<p>Definition at line <a class="el" href="string__util_8ipp_source.html#l00392">392</a> of file <a class="el" href="string__util_8ipp_source.html">string_util.ipp</a>.</p>
 
-<p>References <a class="el" href="string__util_8ipp_source.html#l00338">is_numeric()</a>.</p>
+<p>References <a class="el" href="string__util_8ipp_source.html#l00342">is_numeric()</a>.</p>
 
-<p>Referenced by <a class="el" href="string__util_8ipp_source.html#l00406">is_fractional()</a>.</p>
+<p>Referenced by <a class="el" href="string__util_8ipp_source.html#l00410">is_fractional()</a>.</p>
 <div class="fragment"><div class="line">        {</div>
 <div class="line">            <span class="keywordtype">bool</span> source_is_numeric = <a class="code" href="namespacextd_1_1str.html#a34226a1752297bc73e69640ade471f4a">is_numeric</a>(source_string);</div>
 <div class="line">            <span class="keywordtype">bool</span> source_string_is_not_numeric = ! source_is_numeric;</div>
@@ -353,9 +396,9 @@ Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="string__util_8ipp_source.html#l00338">338</a> of file <a class="el" href="string__util_8ipp_source.html">string_util.ipp</a>.</p>
+<p>Definition at line <a class="el" href="string__util_8ipp_source.html#l00342">342</a> of file <a class="el" href="string__util_8ipp_source.html">string_util.ipp</a>.</p>
 
-<p>Referenced by <a class="el" href="string__util_8ipp_source.html#l00406">is_fractional()</a>, and <a class="el" href="string__util_8ipp_source.html#l00388">is_integer()</a>.</p>
+<p>Referenced by <a class="el" href="string__util_8ipp_source.html#l00410">is_fractional()</a>, and <a class="el" href="string__util_8ipp_source.html#l00392">is_integer()</a>.</p>
 <div class="fragment"><div class="line">        {</div>
 <div class="line"></div>
 <div class="line">            <span class="comment">// Empty std::string is not a number</span></div>
@@ -445,9 +488,9 @@ Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="string__util_8ipp_source.html#l00299">299</a> of file <a class="el" href="string__util_8ipp_source.html">string_util.ipp</a>.</p>
+<p>Definition at line <a class="el" href="string__util_8ipp_source.html#l00303">303</a> of file <a class="el" href="string__util_8ipp_source.html">string_util.ipp</a>.</p>
 
-<p>Referenced by <a class="el" href="string__util_8ipp_source.html#l00323">replace()</a>, and <a class="el" href="string__util_8cpp_source.html#l00254">TEST()</a>.</p>
+<p>Referenced by <a class="el" href="string__util_8ipp_source.html#l00327">replace()</a>, and <a class="el" href="string__util_8cpp_source.html#l00262">TEST()</a>.</p>
 <div class="fragment"><div class="line">        {</div>
 <div class="line"></div>
 <div class="line">            <span class="keywordtype">size_t</span> search_for_size = search_for.size();</div>
@@ -511,9 +554,9 @@ Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="string__util_8ipp_source.html#l00323">323</a> of file <a class="el" href="string__util_8ipp_source.html">string_util.ipp</a>.</p>
+<p>Definition at line <a class="el" href="string__util_8ipp_source.html#l00327">327</a> of file <a class="el" href="string__util_8ipp_source.html">string_util.ipp</a>.</p>
 
-<p>References <a class="el" href="string__util_8ipp_source.html#l00299">replace()</a>.</p>
+<p>References <a class="el" href="string__util_8ipp_source.html#l00303">replace()</a>.</p>
 <div class="fragment"><div class="line">        {</div>
 <div class="line">            std::string search_for_string = std::string(1,search_for);</div>
 <div class="line">            std::string replace_with_string = std::string(1,replace_with);</div>
@@ -560,9 +603,9 @@ Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="string__util_8ipp_source.html#l00330">330</a> of file <a class="el" href="string__util_8ipp_source.html">string_util.ipp</a>.</p>
+<p>Definition at line <a class="el" href="string__util_8ipp_source.html#l00334">334</a> of file <a class="el" href="string__util_8ipp_source.html">string_util.ipp</a>.</p>
 
-<p>References <a class="el" href="string__util_8ipp_source.html#l00299">replace()</a>.</p>
+<p>References <a class="el" href="string__util_8ipp_source.html#l00303">replace()</a>.</p>
 <div class="fragment"><div class="line">        {</div>
 <div class="line">            std::string source_string = std::string(source_string_ptr);</div>
 <div class="line">            std::string search_for_string = std::string(search_for_ptr);</div>
@@ -594,9 +637,9 @@ Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="string__util_8ipp_source.html#l00205">205</a> of file <a class="el" href="string__util_8ipp_source.html">string_util.ipp</a>.</p>
+<p>Definition at line <a class="el" href="string__util_8ipp_source.html#l00209">209</a> of file <a class="el" href="string__util_8ipp_source.html">string_util.ipp</a>.</p>
 
-<p>Referenced by <a class="el" href="string__util_8cpp_source.html#l00293">TEST()</a>.</p>
+<p>Referenced by <a class="el" href="string__util_8cpp_source.html#l00301">TEST()</a>.</p>
 <div class="fragment"><div class="line">        {</div>
 <div class="line"></div>
 <div class="line">            <span class="keywordflow">return</span> std::string(source_string.rbegin(),source_string.rend());</div>
@@ -637,11 +680,11 @@ Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="string__util_8ipp_source.html#l00212">212</a> of file <a class="el" href="string__util_8ipp_source.html">string_util.ipp</a>.</p>
+<p>Definition at line <a class="el" href="string__util_8ipp_source.html#l00216">216</a> of file <a class="el" href="string__util_8ipp_source.html">string_util.ipp</a>.</p>
 
 <p>References <a class="el" href="parameter__pack__for__each_8hpp_source.html#l00029">xstd::pp::for_each()</a>.</p>
 
-<p>Referenced by <a class="el" href="string__util_8ipp_source.html#l00286">split()</a>, and <a class="el" href="string__util_8cpp_source.html#l00049">TEST()</a>.</p>
+<p>Referenced by <a class="el" href="string__util_8ipp_source.html#l00290">split()</a>, and <a class="el" href="string__util_8cpp_source.html#l00057">TEST()</a>.</p>
 <div class="fragment"><div class="line">        {</div>
 <div class="line"></div>
 <div class="line">            <span class="comment">// Create a result vector</span></div>
@@ -749,9 +792,9 @@ Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="string__util_8ipp_source.html#l00286">286</a> of file <a class="el" href="string__util_8ipp_source.html">string_util.ipp</a>.</p>
+<p>Definition at line <a class="el" href="string__util_8ipp_source.html#l00290">290</a> of file <a class="el" href="string__util_8ipp_source.html">string_util.ipp</a>.</p>
 
-<p>References <a class="el" href="string__util_8ipp_source.html#l00212">split()</a>.</p>
+<p>References <a class="el" href="string__util_8ipp_source.html#l00216">split()</a>.</p>
 <div class="fragment"><div class="line">        {</div>
 <div class="line">            std::string delimiter_string = std::string(1,delimiter);</div>
 <div class="line">            <span class="keywordflow">return</span> <a class="code" href="namespacextd_1_1str.html#a6622349d5ca5c31b72990c30eaf0b587">split</a>(source_string,delimiter_string);</div>
@@ -791,9 +834,9 @@ Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="string__util_8ipp_source.html#l00292">292</a> of file <a class="el" href="string__util_8ipp_source.html">string_util.ipp</a>.</p>
+<p>Definition at line <a class="el" href="string__util_8ipp_source.html#l00296">296</a> of file <a class="el" href="string__util_8ipp_source.html">string_util.ipp</a>.</p>
 
-<p>References <a class="el" href="string__util_8ipp_source.html#l00212">split()</a>.</p>
+<p>References <a class="el" href="string__util_8ipp_source.html#l00216">split()</a>.</p>
 <div class="fragment"><div class="line">        {</div>
 <div class="line">            std::string source_string = std::string(source_string_ptr);</div>
 <div class="line">            std::string delimiter_string = std::string(delimiter_ptr);</div>
@@ -861,7 +904,7 @@ Functions</h2></td></tr>
 <div class="line">            <span class="comment">//  Use &quot;first_character_after_number&quot; to distinguish between those cases.</span></div>
 <div class="line">            <span class="keywordflow">if</span> ( number == 0 )</div>
 <div class="line">            {</div>
-<div class="line">                <span class="keywordtype">char</span>* first_character_of_string = &amp;<span class="keyword">const_cast&lt;</span><span class="keywordtype">char</span>&amp;<span class="keyword">&gt;</span>(source_string[0]);</div>
+<div class="line">                <span class="keywordtype">char</span>* first_character_of_string = <span class="keyword">const_cast&lt;</span><span class="keywordtype">char</span>*<span class="keyword">&gt;</span>(source_string.data());</div>
 <div class="line">                <span class="keywordflow">if</span> ( first_character_after_number == first_character_of_string )</div>
 <div class="line">                {</div>
 <div class="line">                    <span class="keywordflow">throw</span> std::runtime_error(<span class="stringliteral">&quot;String to number conversion failed.&quot;</span>);</div>
@@ -939,7 +982,7 @@ Functions</h2></td></tr>
 <div class="line">            <span class="comment">//  Use &quot;first_character_after_number&quot; to distinguish between those cases.</span></div>
 <div class="line">            <span class="keywordflow">if</span> ( number == 0 )</div>
 <div class="line">            {</div>
-<div class="line">                <span class="keywordtype">char</span>* first_character_of_string = &amp;<span class="keyword">const_cast&lt;</span><span class="keywordtype">char</span>&amp;<span class="keyword">&gt;</span>(source_string[0]);</div>
+<div class="line">                <span class="keywordtype">char</span>* first_character_of_string = <span class="keyword">const_cast&lt;</span><span class="keywordtype">char</span>*<span class="keyword">&gt;</span>(source_string.data());</div>
 <div class="line">                <span class="keywordflow">if</span> ( first_character_after_number == first_character_of_string )</div>
 <div class="line">                {</div>
 <div class="line">                    <span class="keywordflow">throw</span> std::runtime_error(<span class="stringliteral">&quot;String to number conversion failed. Unknown error.&quot;</span>);</div>
@@ -1101,7 +1144,7 @@ Functions</h2></td></tr>
 <div class="line">            <span class="comment">//  Use &quot;first_character_after_number&quot; to distinguish between those cases.</span></div>
 <div class="line">            <span class="keywordflow">if</span> ( number == 0 )</div>
 <div class="line">            {</div>
-<div class="line">                <span class="keywordtype">char</span>* first_character_of_string = &amp;<span class="keyword">const_cast&lt;</span><span class="keywordtype">char</span>&amp;<span class="keyword">&gt;</span>(source_string[0]);</div>
+<div class="line">                <span class="keywordtype">char</span>* first_character_of_string = <span class="keyword">const_cast&lt;</span><span class="keywordtype">char</span>*<span class="keyword">&gt;</span>(source_string.data());</div>
 <div class="line">                <span class="keywordflow">if</span> ( first_character_after_number == first_character_of_string )</div>
 <div class="line">                {</div>
 <div class="line">                    <span class="keywordflow">throw</span> std::runtime_error(<span class="stringliteral">&quot;String to number conversion failed.&quot;</span>);</div>
@@ -1191,7 +1234,7 @@ Functions</h2></td></tr>
 <div class="line">            <span class="comment">//  Use &quot;first_character_after_number&quot; to distinguish between those cases.</span></div>
 <div class="line">            <span class="keywordflow">if</span> ( number == 0 )</div>
 <div class="line">            {</div>
-<div class="line">                <span class="keywordtype">char</span>* first_character_of_string = &amp;<span class="keyword">const_cast&lt;</span><span class="keywordtype">char</span>&amp;<span class="keyword">&gt;</span>(source_string[0]);</div>
+<div class="line">                <span class="keywordtype">char</span>* first_character_of_string = <span class="keyword">const_cast&lt;</span><span class="keywordtype">char</span>*<span class="keyword">&gt;</span>(source_string.data());</div>
 <div class="line">                <span class="keywordflow">if</span> ( first_character_after_number == first_character_of_string )</div>
 <div class="line">                {</div>
 <div class="line">                    <span class="keywordflow">throw</span> std::runtime_error(<span class="stringliteral">&quot;String to number conversion failed.&quot;</span>);</div>
@@ -1214,7 +1257,7 @@ Functions</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Aug 8 2014 12:35:58 for XTD by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Aug 8 2014 13:46:58 for XTD by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.1.2
 </small></address>

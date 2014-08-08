@@ -119,113 +119,113 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;</div>
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <span class="keywordtype">int</span> number = 1052;</div>
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    std::string string_correct = <span class="stringliteral">&quot;1052&quot;</span>;</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    std::string string_actual = <a class="code" href="namespacextd_1_1str.html#ae0aeb889864ad86ba2f849f81eea037f" title="Converts a number from numeric to string representation.">xtd::str::from</a>(number);</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    std::string string_actual = <a class="code" href="namespacextd_1_1str.html#a526a132dfcfac73b37078ead543a47c6" title="Converts a number from numeric to string representation.">xtd::str::from</a>(number);</div>
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;</div>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    ASSERT_EQ ( string_correct , string_actual );</div>
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;</div>
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;}</div>
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;</div>
-<div class="line"><a name="l00038"></a><span class="lineno"><a class="code" href="string__util_8cpp.html#a8dd39d3ac8bc7a7d9d397be80aabf200">   38</a></span>&#160;<a class="code" href="chrono__util__tests_8cpp.html#a4d515f066f202870d93427c6823ebeca">TEST</a> ( float_1052_655 , converts_to_string_1052_66 )</div>
+<div class="line"><a name="l00038"></a><span class="lineno"><a class="code" href="string__util_8cpp.html#a3daf732a72a6bdbc64b35e5c97fc0541">   38</a></span>&#160;<a class="code" href="chrono__util__tests_8cpp.html#a4d515f066f202870d93427c6823ebeca">TEST</a> ( <a class="code" href="namespacextd_1_1str.html#a526a132dfcfac73b37078ead543a47c6" title="Converts a number from numeric to string representation.">from</a> , converts_long_double_123_dot_456_to_string )</div>
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;{</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <span class="keywordtype">float</span> number = 1052.655;</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    std::string string_correct = <span class="stringliteral">&quot;1052.66&quot;</span>;</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    std::string string_actual = <a class="code" href="namespacextd_1_1str.html#ae0aeb889864ad86ba2f849f81eea037f" title="Converts a number from numeric to string representation.">xtd::str::from</a>(number);</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    ASSERT_EQ ( string_correct , string_actual );</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;}</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <span class="keywordtype">long</span> <span class="keywordtype">double</span> source_number = 123.456;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    std::string result_string_correct = <span class="stringliteral">&quot;123.456&quot;</span>;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    std::string result_string_actual = <a class="code" href="namespacextd_1_1str.html#a526a132dfcfac73b37078ead543a47c6" title="Converts a number from numeric to string representation.">xtd::str::from</a>(source_number);</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    ASSERT_EQ ( result_string_correct , result_string_actual );</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;}</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;</div>
+<div class="line"><a name="l00046"></a><span class="lineno"><a class="code" href="string__util_8cpp.html#a8dd39d3ac8bc7a7d9d397be80aabf200">   46</a></span>&#160;<a class="code" href="chrono__util__tests_8cpp.html#a4d515f066f202870d93427c6823ebeca">TEST</a> ( float_1052_655 , converts_to_string_1052_66 )</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;{</div>
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;</div>
-<div class="line"><a name="l00049"></a><span class="lineno"><a class="code" href="string__util_8cpp.html#ac5968036ccfa38151768454c8eaacb29">   49</a></span>&#160;<a class="code" href="chrono__util__tests_8cpp.html#a4d515f066f202870d93427c6823ebeca">TEST</a> ( string_1000010001001 , splits_to_0000_000_00_by_delimiter_1 )</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;{</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <span class="keywordtype">char</span> delimiter = <span class="charliteral">&#39;1&#39;</span>;</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    std::string <span class="keywordtype">string</span> = <span class="stringliteral">&quot;1000010001001&quot;</span>;</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    xtd::str::strings strings = <a class="code" href="namespacextd_1_1str.html#a6622349d5ca5c31b72990c30eaf0b587">xtd::str::split</a>(<span class="keywordtype">string</span>,delimiter);</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    ASSERT_EQ ( strings.size() , 3u );</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    ASSERT_EQ ( strings[0] , <span class="stringliteral">&quot;0000&quot;</span> );</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    ASSERT_EQ ( strings[1] , <span class="stringliteral">&quot;000&quot;</span> );</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    ASSERT_EQ ( strings[2] , <span class="stringliteral">&quot;00&quot;</span> );</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;}</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;</div>
-<div class="line"><a name="l00063"></a><span class="lineno"><a class="code" href="string__util_8cpp.html#a42b60f414c9051c7b62fdcd619006cb0">   63</a></span>&#160;<a class="code" href="chrono__util__tests_8cpp.html#a4d515f066f202870d93427c6823ebeca">TEST</a> ( string_0100001000100100 , splits_to_0_0000_000_00_00_by_delimiter_1 )</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;{</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    <span class="keywordtype">char</span> delimiter = <span class="charliteral">&#39;1&#39;</span>;</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    std::string <span class="keywordtype">string</span> = <span class="stringliteral">&quot;0100001000100100&quot;</span>;</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    xtd::str::strings strings = <a class="code" href="namespacextd_1_1str.html#a6622349d5ca5c31b72990c30eaf0b587">xtd::str::split</a>(<span class="keywordtype">string</span>,delimiter);</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    ASSERT_EQ ( strings.size() , 5u );</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    ASSERT_EQ ( strings[0] , <span class="stringliteral">&quot;0&quot;</span> );</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    ASSERT_EQ ( strings[1] , <span class="stringliteral">&quot;0000&quot;</span> );</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    ASSERT_EQ ( strings[2] , <span class="stringliteral">&quot;000&quot;</span> );</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    ASSERT_EQ ( strings[3] , <span class="stringliteral">&quot;00&quot;</span> );</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    ASSERT_EQ ( strings[4] , <span class="stringliteral">&quot;00&quot;</span> );</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;}</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;</div>
-<div class="line"><a name="l00079"></a><span class="lineno"><a class="code" href="string__util_8cpp.html#acec0d1d42aaebd909cc8fcf366e76400">   79</a></span>&#160;<a class="code" href="chrono__util__tests_8cpp.html#a4d515f066f202870d93427c6823ebeca">TEST</a> ( string_01_100001_10001_1001_100 , splits_to_0_0000_000_00_00_by_delimiter_1_1 )</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;{</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    std::string delimiter = <span class="stringliteral">&quot;1_1&quot;</span>;</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    std::string <span class="keywordtype">string</span> = <span class="stringliteral">&quot;01_100001_10001_1001_100&quot;</span>;</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    xtd::str::strings strings = <a class="code" href="namespacextd_1_1str.html#a6622349d5ca5c31b72990c30eaf0b587">xtd::str::split</a>(<span class="keywordtype">string</span>,delimiter);</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    ASSERT_EQ ( strings.size() , 5u );</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    ASSERT_EQ ( strings[0] , <span class="stringliteral">&quot;0&quot;</span> );</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    ASSERT_EQ ( strings[1] , <span class="stringliteral">&quot;0000&quot;</span> );</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    ASSERT_EQ ( strings[2] , <span class="stringliteral">&quot;000&quot;</span> );</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    ASSERT_EQ ( strings[3] , <span class="stringliteral">&quot;00&quot;</span> );</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    ASSERT_EQ ( strings[4] , <span class="stringliteral">&quot;00&quot;</span> );</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;}</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;</div>
-<div class="line"><a name="l00095"></a><span class="lineno"><a class="code" href="string__util_8cpp.html#a5fb6f642fa220a11611f71b7314d9cc1">   95</a></span>&#160;<a class="code" href="chrono__util__tests_8cpp.html#a4d515f066f202870d93427c6823ebeca">TEST</a> ( string_UaaaUaaUUa , splits_to_aaa_aa_a_by_delimiter_U )</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;{</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    <span class="keywordtype">char</span> delimiter = <span class="charliteral">&#39;U&#39;</span>;</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    std::string <span class="keywordtype">string</span> = <span class="stringliteral">&quot;UaaaUaaUUa&quot;</span>;</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    xtd::str::strings strings = <a class="code" href="namespacextd_1_1str.html#a6622349d5ca5c31b72990c30eaf0b587">xtd::str::split</a>(<span class="keywordtype">string</span>,delimiter);</div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;</div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    ASSERT_EQ ( strings.size() , 3u );</div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    ASSERT_EQ ( strings[0] , <span class="stringliteral">&quot;aaa&quot;</span> );</div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;    ASSERT_EQ ( strings[1] , <span class="stringliteral">&quot;aa&quot;</span> );</div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    ASSERT_EQ ( strings[2] , <span class="stringliteral">&quot;a&quot;</span> );</div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;</div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;}</div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;</div>
-<div class="line"><a name="l00109"></a><span class="lineno"><a class="code" href="string__util_8cpp.html#ae660aa6d8ef39b4d93236bb43aa3b1b8">  109</a></span>&#160;<a class="code" href="chrono__util__tests_8cpp.html#a4d515f066f202870d93427c6823ebeca">TEST</a> ( string_FOOBAR , splits_to_F_O_O_B_A_R_by_empty_delimiter )</div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;{</div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;</div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;    std::string delimiter = <span class="stringliteral">&quot;&quot;</span>;</div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;    std::string <span class="keywordtype">string</span> = <span class="stringliteral">&quot;FOOBAR&quot;</span>;</div>
-<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;    xtd::str::strings strings = <a class="code" href="namespacextd_1_1str.html#a6622349d5ca5c31b72990c30eaf0b587">xtd::str::split</a>(<span class="keywordtype">string</span>,delimiter);</div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;</div>
-<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;    ASSERT_EQ ( strings.size() , 6u );</div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;    ASSERT_EQ ( strings[0] , <span class="stringliteral">&quot;F&quot;</span> );</div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;    ASSERT_EQ ( strings[1] , <span class="stringliteral">&quot;O&quot;</span> );</div>
-<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;    ASSERT_EQ ( strings[2] , <span class="stringliteral">&quot;O&quot;</span> );</div>
-<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;    ASSERT_EQ ( strings[3] , <span class="stringliteral">&quot;B&quot;</span> );</div>
-<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;    ASSERT_EQ ( strings[4] , <span class="stringliteral">&quot;A&quot;</span> );</div>
-<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;    ASSERT_EQ ( strings[5] , <span class="stringliteral">&quot;R&quot;</span> );</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <span class="keywordtype">float</span> number = 1052.655;</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    std::string string_correct = <span class="stringliteral">&quot;1052.66&quot;</span>;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    std::string string_actual = <a class="code" href="namespacextd_1_1str.html#a526a132dfcfac73b37078ead543a47c6" title="Converts a number from numeric to string representation.">xtd::str::from</a>(number);</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    ASSERT_EQ ( string_correct , string_actual );</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;}</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;</div>
+<div class="line"><a name="l00057"></a><span class="lineno"><a class="code" href="string__util_8cpp.html#ac5968036ccfa38151768454c8eaacb29">   57</a></span>&#160;<a class="code" href="chrono__util__tests_8cpp.html#a4d515f066f202870d93427c6823ebeca">TEST</a> ( string_1000010001001 , splits_to_0000_000_00_by_delimiter_1 )</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;{</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <span class="keywordtype">char</span> delimiter = <span class="charliteral">&#39;1&#39;</span>;</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    std::string <span class="keywordtype">string</span> = <span class="stringliteral">&quot;1000010001001&quot;</span>;</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    xtd::str::strings strings = <a class="code" href="namespacextd_1_1str.html#a6622349d5ca5c31b72990c30eaf0b587">xtd::str::split</a>(<span class="keywordtype">string</span>,delimiter);</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    ASSERT_EQ ( strings.size() , 3u );</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    ASSERT_EQ ( strings[0] , <span class="stringliteral">&quot;0000&quot;</span> );</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    ASSERT_EQ ( strings[1] , <span class="stringliteral">&quot;000&quot;</span> );</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    ASSERT_EQ ( strings[2] , <span class="stringliteral">&quot;00&quot;</span> );</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;}</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;</div>
+<div class="line"><a name="l00071"></a><span class="lineno"><a class="code" href="string__util_8cpp.html#a42b60f414c9051c7b62fdcd619006cb0">   71</a></span>&#160;<a class="code" href="chrono__util__tests_8cpp.html#a4d515f066f202870d93427c6823ebeca">TEST</a> ( string_0100001000100100 , splits_to_0_0000_000_00_00_by_delimiter_1 )</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;{</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    <span class="keywordtype">char</span> delimiter = <span class="charliteral">&#39;1&#39;</span>;</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    std::string <span class="keywordtype">string</span> = <span class="stringliteral">&quot;0100001000100100&quot;</span>;</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    xtd::str::strings strings = <a class="code" href="namespacextd_1_1str.html#a6622349d5ca5c31b72990c30eaf0b587">xtd::str::split</a>(<span class="keywordtype">string</span>,delimiter);</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    ASSERT_EQ ( strings.size() , 5u );</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    ASSERT_EQ ( strings[0] , <span class="stringliteral">&quot;0&quot;</span> );</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    ASSERT_EQ ( strings[1] , <span class="stringliteral">&quot;0000&quot;</span> );</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    ASSERT_EQ ( strings[2] , <span class="stringliteral">&quot;000&quot;</span> );</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    ASSERT_EQ ( strings[3] , <span class="stringliteral">&quot;00&quot;</span> );</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    ASSERT_EQ ( strings[4] , <span class="stringliteral">&quot;00&quot;</span> );</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;}</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;</div>
+<div class="line"><a name="l00087"></a><span class="lineno"><a class="code" href="string__util_8cpp.html#acec0d1d42aaebd909cc8fcf366e76400">   87</a></span>&#160;<a class="code" href="chrono__util__tests_8cpp.html#a4d515f066f202870d93427c6823ebeca">TEST</a> ( string_01_100001_10001_1001_100 , splits_to_0_0000_000_00_00_by_delimiter_1_1 )</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;{</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    std::string delimiter = <span class="stringliteral">&quot;1_1&quot;</span>;</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    std::string <span class="keywordtype">string</span> = <span class="stringliteral">&quot;01_100001_10001_1001_100&quot;</span>;</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    xtd::str::strings strings = <a class="code" href="namespacextd_1_1str.html#a6622349d5ca5c31b72990c30eaf0b587">xtd::str::split</a>(<span class="keywordtype">string</span>,delimiter);</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    ASSERT_EQ ( strings.size() , 5u );</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    ASSERT_EQ ( strings[0] , <span class="stringliteral">&quot;0&quot;</span> );</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    ASSERT_EQ ( strings[1] , <span class="stringliteral">&quot;0000&quot;</span> );</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    ASSERT_EQ ( strings[2] , <span class="stringliteral">&quot;000&quot;</span> );</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    ASSERT_EQ ( strings[3] , <span class="stringliteral">&quot;00&quot;</span> );</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    ASSERT_EQ ( strings[4] , <span class="stringliteral">&quot;00&quot;</span> );</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;}</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;</div>
+<div class="line"><a name="l00103"></a><span class="lineno"><a class="code" href="string__util_8cpp.html#a5fb6f642fa220a11611f71b7314d9cc1">  103</a></span>&#160;<a class="code" href="chrono__util__tests_8cpp.html#a4d515f066f202870d93427c6823ebeca">TEST</a> ( string_UaaaUaaUUa , splits_to_aaa_aa_a_by_delimiter_U )</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;{</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    <span class="keywordtype">char</span> delimiter = <span class="charliteral">&#39;U&#39;</span>;</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;    std::string <span class="keywordtype">string</span> = <span class="stringliteral">&quot;UaaaUaaUUa&quot;</span>;</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;    xtd::str::strings strings = <a class="code" href="namespacextd_1_1str.html#a6622349d5ca5c31b72990c30eaf0b587">xtd::str::split</a>(<span class="keywordtype">string</span>,delimiter);</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;    ASSERT_EQ ( strings.size() , 3u );</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;    ASSERT_EQ ( strings[0] , <span class="stringliteral">&quot;aaa&quot;</span> );</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;    ASSERT_EQ ( strings[1] , <span class="stringliteral">&quot;aa&quot;</span> );</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;    ASSERT_EQ ( strings[2] , <span class="stringliteral">&quot;a&quot;</span> );</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;}</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;</div>
+<div class="line"><a name="l00117"></a><span class="lineno"><a class="code" href="string__util_8cpp.html#ae660aa6d8ef39b4d93236bb43aa3b1b8">  117</a></span>&#160;<a class="code" href="chrono__util__tests_8cpp.html#a4d515f066f202870d93427c6823ebeca">TEST</a> ( string_FOOBAR , splits_to_F_O_O_B_A_R_by_empty_delimiter )</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;{</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;    std::string delimiter = <span class="stringliteral">&quot;&quot;</span>;</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;    std::string <span class="keywordtype">string</span> = <span class="stringliteral">&quot;FOOBAR&quot;</span>;</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;    xtd::str::strings strings = <a class="code" href="namespacextd_1_1str.html#a6622349d5ca5c31b72990c30eaf0b587">xtd::str::split</a>(<span class="keywordtype">string</span>,delimiter);</div>
 <div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;</div>
-<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;}</div>
-<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;</div>
-<div class="line"><a name="l00126"></a><span class="lineno"><a class="code" href="string__util_8cpp.html#a3da314647e7ae50109683e3a22c19d5f">  126</a></span>&#160;<a class="code" href="chrono__util__tests_8cpp.html#a4d515f066f202870d93427c6823ebeca">TEST</a> ( really_long_string , causes_split_to_fail )</div>
-<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;{</div>
-<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;</div>
-<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;    std::string delimiter = <span class="stringliteral">&quot; &quot;</span>;</div>
-<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;    std::string <span class="keywordtype">string</span> =    <span class="stringliteral">&quot;0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 \</span></div>
-<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;<span class="stringliteral">                            0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 \</span></div>
-<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;<span class="stringliteral">                            0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 \</span></div>
-<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;<span class="stringliteral">                            0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 \</span></div>
-<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;<span class="stringliteral">                            0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 \</span></div>
-<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;<span class="stringliteral">                            0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 \</span></div>
-<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;<span class="stringliteral">                            0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 \</span></div>
-<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;<span class="stringliteral">                            0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 \</span></div>
-<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;<span class="stringliteral">                            0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 \</span></div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;    ASSERT_EQ ( strings.size() , 6u );</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;    ASSERT_EQ ( strings[0] , <span class="stringliteral">&quot;F&quot;</span> );</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;    ASSERT_EQ ( strings[1] , <span class="stringliteral">&quot;O&quot;</span> );</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;    ASSERT_EQ ( strings[2] , <span class="stringliteral">&quot;O&quot;</span> );</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;    ASSERT_EQ ( strings[3] , <span class="stringliteral">&quot;B&quot;</span> );</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;    ASSERT_EQ ( strings[4] , <span class="stringliteral">&quot;A&quot;</span> );</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;    ASSERT_EQ ( strings[5] , <span class="stringliteral">&quot;R&quot;</span> );</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;}</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;</div>
+<div class="line"><a name="l00134"></a><span class="lineno"><a class="code" href="string__util_8cpp.html#a3da314647e7ae50109683e3a22c19d5f">  134</a></span>&#160;<a class="code" href="chrono__util__tests_8cpp.html#a4d515f066f202870d93427c6823ebeca">TEST</a> ( really_long_string , causes_split_to_fail )</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;{</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;    std::string delimiter = <span class="stringliteral">&quot; &quot;</span>;</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;    std::string <span class="keywordtype">string</span> =    <span class="stringliteral">&quot;0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 \</span></div>
 <div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;<span class="stringliteral">                            0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 \</span></div>
 <div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;<span class="stringliteral">                            0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 \</span></div>
 <div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;<span class="stringliteral">                            0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 \</span></div>
@@ -336,73 +336,81 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;<span class="stringliteral">                            0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 \</span></div>
 <div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;<span class="stringliteral">                            0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 \</span></div>
 <div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;<span class="stringliteral">                            0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 \</span></div>
-<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;<span class="stringliteral">                            &quot;</span>;</div>
-<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;    <span class="comment">//xtd::str::strings strings = xtd::str::split(string,delimiter);</span></div>
-<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;</div>
-<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;}</div>
-<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;</div>
-<div class="line"><a name="l00254"></a><span class="lineno"><a class="code" href="string__util_8cpp.html#ab24ee996f3fcd24abe01fee8b48b1668">  254</a></span>&#160;<a class="code" href="chrono__util__tests_8cpp.html#a4d515f066f202870d93427c6823ebeca">TEST</a> ( string_0101010100100001010 , transforms_into_5151515155155551515_after_replacing_0_with_5_000 )</div>
-<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;{</div>
-<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;</div>
-<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;    <span class="keywordtype">char</span> search_for = <span class="charliteral">&#39;0&#39;</span>;</div>
-<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;    <span class="keywordtype">char</span> replace_with = <span class="charliteral">&#39;5&#39;</span>;</div>
-<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;    std::string <span class="keywordtype">string</span> = <span class="stringliteral">&quot;0101010100100001010&quot;</span>;</div>
-<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;    std::string string_transformed_correct = <span class="stringliteral">&quot;5151515155155551515&quot;</span>;</div>
-<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;    std::string string_transformed_actual = <a class="code" href="namespacextd_1_1str.html#a19a7b8aa4523c51af4b1ea70354b4d28">xtd::str::replace</a>(<span class="keywordtype">string</span>,search_for,replace_with);</div>
-<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;</div>
-<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;    ASSERT_EQ ( string_transformed_correct , string_transformed_actual );</div>
+<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;<span class="stringliteral">                            0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 \</span></div>
+<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;<span class="stringliteral">                            0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 \</span></div>
+<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;<span class="stringliteral">                            0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 \</span></div>
+<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;<span class="stringliteral">                            0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 \</span></div>
+<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;<span class="stringliteral">                            0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 \</span></div>
+<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;<span class="stringliteral">                            0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 \</span></div>
+<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;<span class="stringliteral">                            0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 \</span></div>
+<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;<span class="stringliteral">                            0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 \</span></div>
+<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;<span class="stringliteral">                            &quot;</span>;</div>
+<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;    <span class="comment">//xtd::str::strings strings = xtd::str::split(string,delimiter);</span></div>
+<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;</div>
+<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;}</div>
+<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;</div>
+<div class="line"><a name="l00262"></a><span class="lineno"><a class="code" href="string__util_8cpp.html#ab24ee996f3fcd24abe01fee8b48b1668">  262</a></span>&#160;<a class="code" href="chrono__util__tests_8cpp.html#a4d515f066f202870d93427c6823ebeca">TEST</a> ( string_0101010100100001010 , transforms_into_5151515155155551515_after_replacing_0_with_5_000 )</div>
+<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;{</div>
 <div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;</div>
-<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;}</div>
-<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;</div>
-<div class="line"><a name="l00267"></a><span class="lineno"><a class="code" href="string__util_8cpp.html#a08c5c6aee6b53cb9f8b4821fcfd94052">  267</a></span>&#160;<a class="code" href="chrono__util__tests_8cpp.html#a4d515f066f202870d93427c6823ebeca">TEST</a> ( string_0101010100100001010 , transforms_into_5151515155155551515_after_replacing_0_with_5_001 )</div>
-<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;{</div>
-<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;</div>
-<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">char</span>* search_for = <span class="stringliteral">&quot;0&quot;</span>;</div>
-<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">char</span>* replace_with = <span class="stringliteral">&quot;5&quot;</span>;</div>
-<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">char</span>* <span class="keywordtype">string</span> = <span class="stringliteral">&quot;0101010100100001010&quot;</span>;</div>
-<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;    std::string string_transformed_correct = <span class="stringliteral">&quot;5151515155155551515&quot;</span>;</div>
-<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;    std::string string_transformed_actual = <a class="code" href="namespacextd_1_1str.html#a19a7b8aa4523c51af4b1ea70354b4d28">xtd::str::replace</a>(<span class="keywordtype">string</span>,search_for,replace_with);</div>
-<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;</div>
-<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;    ASSERT_EQ ( string_transformed_correct , string_transformed_actual );</div>
+<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;    <span class="keywordtype">char</span> search_for = <span class="charliteral">&#39;0&#39;</span>;</div>
+<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;    <span class="keywordtype">char</span> replace_with = <span class="charliteral">&#39;5&#39;</span>;</div>
+<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;    std::string <span class="keywordtype">string</span> = <span class="stringliteral">&quot;0101010100100001010&quot;</span>;</div>
+<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;    std::string string_transformed_correct = <span class="stringliteral">&quot;5151515155155551515&quot;</span>;</div>
+<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;    std::string string_transformed_actual = <a class="code" href="namespacextd_1_1str.html#a19a7b8aa4523c51af4b1ea70354b4d28">xtd::str::replace</a>(<span class="keywordtype">string</span>,search_for,replace_with);</div>
+<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;</div>
+<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;    ASSERT_EQ ( string_transformed_correct , string_transformed_actual );</div>
+<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;</div>
+<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;}</div>
+<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;</div>
+<div class="line"><a name="l00275"></a><span class="lineno"><a class="code" href="string__util_8cpp.html#a08c5c6aee6b53cb9f8b4821fcfd94052">  275</a></span>&#160;<a class="code" href="chrono__util__tests_8cpp.html#a4d515f066f202870d93427c6823ebeca">TEST</a> ( string_0101010100100001010 , transforms_into_5151515155155551515_after_replacing_0_with_5_001 )</div>
+<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;{</div>
 <div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;</div>
-<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;}</div>
-<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;</div>
-<div class="line"><a name="l00280"></a><span class="lineno"><a class="code" href="string__util_8cpp.html#ae905cff001983b984303a95f3cf3f32a">  280</a></span>&#160;<a class="code" href="chrono__util__tests_8cpp.html#a4d515f066f202870d93427c6823ebeca">TEST</a> ( string_0101010100100001010 , transforms_into_5151515155155551515_after_replacing_0_with_5_002 )</div>
-<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;{</div>
-<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;</div>
-<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;    std::string search_for = <span class="stringliteral">&quot;0&quot;</span>;</div>
-<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;    std::string replace_with = <span class="stringliteral">&quot;5&quot;</span>;</div>
-<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;    std::string <span class="keywordtype">string</span> = <span class="stringliteral">&quot;0101010100100001010&quot;</span>;</div>
-<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;    std::string string_transformed_correct = <span class="stringliteral">&quot;5151515155155551515&quot;</span>;</div>
-<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;    std::string string_transformed_actual = <a class="code" href="namespacextd_1_1str.html#a19a7b8aa4523c51af4b1ea70354b4d28">xtd::str::replace</a>(<span class="keywordtype">string</span>,search_for,replace_with);</div>
-<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;</div>
-<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;    ASSERT_EQ ( string_transformed_correct , string_transformed_actual );</div>
+<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">char</span>* search_for = <span class="stringliteral">&quot;0&quot;</span>;</div>
+<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">char</span>* replace_with = <span class="stringliteral">&quot;5&quot;</span>;</div>
+<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">char</span>* <span class="keywordtype">string</span> = <span class="stringliteral">&quot;0101010100100001010&quot;</span>;</div>
+<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;    std::string string_transformed_correct = <span class="stringliteral">&quot;5151515155155551515&quot;</span>;</div>
+<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;    std::string string_transformed_actual = <a class="code" href="namespacextd_1_1str.html#a19a7b8aa4523c51af4b1ea70354b4d28">xtd::str::replace</a>(<span class="keywordtype">string</span>,search_for,replace_with);</div>
+<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;</div>
+<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;    ASSERT_EQ ( string_transformed_correct , string_transformed_actual );</div>
+<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;</div>
+<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;}</div>
+<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;</div>
+<div class="line"><a name="l00288"></a><span class="lineno"><a class="code" href="string__util_8cpp.html#ae905cff001983b984303a95f3cf3f32a">  288</a></span>&#160;<a class="code" href="chrono__util__tests_8cpp.html#a4d515f066f202870d93427c6823ebeca">TEST</a> ( string_0101010100100001010 , transforms_into_5151515155155551515_after_replacing_0_with_5_002 )</div>
+<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;{</div>
 <div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;</div>
-<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;}</div>
-<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;</div>
-<div class="line"><a name="l00293"></a><span class="lineno"><a class="code" href="string__util_8cpp.html#a2de6109928200c5dea09514d01556306">  293</a></span>&#160;<a class="code" href="chrono__util__tests_8cpp.html#a4d515f066f202870d93427c6823ebeca">TEST</a> ( string_qwertyuiop , transforms_into_poiuytrewq_after_reversing )</div>
-<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;{</div>
-<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;</div>
+<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;    std::string search_for = <span class="stringliteral">&quot;0&quot;</span>;</div>
+<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;    std::string replace_with = <span class="stringliteral">&quot;5&quot;</span>;</div>
+<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;    std::string <span class="keywordtype">string</span> = <span class="stringliteral">&quot;0101010100100001010&quot;</span>;</div>
+<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;    std::string string_transformed_correct = <span class="stringliteral">&quot;5151515155155551515&quot;</span>;</div>
+<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;    std::string string_transformed_actual = <a class="code" href="namespacextd_1_1str.html#a19a7b8aa4523c51af4b1ea70354b4d28">xtd::str::replace</a>(<span class="keywordtype">string</span>,search_for,replace_with);</div>
 <div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;</div>
-<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;    std::string <span class="keywordtype">string</span> = <span class="stringliteral">&quot;qwertyuiop&quot;</span>;</div>
-<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;    std::string reversed_correct = <span class="stringliteral">&quot;poiuytrewq&quot;</span>;</div>
-<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;    std::string reversed_actual = <a class="code" href="namespacextd_1_1str.html#afbf12c7921d111a0601de3d1f206850e">xtd::str::reverse</a>(<span class="keywordtype">string</span>);</div>
+<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;    ASSERT_EQ ( string_transformed_correct , string_transformed_actual );</div>
+<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;</div>
+<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;}</div>
 <div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;</div>
-<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;    ASSERT_EQ ( reversed_correct , reversed_actual );</div>
-<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;</div>
-<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;}</div>
+<div class="line"><a name="l00301"></a><span class="lineno"><a class="code" href="string__util_8cpp.html#a2de6109928200c5dea09514d01556306">  301</a></span>&#160;<a class="code" href="chrono__util__tests_8cpp.html#a4d515f066f202870d93427c6823ebeca">TEST</a> ( string_qwertyuiop , transforms_into_poiuytrewq_after_reversing )</div>
+<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;{</div>
+<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;</div>
 <div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;</div>
-<div class="line"><a name="l00305"></a><span class="lineno"><a class="code" href="string__util_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627">  305</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="chrono__util__tests_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627">main</a> ( <span class="keywordtype">int</span> argc , <span class="keywordtype">char</span>** argv )</div>
-<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;{</div>
-<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;</div>
-<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;    ::testing::InitGoogleTest(&amp;argc, argv);</div>
-<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;    <span class="keywordflow">return</span> RUN_ALL_TESTS();</div>
+<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;    std::string <span class="keywordtype">string</span> = <span class="stringliteral">&quot;qwertyuiop&quot;</span>;</div>
+<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;    std::string reversed_correct = <span class="stringliteral">&quot;poiuytrewq&quot;</span>;</div>
+<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;    std::string reversed_actual = <a class="code" href="namespacextd_1_1str.html#afbf12c7921d111a0601de3d1f206850e">xtd::str::reverse</a>(<span class="keywordtype">string</span>);</div>
+<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;</div>
+<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;    ASSERT_EQ ( reversed_correct , reversed_actual );</div>
 <div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;</div>
 <div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;}</div>
+<div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;</div>
+<div class="line"><a name="l00313"></a><span class="lineno"><a class="code" href="string__util_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627">  313</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="chrono__util__tests_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627">main</a> ( <span class="keywordtype">int</span> argc , <span class="keywordtype">char</span>** argv )</div>
+<div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;{</div>
+<div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;</div>
+<div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;    ::testing::InitGoogleTest(&amp;argc, argv);</div>
+<div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;    <span class="keywordflow">return</span> RUN_ALL_TESTS();</div>
+<div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;</div>
+<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;}</div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Aug 8 2014 12:35:58 for XTD by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Aug 8 2014 13:46:58 for XTD by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.1.2
 </small></address>

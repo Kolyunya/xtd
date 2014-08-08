@@ -103,6 +103,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <tr class="heading"><td colspan="2"><h2><a name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:a85dbac707044eb39f0d8f0a015554d17"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="string__util_8cpp.html#a85dbac707044eb39f0d8f0a015554d17">TEST</a> (integer_1052, converts_to_string_1052)</td></tr>
+<tr class="memitem:a3daf732a72a6bdbc64b35e5c97fc0541"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="string__util_8cpp.html#a3daf732a72a6bdbc64b35e5c97fc0541">TEST</a> (from, converts_long_double_123_dot_456_to_string)</td></tr>
 <tr class="memitem:a8dd39d3ac8bc7a7d9d397be80aabf200"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="string__util_8cpp.html#a8dd39d3ac8bc7a7d9d397be80aabf200">TEST</a> (float_1052_655, converts_to_string_1052_66)</td></tr>
 <tr class="memitem:ac5968036ccfa38151768454c8eaacb29"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="string__util_8cpp.html#ac5968036ccfa38151768454c8eaacb29">TEST</a> (string_1000010001001, splits_to_0000_000_00_by_delimiter_1)</td></tr>
 <tr class="memitem:a42b60f414c9051c7b62fdcd619006cb0"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="string__util_8cpp.html#a42b60f414c9051c7b62fdcd619006cb0">TEST</a> (string_0100001000100100, splits_to_0_0000_000_00_00_by_delimiter_1)</td></tr>
@@ -141,7 +142,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="string__util_8cpp_source.html#l00305">305</a> of file <a class="el" href="string__util_8cpp_source.html">string_util.cpp</a>.</p>
+<p>Definition at line <a class="el" href="string__util_8cpp_source.html#l00313">313</a> of file <a class="el" href="string__util_8cpp_source.html">string_util.cpp</a>.</p>
 <div class="fragment"><div class="line">{</div>
 <div class="line"></div>
 <div class="line">    ::testing::InitGoogleTest(&amp;argc, argv);</div>
@@ -177,15 +178,51 @@ Functions</h2></td></tr>
 
 <p>Definition at line <a class="el" href="string__util_8cpp_source.html#l00027">27</a> of file <a class="el" href="string__util_8cpp_source.html">string_util.cpp</a>.</p>
 
-<p>References <a class="el" href="string__util_8ipp_source.html#l00179">xtd::str::from()</a>.</p>
+<p>References <a class="el" href="string__util_8ipp_source.html#l00180">xtd::str::from()</a>.</p>
 <div class="fragment"><div class="line">{</div>
 <div class="line"></div>
 <div class="line">    <span class="keywordtype">int</span> number = 1052;</div>
 <div class="line">    std::string string_correct = <span class="stringliteral">&quot;1052&quot;</span>;</div>
-<div class="line">    std::string string_actual = <a class="code" href="namespacextd_1_1str.html#ae0aeb889864ad86ba2f849f81eea037f" title="Converts a number from numeric to string representation.">xtd::str::from</a>(number);</div>
+<div class="line">    std::string string_actual = <a class="code" href="namespacextd_1_1str.html#a526a132dfcfac73b37078ead543a47c6" title="Converts a number from numeric to string representation.">xtd::str::from</a>(number);</div>
 <div class="line"></div>
 <div class="line">    ASSERT_EQ ( string_correct , string_actual );</div>
 <div class="line"></div>
+<div class="line">}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a class="anchor" id="a3daf732a72a6bdbc64b35e5c97fc0541"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TEST </td>
+          <td>(</td>
+          <td class="paramtype">from&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">converts_long_double_123_dot_456_to_string&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="string__util_8cpp_source.html#l00038">38</a> of file <a class="el" href="string__util_8cpp_source.html">string_util.cpp</a>.</p>
+
+<p>References <a class="el" href="string__util_8ipp_source.html#l00180">xtd::str::from()</a>.</p>
+<div class="fragment"><div class="line">{</div>
+<div class="line">    <span class="keywordtype">long</span> <span class="keywordtype">double</span> source_number = 123.456;</div>
+<div class="line">    std::string result_string_correct = <span class="stringliteral">&quot;123.456&quot;</span>;</div>
+<div class="line">    std::string result_string_actual = <a class="code" href="namespacextd_1_1str.html#a526a132dfcfac73b37078ead543a47c6" title="Converts a number from numeric to string representation.">xtd::str::from</a>(source_number);</div>
+<div class="line">    ASSERT_EQ ( result_string_correct , result_string_actual );</div>
 <div class="line">}</div>
 </div><!-- fragment -->
 </div>
@@ -214,14 +251,14 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="string__util_8cpp_source.html#l00038">38</a> of file <a class="el" href="string__util_8cpp_source.html">string_util.cpp</a>.</p>
+<p>Definition at line <a class="el" href="string__util_8cpp_source.html#l00046">46</a> of file <a class="el" href="string__util_8cpp_source.html">string_util.cpp</a>.</p>
 
-<p>References <a class="el" href="string__util_8ipp_source.html#l00179">xtd::str::from()</a>.</p>
+<p>References <a class="el" href="string__util_8ipp_source.html#l00180">xtd::str::from()</a>.</p>
 <div class="fragment"><div class="line">{</div>
 <div class="line"></div>
 <div class="line">    <span class="keywordtype">float</span> number = 1052.655;</div>
 <div class="line">    std::string string_correct = <span class="stringliteral">&quot;1052.66&quot;</span>;</div>
-<div class="line">    std::string string_actual = <a class="code" href="namespacextd_1_1str.html#ae0aeb889864ad86ba2f849f81eea037f" title="Converts a number from numeric to string representation.">xtd::str::from</a>(number);</div>
+<div class="line">    std::string string_actual = <a class="code" href="namespacextd_1_1str.html#a526a132dfcfac73b37078ead543a47c6" title="Converts a number from numeric to string representation.">xtd::str::from</a>(number);</div>
 <div class="line"></div>
 <div class="line">    ASSERT_EQ ( string_correct , string_actual );</div>
 <div class="line"></div>
@@ -253,9 +290,9 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="string__util_8cpp_source.html#l00049">49</a> of file <a class="el" href="string__util_8cpp_source.html">string_util.cpp</a>.</p>
+<p>Definition at line <a class="el" href="string__util_8cpp_source.html#l00057">57</a> of file <a class="el" href="string__util_8cpp_source.html">string_util.cpp</a>.</p>
 
-<p>References <a class="el" href="string__util_8ipp_source.html#l00212">xtd::str::split()</a>.</p>
+<p>References <a class="el" href="string__util_8ipp_source.html#l00216">xtd::str::split()</a>.</p>
 <div class="fragment"><div class="line">{</div>
 <div class="line"></div>
 <div class="line">    <span class="keywordtype">char</span> delimiter = <span class="charliteral">&#39;1&#39;</span>;</div>
@@ -295,9 +332,9 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="string__util_8cpp_source.html#l00063">63</a> of file <a class="el" href="string__util_8cpp_source.html">string_util.cpp</a>.</p>
+<p>Definition at line <a class="el" href="string__util_8cpp_source.html#l00071">71</a> of file <a class="el" href="string__util_8cpp_source.html">string_util.cpp</a>.</p>
 
-<p>References <a class="el" href="string__util_8ipp_source.html#l00212">xtd::str::split()</a>.</p>
+<p>References <a class="el" href="string__util_8ipp_source.html#l00216">xtd::str::split()</a>.</p>
 <div class="fragment"><div class="line">{</div>
 <div class="line"></div>
 <div class="line">    <span class="keywordtype">char</span> delimiter = <span class="charliteral">&#39;1&#39;</span>;</div>
@@ -339,9 +376,9 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="string__util_8cpp_source.html#l00079">79</a> of file <a class="el" href="string__util_8cpp_source.html">string_util.cpp</a>.</p>
+<p>Definition at line <a class="el" href="string__util_8cpp_source.html#l00087">87</a> of file <a class="el" href="string__util_8cpp_source.html">string_util.cpp</a>.</p>
 
-<p>References <a class="el" href="string__util_8ipp_source.html#l00212">xtd::str::split()</a>.</p>
+<p>References <a class="el" href="string__util_8ipp_source.html#l00216">xtd::str::split()</a>.</p>
 <div class="fragment"><div class="line">{</div>
 <div class="line"></div>
 <div class="line">    std::string delimiter = <span class="stringliteral">&quot;1_1&quot;</span>;</div>
@@ -383,9 +420,9 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="string__util_8cpp_source.html#l00095">95</a> of file <a class="el" href="string__util_8cpp_source.html">string_util.cpp</a>.</p>
+<p>Definition at line <a class="el" href="string__util_8cpp_source.html#l00103">103</a> of file <a class="el" href="string__util_8cpp_source.html">string_util.cpp</a>.</p>
 
-<p>References <a class="el" href="string__util_8ipp_source.html#l00212">xtd::str::split()</a>.</p>
+<p>References <a class="el" href="string__util_8ipp_source.html#l00216">xtd::str::split()</a>.</p>
 <div class="fragment"><div class="line">{</div>
 <div class="line"></div>
 <div class="line">    <span class="keywordtype">char</span> delimiter = <span class="charliteral">&#39;U&#39;</span>;</div>
@@ -425,9 +462,9 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="string__util_8cpp_source.html#l00109">109</a> of file <a class="el" href="string__util_8cpp_source.html">string_util.cpp</a>.</p>
+<p>Definition at line <a class="el" href="string__util_8cpp_source.html#l00117">117</a> of file <a class="el" href="string__util_8cpp_source.html">string_util.cpp</a>.</p>
 
-<p>References <a class="el" href="string__util_8ipp_source.html#l00212">xtd::str::split()</a>.</p>
+<p>References <a class="el" href="string__util_8ipp_source.html#l00216">xtd::str::split()</a>.</p>
 <div class="fragment"><div class="line">{</div>
 <div class="line"></div>
 <div class="line">    std::string delimiter = <span class="stringliteral">&quot;&quot;</span>;</div>
@@ -470,7 +507,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="string__util_8cpp_source.html#l00126">126</a> of file <a class="el" href="string__util_8cpp_source.html">string_util.cpp</a>.</p>
+<p>Definition at line <a class="el" href="string__util_8cpp_source.html#l00134">134</a> of file <a class="el" href="string__util_8cpp_source.html">string_util.cpp</a>.</p>
 <div class="fragment"><div class="line">{</div>
 <div class="line"></div>
 <div class="line">    std::string delimiter = <span class="stringliteral">&quot; &quot;</span>;</div>
@@ -624,9 +661,9 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="string__util_8cpp_source.html#l00254">254</a> of file <a class="el" href="string__util_8cpp_source.html">string_util.cpp</a>.</p>
+<p>Definition at line <a class="el" href="string__util_8cpp_source.html#l00262">262</a> of file <a class="el" href="string__util_8cpp_source.html">string_util.cpp</a>.</p>
 
-<p>References <a class="el" href="string__util_8ipp_source.html#l00299">xtd::str::replace()</a>.</p>
+<p>References <a class="el" href="string__util_8ipp_source.html#l00303">xtd::str::replace()</a>.</p>
 <div class="fragment"><div class="line">{</div>
 <div class="line"></div>
 <div class="line">    <span class="keywordtype">char</span> search_for = <span class="charliteral">&#39;0&#39;</span>;</div>
@@ -665,9 +702,9 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="string__util_8cpp_source.html#l00267">267</a> of file <a class="el" href="string__util_8cpp_source.html">string_util.cpp</a>.</p>
+<p>Definition at line <a class="el" href="string__util_8cpp_source.html#l00275">275</a> of file <a class="el" href="string__util_8cpp_source.html">string_util.cpp</a>.</p>
 
-<p>References <a class="el" href="string__util_8ipp_source.html#l00299">xtd::str::replace()</a>.</p>
+<p>References <a class="el" href="string__util_8ipp_source.html#l00303">xtd::str::replace()</a>.</p>
 <div class="fragment"><div class="line">{</div>
 <div class="line"></div>
 <div class="line">    <span class="keyword">const</span> <span class="keywordtype">char</span>* search_for = <span class="stringliteral">&quot;0&quot;</span>;</div>
@@ -706,9 +743,9 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="string__util_8cpp_source.html#l00280">280</a> of file <a class="el" href="string__util_8cpp_source.html">string_util.cpp</a>.</p>
+<p>Definition at line <a class="el" href="string__util_8cpp_source.html#l00288">288</a> of file <a class="el" href="string__util_8cpp_source.html">string_util.cpp</a>.</p>
 
-<p>References <a class="el" href="string__util_8ipp_source.html#l00299">xtd::str::replace()</a>.</p>
+<p>References <a class="el" href="string__util_8ipp_source.html#l00303">xtd::str::replace()</a>.</p>
 <div class="fragment"><div class="line">{</div>
 <div class="line"></div>
 <div class="line">    std::string search_for = <span class="stringliteral">&quot;0&quot;</span>;</div>
@@ -747,9 +784,9 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="string__util_8cpp_source.html#l00293">293</a> of file <a class="el" href="string__util_8cpp_source.html">string_util.cpp</a>.</p>
+<p>Definition at line <a class="el" href="string__util_8cpp_source.html#l00301">301</a> of file <a class="el" href="string__util_8cpp_source.html">string_util.cpp</a>.</p>
 
-<p>References <a class="el" href="string__util_8ipp_source.html#l00205">xtd::str::reverse()</a>.</p>
+<p>References <a class="el" href="string__util_8ipp_source.html#l00209">xtd::str::reverse()</a>.</p>
 <div class="fragment"><div class="line">{</div>
 <div class="line"></div>
 <div class="line"></div>
@@ -766,7 +803,7 @@ Functions</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Aug 8 2014 12:35:58 for XTD by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Aug 8 2014 13:46:58 for XTD by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.1.2
 </small></address>
