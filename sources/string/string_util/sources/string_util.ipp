@@ -48,7 +48,12 @@ namespace xtd
 
             //  The number either exceeds or equals the limits of "signed long int".
             //  It is not possible do distinguish those cases because "errno" may be set to "ERANGE" earlyer.
-            else if ( number == LONG_LONG_MAX || number == LONG_LONG_MIN )
+            else if
+            (
+                number == std::numeric_limits<signed long long int>::max()
+                    ||
+                number == std::numeric_limits<signed long long int>::min()
+            )
             {
                 throw std::runtime_error("String to number conversion failed. Number exceeds type limits.");
             }
@@ -83,7 +88,12 @@ namespace xtd
 
             //  The number either exceeds or equals the limits of "signed long int".
             //  It is not possible do distinguish those cases because "errno" may be set to "ERANGE" earlyer.
-            else if ( number == LONG_MAX || number == LONG_MIN )
+            else if
+            (
+                number == std::numeric_limits<signed long int>::max()
+                    ||
+                number == std::numeric_limits<signed long int>::min()
+            )
             {
                 throw std::runtime_error("String to number conversion failed. Number exceeds type limits.");
             }
@@ -99,7 +109,12 @@ namespace xtd
             signed long int number = xtd::str::to_long(source_string,number_base);
 
             //  Check if the number exceeds the limits of "signed int"
-            if ( number < INT_MIN || number > INT_MAX )
+            if
+            (
+                number == std::numeric_limits<signed int>::max()
+                    ||
+                number == std::numeric_limits<signed int>::min()
+            )
             {
                 throw std::runtime_error("String to number conversion failed. Number exceeds type limits.");
             }
@@ -341,43 +356,35 @@ namespace xtd
         bool is_numeric ( const std::string& source_string )
         {
 
-            // Empty std::string is not a number
+            //  Empty std::string is not a number
             if ( source_string.empty() )
             {
-
                 return false;
-
             }
 
-            // std::string containing characters which are not numerals is not a number
+            //  std::string containing characters which are not numerals is not a number
             bool dot_is_already_used = false;
             auto string_itr = source_string.begin();
             for ( ; string_itr < source_string.end() ; string_itr++ )
             {
 
-                // Numeric character
+                //  Numeric character
                 if ( isdigit(*string_itr) )
                 {
-
                     continue;
-
                 }
 
-                // '-' as the first character of the string
+                //  '-' as the first character of the string
                 if ( string_itr == source_string.begin() && *string_itr == '-' )
                 {
-
                     continue;
-
                 }
 
-                // The first usage of a decimal dot
+                //  The first usage of a decimal dot
                 if ( ! dot_is_already_used && ( *string_itr == '.' || *string_itr == ',' ) )
                 {
-
                     dot_is_already_used = true;
                     continue;
-
                 }
 
                 return false;

@@ -23,7 +23,7 @@
 #include <algorithm>
 #include <vector>
 #include <sstream>
-#include <climits>
+#include <limits>
 #include <cstdlib>
 
 /**
