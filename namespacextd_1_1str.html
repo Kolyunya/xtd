@@ -149,7 +149,7 @@ template&lt;typename type &gt; </div>
 <p>Converts a number represented by a <code>source_number</code> to a <code>std::string</code>. </p>
 <dl class="section note"><dt>Note</dt><dd>This function is a wrapper of a <a href="http://en.cppreference.com/w/cpp/io/basic_ostream/operator_ltlt">std::basic_ostream::operator&lt;&lt;</a>. and accepts exact same source string formats. </dd></dl>
 
-<p>Definition at line <a class="el" href="string__util_8ipp_source.html#l00214">214</a> of file <a class="el" href="string__util_8ipp_source.html">string_util.ipp</a>.</p>
+<p>Definition at line <a class="el" href="string__util_8ipp_source.html#l00229">229</a> of file <a class="el" href="string__util_8ipp_source.html">string_util.ipp</a>.</p>
 
 <p>Referenced by <a class="el" href="string__util_8cpp_source.html#l00027">TEST()</a>.</p>
 <div class="fragment"><div class="line">        {</div>
@@ -183,9 +183,9 @@ template&lt;typename type &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="string__util_8ipp_source.html#l00409">409</a> of file <a class="el" href="string__util_8ipp_source.html">string_util.ipp</a>.</p>
+<p>Definition at line <a class="el" href="string__util_8ipp_source.html#l00416">416</a> of file <a class="el" href="string__util_8ipp_source.html">string_util.ipp</a>.</p>
 
-<p>References <a class="el" href="string__util_8ipp_source.html#l00391">is_integer()</a>, and <a class="el" href="string__util_8ipp_source.html#l00341">is_numeric()</a>.</p>
+<p>References <a class="el" href="string__util_8ipp_source.html#l00398">is_integer()</a>, and <a class="el" href="string__util_8ipp_source.html#l00356">is_numeric()</a>.</p>
 <div class="fragment"><div class="line">        {</div>
 <div class="line">            <span class="keywordtype">bool</span> source_is_numeric = <a class="code" href="namespacextd_1_1str.html#a34226a1752297bc73e69640ade471f4a">is_numeric</a>(source_string);</div>
 <div class="line">            <span class="keywordtype">bool</span> source_string_is_not_numeric = ! source_is_numeric;</div>
@@ -226,11 +226,11 @@ template&lt;typename type &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="string__util_8ipp_source.html#l00391">391</a> of file <a class="el" href="string__util_8ipp_source.html">string_util.ipp</a>.</p>
+<p>Definition at line <a class="el" href="string__util_8ipp_source.html#l00398">398</a> of file <a class="el" href="string__util_8ipp_source.html">string_util.ipp</a>.</p>
 
-<p>References <a class="el" href="string__util_8ipp_source.html#l00341">is_numeric()</a>.</p>
+<p>References <a class="el" href="string__util_8ipp_source.html#l00356">is_numeric()</a>.</p>
 
-<p>Referenced by <a class="el" href="string__util_8ipp_source.html#l00409">is_fractional()</a>.</p>
+<p>Referenced by <a class="el" href="string__util_8ipp_source.html#l00416">is_fractional()</a>.</p>
 <div class="fragment"><div class="line">        {</div>
 <div class="line">            <span class="keywordtype">bool</span> source_is_numeric = <a class="code" href="namespacextd_1_1str.html#a34226a1752297bc73e69640ade471f4a">is_numeric</a>(source_string);</div>
 <div class="line">            <span class="keywordtype">bool</span> source_string_is_not_numeric = ! source_is_numeric;</div>
@@ -272,48 +272,40 @@ template&lt;typename type &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="string__util_8ipp_source.html#l00341">341</a> of file <a class="el" href="string__util_8ipp_source.html">string_util.ipp</a>.</p>
+<p>Definition at line <a class="el" href="string__util_8ipp_source.html#l00356">356</a> of file <a class="el" href="string__util_8ipp_source.html">string_util.ipp</a>.</p>
 
-<p>Referenced by <a class="el" href="string__util_8ipp_source.html#l00409">is_fractional()</a>, and <a class="el" href="string__util_8ipp_source.html#l00391">is_integer()</a>.</p>
+<p>Referenced by <a class="el" href="string__util_8ipp_source.html#l00416">is_fractional()</a>, and <a class="el" href="string__util_8ipp_source.html#l00398">is_integer()</a>.</p>
 <div class="fragment"><div class="line">        {</div>
 <div class="line"></div>
-<div class="line">            <span class="comment">// Empty std::string is not a number</span></div>
+<div class="line">            <span class="comment">//  Empty std::string is not a number</span></div>
 <div class="line">            <span class="keywordflow">if</span> ( source_string.empty() )</div>
 <div class="line">            {</div>
-<div class="line"></div>
 <div class="line">                <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"></div>
 <div class="line">            }</div>
 <div class="line"></div>
-<div class="line">            <span class="comment">// std::string containing characters which are not numerals is not a number</span></div>
+<div class="line">            <span class="comment">//  std::string containing characters which are not numerals is not a number</span></div>
 <div class="line">            <span class="keywordtype">bool</span> dot_is_already_used = <span class="keyword">false</span>;</div>
 <div class="line">            <span class="keyword">auto</span> string_itr = source_string.begin();</div>
 <div class="line">            <span class="keywordflow">for</span> ( ; string_itr &lt; source_string.end() ; string_itr++ )</div>
 <div class="line">            {</div>
 <div class="line"></div>
-<div class="line">                <span class="comment">// Numeric character</span></div>
+<div class="line">                <span class="comment">//  Numeric character</span></div>
 <div class="line">                <span class="keywordflow">if</span> ( isdigit(*string_itr) )</div>
 <div class="line">                {</div>
-<div class="line"></div>
 <div class="line">                    <span class="keywordflow">continue</span>;</div>
-<div class="line"></div>
 <div class="line">                }</div>
 <div class="line"></div>
-<div class="line">                <span class="comment">// &#39;-&#39; as the first character of the string</span></div>
+<div class="line">                <span class="comment">//  &#39;-&#39; as the first character of the string</span></div>
 <div class="line">                <span class="keywordflow">if</span> ( string_itr == source_string.begin() &amp;&amp; *string_itr == <span class="charliteral">&#39;-&#39;</span> )</div>
 <div class="line">                {</div>
-<div class="line"></div>
 <div class="line">                    <span class="keywordflow">continue</span>;</div>
-<div class="line"></div>
 <div class="line">                }</div>
 <div class="line"></div>
-<div class="line">                <span class="comment">// The first usage of a decimal dot</span></div>
+<div class="line">                <span class="comment">//  The first usage of a decimal dot</span></div>
 <div class="line">                <span class="keywordflow">if</span> ( ! dot_is_already_used &amp;&amp; ( *string_itr == <span class="charliteral">&#39;.&#39;</span> || *string_itr == <span class="charliteral">&#39;,&#39;</span> ) )</div>
 <div class="line">                {</div>
-<div class="line"></div>
 <div class="line">                    dot_is_already_used = <span class="keyword">true</span>;</div>
 <div class="line">                    <span class="keywordflow">continue</span>;</div>
-<div class="line"></div>
 <div class="line">                }</div>
 <div class="line"></div>
 <div class="line">                <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
@@ -364,9 +356,9 @@ template&lt;typename type &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="string__util_8ipp_source.html#l00310">310</a> of file <a class="el" href="string__util_8ipp_source.html">string_util.ipp</a>.</p>
+<p>Definition at line <a class="el" href="string__util_8ipp_source.html#l00325">325</a> of file <a class="el" href="string__util_8ipp_source.html">string_util.ipp</a>.</p>
 
-<p>Referenced by <a class="el" href="string__util_8ipp_source.html#l00334">replace()</a>, and <a class="el" href="string__util_8cpp_source.html#l00262">TEST()</a>.</p>
+<p>Referenced by <a class="el" href="string__util_8ipp_source.html#l00349">replace()</a>, and <a class="el" href="string__util_8cpp_source.html#l00262">TEST()</a>.</p>
 <div class="fragment"><div class="line">        {</div>
 <div class="line"></div>
 <div class="line">            <span class="keywordtype">size_t</span> search_for_size = search_for.size();</div>
@@ -430,9 +422,9 @@ template&lt;typename type &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="string__util_8ipp_source.html#l00334">334</a> of file <a class="el" href="string__util_8ipp_source.html">string_util.ipp</a>.</p>
+<p>Definition at line <a class="el" href="string__util_8ipp_source.html#l00349">349</a> of file <a class="el" href="string__util_8ipp_source.html">string_util.ipp</a>.</p>
 
-<p>References <a class="el" href="string__util_8ipp_source.html#l00310">replace()</a>.</p>
+<p>References <a class="el" href="string__util_8ipp_source.html#l00325">replace()</a>.</p>
 <div class="fragment"><div class="line">        {</div>
 <div class="line">            std::string search_for_string = std::string(1,search_for);</div>
 <div class="line">            std::string replace_with_string = std::string(1,replace_with);</div>
@@ -473,7 +465,7 @@ template&lt;typename type &gt; </div>
 <dl class="section return"><dt>Returns</dt><dd>A reversed string. </dd></dl>
 <dl class="section user"><dt>Exception safety</dt><dd>Strong exception safety. </dd></dl>
 
-<p>Definition at line <a class="el" href="string__util_8ipp_source.html#l00222">222</a> of file <a class="el" href="string__util_8ipp_source.html">string_util.ipp</a>.</p>
+<p>Definition at line <a class="el" href="string__util_8ipp_source.html#l00237">237</a> of file <a class="el" href="string__util_8ipp_source.html">string_util.ipp</a>.</p>
 
 <p>Referenced by <a class="el" href="string__util_8cpp_source.html#l00301">TEST()</a>.</p>
 <div class="fragment"><div class="line">        {</div>
@@ -529,11 +521,11 @@ template&lt;typename type &gt; </div>
 <dl class="section user"><dt>Exception safety</dt><dd>Strong exception safety.</dd></dl>
 <p>Splits a string <code>source_string</code> by a delimiter <code>delimiter</code>. </p>
 
-<p>Definition at line <a class="el" href="string__util_8ipp_source.html#l00230">230</a> of file <a class="el" href="string__util_8ipp_source.html">string_util.ipp</a>.</p>
+<p>Definition at line <a class="el" href="string__util_8ipp_source.html#l00245">245</a> of file <a class="el" href="string__util_8ipp_source.html">string_util.ipp</a>.</p>
 
 <p>References <a class="el" href="parameter__pack__for__each_8hpp_source.html#l00029">xstd::pp::for_each()</a>.</p>
 
-<p>Referenced by <a class="el" href="string__util_8ipp_source.html#l00303">split()</a>, and <a class="el" href="string__util_8cpp_source.html#l00057">TEST()</a>.</p>
+<p>Referenced by <a class="el" href="string__util_8ipp_source.html#l00318">split()</a>, and <a class="el" href="string__util_8cpp_source.html#l00057">TEST()</a>.</p>
 <div class="fragment"><div class="line">        {</div>
 <div class="line"></div>
 <div class="line">            <span class="comment">//  Create a result vector.</span></div>
@@ -652,9 +644,9 @@ template&lt;typename type &gt; </div>
 <dl class="section user"><dt>Exception safety</dt><dd>Strong exception safety.</dd></dl>
 <p>Splits a string <code>source_string</code> by a delimiter <code>delimiter</code>. </p>
 
-<p>Definition at line <a class="el" href="string__util_8ipp_source.html#l00303">303</a> of file <a class="el" href="string__util_8ipp_source.html">string_util.ipp</a>.</p>
+<p>Definition at line <a class="el" href="string__util_8ipp_source.html#l00318">318</a> of file <a class="el" href="string__util_8ipp_source.html">string_util.ipp</a>.</p>
 
-<p>References <a class="el" href="string__util_8ipp_source.html#l00230">split()</a>.</p>
+<p>References <a class="el" href="string__util_8ipp_source.html#l00245">split()</a>.</p>
 <div class="fragment"><div class="line">        {</div>
 <div class="line">            std::string delimiter_string = std::string(1,delimiter);</div>
 <div class="line">            xtd::str::strings result_strings = <a class="code" href="namespacextd_1_1str.html#a6622349d5ca5c31b72990c30eaf0b587" title="Splits a string by a delimiter.">split</a>(source_string,delimiter_string);</div>
@@ -703,7 +695,7 @@ template&lt;typename type &gt; </div>
 <p>Converts a number represented by a <code>source_string</code> to a <code>double</code>. </p>
 <dl class="section note"><dt>Note</dt><dd>This function is a wrapper of a <a href="http://en.cppreference.com/w/cpp/string/byte/strtod">std::strtod</a> function and accepts exact same source string formats. </dd></dl>
 
-<p>Definition at line <a class="el" href="string__util_8ipp_source.html#l00145">145</a> of file <a class="el" href="string__util_8ipp_source.html">string_util.ipp</a>.</p>
+<p>Definition at line <a class="el" href="string__util_8ipp_source.html#l00160">160</a> of file <a class="el" href="string__util_8ipp_source.html">string_util.ipp</a>.</p>
 
 <p>Referenced by <a class="el" href="to__double_8hpp_source.html#l00001">TEST()</a>.</p>
 <div class="fragment"><div class="line">        {</div>
@@ -781,7 +773,7 @@ template&lt;typename type &gt; </div>
 <p>Converts a number represented by a <code>source_string</code> to a <code>double</code>. </p>
 <dl class="section note"><dt>Note</dt><dd>This function is a wrapper of a <a href="http://en.cppreference.com/w/cpp/string/byte/strtof">std::strtof</a> function and accepts exact same source string formats. </dd></dl>
 
-<p>Definition at line <a class="el" href="string__util_8ipp_source.html#l00179">179</a> of file <a class="el" href="string__util_8ipp_source.html">string_util.ipp</a>.</p>
+<p>Definition at line <a class="el" href="string__util_8ipp_source.html#l00194">194</a> of file <a class="el" href="string__util_8ipp_source.html">string_util.ipp</a>.</p>
 
 <p>Referenced by <a class="el" href="to__float_8hpp_source.html#l00001">TEST()</a>.</p>
 <div class="fragment"><div class="line">        {</div>
@@ -870,9 +862,9 @@ template&lt;typename type &gt; </div>
 <p>Converts a number represented by a <code>source_string</code> to a <code>signed int</code>. Treats a <code>source_string</code> as a numeral with a base of <code>number_base</code>. </p>
 <dl class="section note"><dt>Note</dt><dd>This function is a wrapper of a <a href="http://en.cppreference.com/w/cpp/string/byte/strtol">std::strtol</a> function and accepts exact same source string formats. </dd></dl>
 
-<p>Definition at line <a class="el" href="string__util_8ipp_source.html#l00095">95</a> of file <a class="el" href="string__util_8ipp_source.html">string_util.ipp</a>.</p>
+<p>Definition at line <a class="el" href="string__util_8ipp_source.html#l00105">105</a> of file <a class="el" href="string__util_8ipp_source.html">string_util.ipp</a>.</p>
 
-<p>References <a class="el" href="string__util_8ipp_source.html#l00060">to_long()</a>.</p>
+<p>References <a class="el" href="string__util_8ipp_source.html#l00065">to_long()</a>.</p>
 
 <p>Referenced by <a class="el" href="to__int_8hpp_source.html#l00001">TEST()</a>.</p>
 <div class="fragment"><div class="line">        {</div>
@@ -881,7 +873,12 @@ template&lt;typename type &gt; </div>
 <div class="line">            <span class="keywordtype">signed</span> <span class="keywordtype">long</span> <span class="keywordtype">int</span> number = <a class="code" href="namespacextd_1_1str.html#a4bba828b70a28914977c06ca900e6d77" title="Converts a number from string to numeric representation.">xtd::str::to_long</a>(source_string,number_base);</div>
 <div class="line"></div>
 <div class="line">            <span class="comment">//  Check if the number exceeds the limits of &quot;signed int&quot;</span></div>
-<div class="line">            <span class="keywordflow">if</span> ( number &lt; INT_MIN || number &gt; INT_MAX )</div>
+<div class="line">            <span class="keywordflow">if</span></div>
+<div class="line">            (</div>
+<div class="line">                number == std::numeric_limits&lt;signed int&gt;::max()</div>
+<div class="line">                    ||</div>
+<div class="line">                number == std::numeric_limits&lt;signed int&gt;::min()</div>
+<div class="line">            )</div>
 <div class="line">            {</div>
 <div class="line">                <span class="keywordflow">throw</span> std::runtime_error(<span class="stringliteral">&quot;String to number conversion failed. Number exceeds type limits.&quot;</span>);</div>
 <div class="line">            }</div>
@@ -943,9 +940,9 @@ template&lt;typename type &gt; </div>
 <p>Converts a number represented by a <code>source_string</code> to a <code>signed long int</code>. Treats a <code>source_string</code> as a numeral with a base of <code>number_base</code>. </p>
 <dl class="section note"><dt>Note</dt><dd>This function is a wrapper of a <a href="http://en.cppreference.com/w/cpp/string/byte/strtol">std::strtol</a> function and accepts exact same source string formats. </dd></dl>
 
-<p>Definition at line <a class="el" href="string__util_8ipp_source.html#l00060">60</a> of file <a class="el" href="string__util_8ipp_source.html">string_util.ipp</a>.</p>
+<p>Definition at line <a class="el" href="string__util_8ipp_source.html#l00065">65</a> of file <a class="el" href="string__util_8ipp_source.html">string_util.ipp</a>.</p>
 
-<p>Referenced by <a class="el" href="to__long_8hpp_source.html#l00001">TEST()</a>, and <a class="el" href="string__util_8ipp_source.html#l00095">to_int()</a>.</p>
+<p>Referenced by <a class="el" href="to__long_8hpp_source.html#l00001">TEST()</a>, and <a class="el" href="string__util_8ipp_source.html#l00105">to_int()</a>.</p>
 <div class="fragment"><div class="line">        {</div>
 <div class="line"></div>
 <div class="line">            <span class="comment">//  Function &quot;strtol&quot; will set this pointer to point to the first character after the numeric part of the original string.</span></div>
@@ -971,7 +968,12 @@ template&lt;typename type &gt; </div>
 <div class="line"></div>
 <div class="line">            <span class="comment">//  The number either exceeds or equals the limits of &quot;signed long int&quot;.</span></div>
 <div class="line">            <span class="comment">//  It is not possible do distinguish those cases because &quot;errno&quot; may be set to &quot;ERANGE&quot; earlyer.</span></div>
-<div class="line">            <span class="keywordflow">else</span> <span class="keywordflow">if</span> ( number == LONG_MAX || number == LONG_MIN )</div>
+<div class="line">            <span class="keywordflow">else</span> <span class="keywordflow">if</span></div>
+<div class="line">            (</div>
+<div class="line">                number == std::numeric_limits&lt;signed long int&gt;::max()</div>
+<div class="line">                    ||</div>
+<div class="line">                number == std::numeric_limits&lt;signed long int&gt;::min()</div>
+<div class="line">            )</div>
 <div class="line">            {</div>
 <div class="line">                <span class="keywordflow">throw</span> std::runtime_error(<span class="stringliteral">&quot;String to number conversion failed. Number exceeds type limits.&quot;</span>);</div>
 <div class="line">            }</div>
@@ -1022,7 +1024,7 @@ template&lt;typename type &gt; </div>
 <p>Converts a number represented by a <code>source_string</code> to a <code>double</code>. </p>
 <dl class="section note"><dt>Note</dt><dd>This function is a wrapper of a <a href="http://en.cppreference.com/w/cpp/string/byte/strtold">std::strtold</a> function and accepts exact same source string formats. </dd></dl>
 
-<p>Definition at line <a class="el" href="string__util_8ipp_source.html#l00111">111</a> of file <a class="el" href="string__util_8ipp_source.html">string_util.ipp</a>.</p>
+<p>Definition at line <a class="el" href="string__util_8ipp_source.html#l00126">126</a> of file <a class="el" href="string__util_8ipp_source.html">string_util.ipp</a>.</p>
 <div class="fragment"><div class="line">        {</div>
 <div class="line"></div>
 <div class="line">            <span class="comment">// Function &quot;strtold&quot; will set this pointer to point to the first character after the numeric part of the original string.</span></div>
@@ -1137,7 +1139,12 @@ template&lt;typename type &gt; </div>
 <div class="line"></div>
 <div class="line">            <span class="comment">//  The number either exceeds or equals the limits of &quot;signed long int&quot;.</span></div>
 <div class="line">            <span class="comment">//  It is not possible do distinguish those cases because &quot;errno&quot; may be set to &quot;ERANGE&quot; earlyer.</span></div>
-<div class="line">            <span class="keywordflow">else</span> <span class="keywordflow">if</span> ( number == LONG_LONG_MAX || number == LONG_LONG_MIN )</div>
+<div class="line">            <span class="keywordflow">else</span> <span class="keywordflow">if</span></div>
+<div class="line">            (</div>
+<div class="line">                number == std::numeric_limits&lt;signed long long int&gt;::max()</div>
+<div class="line">                    ||</div>
+<div class="line">                number == std::numeric_limits&lt;signed long long int&gt;::min()</div>
+<div class="line">            )</div>
 <div class="line">            {</div>
 <div class="line">                <span class="keywordflow">throw</span> std::runtime_error(<span class="stringliteral">&quot;String to number conversion failed. Number exceeds type limits.&quot;</span>);</div>
 <div class="line">            }</div>
@@ -1151,7 +1158,7 @@ template&lt;typename type &gt; </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Aug 8 2014 15:21:30 for XTD by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Aug 8 2014 22:21:38 for XTD by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.1.2
 </small></address>
