@@ -29,6 +29,7 @@ The project employs the [Doxygen](http://www.doxygen.org/) documentation generat
 * Prerequisites.
   + C++11 compatible compiler supported by GYP.
   + GYP build system.
+  + gtest framework.
 * Testing library.
   + Set `XTD_HOME` environment variable to the location of this library. Home directory is one with `src`, `include`, `system` and others sub-directories
   + Set `GYP_GENERATORS` environment variable to value(s) corresponding you compiler(s). Options should be separated by a comma. Available options are `make`, `msvs`, `ninja`, `scons`, `eclipse` and others.
