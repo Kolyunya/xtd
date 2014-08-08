@@ -23,8 +23,8 @@
                         'LIBRARY_SOURCES_DIR'       :   '$(XTD_HOME)/src',
                         'LIBRARY_SCRIPTS_DIR'       :   '$(XTD_HOME)/system/gyp/scripts',
                         'DEPENDENCIES_DIR'          :   '$(XTD_HOME)/dependencies',
-                        'GTEST_HOME'                :   '<(DEPENDENCIES_DIR)/gtest',
-                        'GTEST_SOURCE_FILE'         :   '<(GTEST_HOME)/gtest-all.cc',
+                        'GTEST_INCLUDE_DIR'         :   '$(GTEST_HOME)/include',
+                        'GTEST_OBJECT_FILE'         :   '$(GTEST_HOME)/build/gtest-all.o',
                         'SCRIPTS_DIR'               :   '$(XTD_HOME)/system/gyp/scripts',
                         'CFLAGS_STANDARD'           :   [
                                                             '-std=<(UNIT_STANDARD)',        # Use c++11 standard
