@@ -22,7 +22,7 @@ Each library unit is contained in a separate directory. Each unit directory cont
   + Compile your project.
 
 ##Documentation
-The project employs the [Doxygen](http://www.doxygen.org/) documentation generator. The documentation is available in the `documentation` directory. The HTML version of the library documentation is hosted on GitHub Pages of the project [here](http://kolyunya.github.io/xtd/).
+The project employs the [Doxygen](http://www.doxygen.org/) documentation generator. The documentation is available in the `documentation` directory. The HTML version of the library documentation is hosted on GitHub Pages of the project [here](http://kolyunya.github.io/xtd/namespacextd.html).
 
 ##Testing
 
