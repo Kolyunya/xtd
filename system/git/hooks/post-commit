@@ -10,13 +10,13 @@ if [ `git rev-parse --abbrev-ref HEAD` == "master" ]; then
     git rm -rf .
 
     # Get the latest version of the site
-    git checkout master -- system/doxygen src
+    git checkout master -- system/doxygen sources
 
     # Update the documentation
     doxygen system/doxygen/Doxyfile
 
     # Remove the documentation directory
-    git rm -rf system src
+    git rm -rf system sources
 
     # Add all changes to the stage
     git add .
