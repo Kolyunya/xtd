@@ -13,6 +13,7 @@ var searchData=
   ['to_5ffloat',['to_float',['../namespacextd_1_1str.html#ae80bc523e87c11b0d108e794ffc40d09',1,'xtd::str']]],
   ['to_5fint',['to_int',['../namespacextd_1_1str.html#a82b86afc90241a9f989ebebe93774ddb',1,'xtd::str']]],
   ['to_5flong',['to_long',['../namespacextd_1_1str.html#a4bba828b70a28914977c06ca900e6d77',1,'xtd::str']]],
+  ['to_5flong_5fdouble',['to_long_double',['../namespacextd_1_1str.html#ace5b6f1d688c50a4547a6a03b7f6c9b2',1,'xtd::str']]],
   ['to_5flong_5flong',['to_long_long',['../namespacextd_1_1str.html#a46545c68ba08f752b6661f3abf4e86bc',1,'xtd::str']]],
   ['truncate_5ffile_5fcontents',['truncate_file_contents',['../namespacexstd_1_1fs.html#a119353947b14c506352a55dae89bffe1',1,'xstd::fs']]]
 ];
