@@ -18,11 +18,11 @@
 
 #include <gtest/gtest.h>
 #include <string.hpp>
-#include "to_long_long_tests.hpp"
-#include "to_long_tests.hpp"
-#include "to_int_tests.hpp"
-#include "to_double_tests.hpp"
-#include "to_float_tests.hpp"
+#include "to_long_long.hpp"
+#include "to_long.hpp"
+#include "to_int.hpp"
+#include "to_double.hpp"
+#include "to_float.hpp"
 
 TEST ( integer_1052 , converts_to_string_1052 )
 {
