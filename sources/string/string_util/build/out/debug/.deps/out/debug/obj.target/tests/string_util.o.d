@@ -1,6 +1,6 @@
-cmd_out/debug/obj.target/tests/../tests/src/string_util_tests.o := /usr/bin/g++  -I/home/kolyunya/projects/xtd/include -I/home/kolyunya/projects/gtest/include  -std=c++11 -Wall -Wextra -Werror -pedantic -pedantic-errors -O0 -g  -MMD -MF out/debug/.deps/out/debug/obj.target/tests/../tests/src/string_util_tests.o.d.raw  -c -o out/debug/obj.target/tests/../tests/src/string_util_tests.o ../tests/src/string_util_tests.cpp
-out/debug/obj.target/tests/../tests/src/string_util_tests.o: \
- ../tests/src/string_util_tests.cpp \
+cmd_out/debug/obj.target/tests/../tests/string_util.o := /usr/bin/g++  -I/home/kolyunya/projects/xtd/include -I/home/kolyunya/projects/gtest/include  -std=c++11 -Wall -Wextra -Werror -pedantic -pedantic-errors -O0 -g  -MMD -MF out/debug/.deps/out/debug/obj.target/tests/../tests/string_util.o.d.raw  -c -o out/debug/obj.target/tests/../tests/string_util.o ../tests/string_util.cpp
+out/debug/obj.target/tests/../tests/string_util.o: \
+ ../tests/string_util.cpp \
  /home/kolyunya/projects/gtest/include/gtest/gtest.h \
  /home/kolyunya/projects/gtest/include/gtest/internal/gtest-internal.h \
  /home/kolyunya/projects/gtest/include/gtest/internal/gtest-port.h \
@@ -23,10 +23,9 @@ out/debug/obj.target/tests/../tests/src/string_util_tests.o: \
  /home/kolyunya/projects/xtd/include/string/string_util.hpp \
  /home/kolyunya/projects/xtd/include/string/./../../sources/string/string_util/sources/string_util.hpp \
  /home/kolyunya/projects/xtd/include/string/./../../sources/string/string_util/sources/string_util.ipp \
- ../tests/src/to_long_long_tests.hpp ../tests/src/to_long_tests.hpp \
- ../tests/src/to_int_tests.hpp ../tests/src/to_double_tests.hpp \
- ../tests/src/to_float_tests.hpp
-../tests/src/string_util_tests.cpp:
+ ../tests/to_long_long.hpp ../tests/to_long.hpp ../tests/to_int.hpp \
+ ../tests/to_double.hpp ../tests/to_float.hpp
+../tests/string_util.cpp:
 /home/kolyunya/projects/gtest/include/gtest/gtest.h:
 /home/kolyunya/projects/gtest/include/gtest/internal/gtest-internal.h:
 /home/kolyunya/projects/gtest/include/gtest/internal/gtest-port.h:
@@ -49,8 +48,8 @@ out/debug/obj.target/tests/../tests/src/string_util_tests.o: \
 /home/kolyunya/projects/xtd/include/string/string_util.hpp:
 /home/kolyunya/projects/xtd/include/string/./../../sources/string/string_util/sources/string_util.hpp:
 /home/kolyunya/projects/xtd/include/string/./../../sources/string/string_util/sources/string_util.ipp:
-../tests/src/to_long_long_tests.hpp:
-../tests/src/to_long_tests.hpp:
-../tests/src/to_int_tests.hpp:
-../tests/src/to_double_tests.hpp:
-../tests/src/to_float_tests.hpp:
+../tests/to_long_long.hpp:
+../tests/to_long.hpp:
+../tests/to_int.hpp:
+../tests/to_double.hpp:
+../tests/to_float.hpp:
