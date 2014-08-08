@@ -123,6 +123,15 @@ namespace xtd
          *  @returns A string representation of a number.
          *  @details Converts a number represented by a `source_number` to a `std::string`.
          */
+        template <typename type>
+        std::string from ( type source );
+
+        /**
+         *  @brief Converts a number from numeric to string representation.
+         *  @param [in] source_number A numeric representation of a number.
+         *  @returns A string representation of a number.
+         *  @details Converts a number represented by a `source_number` to a `std::string`.
+         */
         inline std::string from ( signed int source_number );
 
         /**
@@ -133,6 +142,12 @@ namespace xtd
          */
         inline std::string from ( unsigned int source_number );
 
+        /**
+         *  @brief Converts a number from numeric to string representation.
+         *  @param [in] source_number A numeric representation of a number.
+         *  @returns A string representation of a number.
+         *  @details Converts a number represented by a `source_number` to a `std::string`.
+         */
         inline std::string from ( float source_number );
 
         inline std::string reverse ( const std::string& source_string );

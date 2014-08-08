@@ -39,7 +39,7 @@ namespace xtd
             //  Use "first_character_after_number" to distinguish between those cases.
             if ( number == 0 )
             {
-                char* first_character_of_string = &const_cast<char&>(source_string[0]);
+                char* first_character_of_string = const_cast<char*>(source_string.data());
                 if ( first_character_after_number == first_character_of_string )
                 {
                     throw std::runtime_error("String to number conversion failed.");
@@ -74,7 +74,7 @@ namespace xtd
             //  Use "first_character_after_number" to distinguish between those cases.
             if ( number == 0 )
             {
-                char* first_character_of_string = &const_cast<char&>(source_string[0]);
+                char* first_character_of_string = const_cast<char*>(source_string.data());
                 if ( first_character_after_number == first_character_of_string )
                 {
                     throw std::runtime_error("String to number conversion failed.");
@@ -125,7 +125,7 @@ namespace xtd
             //  Use "first_character_after_number" to distinguish between those cases.
             if ( number == 0 )
             {
-                char* first_character_of_string = &const_cast<char&>(source_string[0]);
+                char* first_character_of_string = const_cast<char*>(source_string.data());
                 if ( first_character_after_number == first_character_of_string )
                 {
                     throw std::runtime_error("String to number conversion failed.");
@@ -159,7 +159,7 @@ namespace xtd
             //  Use "first_character_after_number" to distinguish between those cases.
             if ( number == 0 )
             {
-                char* first_character_of_string = &const_cast<char&>(source_string[0]);
+                char* first_character_of_string = const_cast<char*>(source_string.data());
                 if ( first_character_after_number == first_character_of_string )
                 {
                     throw std::runtime_error("String to number conversion failed. Unknown error.");
@@ -176,30 +176,34 @@ namespace xtd
 
         }
 
+        template <typename type>
+        std::string from ( type source )
+        {
+            std::stringstream string_stream;
+            string_stream << source;
+            std::string result_string = string_stream.str();
+            return result_string;
+        }
+
         std::string from ( signed int source_number )
         {
-
             std::stringstream string_stream;
             string_stream << source_number;
-
             return string_stream.str();
         }
 
         std::string from ( unsigned int source_number )
         {
-
-            return from(static_cast<int>(source_number));
-
+            std::stringstream string_stream;
+            string_stream << source_number;
+            return string_stream.str();
         }
 
         std::string from ( float source_number )
         {
-
             std::stringstream string_stream;
             string_stream << source_number;
-
             return string_stream.str();
-
         }
 
         std::string reverse ( const std::string& source_string )

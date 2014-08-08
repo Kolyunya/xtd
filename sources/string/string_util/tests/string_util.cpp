@@ -35,6 +35,14 @@ TEST ( integer_1052 , converts_to_string_1052 )
 
 }
 
+TEST ( from , converts_long_double_123_dot_456_to_string )
+{
+    long double source_number = 123.456;
+    std::string result_string_correct = "123.456";
+    std::string result_string_actual = xtd::str::from(source_number);
+    ASSERT_EQ ( result_string_correct , result_string_actual );
+}
+
 TEST ( float_1052_655 , converts_to_string_1052_66 )
 {
 
