@@ -29,7 +29,7 @@ TEST ( integer_1052 , converts_to_string_1052 )
 
     int number = 1052;
     std::string string_correct = "1052";
-    std::string string_actual = xtd::str::number_to_string(number);
+    std::string string_actual = xtd::str::from(number);
 
     ASSERT_EQ ( string_correct , string_actual );
 
@@ -40,7 +40,7 @@ TEST ( float_1052_655 , converts_to_string_1052_66 )
 
     float number = 1052.655;
     std::string string_correct = "1052.66";
-    std::string string_actual = xtd::str::number_to_string(number);
+    std::string string_actual = xtd::str::from(number);
 
     ASSERT_EQ ( string_correct , string_actual );
 
@@ -51,7 +51,7 @@ TEST ( string_1000010001001 , splits_to_0000_000_00_by_delimiter_1 )
 
     char delimiter = '1';
     std::string string = "1000010001001";
-    xtd::str::strings strings = xtd::str::string_split(string,delimiter);
+    xtd::str::strings strings = xtd::str::split(string,delimiter);
 
     ASSERT_EQ ( strings.size() , 3u );
     ASSERT_EQ ( strings[0] , "0000" );
@@ -65,7 +65,7 @@ TEST ( string_0100001000100100 , splits_to_0_0000_000_00_00_by_delimiter_1 )
 
     char delimiter = '1';
     std::string string = "0100001000100100";
-    xtd::str::strings strings = xtd::str::string_split(string,delimiter);
+    xtd::str::strings strings = xtd::str::split(string,delimiter);
 
     ASSERT_EQ ( strings.size() , 5u );
     ASSERT_EQ ( strings[0] , "0" );
@@ -81,7 +81,7 @@ TEST ( string_01_100001_10001_1001_100 , splits_to_0_0000_000_00_00_by_delimiter
 
     std::string delimiter = "1_1";
     std::string string = "01_100001_10001_1001_100";
-    xtd::str::strings strings = xtd::str::string_split(string,delimiter);
+    xtd::str::strings strings = xtd::str::split(string,delimiter);
 
     ASSERT_EQ ( strings.size() , 5u );
     ASSERT_EQ ( strings[0] , "0" );
@@ -97,7 +97,7 @@ TEST ( string_UaaaUaaUUa , splits_to_aaa_aa_a_by_delimiter_U )
 
     char delimiter = 'U';
     std::string string = "UaaaUaaUUa";
-    xtd::str::strings strings = xtd::str::string_split(string,delimiter);
+    xtd::str::strings strings = xtd::str::split(string,delimiter);
 
     ASSERT_EQ ( strings.size() , 3u );
     ASSERT_EQ ( strings[0] , "aaa" );
@@ -111,7 +111,7 @@ TEST ( string_FOOBAR , splits_to_F_O_O_B_A_R_by_empty_delimiter )
 
     std::string delimiter = "";
     std::string string = "FOOBAR";
-    xtd::str::strings strings = xtd::str::string_split(string,delimiter);
+    xtd::str::strings strings = xtd::str::split(string,delimiter);
 
     ASSERT_EQ ( strings.size() , 6u );
     ASSERT_EQ ( strings[0] , "F" );
@@ -123,7 +123,7 @@ TEST ( string_FOOBAR , splits_to_F_O_O_B_A_R_by_empty_delimiter )
 
 }
 
-TEST ( really_long_string , causes_string_split_to_fail )
+TEST ( really_long_string , causes_split_to_fail )
 {
 
     std::string delimiter = " ";
@@ -247,7 +247,7 @@ TEST ( really_long_string , causes_string_split_to_fail )
                             0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 \
                             0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 \
                             ";
-    //xtd::str::strings strings = xtd::str::string_split(string,delimiter);
+    //xtd::str::strings strings = xtd::str::split(string,delimiter);
 
 }
 
@@ -258,7 +258,7 @@ TEST ( string_0101010100100001010 , transforms_into_5151515155155551515_after_re
     char replace_with = '5';
     std::string string = "0101010100100001010";
     std::string string_transformed_correct = "5151515155155551515";
-    std::string string_transformed_actual = xtd::str::string_replace(string,search_for,replace_with);
+    std::string string_transformed_actual = xtd::str::replace(string,search_for,replace_with);
 
     ASSERT_EQ ( string_transformed_correct , string_transformed_actual );
 
@@ -271,7 +271,7 @@ TEST ( string_0101010100100001010 , transforms_into_5151515155155551515_after_re
     const char* replace_with = "5";
     const char* string = "0101010100100001010";
     std::string string_transformed_correct = "5151515155155551515";
-    std::string string_transformed_actual = xtd::str::string_replace(string,search_for,replace_with);
+    std::string string_transformed_actual = xtd::str::replace(string,search_for,replace_with);
 
     ASSERT_EQ ( string_transformed_correct , string_transformed_actual );
 
@@ -284,7 +284,7 @@ TEST ( string_0101010100100001010 , transforms_into_5151515155155551515_after_re
     std::string replace_with = "5";
     std::string string = "0101010100100001010";
     std::string string_transformed_correct = "5151515155155551515";
-    std::string string_transformed_actual = xtd::str::string_replace(string,search_for,replace_with);
+    std::string string_transformed_actual = xtd::str::replace(string,search_for,replace_with);
 
     ASSERT_EQ ( string_transformed_correct , string_transformed_actual );
 
@@ -295,10 +295,10 @@ TEST ( string_qwertyuiop , transforms_into_poiuytrewq_after_reversing )
 
 
     std::string string = "qwertyuiop";
-    std::string string_reversed_correct = "poiuytrewq";
-    std::string string_reversed_actual = xtd::str::string_reverse(string);
+    std::string reversed_correct = "poiuytrewq";
+    std::string reversed_actual = xtd::str::reverse(string);
 
-    ASSERT_EQ ( string_reversed_correct , string_reversed_actual );
+    ASSERT_EQ ( reversed_correct , reversed_actual );
 
 }
 

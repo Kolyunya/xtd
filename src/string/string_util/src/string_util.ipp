@@ -121,25 +121,21 @@ namespace xtd
 
             double number = strtod(source_string.data(),&first_character_after_number);
 
+            //  Either error occured or the the result number is "0".
+            //  Use "first_character_after_number" to distinguish between those cases.
             if ( number == 0 )
             {
-
                 char* first_character_of_string = &const_cast<char&>(source_string[0]);
-
                 if ( first_character_after_number == first_character_of_string )
                 {
-
                     throw std::runtime_error("String to number conversion failed.");
-
                 }
-
             }
 
-            else if ( number == LONG_MAX || number == LONG_MIN )
+            //  The number exceeds type limits.
+            else if ( number == HUGE_VAL || number == -HUGE_VAL )
             {
-
                 throw std::runtime_error("String to number conversion failed. Number exceeds type limits.");
-
             }
 
             return number;
@@ -159,32 +155,28 @@ namespace xtd
 
             float number = strtof(source_string.data(),&first_character_after_number);
 
+            //  Either error occured or the the result number is "0".
+            //  Use "first_character_after_number" to distinguish between those cases.
             if ( number == 0 )
             {
-
                 char* first_character_of_string = &const_cast<char&>(source_string[0]);
-
                 if ( first_character_after_number == first_character_of_string )
                 {
-
                     throw std::runtime_error("String to number conversion failed. Unknown error.");
-
                 }
-
             }
 
-            else if ( number == LONG_MAX || number == LONG_MIN )
+            //  The number exceeds type limits.
+            else if ( number == HUGE_VAL || number == -HUGE_VAL )
             {
-
                 throw std::runtime_error("String to number conversion failed. Number exceeds type limits.");
-
             }
 
             return number;
 
         }
 
-        std::string number_to_string ( int source_number )
+        std::string from ( signed int source_number )
         {
 
             std::stringstream string_stream;
@@ -193,14 +185,14 @@ namespace xtd
             return string_stream.str();
         }
 
-        std::string number_to_string ( unsigned int source_number )
+        std::string from ( unsigned int source_number )
         {
 
-            return number_to_string(static_cast<int>(source_number));
+            return from(static_cast<int>(source_number));
 
         }
 
-        std::string number_to_string ( float source_number )
+        std::string from ( float source_number )
         {
 
             std::stringstream string_stream;
@@ -210,14 +202,14 @@ namespace xtd
 
         }
 
-        std::string string_reverse ( const std::string& source_string )
+        std::string reverse ( const std::string& source_string )
         {
 
             return std::string(source_string.rbegin(),source_string.rend());
 
         }
 
-        strings string_split ( const std::string& source_string , const std::string& delimiter )
+        strings split ( const std::string& source_string , const std::string& delimiter )
         {
 
             // Create a result vector
@@ -275,10 +267,10 @@ namespace xtd
 
                     }
 
-                    // Cut off the first fragment and the first delimiter and call the `string_split`
+                    // Cut off the first fragment and the first delimiter and call the `split`
                     // function again with `input` std::string containing the rest of the string
                     std::string string_tail = string_copy.substr(first_delimiter_position+delimiter_size,string_size-first_delimiter_position-delimiter_size);
-                    strings strings_tail = string_split(string_tail,delimiter);
+                    strings strings_tail = split(string_tail,delimiter);
 
                     // Add tail strings to result
                     result.insert(result.end(),strings_tail.begin(),strings_tail.end());
@@ -291,20 +283,20 @@ namespace xtd
 
         }
 
-        strings string_split ( const std::string& source_string , char delimiter )
+        strings split ( const std::string& source_string , char delimiter )
         {
             std::string delimiter_string = std::string(1,delimiter);
-            return string_split(source_string,delimiter_string);
+            return split(source_string,delimiter_string);
         }
 
-        strings string_split ( const char* source_string_ptr , const char* delimiter_ptr )
+        strings split ( const char* source_string_ptr , const char* delimiter_ptr )
         {
             std::string source_string = std::string(source_string_ptr);
             std::string delimiter_string = std::string(delimiter_ptr);
-            return string_split(source_string,delimiter_string);
+            return split(source_string,delimiter_string);
         }
 
-        std::string string_replace ( const std::string& source_string , const std::string& search_for , const std::string& replace_with )
+        std::string replace ( const std::string& source_string , const std::string& search_for , const std::string& replace_with )
         {
 
             size_t search_for_size = search_for.size();
@@ -328,22 +320,22 @@ namespace xtd
 
         }
 
-        std::string string_replace ( const std::string& source_string , const char search_for , const char replace_with )
+        std::string replace ( const std::string& source_string , const char search_for , const char replace_with )
         {
             std::string search_for_string = std::string(1,search_for);
             std::string replace_with_string = std::string(1,replace_with);
-            return string_replace(source_string,search_for_string,replace_with_string);
+            return replace(source_string,search_for_string,replace_with_string);
         }
 
-        std::string string_replace ( const char* source_string_ptr , const char* search_for_ptr , const char* replace_with_ptr )
+        std::string replace ( const char* source_string_ptr , const char* search_for_ptr , const char* replace_with_ptr )
         {
             std::string source_string = std::string(source_string_ptr);
             std::string search_for_string = std::string(search_for_ptr);
             std::string replace_with_string = std::string(replace_with_ptr);
-            return string_replace(source_string,search_for_string,replace_with_string);
+            return replace(source_string,search_for_string,replace_with_string);
         }
 
-        bool string_is_numeric ( const std::string& source_string )
+        bool is_numeric ( const std::string& source_string )
         {
 
             // Empty std::string is not a number
@@ -393,10 +385,10 @@ namespace xtd
 
         }
 
-        bool string_is_integer ( const std::string& source_string )
+        bool is_integer ( const std::string& source_string )
         {
-            bool source_string_is_numeric = string_is_numeric(source_string);
-            bool source_string_is_not_numeric = ! source_string_is_numeric;
+            bool source_is_numeric = is_numeric(source_string);
+            bool source_string_is_not_numeric = ! source_is_numeric;
             if ( source_string_is_not_numeric )
             {
                 return false;
@@ -411,16 +403,16 @@ namespace xtd
             return true;
         }
 
-        bool string_is_fractional ( const std::string& source_string )
+        bool is_fractional ( const std::string& source_string )
         {
-            bool source_string_is_numeric = string_is_numeric(source_string);
-            bool source_string_is_not_numeric = ! source_string_is_numeric;
+            bool source_is_numeric = is_numeric(source_string);
+            bool source_string_is_not_numeric = ! source_is_numeric;
             if ( source_string_is_not_numeric )
             {
                 return false;
             }
-            bool source_string_is_integer = string_is_integer(source_string);
-            bool source_string_is_not_integer = ! source_string_is_integer;
+            bool source_is_integer = is_integer(source_string);
+            bool source_string_is_not_integer = ! source_is_integer;
             if ( source_string_is_not_integer )
             {
                 return false;
