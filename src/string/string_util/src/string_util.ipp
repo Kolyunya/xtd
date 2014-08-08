@@ -22,6 +22,41 @@ namespace xtd
     namespace str
     {
 
+        signed long long int to_long_long ( const std::string& source_string , signed int number_base )
+        {
+
+            //  Function "strtoll" will set this pointer to point to the first character after the numeric part of the original string.
+            //  This pointer will be used in the case when "std::strtoll" will returns "0".
+            //  If this pointer will point to the first character of the original std::string this will mean that the std::string does not start
+            //  with a numeral and no conversion has been performed.
+            //  If this pointer will not point to the first character of the original std::string this will mean that the original string
+            //  does start with a numeral equal to "0" and the conersion was performed successfully.
+            char* first_character_after_number = nullptr;
+
+            signed long long int number = strtoll(source_string.data(),&first_character_after_number,number_base);
+
+            //  Either error occured or the the result number is "0".
+            //  Use "first_character_after_number" to distinguish between those cases.
+            if ( number == 0 )
+            {
+                char* first_character_of_string = &const_cast<char&>(source_string[0]);
+                if ( first_character_after_number == first_character_of_string )
+                {
+                    throw std::runtime_error("String to number conversion failed.");
+                }
+            }
+
+            //  The number either exceeds or equals the limits of "signed long int".
+            //  It is not possible do distinguish those cases because "errno" may be set to "ERANGE" earlyer.
+            else if ( number == LONG_LONG_MAX || number == LONG_LONG_MIN )
+            {
+                throw std::runtime_error("String to number conversion failed. Number exceeds type limits.");
+            }
+
+            return number;
+
+        }
+
         signed long int to_long ( const std::string& source_string , signed int number_base )
         {
 
@@ -57,23 +92,23 @@ namespace xtd
 
         }
 
-        signed int          string_to_int ( const std::string& source_string , int number_base )
+        signed int to_int ( const std::string& source_string , signed int number_base )
         {
 
-            long int number = to_long(source_string,number_base);
+            //  Try to convert the string to "signed long int"
+            signed long int number = xtd::str::to_long(source_string,number_base);
 
+            //  Check if the number exceeds the limits of "signed int"
             if ( number < INT_MIN || number > INT_MAX )
             {
-
                 throw std::runtime_error("String to number conversion failed. Number exceeds type limits.");
-
             }
 
             return number;
 
         }
 
-        double              string_to_double ( const std::string& source_string )
+        double to_double ( const std::string& source_string )
         {
 
             // Function "strtod" will set this pointer to point to the first character after the numeric part of the original string.
@@ -111,7 +146,7 @@ namespace xtd
 
         }
 
-        float               string_to_float ( const std::string& source_string )
+        float to_float ( const std::string& source_string )
         {
 
             // Function "strtof" will set this pointer to point to the first character after the numeric part of the original string.
@@ -149,7 +184,7 @@ namespace xtd
 
         }
 
-        std::string         number_to_string ( int source_number )
+        std::string number_to_string ( int source_number )
         {
 
             std::stringstream string_stream;
@@ -158,14 +193,14 @@ namespace xtd
             return string_stream.str();
         }
 
-        std::string         number_to_string ( unsigned int source_number )
+        std::string number_to_string ( unsigned int source_number )
         {
 
             return number_to_string(static_cast<int>(source_number));
 
         }
 
-        std::string         number_to_string ( float source_number )
+        std::string number_to_string ( float source_number )
         {
 
             std::stringstream string_stream;
@@ -175,14 +210,14 @@ namespace xtd
 
         }
 
-        std::string         string_reverse ( const std::string& source_string )
+        std::string string_reverse ( const std::string& source_string )
         {
 
             return std::string(source_string.rbegin(),source_string.rend());
 
         }
 
-        strings             string_split ( const std::string& source_string , const std::string& delimiter )
+        strings string_split ( const std::string& source_string , const std::string& delimiter )
         {
 
             // Create a result vector
@@ -256,20 +291,20 @@ namespace xtd
 
         }
 
-        strings             string_split ( const std::string& source_string , char delimiter )
+        strings string_split ( const std::string& source_string , char delimiter )
         {
             std::string delimiter_string = std::string(1,delimiter);
             return string_split(source_string,delimiter_string);
         }
 
-        strings             string_split ( const char* source_string_ptr , const char* delimiter_ptr )
+        strings string_split ( const char* source_string_ptr , const char* delimiter_ptr )
         {
             std::string source_string = std::string(source_string_ptr);
             std::string delimiter_string = std::string(delimiter_ptr);
             return string_split(source_string,delimiter_string);
         }
 
-        std::string         string_replace ( const std::string& source_string , const std::string& search_for , const std::string& replace_with )
+        std::string string_replace ( const std::string& source_string , const std::string& search_for , const std::string& replace_with )
         {
 
             size_t search_for_size = search_for.size();
@@ -293,14 +328,14 @@ namespace xtd
 
         }
 
-        std::string         string_replace ( const std::string& source_string , const char search_for , const char replace_with )
+        std::string string_replace ( const std::string& source_string , const char search_for , const char replace_with )
         {
             std::string search_for_string = std::string(1,search_for);
             std::string replace_with_string = std::string(1,replace_with);
             return string_replace(source_string,search_for_string,replace_with_string);
         }
 
-        std::string         string_replace ( const char* source_string_ptr , const char* search_for_ptr , const char* replace_with_ptr )
+        std::string string_replace ( const char* source_string_ptr , const char* search_for_ptr , const char* replace_with_ptr )
         {
             std::string source_string = std::string(source_string_ptr);
             std::string search_for_string = std::string(search_for_ptr);
@@ -308,7 +343,7 @@ namespace xtd
             return string_replace(source_string,search_for_string,replace_with_string);
         }
 
-        bool                string_is_numeric ( const std::string& source_string )
+        bool string_is_numeric ( const std::string& source_string )
         {
 
             // Empty std::string is not a number
@@ -358,7 +393,7 @@ namespace xtd
 
         }
 
-        bool                string_is_integer ( const std::string& source_string )
+        bool string_is_integer ( const std::string& source_string )
         {
             bool source_string_is_numeric = string_is_numeric(source_string);
             bool source_string_is_not_numeric = ! source_string_is_numeric;
@@ -376,7 +411,7 @@ namespace xtd
             return true;
         }
 
-        bool                string_is_fractional ( const std::string& source_string )
+        bool string_is_fractional ( const std::string& source_string )
         {
             bool source_string_is_numeric = string_is_numeric(source_string);
             bool source_string_is_not_numeric = ! source_string_is_numeric;

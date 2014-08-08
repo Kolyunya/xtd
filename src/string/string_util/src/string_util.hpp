@@ -19,12 +19,12 @@
 #ifndef _XTD_STRING_UTIL_HPP_
 #define _XTD_STRING_UTIL_HPP_
 
-#include <stdexcept>    //  std::runtime_error
-#include <algorithm>    //  std::for_each
-#include <vector>       //  std::vector
-#include <sstream>      //  std::string, std::stringstream
-#include <climits>      //  LONG_MIN, LONG_MAX, INT_MIN, INT_MAX
-#include <cstdlib>      //  std::strtol, std::strtof
+#include <stdexcept>
+#include <algorithm>
+#include <vector>
+#include <sstream>
+#include <climits>
+#include <cstdlib>
 
 /**
  *  @namespace xtd
@@ -53,27 +53,43 @@ namespace xtd
          *  @returns A numeric representation of a number.
          *  @exception_safety Strong exception safety.
          *  @throws std::runtime_error Thrown if `source_string` does not represent a valid_number.
-         *                             Also thrown if `source_string` represents a number which is out of range of `signed long int`.
-         *  @details Converts a number represented by a `source_string` to a `long int`.
+         *                             Also thrown if `source_string` represents a number which exceeds the range of `signed long long int`.
+         *  @details Converts a number represented by a `source_string` to a `signed long long int`.
          *           Treats a `source_string` as a numeral with a base of `number_base`.
-         *  @note This function is a wrapper of a [strtol](http://en.cppreference.com/w/cpp/string/byte/strtol) function.
+         *  @note This function is a wrapper of a [strtoll](http://en.cppreference.com/w/cpp/string/byte/strtoll) function
+         *        and accepts exact same source string formats.
          */
-        inline signed long int to_long ( const std::string& source_string , signed int number_base = 0 );
+        inline signed long long int to_long_long ( const std::string& source_string , signed int number_base = 0 );
 
         /**
          *  @brief Converts a number from string to numeric representation.
-         *
          *  @param [in] source_string A string representation of a number.
          *  @param [in] number_base A base of a number.
          *  @returns A numeric representation of a number.
          *  @exception_safety Strong exception safety.
          *  @throws std::runtime_error Thrown if `source_string` does not represent a valid_number.
-         *                             Also thrown if `source_string` represents a number which is out of range of `signed int`.
-         *
-         *  @details Converts a number represented by a `source_string` to a `long int`.
+         *                             Also thrown if `source_string` represents a number which exceeds the range of `signed long int`.
+         *  @details Converts a number represented by a `source_string` to a `signed long int`.
          *           Treats a `source_string` as a numeral with a base of `number_base`.
+         *  @note This function is a wrapper of a [strtol](http://en.cppreference.com/w/cpp/string/byte/strtol) function
+         *        and accepts exact same source string formats.
          */
-        inline signed int           string_to_int ( const std::string& source_string , int number_base = 10 );
+        inline signed long int to_long ( const std::string& source_string , signed int number_base = 0 );
+
+        /**
+         *  @brief Converts a number from string to numeric representation.
+         *  @param [in] source_string A string representation of a number.
+         *  @param [in] number_base A base of a number.
+         *  @returns A numeric representation of a number.
+         *  @exception_safety Strong exception safety.
+         *  @throws std::runtime_error Thrown if `source_string` does not represent a valid_number.
+         *                             Also thrown if `source_string` represents a number which exceeds the range of `signed int`.
+         *  @details Converts a number represented by a `source_string` to a `signed int`.
+         *           Treats a `source_string` as a numeral with a base of `number_base`.
+         *  @note This function is a wrapper of a [strtol](http://en.cppreference.com/w/cpp/string/byte/strtol) function
+         *        and accepts exact same source string formats.
+         */
+        inline signed int to_int ( const std::string& source_string , signed int number_base = 0 );
 
         /**
          *  @brief Converts a number from string to numeric representation.
@@ -86,7 +102,7 @@ namespace xtd
          *
          *  @details Converts a number represented by a `source_string` to a `long int`.
          */
-        inline double               string_to_double ( const std::string& source_string );
+        inline double to_double ( const std::string& source_string );
 
         /**
          *  @brief Converts a number from string to numeric representation.
@@ -99,7 +115,7 @@ namespace xtd
          *
          *  @details Converts a number represented by a `source_string` to a `long int`.
          */
-        inline float                string_to_float ( const std::string& source_string );
+        inline float to_float ( const std::string& source_string );
 
         /**
          *  @brief Converts a number from numeric to string representation.
@@ -109,7 +125,7 @@ namespace xtd
          *
          *  @details Converts a number represented by a `source_number` to a `std::string`.
          */
-        inline std::string          number_to_string ( int source_number );
+        inline std::string number_to_string ( int source_number );
 
         /**
          *  @brief Converts a number from numeric to string representation.
@@ -119,35 +135,35 @@ namespace xtd
          *
          *  @details Converts a number represented by a `source_number` to a `std::string`.
          */
-        inline std::string          number_to_string ( unsigned int source_number );
+        inline std::string number_to_string ( unsigned int source_number );
 
-        inline std::string          number_to_string ( float source_number );
+        inline std::string number_to_string ( float source_number );
 
-        inline std::string          string_reverse ( const std::string& source_string );
+        inline std::string string_reverse ( const std::string& source_string );
 
-        inline strings              string_split ( const std::string& source_string , const std::string& delimiter );
+        inline strings string_split ( const std::string& source_string , const std::string& delimiter );
 
-        inline strings              string_split ( const std::string& source_string , char delimiter );
+        inline strings string_split ( const std::string& source_string , char delimiter );
 
-        inline strings              string_split ( const char* source_string_ptr , const char* delimiter_ptr );
+        inline strings string_split ( const char* source_string_ptr , const char* delimiter_ptr );
 
-        inline std::string          string_replace ( const std::string& source_string , const std::string& search_for , const std::string& replace_with );
+        inline std::string string_replace ( const std::string& source_string , const std::string& search_for , const std::string& replace_with );
 
-        inline std::string          string_replace ( const std::string& source_string , char search_for , char replace_with );
+        inline std::string string_replace ( const std::string& source_string , char search_for , char replace_with );
 
-        inline std::string          string_replace ( const char* source_string_ptr , const char* search_for_ptr , const char* replace_with_ptr );
+        inline std::string string_replace ( const char* source_string_ptr , const char* search_for_ptr , const char* replace_with_ptr );
 
-        inline bool                 string_is_numeric ( const std::string& source_string );
+        inline bool string_is_numeric ( const std::string& source_string );
 
-        inline bool                 string_is_integer ( const std::string& source_string );
+        inline bool string_is_integer ( const std::string& source_string );
 
-        inline bool                 string_is_fractional ( const std::string& source_string );
+        inline bool string_is_fractional ( const std::string& source_string );
 
     }
 
 }
 
-//  Include implementation file
+//  Include an implementation file
 #include "string_util.ipp"
 
 #endif  //  _XTD_STRING_UTIL_HPP_
