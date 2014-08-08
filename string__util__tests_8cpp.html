@@ -109,7 +109,7 @@ Functions</h2></td></tr>
 <tr class="memitem:acec0d1d42aaebd909cc8fcf366e76400"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="string__util__tests_8cpp.html#acec0d1d42aaebd909cc8fcf366e76400">TEST</a> (string_01_100001_10001_1001_100, splits_to_0_0000_000_00_00_by_delimiter_1_1)</td></tr>
 <tr class="memitem:a5fb6f642fa220a11611f71b7314d9cc1"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="string__util__tests_8cpp.html#a5fb6f642fa220a11611f71b7314d9cc1">TEST</a> (string_UaaaUaaUUa, splits_to_aaa_aa_a_by_delimiter_U)</td></tr>
 <tr class="memitem:ae660aa6d8ef39b4d93236bb43aa3b1b8"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="string__util__tests_8cpp.html#ae660aa6d8ef39b4d93236bb43aa3b1b8">TEST</a> (string_FOOBAR, splits_to_F_O_O_B_A_R_by_empty_delimiter)</td></tr>
-<tr class="memitem:a59396cade1ed8996963bf4110f6c435c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="string__util__tests_8cpp.html#a59396cade1ed8996963bf4110f6c435c">TEST</a> (really_long_string, causes_string_split_to_fail)</td></tr>
+<tr class="memitem:a3da314647e7ae50109683e3a22c19d5f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="string__util__tests_8cpp.html#a3da314647e7ae50109683e3a22c19d5f">TEST</a> (really_long_string, causes_split_to_fail)</td></tr>
 <tr class="memitem:ab24ee996f3fcd24abe01fee8b48b1668"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="string__util__tests_8cpp.html#ab24ee996f3fcd24abe01fee8b48b1668">TEST</a> (string_0101010100100001010, transforms_into_5151515155155551515_after_replacing_0_with_5_000)</td></tr>
 <tr class="memitem:a08c5c6aee6b53cb9f8b4821fcfd94052"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="string__util__tests_8cpp.html#a08c5c6aee6b53cb9f8b4821fcfd94052">TEST</a> (string_0101010100100001010, transforms_into_5151515155155551515_after_replacing_0_with_5_001)</td></tr>
 <tr class="memitem:ae905cff001983b984303a95f3cf3f32a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="string__util__tests_8cpp.html#ae905cff001983b984303a95f3cf3f32a">TEST</a> (string_0101010100100001010, transforms_into_5151515155155551515_after_replacing_0_with_5_002)</td></tr>
@@ -177,12 +177,12 @@ Functions</h2></td></tr>
 
 <p>Definition at line <a class="el" href="string__util__tests_8cpp_source.html#l00027">27</a> of file <a class="el" href="string__util__tests_8cpp_source.html">string_util_tests.cpp</a>.</p>
 
-<p>References <a class="el" href="string__util_8ipp_source.html#l00187">xtd::str::number_to_string()</a>.</p>
+<p>References <a class="el" href="string__util_8ipp_source.html#l00179">xtd::str::from()</a>.</p>
 <div class="fragment"><div class="line">{</div>
 <div class="line"></div>
 <div class="line">    <span class="keywordtype">int</span> number = 1052;</div>
 <div class="line">    std::string string_correct = <span class="stringliteral">&quot;1052&quot;</span>;</div>
-<div class="line">    std::string string_actual = <a class="code" href="namespacextd_1_1str.html#a84c0f8285134f075fde7fbb91ee174ef" title="Converts a number from numeric to string representation.">xtd::str::number_to_string</a>(number);</div>
+<div class="line">    std::string string_actual = <a class="code" href="namespacextd_1_1str.html#ae0aeb889864ad86ba2f849f81eea037f" title="Converts a number from numeric to string representation.">xtd::str::from</a>(number);</div>
 <div class="line"></div>
 <div class="line">    ASSERT_EQ ( string_correct , string_actual );</div>
 <div class="line"></div>
@@ -216,12 +216,12 @@ Functions</h2></td></tr>
 
 <p>Definition at line <a class="el" href="string__util__tests_8cpp_source.html#l00038">38</a> of file <a class="el" href="string__util__tests_8cpp_source.html">string_util_tests.cpp</a>.</p>
 
-<p>References <a class="el" href="string__util_8ipp_source.html#l00187">xtd::str::number_to_string()</a>.</p>
+<p>References <a class="el" href="string__util_8ipp_source.html#l00179">xtd::str::from()</a>.</p>
 <div class="fragment"><div class="line">{</div>
 <div class="line"></div>
 <div class="line">    <span class="keywordtype">float</span> number = 1052.655;</div>
 <div class="line">    std::string string_correct = <span class="stringliteral">&quot;1052.66&quot;</span>;</div>
-<div class="line">    std::string string_actual = <a class="code" href="namespacextd_1_1str.html#a84c0f8285134f075fde7fbb91ee174ef" title="Converts a number from numeric to string representation.">xtd::str::number_to_string</a>(number);</div>
+<div class="line">    std::string string_actual = <a class="code" href="namespacextd_1_1str.html#ae0aeb889864ad86ba2f849f81eea037f" title="Converts a number from numeric to string representation.">xtd::str::from</a>(number);</div>
 <div class="line"></div>
 <div class="line">    ASSERT_EQ ( string_correct , string_actual );</div>
 <div class="line"></div>
@@ -255,12 +255,12 @@ Functions</h2></td></tr>
 
 <p>Definition at line <a class="el" href="string__util__tests_8cpp_source.html#l00049">49</a> of file <a class="el" href="string__util__tests_8cpp_source.html">string_util_tests.cpp</a>.</p>
 
-<p>References <a class="el" href="string__util_8ipp_source.html#l00220">xtd::str::string_split()</a>.</p>
+<p>References <a class="el" href="string__util_8ipp_source.html#l00212">xtd::str::split()</a>.</p>
 <div class="fragment"><div class="line">{</div>
 <div class="line"></div>
 <div class="line">    <span class="keywordtype">char</span> delimiter = <span class="charliteral">&#39;1&#39;</span>;</div>
 <div class="line">    std::string <span class="keywordtype">string</span> = <span class="stringliteral">&quot;1000010001001&quot;</span>;</div>
-<div class="line">    xtd::str::strings strings = <a class="code" href="namespacextd_1_1str.html#a94ab05421170b46d98baffd7fbd04ae5">xtd::str::string_split</a>(<span class="keywordtype">string</span>,delimiter);</div>
+<div class="line">    xtd::str::strings strings = <a class="code" href="namespacextd_1_1str.html#a6622349d5ca5c31b72990c30eaf0b587">xtd::str::split</a>(<span class="keywordtype">string</span>,delimiter);</div>
 <div class="line"></div>
 <div class="line">    ASSERT_EQ ( strings.size() , 3u );</div>
 <div class="line">    ASSERT_EQ ( strings[0] , <span class="stringliteral">&quot;0000&quot;</span> );</div>
@@ -297,12 +297,12 @@ Functions</h2></td></tr>
 
 <p>Definition at line <a class="el" href="string__util__tests_8cpp_source.html#l00063">63</a> of file <a class="el" href="string__util__tests_8cpp_source.html">string_util_tests.cpp</a>.</p>
 
-<p>References <a class="el" href="string__util_8ipp_source.html#l00220">xtd::str::string_split()</a>.</p>
+<p>References <a class="el" href="string__util_8ipp_source.html#l00212">xtd::str::split()</a>.</p>
 <div class="fragment"><div class="line">{</div>
 <div class="line"></div>
 <div class="line">    <span class="keywordtype">char</span> delimiter = <span class="charliteral">&#39;1&#39;</span>;</div>
 <div class="line">    std::string <span class="keywordtype">string</span> = <span class="stringliteral">&quot;0100001000100100&quot;</span>;</div>
-<div class="line">    xtd::str::strings strings = <a class="code" href="namespacextd_1_1str.html#a94ab05421170b46d98baffd7fbd04ae5">xtd::str::string_split</a>(<span class="keywordtype">string</span>,delimiter);</div>
+<div class="line">    xtd::str::strings strings = <a class="code" href="namespacextd_1_1str.html#a6622349d5ca5c31b72990c30eaf0b587">xtd::str::split</a>(<span class="keywordtype">string</span>,delimiter);</div>
 <div class="line"></div>
 <div class="line">    ASSERT_EQ ( strings.size() , 5u );</div>
 <div class="line">    ASSERT_EQ ( strings[0] , <span class="stringliteral">&quot;0&quot;</span> );</div>
@@ -341,12 +341,12 @@ Functions</h2></td></tr>
 
 <p>Definition at line <a class="el" href="string__util__tests_8cpp_source.html#l00079">79</a> of file <a class="el" href="string__util__tests_8cpp_source.html">string_util_tests.cpp</a>.</p>
 
-<p>References <a class="el" href="string__util_8ipp_source.html#l00220">xtd::str::string_split()</a>.</p>
+<p>References <a class="el" href="string__util_8ipp_source.html#l00212">xtd::str::split()</a>.</p>
 <div class="fragment"><div class="line">{</div>
 <div class="line"></div>
 <div class="line">    std::string delimiter = <span class="stringliteral">&quot;1_1&quot;</span>;</div>
 <div class="line">    std::string <span class="keywordtype">string</span> = <span class="stringliteral">&quot;01_100001_10001_1001_100&quot;</span>;</div>
-<div class="line">    xtd::str::strings strings = <a class="code" href="namespacextd_1_1str.html#a94ab05421170b46d98baffd7fbd04ae5">xtd::str::string_split</a>(<span class="keywordtype">string</span>,delimiter);</div>
+<div class="line">    xtd::str::strings strings = <a class="code" href="namespacextd_1_1str.html#a6622349d5ca5c31b72990c30eaf0b587">xtd::str::split</a>(<span class="keywordtype">string</span>,delimiter);</div>
 <div class="line"></div>
 <div class="line">    ASSERT_EQ ( strings.size() , 5u );</div>
 <div class="line">    ASSERT_EQ ( strings[0] , <span class="stringliteral">&quot;0&quot;</span> );</div>
@@ -385,12 +385,12 @@ Functions</h2></td></tr>
 
 <p>Definition at line <a class="el" href="string__util__tests_8cpp_source.html#l00095">95</a> of file <a class="el" href="string__util__tests_8cpp_source.html">string_util_tests.cpp</a>.</p>
 
-<p>References <a class="el" href="string__util_8ipp_source.html#l00220">xtd::str::string_split()</a>.</p>
+<p>References <a class="el" href="string__util_8ipp_source.html#l00212">xtd::str::split()</a>.</p>
 <div class="fragment"><div class="line">{</div>
 <div class="line"></div>
 <div class="line">    <span class="keywordtype">char</span> delimiter = <span class="charliteral">&#39;U&#39;</span>;</div>
 <div class="line">    std::string <span class="keywordtype">string</span> = <span class="stringliteral">&quot;UaaaUaaUUa&quot;</span>;</div>
-<div class="line">    xtd::str::strings strings = <a class="code" href="namespacextd_1_1str.html#a94ab05421170b46d98baffd7fbd04ae5">xtd::str::string_split</a>(<span class="keywordtype">string</span>,delimiter);</div>
+<div class="line">    xtd::str::strings strings = <a class="code" href="namespacextd_1_1str.html#a6622349d5ca5c31b72990c30eaf0b587">xtd::str::split</a>(<span class="keywordtype">string</span>,delimiter);</div>
 <div class="line"></div>
 <div class="line">    ASSERT_EQ ( strings.size() , 3u );</div>
 <div class="line">    ASSERT_EQ ( strings[0] , <span class="stringliteral">&quot;aaa&quot;</span> );</div>
@@ -427,12 +427,12 @@ Functions</h2></td></tr>
 
 <p>Definition at line <a class="el" href="string__util__tests_8cpp_source.html#l00109">109</a> of file <a class="el" href="string__util__tests_8cpp_source.html">string_util_tests.cpp</a>.</p>
 
-<p>References <a class="el" href="string__util_8ipp_source.html#l00220">xtd::str::string_split()</a>.</p>
+<p>References <a class="el" href="string__util_8ipp_source.html#l00212">xtd::str::split()</a>.</p>
 <div class="fragment"><div class="line">{</div>
 <div class="line"></div>
 <div class="line">    std::string delimiter = <span class="stringliteral">&quot;&quot;</span>;</div>
 <div class="line">    std::string <span class="keywordtype">string</span> = <span class="stringliteral">&quot;FOOBAR&quot;</span>;</div>
-<div class="line">    xtd::str::strings strings = <a class="code" href="namespacextd_1_1str.html#a94ab05421170b46d98baffd7fbd04ae5">xtd::str::string_split</a>(<span class="keywordtype">string</span>,delimiter);</div>
+<div class="line">    xtd::str::strings strings = <a class="code" href="namespacextd_1_1str.html#a6622349d5ca5c31b72990c30eaf0b587">xtd::str::split</a>(<span class="keywordtype">string</span>,delimiter);</div>
 <div class="line"></div>
 <div class="line">    ASSERT_EQ ( strings.size() , 6u );</div>
 <div class="line">    ASSERT_EQ ( strings[0] , <span class="stringliteral">&quot;F&quot;</span> );</div>
@@ -446,7 +446,7 @@ Functions</h2></td></tr>
 </div><!-- fragment -->
 </div>
 </div>
-<a class="anchor" id="a59396cade1ed8996963bf4110f6c435c"></a>
+<a class="anchor" id="a3da314647e7ae50109683e3a22c19d5f"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -459,7 +459,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">causes_string_split_to_fail&#160;</td>
+          <td class="paramtype">causes_split_to_fail&#160;</td>
           <td class="paramname">&#160;</td>
         </tr>
         <tr>
@@ -594,7 +594,7 @@ Functions</h2></td></tr>
 <div class="line"><span class="stringliteral">                            0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 \</span></div>
 <div class="line"><span class="stringliteral">                            0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 \</span></div>
 <div class="line"><span class="stringliteral">                            &quot;</span>;</div>
-<div class="line">    <span class="comment">//xtd::str::strings strings = xtd::str::string_split(string,delimiter);</span></div>
+<div class="line">    <span class="comment">//xtd::str::strings strings = xtd::str::split(string,delimiter);</span></div>
 <div class="line"></div>
 <div class="line">}</div>
 </div><!-- fragment -->
@@ -626,14 +626,14 @@ Functions</h2></td></tr>
 
 <p>Definition at line <a class="el" href="string__util__tests_8cpp_source.html#l00254">254</a> of file <a class="el" href="string__util__tests_8cpp_source.html">string_util_tests.cpp</a>.</p>
 
-<p>References <a class="el" href="string__util_8ipp_source.html#l00307">xtd::str::string_replace()</a>.</p>
+<p>References <a class="el" href="string__util_8ipp_source.html#l00299">xtd::str::replace()</a>.</p>
 <div class="fragment"><div class="line">{</div>
 <div class="line"></div>
 <div class="line">    <span class="keywordtype">char</span> search_for = <span class="charliteral">&#39;0&#39;</span>;</div>
 <div class="line">    <span class="keywordtype">char</span> replace_with = <span class="charliteral">&#39;5&#39;</span>;</div>
 <div class="line">    std::string <span class="keywordtype">string</span> = <span class="stringliteral">&quot;0101010100100001010&quot;</span>;</div>
 <div class="line">    std::string string_transformed_correct = <span class="stringliteral">&quot;5151515155155551515&quot;</span>;</div>
-<div class="line">    std::string string_transformed_actual = <a class="code" href="namespacextd_1_1str.html#a73aeee14b743df341c1b4a66199aa2c2">xtd::str::string_replace</a>(<span class="keywordtype">string</span>,search_for,replace_with);</div>
+<div class="line">    std::string string_transformed_actual = <a class="code" href="namespacextd_1_1str.html#a19a7b8aa4523c51af4b1ea70354b4d28">xtd::str::replace</a>(<span class="keywordtype">string</span>,search_for,replace_with);</div>
 <div class="line"></div>
 <div class="line">    ASSERT_EQ ( string_transformed_correct , string_transformed_actual );</div>
 <div class="line"></div>
@@ -667,14 +667,14 @@ Functions</h2></td></tr>
 
 <p>Definition at line <a class="el" href="string__util__tests_8cpp_source.html#l00267">267</a> of file <a class="el" href="string__util__tests_8cpp_source.html">string_util_tests.cpp</a>.</p>
 
-<p>References <a class="el" href="string__util_8ipp_source.html#l00307">xtd::str::string_replace()</a>.</p>
+<p>References <a class="el" href="string__util_8ipp_source.html#l00299">xtd::str::replace()</a>.</p>
 <div class="fragment"><div class="line">{</div>
 <div class="line"></div>
 <div class="line">    <span class="keyword">const</span> <span class="keywordtype">char</span>* search_for = <span class="stringliteral">&quot;0&quot;</span>;</div>
 <div class="line">    <span class="keyword">const</span> <span class="keywordtype">char</span>* replace_with = <span class="stringliteral">&quot;5&quot;</span>;</div>
 <div class="line">    <span class="keyword">const</span> <span class="keywordtype">char</span>* <span class="keywordtype">string</span> = <span class="stringliteral">&quot;0101010100100001010&quot;</span>;</div>
 <div class="line">    std::string string_transformed_correct = <span class="stringliteral">&quot;5151515155155551515&quot;</span>;</div>
-<div class="line">    std::string string_transformed_actual = <a class="code" href="namespacextd_1_1str.html#a73aeee14b743df341c1b4a66199aa2c2">xtd::str::string_replace</a>(<span class="keywordtype">string</span>,search_for,replace_with);</div>
+<div class="line">    std::string string_transformed_actual = <a class="code" href="namespacextd_1_1str.html#a19a7b8aa4523c51af4b1ea70354b4d28">xtd::str::replace</a>(<span class="keywordtype">string</span>,search_for,replace_with);</div>
 <div class="line"></div>
 <div class="line">    ASSERT_EQ ( string_transformed_correct , string_transformed_actual );</div>
 <div class="line"></div>
@@ -708,14 +708,14 @@ Functions</h2></td></tr>
 
 <p>Definition at line <a class="el" href="string__util__tests_8cpp_source.html#l00280">280</a> of file <a class="el" href="string__util__tests_8cpp_source.html">string_util_tests.cpp</a>.</p>
 
-<p>References <a class="el" href="string__util_8ipp_source.html#l00307">xtd::str::string_replace()</a>.</p>
+<p>References <a class="el" href="string__util_8ipp_source.html#l00299">xtd::str::replace()</a>.</p>
 <div class="fragment"><div class="line">{</div>
 <div class="line"></div>
 <div class="line">    std::string search_for = <span class="stringliteral">&quot;0&quot;</span>;</div>
 <div class="line">    std::string replace_with = <span class="stringliteral">&quot;5&quot;</span>;</div>
 <div class="line">    std::string <span class="keywordtype">string</span> = <span class="stringliteral">&quot;0101010100100001010&quot;</span>;</div>
 <div class="line">    std::string string_transformed_correct = <span class="stringliteral">&quot;5151515155155551515&quot;</span>;</div>
-<div class="line">    std::string string_transformed_actual = <a class="code" href="namespacextd_1_1str.html#a73aeee14b743df341c1b4a66199aa2c2">xtd::str::string_replace</a>(<span class="keywordtype">string</span>,search_for,replace_with);</div>
+<div class="line">    std::string string_transformed_actual = <a class="code" href="namespacextd_1_1str.html#a19a7b8aa4523c51af4b1ea70354b4d28">xtd::str::replace</a>(<span class="keywordtype">string</span>,search_for,replace_with);</div>
 <div class="line"></div>
 <div class="line">    ASSERT_EQ ( string_transformed_correct , string_transformed_actual );</div>
 <div class="line"></div>
@@ -749,15 +749,15 @@ Functions</h2></td></tr>
 
 <p>Definition at line <a class="el" href="string__util__tests_8cpp_source.html#l00293">293</a> of file <a class="el" href="string__util__tests_8cpp_source.html">string_util_tests.cpp</a>.</p>
 
-<p>References <a class="el" href="string__util_8ipp_source.html#l00213">xtd::str::string_reverse()</a>.</p>
+<p>References <a class="el" href="string__util_8ipp_source.html#l00205">xtd::str::reverse()</a>.</p>
 <div class="fragment"><div class="line">{</div>
 <div class="line"></div>
 <div class="line"></div>
 <div class="line">    std::string <span class="keywordtype">string</span> = <span class="stringliteral">&quot;qwertyuiop&quot;</span>;</div>
-<div class="line">    std::string string_reversed_correct = <span class="stringliteral">&quot;poiuytrewq&quot;</span>;</div>
-<div class="line">    std::string string_reversed_actual = <a class="code" href="namespacextd_1_1str.html#a0e5d3ce0842d8c4a0b42ec6bba6c5b00">xtd::str::string_reverse</a>(<span class="keywordtype">string</span>);</div>
+<div class="line">    std::string reversed_correct = <span class="stringliteral">&quot;poiuytrewq&quot;</span>;</div>
+<div class="line">    std::string reversed_actual = <a class="code" href="namespacextd_1_1str.html#afbf12c7921d111a0601de3d1f206850e">xtd::str::reverse</a>(<span class="keywordtype">string</span>);</div>
 <div class="line"></div>
-<div class="line">    ASSERT_EQ ( string_reversed_correct , string_reversed_actual );</div>
+<div class="line">    ASSERT_EQ ( reversed_correct , reversed_actual );</div>
 <div class="line"></div>
 <div class="line">}</div>
 </div><!-- fragment -->
@@ -766,7 +766,7 @@ Functions</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Aug 8 2014 10:50:23 for XTD by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Aug 8 2014 11:07:26 for XTD by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.1.2
 </small></address>
