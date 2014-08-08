@@ -1,6 +1,6 @@
-#ifndef _INCLUDE_STRING_
-#define _INCLUDE_STRING_
+#ifndef _XTD_INCLUDE_STRING_
+#define _XTD_INCLUDE_STRING_
 
 #include "string/string_util.hpp"
 
-#endif // _INCLUDE_STRING_
+#endif  //  _XTD_INCLUDE_STRING_

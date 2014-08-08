@@ -1,6 +1,6 @@
-#ifndef _INCLUDE_STRING_UTIL_HPP_
-#define _INCLUDE_STRING_UTIL_HPP_
+#ifndef _XTD_INCLUDE_STRING_UTIL_HPP_
+#define _XTD_INCLUDE_STRING_UTIL_HPP_
 
-#include "./../../src/string/string_util/src/string_util.hpp"
+#include "./../../sources/string/string_util/sources/string_util.hpp"
 
-#endif // _INCLUDE_STRING_UTIL_HPP_
+#endif  //  _XTD_INCLUDE_STRING_UTIL_HPP_
