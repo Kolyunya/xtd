@@ -21,6 +21,7 @@
             '-Werror',
             '-pedantic',
             '-pedantic-errors',
+            '-Wno-unused-variable',
         ],
         'CFLAGS_DEBUG':
         [
