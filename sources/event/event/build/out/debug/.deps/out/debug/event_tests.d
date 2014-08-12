@@ -1,0 +1,1 @@
+cmd_out/debug/event_tests := flock out/debug/linker.lock g++ -lpthread  -o out/debug/event_tests -Wl,--start-group out/debug/obj.target/event_tests/../tests/sources/event.o /home/kolyunya/projects/gtest/build/gtest-all.o out/debug/obj.target/libevent.a -Wl,--end-group 

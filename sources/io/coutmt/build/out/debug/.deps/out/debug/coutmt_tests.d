@@ -1,0 +1,1 @@
+cmd_out/debug/coutmt_tests := flock out/debug/linker.lock g++ -lpthread  -o out/debug/coutmt_tests -Wl,--start-group out/debug/obj.target/coutmt_tests/../tests/sources/coutmt.o /home/kolyunya/projects/gtest/build/gtest-all.o out/debug/obj.target/libcoutmt.a -Wl,--end-group 
