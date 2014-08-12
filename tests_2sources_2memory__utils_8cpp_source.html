@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<title>XTD: sources/memory/memory_utils/tests/memory_utils.cpp Source File</title>
+<title>XTD: sources/memory/memory_utils/tests/sources/memory_utils.cpp Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -79,7 +79,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_08d237fc27d4ecd563f71c5d52f2fecc.html">sources</a></li><li class="navelem"><a class="el" href="dir_0fd26679842495c3b6f31aec759f9595.html">memory</a></li><li class="navelem"><a class="el" href="dir_9c3ce82ecae48181cb7136dcba32b97a.html">memory_utils</a></li><li class="navelem"><a class="el" href="dir_6e99d5ddb09ab2de6254eebf61ef1ba0.html">tests</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_08d237fc27d4ecd563f71c5d52f2fecc.html">sources</a></li><li class="navelem"><a class="el" href="dir_0fd26679842495c3b6f31aec759f9595.html">memory</a></li><li class="navelem"><a class="el" href="dir_9c3ce82ecae48181cb7136dcba32b97a.html">memory_utils</a></li><li class="navelem"><a class="el" href="dir_6e99d5ddb09ab2de6254eebf61ef1ba0.html">tests</a></li><li class="navelem"><a class="el" href="dir_96c4b85598758d2198d47a69c9d41955.html">sources</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -87,21 +87,21 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">memory_utils.cpp</div>  </div>
 </div><!--header-->
 <div class="contents">
-<a href="tests_2memory__utils_8cpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#include &lt;gtest/gtest.h&gt;</span></div>
+<a href="tests_2sources_2memory__utils_8cpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#include &lt;gtest/gtest.h&gt;</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#include &lt;xtd/memory.hpp&gt;</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;</div>
-<div class="line"><a name="l00004"></a><span class="lineno"><a class="code" href="tests_2memory__utils_8cpp.html#a1cf4bdeeae4289bc6c6b3f110a27fffc">    4</a></span>&#160;<a class="code" href="tests_2memory__utils_8cpp.html#a1cf4bdeeae4289bc6c6b3f110a27fffc">TEST</a> ( std_validate_pointer , throws_when_being_passed_a_null_pointer )</div>
+<div class="line"><a name="l00004"></a><span class="lineno"><a class="code" href="tests_2sources_2memory__utils_8cpp.html#a1cf4bdeeae4289bc6c6b3f110a27fffc">    4</a></span>&#160;<a class="code" href="tests_2sources_2file__utils_8cpp.html#ab526eaa5c5958f392a16a66b1a3b9f84">TEST</a> ( std_validate_pointer , throws_when_being_passed_a_null_pointer )</div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;{</div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;    ASSERT_THROW(xtd::mem::validate_pointer&lt;int&gt;(<span class="keyword">nullptr</span>),std::runtime_error);</div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;}</div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;</div>
-<div class="line"><a name="l00009"></a><span class="lineno"><a class="code" href="tests_2memory__utils_8cpp.html#a3b87b6745d899942c3043200c7e10a91">    9</a></span>&#160;<a class="code" href="tests_2memory__utils_8cpp.html#a1cf4bdeeae4289bc6c6b3f110a27fffc">TEST</a> ( std_validate_pointer , does_not_throw_when_being_passed_a_non_null_pointer )</div>
+<div class="line"><a name="l00009"></a><span class="lineno"><a class="code" href="tests_2sources_2memory__utils_8cpp.html#a3b87b6745d899942c3043200c7e10a91">    9</a></span>&#160;<a class="code" href="tests_2sources_2file__utils_8cpp.html#ab526eaa5c5958f392a16a66b1a3b9f84">TEST</a> ( std_validate_pointer , does_not_throw_when_being_passed_a_non_null_pointer )</div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;{</div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    <span class="keywordtype">int</span> foo;</div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    ASSERT_NO_THROW(<a class="code" href="namespacextd_1_1mem.html#ad48d2118e4474ba7705d529a6de30b10" title="Validates a pointer of arbitrary type.">xtd::mem::validate_pointer</a>(&amp;foo));</div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;}</div>
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;</div>
-<div class="line"><a name="l00015"></a><span class="lineno"><a class="code" href="tests_2memory__utils_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627">   15</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="tests_2memory__utils_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627">main</a> ( <span class="keywordtype">int</span> argc , <span class="keywordtype">char</span>** argv )</div>
+<div class="line"><a name="l00015"></a><span class="lineno"><a class="code" href="tests_2sources_2memory__utils_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627">   15</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="tests_2sources_2file__utils_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627">main</a> ( <span class="keywordtype">int</span> argc , <span class="keywordtype">char</span>** argv )</div>
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;{</div>
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    ::testing::InitGoogleTest(&amp;argc, argv);</div>
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <span class="keywordflow">return</span> RUN_ALL_TESTS();</div>
@@ -109,7 +109,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Aug 12 2014 11:56:45 for XTD by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Aug 12 2014 15:04:21 for XTD by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.1.2
 </small></address>
