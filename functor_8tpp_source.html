@@ -91,11 +91,11 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a href="functor_8tpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="keyword">namespace </span>xtd</div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;{</div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;</div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;    <span class="keyword">namespace </span>io</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;    <span class="keyword">namespace </span>fn</div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;    {</div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;</div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;        <span class="keyword">template</span> &lt;<span class="keyword">typename</span> <span class="keywordtype">object</span>_type , <span class="keyword">typename</span> parameter_type&gt;</div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;        <a class="code" href="classxtd_1_1io_1_1functor.html#a9cba8dfc0fecfc8a775437050e583285">functor&lt;object_type,parameter_type&gt;::functor</a> ( object_type* object_ptr , <span class="keywordtype">void</span>(object_type::*method_ptr)(parameter_type*) )</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;        <a class="code" href="classxtd_1_1fn_1_1functor.html#a8e59057e90522c08e2224ef40b602de7">functor&lt;object_type,parameter_type&gt;::functor</a> ( object_type* object_ptr , <span class="keywordtype">void</span>(object_type::*method_ptr)(parameter_type*) )</div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;        {</div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;            <span class="keywordflow">if</span></div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;            (</div>
@@ -111,13 +111,13 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;        }</div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;</div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        <span class="keyword">template</span> &lt;<span class="keyword">typename</span> <span class="keywordtype">object</span>_type , <span class="keyword">typename</span> parameter_type&gt;</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classxtd_1_1io_1_1functor.html#a5ba822436a92ff119940719cc0c2d5b6">functor&lt;object_type,parameter_type&gt;::operator() </a>( <span class="keywordtype">void</span>* parameter_void_ptr )<span class="keyword"> const</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classxtd_1_1fn_1_1functor.html#a9483e1cc6f4176f339fd7cb0b84900c3">functor&lt;object_type,parameter_type&gt;::operator() </a>( <span class="keywordtype">void</span>* parameter_void_ptr )<span class="keyword"> const</span></div>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="keyword">        </span>{</div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;            this-&gt;invoke(arguments...);</div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        }</div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;</div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        <span class="keyword">template</span> &lt;<span class="keyword">typename</span> <span class="keywordtype">object</span>_type , <span class="keyword">typename</span> parameter_type&gt;</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classxtd_1_1io_1_1functor.html#ab78ff23ecad2e4060fbb14ee7f38a58d">functor&lt;object_type,parameter_type&gt;::invoke</a> ( <span class="keywordtype">void</span>* parameter_void_ptr )<span class="keyword"> const</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classxtd_1_1fn_1_1functor.html#a51cf0ac5d365d2d75f56cee6ae321298">functor&lt;object_type,parameter_type&gt;::invoke</a> ( <span class="keywordtype">void</span>* parameter_void_ptr )<span class="keyword"> const</span></div>
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="keyword">        </span>{</div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;            ((this-&gt;object_ptr)-&gt;*(this-&gt;method_ptr))(arguments...);</div>
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        }</div>
@@ -128,7 +128,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Aug 12 2014 16:46:48 for XTD by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Aug 12 2014 17:09:13 for XTD by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.1.2
 </small></address>
