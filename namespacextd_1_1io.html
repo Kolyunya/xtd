@@ -92,6 +92,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">xtd::io Namespace Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>A namespace containing tools for processing input and out put operations.  
+<a href="#details">More...</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2><a name="nested-classes"></a>
 Classes</h2></td></tr>
@@ -111,7 +114,9 @@ Variables</h2></td></tr>
 <tr class="memitem:aa1343588861f127c76a3408e2f005a6e"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classxtd_1_1io_1_1coutmt__singleton.html">coutmt_singleton</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacextd_1_1io.html#aa1343588861f127c76a3408e2f005a6e">coutmt</a> = <a class="el" href="classxtd_1_1io_1_1coutmt__singleton.html#ad7e695a244ff4290f409253bdcb670f7">coutmt_singleton::get_instance</a>()</td></tr>
 <tr class="memdesc:aa1343588861f127c76a3408e2f005a6e"><td class="mdescLeft">&#160;</td><td class="mdescRight">An instance of the multithreaded standard output stream.  <a href="#aa1343588861f127c76a3408e2f005a6e"></a><br/></td></tr>
 </table>
-<h2>Function Documentation</h2>
+<a name="details" id="details"></a><h2>Detailed Description</h2>
+<div class="textblock"><p>A namespace containing tools for processing input and out put operations. </p>
+</div><h2>Function Documentation</h2>
 <a class="anchor" id="a58c359f2746f778d8f9ceb1a2748f99c"></a>
 <div class="memitem">
 <div class="memproto">
@@ -140,7 +145,7 @@ template&lt;typename type &gt; </div>
 
 <p>Definition at line <a class="el" href="coutmt_8tpp_source.html#l00008">8</a> of file <a class="el" href="coutmt_8tpp_source.html">coutmt.tpp</a>.</p>
 
-<p>References <a class="el" href="coutmt_8hpp_source.html#l00091">xtd::io::coutmt_singleton::coutmt_mutex</a>.</p>
+<p>References <a class="el" href="coutmt_8hpp_source.html#l00088">xtd::io::coutmt_singleton::coutmt_mutex</a>.</p>
 <div class="fragment"><div class="line">        {</div>
 <div class="line">            std::lock_guard&lt;std::mutex&gt; lock_guard(coutmt_singleton_instance.coutmt_mutex);</div>
 <div class="line">            std::cout &lt;&lt; object;</div>
@@ -175,7 +180,7 @@ template&lt;typename type &gt; </div>
 
 <p>Definition at line <a class="el" href="sources_2coutmt_8cpp_source.html#l00009">9</a> of file <a class="el" href="sources_2coutmt_8cpp_source.html">coutmt.cpp</a>.</p>
 
-<p>References <a class="el" href="coutmt_8hpp_source.html#l00091">xtd::io::coutmt_singleton::coutmt_mutex</a>.</p>
+<p>References <a class="el" href="coutmt_8hpp_source.html#l00088">xtd::io::coutmt_singleton::coutmt_mutex</a>.</p>
 <div class="fragment"><div class="line">        {</div>
 <div class="line">            std::lock_guard&lt;std::mutex&gt; lock_guard(coutmt_singleton_instance.coutmt_mutex);</div>
 <div class="line">            std::cout &lt;&lt; function_ptr;</div>
@@ -210,7 +215,7 @@ template&lt;typename type &gt; </div>
 
 <p>Definition at line <a class="el" href="sources_2coutmt_8cpp_source.html#l00016">16</a> of file <a class="el" href="sources_2coutmt_8cpp_source.html">coutmt.cpp</a>.</p>
 
-<p>References <a class="el" href="coutmt_8hpp_source.html#l00091">xtd::io::coutmt_singleton::coutmt_mutex</a>.</p>
+<p>References <a class="el" href="coutmt_8hpp_source.html#l00088">xtd::io::coutmt_singleton::coutmt_mutex</a>.</p>
 <div class="fragment"><div class="line">        {</div>
 <div class="line">            std::lock_guard&lt;std::mutex&gt; lock_guard(coutmt_singleton_instance.coutmt_mutex);</div>
 <div class="line">            std::cout &lt;&lt; function_ptr;</div>
@@ -245,7 +250,7 @@ template&lt;typename type &gt; </div>
 
 <p>Definition at line <a class="el" href="sources_2coutmt_8cpp_source.html#l00023">23</a> of file <a class="el" href="sources_2coutmt_8cpp_source.html">coutmt.cpp</a>.</p>
 
-<p>References <a class="el" href="coutmt_8hpp_source.html#l00091">xtd::io::coutmt_singleton::coutmt_mutex</a>.</p>
+<p>References <a class="el" href="coutmt_8hpp_source.html#l00088">xtd::io::coutmt_singleton::coutmt_mutex</a>.</p>
 <div class="fragment"><div class="line">        {</div>
 <div class="line">            std::lock_guard&lt;std::mutex&gt; lock_guard(coutmt_singleton_instance.coutmt_mutex);</div>
 <div class="line">            std::cout &lt;&lt; function_ptr;</div>
@@ -275,7 +280,7 @@ template&lt;typename type &gt; </div>
 
 <p>An instance of the multithreaded standard output stream. </p>
 
-<p>Definition at line <a class="el" href="coutmt_8hpp_source.html#l00103">103</a> of file <a class="el" href="coutmt_8hpp_source.html">coutmt.hpp</a>.</p>
+<p>Definition at line <a class="el" href="coutmt_8hpp_source.html#l00100">100</a> of file <a class="el" href="coutmt_8hpp_source.html">coutmt.hpp</a>.</p>
 
 <p>Referenced by <a class="el" href="tests_2sources_2coutmt_8cpp_source.html#l00004">TEST()</a>.</p>
 
@@ -284,7 +289,7 @@ template&lt;typename type &gt; </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Aug 12 2014 20:24:26 for XTD by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Aug 12 2014 20:26:20 for XTD by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.1.2
 </small></address>
