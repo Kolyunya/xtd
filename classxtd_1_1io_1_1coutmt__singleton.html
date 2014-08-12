@@ -97,32 +97,51 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!--header-->
 <div class="contents">
 
+<p>A class which lets you to write to the standard output stream from multiple threads at the time.  
+ <a href="classxtd_1_1io_1_1coutmt__singleton.html#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="coutmt_8hpp_source.html">coutmt.hpp</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
 <tr class="memitem:ad7e695a244ff4290f409253bdcb670f7"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classxtd_1_1io_1_1coutmt__singleton.html">coutmt_singleton</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxtd_1_1io_1_1coutmt__singleton.html#ad7e695a244ff4290f409253bdcb670f7">get_instance</a> (void)</td></tr>
+<tr class="memdesc:ad7e695a244ff4290f409253bdcb670f7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a singleton instance.  <a href="#ad7e695a244ff4290f409253bdcb670f7"></a><br/></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2><a name="pri-methods"></a>
 Private Member Functions</h2></td></tr>
 <tr class="memitem:adbb7ecc6146157eafc643c045d2ae5bc"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxtd_1_1io_1_1coutmt__singleton.html#adbb7ecc6146157eafc643c045d2ae5bc">coutmt_singleton</a> (void)</td></tr>
+<tr class="memdesc:adbb7ecc6146157eafc643c045d2ae5bc"><td class="mdescLeft">&#160;</td><td class="mdescRight">A private default constructor.  <a href="#adbb7ecc6146157eafc643c045d2ae5bc"></a><br/></td></tr>
+<tr class="memitem:aa6d80448664af984aa77e94829ccd479"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxtd_1_1io_1_1coutmt__singleton.html#aa6d80448664af984aa77e94829ccd479">coutmt_singleton</a> (const <a class="el" href="classxtd_1_1io_1_1coutmt__singleton.html">coutmt_singleton</a> &amp;)</td></tr>
+<tr class="memdesc:aa6d80448664af984aa77e94829ccd479"><td class="mdescLeft">&#160;</td><td class="mdescRight">A deleted copy-constructor.  <a href="#aa6d80448664af984aa77e94829ccd479"></a><br/></td></tr>
+<tr class="memitem:a3653de7219e1d415921ebe72d051318c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxtd_1_1io_1_1coutmt__singleton.html#a3653de7219e1d415921ebe72d051318c">coutmt_singleton</a> (const <a class="el" href="classxtd_1_1io_1_1coutmt__singleton.html">coutmt_singleton</a> &amp;&amp;)</td></tr>
+<tr class="memdesc:a3653de7219e1d415921ebe72d051318c"><td class="mdescLeft">&#160;</td><td class="mdescRight">A deleted move-constructor.  <a href="#a3653de7219e1d415921ebe72d051318c"></a><br/></td></tr>
+<tr class="memitem:aeef551bdd24899dda24e0f6cc927cdce"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classxtd_1_1io_1_1coutmt__singleton.html">coutmt_singleton</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxtd_1_1io_1_1coutmt__singleton.html#aeef551bdd24899dda24e0f6cc927cdce">operator=</a> (const <a class="el" href="classxtd_1_1io_1_1coutmt__singleton.html">coutmt_singleton</a> &amp;)</td></tr>
+<tr class="memdesc:aeef551bdd24899dda24e0f6cc927cdce"><td class="mdescLeft">&#160;</td><td class="mdescRight">A deleted assignment-operator.  <a href="#aeef551bdd24899dda24e0f6cc927cdce"></a><br/></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
 <tr class="memitem:a5a1f82ede834e6a95bf07831cfd2a4a1"><td class="memItemLeft" align="right" valign="top">std::mutex&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxtd_1_1io_1_1coutmt__singleton.html#a5a1f82ede834e6a95bf07831cfd2a4a1">coutmt_mutex</a></td></tr>
+<tr class="memdesc:a5a1f82ede834e6a95bf07831cfd2a4a1"><td class="mdescLeft">&#160;</td><td class="mdescRight">A mutex which is used to synchronize the access to the standard output stream.  <a href="#a5a1f82ede834e6a95bf07831cfd2a4a1"></a><br/></td></tr>
 <tr class="memitem:af738e92163634974f3cfb2d2c9756b2c"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxtd_1_1io_1_1coutmt__singleton.html#af738e92163634974f3cfb2d2c9756b2c">instance_initialized</a></td></tr>
+<tr class="memdesc:af738e92163634974f3cfb2d2c9756b2c"><td class="mdescLeft">&#160;</td><td class="mdescRight">A flag which is used to aknowlege if the singleton instance is already instantinated.  <a href="#af738e92163634974f3cfb2d2c9756b2c"></a><br/></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2><a name="friends"></a>
 Friends</h2></td></tr>
-<tr class="memitem:aae5812b8fa2d66eaaa921e864e1077d4"><td class="memTemplParams" colspan="2">template&lt;typename Type &gt; </td></tr>
-<tr class="memitem:aae5812b8fa2d66eaaa921e864e1077d4"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classxtd_1_1io_1_1coutmt__singleton.html">coutmt_singleton</a> &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classxtd_1_1io_1_1coutmt__singleton.html#aae5812b8fa2d66eaaa921e864e1077d4">operator&lt;&lt;</a> (<a class="el" href="classxtd_1_1io_1_1coutmt__singleton.html">coutmt_singleton</a> &amp;coutmt_singleton_instance, Type object)</td></tr>
+<tr class="memitem:ae266e98a079826eaac5d4d28edbf752d"><td class="memTemplParams" colspan="2">template&lt;typename type &gt; </td></tr>
+<tr class="memitem:ae266e98a079826eaac5d4d28edbf752d"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classxtd_1_1io_1_1coutmt__singleton.html">coutmt_singleton</a> &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classxtd_1_1io_1_1coutmt__singleton.html#ae266e98a079826eaac5d4d28edbf752d">operator&lt;&lt;</a> (<a class="el" href="classxtd_1_1io_1_1coutmt__singleton.html">coutmt_singleton</a> &amp;coutmt_singleton_instance, type object)</td></tr>
+<tr class="memdesc:ae266e98a079826eaac5d4d28edbf752d"><td class="mdescLeft">&#160;</td><td class="mdescRight">A function template which allows putting arbitrary objects to the output stream.  <a href="#ae266e98a079826eaac5d4d28edbf752d"></a><br/></td></tr>
 <tr class="memitem:a75138493a4c47f61c28762df29d5af97"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classxtd_1_1io_1_1coutmt__singleton.html">coutmt_singleton</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxtd_1_1io_1_1coutmt__singleton.html#a75138493a4c47f61c28762df29d5af97">operator&lt;&lt;</a> (<a class="el" href="classxtd_1_1io_1_1coutmt__singleton.html">coutmt_singleton</a> &amp;coutmt_singleton_instance, std::ostream &amp;(*function_ptr)(std::ostream &amp;))</td></tr>
+<tr class="memdesc:a75138493a4c47f61c28762df29d5af97"><td class="mdescLeft">&#160;</td><td class="mdescRight">A function template which allows putting function pointers to the output stream.  <a href="#a75138493a4c47f61c28762df29d5af97"></a><br/></td></tr>
 <tr class="memitem:af343264ff6f5ba75b8f6eab378c55638"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classxtd_1_1io_1_1coutmt__singleton.html">coutmt_singleton</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxtd_1_1io_1_1coutmt__singleton.html#af343264ff6f5ba75b8f6eab378c55638">operator&lt;&lt;</a> (<a class="el" href="classxtd_1_1io_1_1coutmt__singleton.html">coutmt_singleton</a> &amp;coutmt_singleton_instance, std::ios &amp;(*function_ptr)(std::ios &amp;))</td></tr>
+<tr class="memdesc:af343264ff6f5ba75b8f6eab378c55638"><td class="mdescLeft">&#160;</td><td class="mdescRight">A function template which allows putting function pointers to the output stream.  <a href="#af343264ff6f5ba75b8f6eab378c55638"></a><br/></td></tr>
 <tr class="memitem:af794d8d7f2993af42e84429e5f5b4c9a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classxtd_1_1io_1_1coutmt__singleton.html">coutmt_singleton</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classxtd_1_1io_1_1coutmt__singleton.html#af794d8d7f2993af42e84429e5f5b4c9a">operator&lt;&lt;</a> (<a class="el" href="classxtd_1_1io_1_1coutmt__singleton.html">coutmt_singleton</a> &amp;coutmt_singleton_instance, std::ios_base &amp;(*function_ptr)(std::ios_base &amp;))</td></tr>
+<tr class="memdesc:af794d8d7f2993af42e84429e5f5b4c9a"><td class="mdescLeft">&#160;</td><td class="mdescRight">A function template which allows putting function pointers to the output stream.  <a href="#af794d8d7f2993af42e84429e5f5b4c9a"></a><br/></td></tr>
 </table>
 <a name="details" id="details"></a><h2>Detailed Description</h2>
-<div class="textblock">
-<p>Definition at line <a class="el" href="coutmt_8hpp_source.html#l00016">16</a> of file <a class="el" href="coutmt_8hpp_source.html">coutmt.hpp</a>.</p>
+<div class="textblock"><p>A class which lets you to write to the standard output stream from multiple threads at the time. </p>
+<p>The class uses <code>std::mutex</code> as a syncronization primitive. </p>
+
+<p>Definition at line <a class="el" href="coutmt_8hpp_source.html#l00029">29</a> of file <a class="el" href="coutmt_8hpp_source.html">coutmt.hpp</a>.</p>
 </div><h2>Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="adbb7ecc6146157eafc643c045d2ae5bc"></a>
 <div class="memitem">
@@ -146,7 +165,64 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>A private default constructor. </p>
+<dl class="section note"><dt>Note</dt><dd>A singleton object should not be constructed in user-space. </dd></dl>
+
 <p>Referenced by <a class="el" href="sources_2coutmt_8cpp_source.html#l00030">get_instance()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="aa6d80448664af984aa77e94829ccd479"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">xtd::io::coutmt_singleton::coutmt_singleton </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classxtd_1_1io_1_1coutmt__singleton.html">coutmt_singleton</a> &amp;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">explicit</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>A deleted copy-constructor. </p>
+<dl class="section note"><dt>Note</dt><dd>A singleton object should not be copied. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a3653de7219e1d415921ebe72d051318c"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">xtd::io::coutmt_singleton::coutmt_singleton </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classxtd_1_1io_1_1coutmt__singleton.html">coutmt_singleton</a> &amp;&amp;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">explicit</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>A deleted move-constructor. </p>
+<dl class="section note"><dt>Note</dt><dd>A singleton object should not be moved. </dd></dl>
 
 </div>
 </div>
@@ -173,6 +249,8 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Returns a singleton instance. </p>
+
 <p>Definition at line <a class="el" href="sources_2coutmt_8cpp_source.html#l00030">30</a> of file <a class="el" href="sources_2coutmt_8cpp_source.html">coutmt.cpp</a>.</p>
 
 <p>References <a class="el" href="classxtd_1_1io_1_1coutmt__singleton.html#adbb7ecc6146157eafc643c045d2ae5bc">coutmt_singleton()</a>.</p>
@@ -182,7 +260,7 @@ Friends</h2></td></tr>
 <div class="line"></div>
 <div class="line">            <span class="keywordflow">if</span> ( coutmt_instance_unique_prt == <span class="keyword">nullptr</span> )</div>
 <div class="line">            {</div>
-<div class="line">                coutmt_instance_unique_prt.reset(<span class="keyword">new</span> <a class="code" href="classxtd_1_1io_1_1coutmt__singleton.html#adbb7ecc6146157eafc643c045d2ae5bc">coutmt_singleton</a>());</div>
+<div class="line">                coutmt_instance_unique_prt.reset(<span class="keyword">new</span> <a class="code" href="classxtd_1_1io_1_1coutmt__singleton.html#adbb7ecc6146157eafc643c045d2ae5bc" title="A private default constructor.">coutmt_singleton</a>());</div>
 <div class="line">            }</div>
 <div class="line"></div>
 <div class="line">            <span class="keywordflow">return</span> *coutmt_instance_unique_prt;</div>
@@ -190,12 +268,39 @@ Friends</h2></td></tr>
 </div><!-- fragment -->
 </div>
 </div>
+<a class="anchor" id="aeef551bdd24899dda24e0f6cc927cdce"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classxtd_1_1io_1_1coutmt__singleton.html">coutmt_singleton</a>&amp; xtd::io::coutmt_singleton::operator= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classxtd_1_1io_1_1coutmt__singleton.html">coutmt_singleton</a> &amp;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>A deleted assignment-operator. </p>
+<dl class="section note"><dt>Note</dt><dd>A singleton object should not be assigned to. </dd></dl>
+
+</div>
+</div>
 <h2>Friends And Related Function Documentation</h2>
-<a class="anchor" id="aae5812b8fa2d66eaaa921e864e1077d4"></a>
+<a class="anchor" id="ae266e98a079826eaac5d4d28edbf752d"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename Type &gt; </div>
+template&lt;typename type &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -209,7 +314,7 @@ template&lt;typename Type &gt; </div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">Type&#160;</td>
+          <td class="paramtype">type&#160;</td>
           <td class="paramname"><em>object</em>&#160;</td>
         </tr>
         <tr>
@@ -224,6 +329,8 @@ template&lt;typename Type &gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>A function template which allows putting arbitrary objects to the output stream. </p>
 
 <p>Definition at line <a class="el" href="coutmt_8tpp_source.html#l00008">8</a> of file <a class="el" href="coutmt_8tpp_source.html">coutmt.tpp</a>.</p>
 <div class="fragment"><div class="line">        {</div>
@@ -266,6 +373,8 @@ template&lt;typename Type &gt; </div>
 </table>
 </div><div class="memdoc">
 
+<p>A function template which allows putting function pointers to the output stream. </p>
+
 <p>Definition at line <a class="el" href="sources_2coutmt_8cpp_source.html#l00009">9</a> of file <a class="el" href="sources_2coutmt_8cpp_source.html">coutmt.cpp</a>.</p>
 <div class="fragment"><div class="line">        {</div>
 <div class="line">            std::lock_guard&lt;std::mutex&gt; lock_guard(coutmt_singleton_instance.coutmt_mutex);</div>
@@ -306,6 +415,8 @@ template&lt;typename Type &gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>A function template which allows putting function pointers to the output stream. </p>
 
 <p>Definition at line <a class="el" href="sources_2coutmt_8cpp_source.html#l00016">16</a> of file <a class="el" href="sources_2coutmt_8cpp_source.html">coutmt.cpp</a>.</p>
 <div class="fragment"><div class="line">        {</div>
@@ -348,6 +459,8 @@ template&lt;typename Type &gt; </div>
 </table>
 </div><div class="memdoc">
 
+<p>A function template which allows putting function pointers to the output stream. </p>
+
 <p>Definition at line <a class="el" href="sources_2coutmt_8cpp_source.html#l00023">23</a> of file <a class="el" href="sources_2coutmt_8cpp_source.html">coutmt.cpp</a>.</p>
 <div class="fragment"><div class="line">        {</div>
 <div class="line">            std::lock_guard&lt;std::mutex&gt; lock_guard(coutmt_singleton_instance.coutmt_mutex);</div>
@@ -376,7 +489,9 @@ template&lt;typename Type &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="coutmt_8hpp_source.html#l00029">29</a> of file <a class="el" href="coutmt_8hpp_source.html">coutmt.hpp</a>.</p>
+<p>A mutex which is used to synchronize the access to the standard output stream. </p>
+
+<p>Definition at line <a class="el" href="coutmt_8hpp_source.html#l00091">91</a> of file <a class="el" href="coutmt_8hpp_source.html">coutmt.hpp</a>.</p>
 
 <p>Referenced by <a class="el" href="sources_2coutmt_8cpp_source.html#l00009">xtd::io::operator&lt;&lt;()</a>.</p>
 
@@ -400,7 +515,9 @@ template&lt;typename Type &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="coutmt_8hpp_source.html#l00030">30</a> of file <a class="el" href="coutmt_8hpp_source.html">coutmt.hpp</a>.</p>
+<p>A flag which is used to aknowlege if the singleton instance is already instantinated. </p>
+
+<p>Definition at line <a class="el" href="coutmt_8hpp_source.html#l00096">96</a> of file <a class="el" href="coutmt_8hpp_source.html">coutmt.hpp</a>.</p>
 
 </div>
 </div>
@@ -411,7 +528,7 @@ template&lt;typename Type &gt; </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Aug 12 2014 19:08:28 for XTD by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Aug 12 2014 20:24:26 for XTD by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.1.2
 </small></address>

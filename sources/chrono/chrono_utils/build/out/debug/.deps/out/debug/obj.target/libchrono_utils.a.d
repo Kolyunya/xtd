@@ -1,1 +1,0 @@
-cmd_out/debug/obj.target/libchrono_utils.a := rm -f out/debug/obj.target/libchrono_utils.a && ar crsT out/debug/obj.target/libchrono_utils.a out/debug/obj.target/chrono_utils/../sources/chrono_utils.o

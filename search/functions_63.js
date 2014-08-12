@@ -8,5 +8,5 @@ var searchData=
   ['check_5fis_5fready_5fto_5fstart',['check_is_ready_to_start',['../classxtd_1_1chrono_1_1timer.html#a14f5d30b77745cb5b1326e4a083e1573',1,'xtd::chrono::timer']]],
   ['check_5fis_5fready_5fto_5fstop',['check_is_ready_to_stop',['../classxtd_1_1chrono_1_1timer.html#a4f5d5a1578229cb9008ddc3c08e467d9',1,'xtd::chrono::timer']]],
   ['coin_5fflip',['coin_flip',['../namespacextd_1_1random.html#a078c9cabf9b614876e5b1bc387349ed9',1,'xtd::random']]],
-  ['coutmt_5fsingleton',['coutmt_singleton',['../classxtd_1_1io_1_1coutmt__singleton.html#adbb7ecc6146157eafc643c045d2ae5bc',1,'xtd::io::coutmt_singleton']]]
+  ['coutmt_5fsingleton',['coutmt_singleton',['../classxtd_1_1io_1_1coutmt__singleton.html#adbb7ecc6146157eafc643c045d2ae5bc',1,'xtd::io::coutmt_singleton::coutmt_singleton(void)'],['../classxtd_1_1io_1_1coutmt__singleton.html#aa6d80448664af984aa77e94829ccd479',1,'xtd::io::coutmt_singleton::coutmt_singleton(const coutmt_singleton &amp;)'],['../classxtd_1_1io_1_1coutmt__singleton.html#a3653de7219e1d415921ebe72d051318c',1,'xtd::io::coutmt_singleton::coutmt_singleton(const coutmt_singleton &amp;&amp;)']]]
 ];

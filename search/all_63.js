@@ -18,5 +18,5 @@ var searchData=
   ['coutmt_2etpp',['coutmt.tpp',['../coutmt_8tpp.html',1,'']]],
   ['coutmt_5fmutex',['coutmt_mutex',['../classxtd_1_1io_1_1coutmt__singleton.html#a5a1f82ede834e6a95bf07831cfd2a4a1',1,'xtd::io::coutmt_singleton']]],
   ['coutmt_5fsingleton',['coutmt_singleton',['../classxtd_1_1io_1_1coutmt__singleton.html',1,'xtd::io']]],
-  ['coutmt_5fsingleton',['coutmt_singleton',['../classxtd_1_1io_1_1coutmt__singleton.html#adbb7ecc6146157eafc643c045d2ae5bc',1,'xtd::io::coutmt_singleton']]]
+  ['coutmt_5fsingleton',['coutmt_singleton',['../classxtd_1_1io_1_1coutmt__singleton.html#adbb7ecc6146157eafc643c045d2ae5bc',1,'xtd::io::coutmt_singleton::coutmt_singleton(void)'],['../classxtd_1_1io_1_1coutmt__singleton.html#aa6d80448664af984aa77e94829ccd479',1,'xtd::io::coutmt_singleton::coutmt_singleton(const coutmt_singleton &amp;)'],['../classxtd_1_1io_1_1coutmt__singleton.html#a3653de7219e1d415921ebe72d051318c',1,'xtd::io::coutmt_singleton::coutmt_singleton(const coutmt_singleton &amp;&amp;)']]]
 ];
