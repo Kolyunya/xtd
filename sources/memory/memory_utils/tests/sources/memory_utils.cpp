@@ -1,5 +1,5 @@
 #include <gtest/gtest.h>
-#include <xtd/memory>
+#include <xtd/memory.hpp>
 
 TEST ( std_validate_pointer , throws_when_being_passed_a_null_pointer )
 {

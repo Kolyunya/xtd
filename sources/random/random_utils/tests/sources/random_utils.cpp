@@ -1,5 +1,5 @@
 #include <gtest/gtest.h>
-#include <xtd/random>
+#include <xtd/random.hpp>
 #include <stdlib.h>
 
 TEST ( get_int_1_2 , returns_1_or_2 )

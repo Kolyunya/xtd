@@ -1,5 +1,5 @@
 #include <gtest/gtest.h>
-#include <xtd/io>
+#include <xtd/io.hpp>
 
 TEST ( coutmt_operator_out , does_not_throw )
 {

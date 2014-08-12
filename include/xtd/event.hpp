@@ -1,5 +1,5 @@
-#ifndef _XTD_INCLUDE_EVENT_
-#define _XTD_INCLUDE_EVENT_
+#ifndef _XTD_NAMESPACE_EVENT_
+#define _XTD_NAMESPACE_EVENT_
 
 #include "./../../sources/event/event/sources/event.hpp"
 

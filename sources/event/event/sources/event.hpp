@@ -4,7 +4,7 @@
 #include <vector>
 #include <thread>
 #include <mutex>
-#include <xtd/functional.hpp>
+#include <xtd/functional>
 
 namespace xtd
 {
@@ -27,9 +27,9 @@ namespace xtd
                 using free_listeners_collection_itr = typename free_listeners_collection::iterator;
 
                 template <typename object_type>
-                using functor_listener = xtd::fn::functor<object_type,data_type...>;
+                using functor_listener = xtd::functional::functor<object_type,data_type...>;
 
-                using abstract_functor_listener = typename xtd::fn::abstract_functor<data_type...>;
+                using abstract_functor_listener = typename xtd::functional::abstract_functor<data_type...>;
 
                 using functor_listeners_collection = std::vector<abstract_functor_listener*>;
 

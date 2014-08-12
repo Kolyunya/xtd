@@ -1,9 +1,0 @@
-#ifndef _XTD_INCLUDE_CHRONO_
-#define _XTD_INCLUDE_CHRONO_
-
-#include "./../../sources/chrono/chrono_utils/sources/chrono_utils.hpp"
-//#include "./../../sources/chrono/timer/timer_base/sources/timer_base.hpp"
-//#include "./../../sources/chrono/timer/timer/sources/timer.hpp"
-//#include "./../../sources/chrono/timer/timer_manager/sources/timer_manager.hpp"
-
-#endif
