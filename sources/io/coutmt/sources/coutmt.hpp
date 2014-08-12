@@ -14,7 +14,7 @@ namespace xtd
 {
 
     /**
-     *  @brief A namespace containing tools for processing input and out put operations.
+     *  @brief A namespace containing tools for processing input and output operations.
      */
     namespace io
     {
