@@ -1,7 +1,7 @@
 namespace xtd
 {
 
-    namespace io
+    namespace fn
     {
 
         template <typename object_type , typename parameter_type>

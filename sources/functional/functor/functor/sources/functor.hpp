@@ -6,7 +6,7 @@
 namespace xtd
 {
 
-    namespace io
+    namespace fn
     {
 
         template <typename object_type , typename... arguments_type>
@@ -17,13 +17,32 @@ namespace xtd
 
             public:
 
-                explicit functor ( object_type* object_ptr , void(object_type::*method_ptr)(arguments_type...) );
+                explicit functor ( object_type* object_ptr , void(object_type::*method_ptr)(arguments_type...) )
+                {
+                    if
+                    (
+                        object_ptr == nullptr
+                            ||
+                        method_ptr == nullptr
+                    )
+                    {
+                        throw -1;
+                    }
+                    this->object_ptr = object_ptr;
+                    this->method_ptr = method_ptr;
+                }
 
                 virtual ~functor ( void ) noexcept override = default;
 
-                virtual void operator() ( arguments_type... arguments ) const override final;
+                virtual void operator() ( arguments_type... arguments ) const override final
+                {
+                    this->invoke(arguments...);
+                }
 
-                virtual void invoke ( arguments_type... arguments ) const override final;
+                virtual void invoke ( arguments_type... arguments ) const override final
+                {
+                    ((this->object_ptr)->*(this->method_ptr))(arguments...);
+                }
 
                 void (object_type::*method_ptr)(arguments_type...);
 
@@ -36,6 +55,6 @@ namespace xtd
 }
 
 //  Include definions of templates
-#include "functor.tpp"
+//#include "functor.tpp"
 
 #endif
