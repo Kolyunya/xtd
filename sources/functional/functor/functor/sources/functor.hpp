@@ -1,7 +1,7 @@
 #ifndef _XTD_FUNCTOR_HPP_
 #define _XTD_FUNCTOR_HPP_
 
-#include "./../../abstract_functor/sources/abstract_functor.hpp"
+#include <xtd/functional/abstract_functor.hpp>
 
 namespace xtd
 {

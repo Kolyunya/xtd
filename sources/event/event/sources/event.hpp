@@ -4,7 +4,7 @@
 #include <vector>
 #include <thread>
 #include <mutex>
-#include <xtd/functional>
+#include <xtd/functional/functor.hpp>
 
 namespace xtd
 {
