@@ -91,7 +91,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><code>#include &lt;gtest/gtest.h&gt;</code><br/>
-<code>#include &lt;xtd/memory.hpp&gt;</code><br/>
+<code>#include &lt;xtd/memory&gt;</code><br/>
 </div>
 <p><a href="tests_2sources_2memory__utils_8cpp_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
@@ -159,7 +159,7 @@ Functions</h2></td></tr>
 
 <p>Definition at line <a class="el" href="tests_2sources_2memory__utils_8cpp_source.html#l00004">4</a> of file <a class="el" href="tests_2sources_2memory__utils_8cpp_source.html">memory_utils.cpp</a>.</p>
 <div class="fragment"><div class="line">{</div>
-<div class="line">    ASSERT_THROW(xtd::mem::validate_pointer&lt;int&gt;(<span class="keyword">nullptr</span>),std::runtime_error);</div>
+<div class="line">    ASSERT_THROW(xtd::memory::validate_pointer&lt;int&gt;(<span class="keyword">nullptr</span>),std::runtime_error);</div>
 <div class="line">}</div>
 </div><!-- fragment -->
 </div>
@@ -190,10 +190,10 @@ Functions</h2></td></tr>
 
 <p>Definition at line <a class="el" href="tests_2sources_2memory__utils_8cpp_source.html#l00009">9</a> of file <a class="el" href="tests_2sources_2memory__utils_8cpp_source.html">memory_utils.cpp</a>.</p>
 
-<p>References <a class="el" href="memory__utils_8tpp_source.html#l00008">xtd::mem::validate_pointer()</a>.</p>
+<p>References <a class="el" href="memory__utils_8tpp_source.html#l00008">xtd::memory::validate_pointer()</a>.</p>
 <div class="fragment"><div class="line">{</div>
 <div class="line">    <span class="keywordtype">int</span> foo;</div>
-<div class="line">    ASSERT_NO_THROW(<a class="code" href="namespacextd_1_1mem.html#ad48d2118e4474ba7705d529a6de30b10" title="Validates a pointer of arbitrary type.">xtd::mem::validate_pointer</a>(&amp;foo));</div>
+<div class="line">    ASSERT_NO_THROW(<a class="code" href="namespacextd_1_1memory.html#aa72b1b81e1c02e5692f7065d1e304dae" title="Validates a pointer of arbitrary type.">xtd::memory::validate_pointer</a>(&amp;foo));</div>
 <div class="line">}</div>
 </div><!-- fragment -->
 </div>
@@ -201,7 +201,7 @@ Functions</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Aug 12 2014 20:34:09 for XTD by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Aug 12 2014 23:10:17 for XTD by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.1.2
 </small></address>

@@ -1,7 +1,7 @@
 var searchData=
 [
   ['set_5fcontents',['set_contents',['../namespacextd_1_1file.html#a532a8d3abdaed62c3f83e1fcaf1119dd',1,'xtd::file']]],
-  ['split',['split',['../namespacextd_1_1str.html#a6622349d5ca5c31b72990c30eaf0b587',1,'xtd::str::split(const std::string &amp;source_string, const std::string &amp;delimiter)'],['../namespacextd_1_1str.html#a3186c20d3d6f96cae15ef43b9d2033aa',1,'xtd::str::split(const std::string &amp;source_string, char delimiter)']]],
+  ['split',['split',['../namespacextd_1_1string.html#a64156e2de91ffe68e6cfcbc5ac66bc0f',1,'xtd::string::split(const std::string &amp;source_string, const std::string &amp;delimiter)'],['../namespacextd_1_1string.html#a3eb4abaaada2b6580876331e5406f29b',1,'xtd::string::split(const std::string &amp;source_string, char delimiter)']]],
   ['start',['start',['../classxtd_1_1chrono_1_1timer.html#ad7fed98afb41e1fdc0ac5c9c288e09bf',1,'xtd::chrono::timer']]],
   ['start_5fthread_5fif_5fneeded',['start_thread_if_needed',['../classxtd_1_1chrono_1_1timer__manager.html#a3656535d20fe04e6234b314c2c27b7d2',1,'xtd::chrono::timer_manager']]],
   ['stop',['stop',['../classxtd_1_1chrono_1_1timer.html#ad2bea72fb6c07586fab5e19311548082',1,'xtd::chrono::timer']]],
