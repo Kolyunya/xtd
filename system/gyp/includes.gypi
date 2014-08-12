@@ -1,8 +1,8 @@
 {
-    'includes'  :   [
-                        'settings.gypi',
-                        'variables.gypi',
-                        'target_defaults.gypi',
-                        'targets.gypi',
-                    ],
+    'includes':
+    [
+        'variables.gypi',
+        'defaults.gypi',
+        'targets.gypi',
+    ],
 }
