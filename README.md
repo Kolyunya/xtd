@@ -26,3 +26,7 @@ Each library unit is contained in a separate directory. Each unit directory cont
   + Add path to the `include` directory to your project `include` paths.
   + Include required headers from the `include` directory into your source files.
   + Compile you project linking to the static library compiled earlier.
+
+##Testing
+
+The project employs the [Google C++ Testing Framework](https://en.wikipedia.org/wiki/Google_C%2B%2B_Testing_Framework) for unit-testing. Each unit has a `tests` directory containing it's unit-tests. And every unit's build script contains a tests target. A tests target name has the following name convention: `%UNIT_NAME%_tests`.
