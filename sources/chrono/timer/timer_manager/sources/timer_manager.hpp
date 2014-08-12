@@ -1,30 +1,12 @@
-//  xstd - extension of the C++ standard library
-//  Copyright (C) 2013 Oleynikov Nikolay
-//
-//  This program is free software: you can redistribute it and/or modify
-//  it under the terms of the GNU General Public License as published by
-//  the Free Software Foundation, either version 3 of the License, or
-//  (at your option) any later version.
-//
-//  This program is distributed in the hope that it will be useful,
-//  but WITHOUT ANY WARRANTY; without even the implied warranty of
-//  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-//  GNU General Public License for more details.
-//
-//  You should have received a copy of the GNU General Public License
-//  along with this program.  If not, see <http://www.gnu.org/licenses/>.
-//
-//  Author email: OleynikovNY@mail.ru
-
-#ifndef _XSTD_TIMER_MANAGER_HPP_
-#define _XSTD_TIMER_MANAGER_HPP_
+#ifndef _XTD_TIMER_MANAGER_HPP_
+#define _XTD_TIMER_MANAGER_HPP_
 
 #include <memory>
 #include <vector>
 #include <thread.hpp>
 #include <chrono/timer_base.hpp>
 
-namespace xstd
+namespace xtd
 {
 
     namespace chrono
@@ -34,7 +16,7 @@ namespace xstd
         {
             public:
 
-                static timer_manager&       get_instance ( void )
+                static timer_manager& get_instance ( void )
                 {
                     //  No mutex needed here because local statics are initialized in a thread-safe manner in C++11
                     //  and the "instance" is not modified after the instantiation
@@ -42,7 +24,7 @@ namespace xstd
                     return instance;
                 }
 
-                void                        add_timer ( timer_base* const timer_ptr )
+                void add_timer ( timer_base* const timer_ptr )
                 {
                     std::lock_guard<std::recursive_mutex> lock_guard(this->mutex);
                     this->check_has_no_timer(timer_ptr);
@@ -50,7 +32,7 @@ namespace xstd
                     this->start_thread_if_needed();
                 }
 
-                void                        remove_timer ( timer_base* const timer_ptr )
+                void remove_timer ( timer_base* const timer_ptr )
                 {
                     std::lock_guard<std::recursive_mutex> lock_guard(this->mutex);
                     this->check_has_timer(timer_ptr);
@@ -60,24 +42,24 @@ namespace xstd
 
             private:
 
-                explicit                    timer_manager ( void )
-                                                :
-                                                    thread(std::bind(timer_manager::thread_routine,this))
+                explicit timer_manager ( void )
+                            :
+                                thread(std::bind(timer_manager::thread_routine,this))
                 {
 
                 }
 
-                virtual                     ~timer_manager ( void ) noexcept
+                virtual ~timer_manager ( void ) noexcept
                 {
 
                 }
 
-                bool                        has_timer ( const timer_base* timer_ptr ) const
+                bool has_timer ( const timer_base* timer_ptr ) const
                 {
                     return this->get_timer_itr(timer_ptr) != this->timers.cend();
                 }
 
-                void                        check_has_timer ( const timer_base* timer_ptr ) const
+                void check_has_timer ( const timer_base* timer_ptr ) const
                 {
                     if ( this->has_timer(timer_ptr) == false )
                     {
@@ -85,7 +67,7 @@ namespace xstd
                     }
                 }
 
-                void                        check_has_no_timer ( const timer_base* timer_ptr ) const
+                void check_has_no_timer ( const timer_base* timer_ptr ) const
                 {
                     if ( this->has_timer(timer_ptr) == true )
                     {
@@ -93,7 +75,7 @@ namespace xstd
                     }
                 }
 
-                void                        start_thread_if_needed ( void )
+                void start_thread_if_needed ( void )
                 {
 
                     //  Starts the thread if there is exactly one active timer
@@ -106,7 +88,7 @@ namespace xstd
 
                 }
 
-                void                        stop_thread_if_needed ( void )
+                void stop_thread_if_needed ( void )
                 {
 
                     //  Stops the thread if there are no active timers
@@ -118,7 +100,7 @@ namespace xstd
 
                 }
 
-                timers_vector_itr           get_timer_itr ( const timer_base* timer_ptr ) const
+                timers_vector_itr get_timer_itr ( const timer_base* timer_ptr ) const
                 {
 
                     timers_vector_itr timers_vector_itr_obj = this->timers.begin();
@@ -139,7 +121,7 @@ namespace xstd
 
                 }
 
-                static void                 thread_routine ( const timer_manager* timer_manager_ptr )
+                static void thread_routine ( const timer_manager* timer_manager_ptr )
                 {
 
                     for ( timer_base* timer_ptr : timer_manager_ptr->timers )
@@ -163,13 +145,13 @@ namespace xstd
 
                 }
 
-                timer_manager&              operator= ( timer_manager& ) = delete;
+                timer_manager& operator= ( timer_manager& ) = delete;
 
-                raii_thread_manual          thread;
+                raii_thread_manual thread;
 
-                std::recursive_mutex        mutex;
+                std::recursive_mutex mutex;
 
-                mutable timers_vector       timers;
+                mutable timers_vector timers;
 
         };
 
