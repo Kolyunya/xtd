@@ -115,7 +115,7 @@ namespace xtd
             static float to_float ( const std::string& source_string );
 
             /**
-             *  @brief Converts an object to strign.
+             *  @brief Converts an object to string.
              *  @param [in] source A source object.
              *  @returns A string representation of a number.
              *  @exception_safety Strong exception safety.
@@ -127,7 +127,7 @@ namespace xtd
             static std::string from ( type source );
 
             /**
-             *  @brief Reverses a sting.
+             *  @brief Reverses a string.
              *  @param [in] source_string A string to be reversed.
              *  @returns A reversed string.
              *  @exception_safety Strong exception safety.
