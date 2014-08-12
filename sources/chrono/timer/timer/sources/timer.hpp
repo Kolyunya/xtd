@@ -2,8 +2,8 @@
 #define _XTD_TIMER_HPP_
 
 #include <vector>
-#include <event.hpp>
-#include <chrono/timer_manager.hpp>
+#include <xtd/chrono/timer_manager.hpp>
+#include <xtd/event.hpp>
 #include <iostream>
 
 namespace xtd
@@ -52,10 +52,10 @@ namespace xtd
                     }
                 }
 
-                bool get_is_active ( void ) const
+                bool get_is_active ( void ) const;/*
                 {
                     return this->is_active;
-                }
+                }*/
 
                 void get_ticks_done ( void ) const
                 {
@@ -159,5 +159,8 @@ namespace xtd
     }
 
 }
+
+//  Include definions of templates
+#include "timer.tpp"
 
 #endif

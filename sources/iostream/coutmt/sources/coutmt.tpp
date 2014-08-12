@@ -4,8 +4,8 @@ namespace xtd
     namespace io
     {
 
-        template <typename Type>
-        coutmt_singleton& operator<< ( coutmt_singleton& coutmt_singleton_instance , Type object )
+        template <typename type>
+        coutmt_singleton& operator<< ( coutmt_singleton& coutmt_singleton_instance , type object )
         {
             std::lock_guard<std::mutex> lock_guard(coutmt_singleton_instance.coutmt_mutex);
             std::cout << object;
