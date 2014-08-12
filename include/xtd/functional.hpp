@@ -1,5 +1,5 @@
-#ifndef _INCLUDE_XTD_FUNCTIONAL_HPP_
-#define _INCLUDE_XTD_FUNCTIONAL_HPP_
+#ifndef _INCLUDE_XTD_FUNCTIONAL_
+#define _INCLUDE_XTD_FUNCTIONAL_
 
 #include <functional>
 #include "functional/functor.hpp"

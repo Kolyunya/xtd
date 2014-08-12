@@ -54,7 +54,4 @@ namespace xtd
 
 }
 
-//  Include definions of templates
-//#include "functor.tpp"
-
 #endif
