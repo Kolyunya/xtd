@@ -8,21 +8,18 @@
 #include <mutex>
 
 /**
- *  @namespace xtd
  *  @brief A root namespace of the library.
  */
 namespace xtd
 {
 
     /**
-     *  @namespace str
      *  @brief A namespace containing tools for processing input and out put operations.
      */
     namespace io
     {
 
         /**
-         *  @class coutmt_singleton
          *  @brief A class which lets you to write to the standard output stream from multiple threads at the time.
          *  @details The class uses `std::mutex` as a syncronization primitive.
          */
