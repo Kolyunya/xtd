@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<title>XTD: sources/string/string_util/tests/to_float.hpp Source File</title>
+<title>XTD: sources/string/string_utils/tests/to_float.hpp Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -80,7 +80,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_08d237fc27d4ecd563f71c5d52f2fecc.html">sources</a></li><li class="navelem"><a class="el" href="dir_ed3f187283697188d51c913e72f6a524.html">string</a></li><li class="navelem"><a class="el" href="dir_03081c7f60e1ff62752e63d6c8b6efae.html">string_util</a></li><li class="navelem"><a class="el" href="dir_4f53cb990249b53771ce2a5f0132db1c.html">tests</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_08d237fc27d4ecd563f71c5d52f2fecc.html">sources</a></li><li class="navelem"><a class="el" href="dir_ed3f187283697188d51c913e72f6a524.html">string</a></li><li class="navelem"><a class="el" href="dir_dcef30b860c29f7448b589243f6534eb.html">string_utils</a></li><li class="navelem"><a class="el" href="dir_6884c5be0f20010ad773fd1d6be2e912.html">tests</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -88,25 +88,25 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">to_float.hpp</div>  </div>
 </div><!--header-->
 <div class="contents">
-<a href="to__float_8hpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno"><a class="code" href="to__float_8hpp.html#a9f2431d3ea1ec137cc23f0f8a15d5977">    1</a></span>&#160;<a class="code" href="chrono__util__tests_8cpp.html#a4d515f066f202870d93427c6823ebeca">TEST</a> ( <a class="code" href="namespacextd_1_1str.html#ae80bc523e87c11b0d108e794ffc40d09" title="Converts a number from string to numeric representation.">to_float</a> , effectively_converts_14_dot_5631 )</div>
+<a href="to__float_8hpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno"><a class="code" href="to__float_8hpp.html#a9f2431d3ea1ec137cc23f0f8a15d5977">    1</a></span>&#160;<a class="code" href="chrono__util__tests_8cpp.html#a4d515f066f202870d93427c6823ebeca">TEST</a> ( to_float , effectively_converts_14_dot_5631 )</div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;{</div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;    std::string source_string = <span class="stringliteral">&quot;14.5631&quot;</span>;</div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;    <span class="keywordtype">float</span> result_number_correct = 14.5631;</div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;    <span class="keywordtype">float</span> result_number_actual = <a class="code" href="namespacextd_1_1str.html#ae80bc523e87c11b0d108e794ffc40d09" title="Converts a number from string to numeric representation.">xtd::str::to_float</a>(source_string);</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;    <span class="keywordtype">float</span> result_number_actual = <a class="code" href="classxtd_1_1str.html#ae80bc523e87c11b0d108e794ffc40d09" title="Converts a number from string to numeric representation.">xtd::str::to_float</a>(source_string);</div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;    ASSERT_FLOAT_EQ ( result_number_correct , result_number_actual );</div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;}</div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;</div>
-<div class="line"><a name="l00009"></a><span class="lineno"><a class="code" href="to__float_8hpp.html#a070b3ccd2210f2b6d13b2ce78303d3d7">    9</a></span>&#160;<a class="code" href="chrono__util__tests_8cpp.html#a4d515f066f202870d93427c6823ebeca">TEST</a> ( <a class="code" href="namespacextd_1_1str.html#ae80bc523e87c11b0d108e794ffc40d09" title="Converts a number from string to numeric representation.">to_float</a> , effectively_converts_minus_145_dot_643 )</div>
+<div class="line"><a name="l00009"></a><span class="lineno"><a class="code" href="to__float_8hpp.html#a070b3ccd2210f2b6d13b2ce78303d3d7">    9</a></span>&#160;<a class="code" href="chrono__util__tests_8cpp.html#a4d515f066f202870d93427c6823ebeca">TEST</a> ( to_float , effectively_converts_minus_145_dot_643 )</div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;{</div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    std::string source_string = <span class="stringliteral">&quot;-145.643&quot;</span>;</div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    <span class="keywordtype">float</span> result_number_correct = -145.643;</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    <span class="keywordtype">float</span> result_number_actual = <a class="code" href="namespacextd_1_1str.html#ae80bc523e87c11b0d108e794ffc40d09" title="Converts a number from string to numeric representation.">xtd::str::to_float</a>(source_string);</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    <span class="keywordtype">float</span> result_number_actual = <a class="code" href="classxtd_1_1str.html#ae80bc523e87c11b0d108e794ffc40d09" title="Converts a number from string to numeric representation.">xtd::str::to_float</a>(source_string);</div>
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    ASSERT_FLOAT_EQ ( result_number_correct , result_number_actual );</div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;}</div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Aug 8 2014 22:21:37 for XTD by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Aug 12 2014 10:13:55 for XTD by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.1.2
 </small></address>

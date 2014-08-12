@@ -13,7 +13,7 @@ var searchData=
   ['first_5fvalue',['first_value',['../namespacexstd_1_1pp.html#aa93a8a507e9fef379bd5d05249b4522e',1,'xstd::pp']]],
   ['for_5feach',['for_each',['../namespacexstd_1_1pp.html#a55868e0a2c2057ea2ba4ee9a938b8f07',1,'xstd::pp::for_each(parameters_types...)'],['../namespacexstd_1_1pp.html#aa29a2aab754d68ff365898122abea2fe',1,'xstd::pp::for_each(first_parameter_type first_parameter, other_parameters_types...other_parameters)']]],
   ['free_5flisteners',['free_listeners',['../classxstd_1_1event.html#a045873dfdf4fe07af8421d81592d3275',1,'xstd::event']]],
-  ['from',['from',['../namespacextd_1_1str.html#a526a132dfcfac73b37078ead543a47c6',1,'xtd::str']]],
+  ['from',['from',['../classxtd_1_1str.html#a37b003c1acec0bc1c779d30796851075',1,'xtd::str']]],
   ['functor',['functor',['../classxstd_1_1functor.html#aed2d510d4df5f6bb33d06370fbfa5fb8',1,'xstd::functor']]],
   ['functor',['functor',['../classxstd_1_1functor.html',1,'xstd']]],
   ['functor_2ehpp',['functor.hpp',['../functor_8hpp.html',1,'']]],
