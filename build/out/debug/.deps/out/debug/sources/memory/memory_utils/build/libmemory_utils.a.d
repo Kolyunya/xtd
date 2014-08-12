@@ -1,0 +1,1 @@
+cmd_out/debug/obj.target/../sources/memory/memory_utils/build/libmemory_utils.a := rm -f out/debug/obj.target/../sources/memory/memory_utils/build/libmemory_utils.a && ar crsT out/debug/obj.target/../sources/memory/memory_utils/build/libmemory_utils.a out/debug/obj.target/memory_utils/../sources/memory/memory_utils/sources/memory_utils.o
