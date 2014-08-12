@@ -38,7 +38,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
       <li><a href="namespaces.html"><span>Namespaces</span></a></li>
-      <li><a href="annotated.html"><span>Classes</span></a></li>
       <li class="current"><a href="files.html"><span>Files</span></a></li>
       <li>
         <div id="MSearchBox" class="MSearchBoxInactive">
@@ -69,7 +68,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -88,25 +87,25 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">to_double.hpp</div>  </div>
 </div><!--header-->
 <div class="contents">
-<a href="to__double_8hpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno"><a class="code" href="to__double_8hpp.html#a97f1186f3ea427a752a23fdfea46f2f0">    1</a></span>&#160;<a class="code" href="tests_2string__utils_8cpp.html#a85dbac707044eb39f0d8f0a015554d17">TEST</a> ( to_double , effectively_converts_14_dot_5631 )</div>
+<a href="to__double_8hpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno"><a class="code" href="to__double_8hpp.html#a97f1186f3ea427a752a23fdfea46f2f0">    1</a></span>&#160;<a class="code" href="tests_2string__utils_8cpp.html#a85dbac707044eb39f0d8f0a015554d17">TEST</a> ( <a class="code" href="namespacextd_1_1str.html#a556648e51f28261237c8d4ec28ba9198" title="Converts a number from string to numeric representation.">to_double</a> , effectively_converts_14_dot_5631 )</div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;{</div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;    std::string source_string = <span class="stringliteral">&quot;14.5631&quot;</span>;</div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;    <span class="keywordtype">double</span> result_number_correct = 14.5631;</div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;    <span class="keywordtype">double</span> result_number_actual = <a class="code" href="classxtd_1_1str.html#a556648e51f28261237c8d4ec28ba9198" title="Converts a number from string to numeric representation.">xtd::str::to_double</a>(source_string);</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;    <span class="keywordtype">double</span> result_number_actual = <a class="code" href="namespacextd_1_1str.html#a556648e51f28261237c8d4ec28ba9198" title="Converts a number from string to numeric representation.">xtd::str::to_double</a>(source_string);</div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;    ASSERT_FLOAT_EQ ( result_number_correct , result_number_actual );</div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;}</div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;</div>
-<div class="line"><a name="l00009"></a><span class="lineno"><a class="code" href="to__double_8hpp.html#a0d7a0773a4df25803b7d1c3e55ceffbd">    9</a></span>&#160;<a class="code" href="tests_2string__utils_8cpp.html#a85dbac707044eb39f0d8f0a015554d17">TEST</a> ( to_double , effectively_converts_minus_145_dot_643 )</div>
+<div class="line"><a name="l00009"></a><span class="lineno"><a class="code" href="to__double_8hpp.html#a0d7a0773a4df25803b7d1c3e55ceffbd">    9</a></span>&#160;<a class="code" href="tests_2string__utils_8cpp.html#a85dbac707044eb39f0d8f0a015554d17">TEST</a> ( <a class="code" href="namespacextd_1_1str.html#a556648e51f28261237c8d4ec28ba9198" title="Converts a number from string to numeric representation.">to_double</a> , effectively_converts_minus_145_dot_643 )</div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;{</div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    std::string source_string = <span class="stringliteral">&quot;-145.643&quot;</span>;</div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    <span class="keywordtype">double</span> result_number_correct = -145.643;</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    <span class="keywordtype">double</span> result_number_actual = <a class="code" href="classxtd_1_1str.html#a556648e51f28261237c8d4ec28ba9198" title="Converts a number from string to numeric representation.">xtd::str::to_double</a>(source_string);</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    <span class="keywordtype">double</span> result_number_actual = <a class="code" href="namespacextd_1_1str.html#a556648e51f28261237c8d4ec28ba9198" title="Converts a number from string to numeric representation.">xtd::str::to_double</a>(source_string);</div>
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    ASSERT_FLOAT_EQ ( result_number_correct , result_number_actual );</div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;}</div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Aug 12 2014 11:02:57 for XTD by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Aug 12 2014 11:13:11 for XTD by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.1.2
 </small></address>

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['split',['split',['../classxtd_1_1str.html#a688698cc63b3de16678cb1feefd2035e',1,'xtd::str::split(const std::string &amp;source_string, const std::string &amp;delimiter)'],['../classxtd_1_1str.html#ab312dba9debd454bfff2d2e4856b63b0',1,'xtd::str::split(const std::string &amp;source_string, char delimiter)']]]
+  ['split',['split',['../namespacextd_1_1str.html#a6622349d5ca5c31b72990c30eaf0b587',1,'xtd::str::split(const std::string &amp;source_string, const std::string &amp;delimiter)'],['../namespacextd_1_1str.html#a3186c20d3d6f96cae15ef43b9d2033aa',1,'xtd::str::split(const std::string &amp;source_string, char delimiter)']]]
 ];
