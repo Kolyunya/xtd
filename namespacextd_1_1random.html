@@ -119,18 +119,14 @@ Functions</h2></td></tr>
 <p>Referenced by <a class="el" href="tests_2sources_2random_8cpp_source.html#l00042">TEST()</a>.</p>
 <div class="fragment"><div class="line">        {</div>
 <div class="line"></div>
-<div class="line">            <span class="keywordflow">if</span> ( win_rate_percent &gt; 100 )</div>
+<div class="line">            <span class="keywordflow">if</span> ( win_rate_percent &gt;= 100 )</div>
 <div class="line">            {</div>
-<div class="line"></div>
 <div class="line">                win_rate_percent = 100;</div>
-<div class="line"></div>
 <div class="line">            }</div>
 <div class="line"></div>
-<div class="line">            <span class="keywordflow">if</span> ( win_rate_percent &lt; 0 )</div>
+<div class="line">            <span class="keywordflow">if</span> ( win_rate_percent &lt;= 0 )</div>
 <div class="line">            {</div>
-<div class="line"></div>
 <div class="line">                win_rate_percent = 0;</div>
-<div class="line"></div>
 <div class="line">            }</div>
 <div class="line"></div>
 <div class="line">            <span class="keywordtype">int</span> win_rate_inverted = 100 / win_rate_percent;</div>
@@ -170,7 +166,7 @@ Functions</h2></td></tr>
 <p>Referenced by <a class="el" href="sources_2random_8cpp_source.html#l00044">coin_flip()</a>, and <a class="el" href="tests_2sources_2random_8cpp_source.html#l00005">TEST()</a>.</p>
 <div class="fragment"><div class="line">        {</div>
 <div class="line"></div>
-<div class="line">            <span class="comment">// Validate the range</span></div>
+<div class="line">            <span class="comment">//  Validate the range</span></div>
 <div class="line">            <span class="keywordflow">if</span> ( minimum &gt; maximum )</div>
 <div class="line">            {</div>
 <div class="line"></div>
@@ -178,7 +174,7 @@ Functions</h2></td></tr>
 <div class="line"></div>
 <div class="line">            }</div>
 <div class="line"></div>
-<div class="line">            <span class="comment">// Minimum range</span></div>
+<div class="line">            <span class="comment">//  Minimum range</span></div>
 <div class="line">            <span class="keywordflow">else</span> <span class="keywordflow">if</span> ( minimum == maximum )</div>
 <div class="line">            {</div>
 <div class="line"></div>
@@ -186,10 +182,10 @@ Functions</h2></td></tr>
 <div class="line"></div>
 <div class="line">            }</div>
 <div class="line"></div>
-<div class="line">            <span class="comment">// Calculate the length of the range</span></div>
+<div class="line">            <span class="comment">//  Calculate the length of the range</span></div>
 <div class="line">            <span class="keywordtype">int</span> range_length = maximum - minimum + 1;</div>
 <div class="line"></div>
-<div class="line">            <span class="comment">// Return a random number from the range</span></div>
+<div class="line">            <span class="comment">//  Return a random number from the range</span></div>
 <div class="line">            <span class="keywordflow">return</span> std::rand() % range_length + minimum;</div>
 <div class="line"></div>
 <div class="line">        }</div>
@@ -215,7 +211,7 @@ Functions</h2></td></tr>
 <p>Referenced by <a class="el" href="tests_2sources_2random_8cpp_source.html#l00089">main()</a>.</p>
 <div class="fragment"><div class="line">        {</div>
 <div class="line"></div>
-<div class="line">            <span class="comment">// Randomize random number generator using vurent</span></div>
+<div class="line">            <span class="comment">//  Randomize random number generator using curent timestamp.</span></div>
 <div class="line">            std::srand(std::time(<span class="keyword">nullptr</span>));</div>
 <div class="line"></div>
 <div class="line">        }</div>
@@ -225,7 +221,7 @@ Functions</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Aug 12 2014 18:23:18 for XTD by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Aug 12 2014 19:08:28 for XTD by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.1.2
 </small></address>

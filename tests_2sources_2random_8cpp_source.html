@@ -92,7 +92,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#include &lt;xtd/random.hpp&gt;</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &lt;stdlib.h&gt;</span></div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;</div>
-<div class="line"><a name="l00005"></a><span class="lineno"><a class="code" href="tests_2sources_2random_8cpp.html#a5fad8a757375975953f6c4ccac58793f">    5</a></span>&#160;<a class="code" href="tests_2sources_2event_8cpp.html#aad039085db06fd3e1eb90c2c3f469b96">TEST</a> ( get_int_1_2 , returns_1_or_2 )</div>
+<div class="line"><a name="l00005"></a><span class="lineno"><a class="code" href="tests_2sources_2random_8cpp.html#a5fad8a757375975953f6c4ccac58793f">    5</a></span>&#160;<a class="code" href="tests_2sources_2chrono__utils_8cpp.html#a4d515f066f202870d93427c6823ebeca">TEST</a> ( get_int_1_2 , returns_1_or_2 )</div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;{</div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;</div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;    <span class="keywordtype">int</span> random_integer = <a class="code" href="namespacextd_1_1random.html#a29c6502aa29166aae68dfac16f553fd7">xtd::random::get_int</a>(1,2);</div>
@@ -106,7 +106,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;</div>
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;}</div>
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;</div>
-<div class="line"><a name="l00019"></a><span class="lineno"><a class="code" href="tests_2sources_2random_8cpp.html#ac80f34b5addc247eca609ca6d7476415">   19</a></span>&#160;<a class="code" href="tests_2sources_2event_8cpp.html#aad039085db06fd3e1eb90c2c3f469b96">TEST</a> ( get_int_minus_5_minus_3 , returns_minus_5_or_minus_4_or_minus_3 )</div>
+<div class="line"><a name="l00019"></a><span class="lineno"><a class="code" href="tests_2sources_2random_8cpp.html#ac80f34b5addc247eca609ca6d7476415">   19</a></span>&#160;<a class="code" href="tests_2sources_2chrono__utils_8cpp.html#a4d515f066f202870d93427c6823ebeca">TEST</a> ( get_int_minus_5_minus_3 , returns_minus_5_or_minus_4_or_minus_3 )</div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;{</div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;</div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <span class="keywordtype">int</span> random_integer = <a class="code" href="namespacextd_1_1random.html#a29c6502aa29166aae68dfac16f553fd7">xtd::random::get_int</a>(-5,-3);</div>
@@ -122,14 +122,14 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;</div>
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;}</div>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;</div>
-<div class="line"><a name="l00035"></a><span class="lineno"><a class="code" href="tests_2sources_2random_8cpp.html#a55332d5ebdafe9875412ad0a0aad4f29">   35</a></span>&#160;<a class="code" href="tests_2sources_2event_8cpp.html#aad039085db06fd3e1eb90c2c3f469b96">TEST</a> ( get_int_2_1 , throws_std_range_error )</div>
+<div class="line"><a name="l00035"></a><span class="lineno"><a class="code" href="tests_2sources_2random_8cpp.html#a55332d5ebdafe9875412ad0a0aad4f29">   35</a></span>&#160;<a class="code" href="tests_2sources_2chrono__utils_8cpp.html#a4d515f066f202870d93427c6823ebeca">TEST</a> ( get_int_2_1 , throws_std_range_error )</div>
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;{</div>
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;</div>
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    ASSERT_THROW(<a class="code" href="namespacextd_1_1random.html#a29c6502aa29166aae68dfac16f553fd7">xtd::random::get_int</a>(2,1),std::range_error);</div>
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;</div>
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;}</div>
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;</div>
-<div class="line"><a name="l00042"></a><span class="lineno"><a class="code" href="tests_2sources_2random_8cpp.html#a0a49e32d5fa53433e88b5ebc0110a4d8">   42</a></span>&#160;<a class="code" href="tests_2sources_2event_8cpp.html#aad039085db06fd3e1eb90c2c3f469b96">TEST</a> ( <a class="code" href="namespacextd_1_1random.html#a078c9cabf9b614876e5b1bc387349ed9">coin_flip</a> , returns_true_or_false )</div>
+<div class="line"><a name="l00042"></a><span class="lineno"><a class="code" href="tests_2sources_2random_8cpp.html#a0a49e32d5fa53433e88b5ebc0110a4d8">   42</a></span>&#160;<a class="code" href="tests_2sources_2chrono__utils_8cpp.html#a4d515f066f202870d93427c6823ebeca">TEST</a> ( <a class="code" href="namespacextd_1_1random.html#a078c9cabf9b614876e5b1bc387349ed9">coin_flip</a> , returns_true_or_false )</div>
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;{</div>
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;</div>
 <div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="namespacextd_1_1random.html#a078c9cabf9b614876e5b1bc387349ed9">coin_flip</a> = <a class="code" href="namespacextd_1_1random.html#a078c9cabf9b614876e5b1bc387349ed9">xtd::random::coin_flip</a>();</div>
@@ -143,7 +143,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;</div>
 <div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;}</div>
 <div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;</div>
-<div class="line"><a name="l00056"></a><span class="lineno"><a class="code" href="tests_2sources_2random_8cpp.html#af023ace5cf5a30be3d5ff013e0a6cfb7">   56</a></span>&#160;<a class="code" href="tests_2sources_2event_8cpp.html#aad039085db06fd3e1eb90c2c3f469b96">TEST</a> ( coin_flip_10 , returns_true_or_false )</div>
+<div class="line"><a name="l00056"></a><span class="lineno"><a class="code" href="tests_2sources_2random_8cpp.html#af023ace5cf5a30be3d5ff013e0a6cfb7">   56</a></span>&#160;<a class="code" href="tests_2sources_2chrono__utils_8cpp.html#a4d515f066f202870d93427c6823ebeca">TEST</a> ( coin_flip_10 , returns_true_or_false )</div>
 <div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;{</div>
 <div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;</div>
 <div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="namespacextd_1_1random.html#a078c9cabf9b614876e5b1bc387349ed9">coin_flip</a> = <a class="code" href="namespacextd_1_1random.html#a078c9cabf9b614876e5b1bc387349ed9">xtd::random::coin_flip</a>(10);</div>
@@ -157,7 +157,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;</div>
 <div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;}</div>
 <div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;</div>
-<div class="line"><a name="l00070"></a><span class="lineno"><a class="code" href="tests_2sources_2random_8cpp.html#a1b73f97072dcfb4159ad97b4f74a6e7b">   70</a></span>&#160;<a class="code" href="tests_2sources_2event_8cpp.html#aad039085db06fd3e1eb90c2c3f469b96">TEST</a> ( coin_flip_10 , returns_true_in_10_percents_of_cases )</div>
+<div class="line"><a name="l00070"></a><span class="lineno"><a class="code" href="tests_2sources_2random_8cpp.html#a1b73f97072dcfb4159ad97b4f74a6e7b">   70</a></span>&#160;<a class="code" href="tests_2sources_2chrono__utils_8cpp.html#a4d515f066f202870d93427c6823ebeca">TEST</a> ( coin_flip_10 , returns_true_in_10_percents_of_cases )</div>
 <div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;{</div>
 <div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;</div>
 <div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    <span class="keywordtype">int</span> wins = 0;</div>
@@ -176,7 +176,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;</div>
 <div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;}</div>
 <div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;</div>
-<div class="line"><a name="l00089"></a><span class="lineno"><a class="code" href="tests_2sources_2random_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627">   89</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="tests_2sources_2event_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627">main</a> ( <span class="keywordtype">int</span> argc , <span class="keywordtype">char</span>** argv )</div>
+<div class="line"><a name="l00089"></a><span class="lineno"><a class="code" href="tests_2sources_2random_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627">   89</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="tests_2sources_2chrono__utils_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627">main</a> ( <span class="keywordtype">int</span> argc , <span class="keywordtype">char</span>** argv )</div>
 <div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;{</div>
 <div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    <a class="code" href="namespacextd_1_1random.html#a280afd3305a1e2e693b00299e30b05ba">xtd::random::randomize</a>();</div>
 <div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    ::testing::InitGoogleTest(&amp;argc, argv);</div>
@@ -185,7 +185,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Aug 12 2014 18:23:18 for XTD by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Aug 12 2014 19:08:28 for XTD by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.1.2
 </small></address>
