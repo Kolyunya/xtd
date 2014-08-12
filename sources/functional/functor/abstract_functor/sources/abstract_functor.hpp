@@ -4,7 +4,7 @@
 namespace xtd
 {
 
-    namespace fn
+    namespace functional
     {
 
         template <typename... arguments_type>

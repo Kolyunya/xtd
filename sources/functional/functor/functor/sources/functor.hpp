@@ -1,12 +1,12 @@
 #ifndef _XTD_FUNCTOR_HPP_
 #define _XTD_FUNCTOR_HPP_
 
-#include <xtd/functional/abstract_functor.hpp>
+#include "./../../abstract_functor/sources/abstract_functor.hpp"
 
 namespace xtd
 {
 
-    namespace fn
+    namespace functional
     {
 
         template <typename object_type , typename... arguments_type>

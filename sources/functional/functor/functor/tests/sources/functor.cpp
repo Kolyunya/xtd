@@ -1,5 +1,5 @@
 #include <gtest/gtest.h>
-#include <xtd/functional.hpp>
+#include <xtd/functional>
 
 int main ( int argc , char** argv )
 {
