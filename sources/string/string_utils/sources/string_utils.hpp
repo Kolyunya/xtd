@@ -6,21 +6,18 @@
 #include <sstream>
 
 /**
- *  @namespace xtd
  *  @brief A root namespace of the library.
  */
 namespace xtd
 {
 
     /**
-     *  @namespace str
      *  @brief A namespace containing tools for string operations.
      */
     namespace str
     {
 
         /**
-         *  @typedef
          *  @brief A collection of strings.
          */
         using strings = std::vector<std::string>;

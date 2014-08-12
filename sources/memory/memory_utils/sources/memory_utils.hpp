@@ -4,14 +4,12 @@
 #include <stdexcept>
 
 /**
- *  @namespace xtd
  *  @brief A root namespace of the library.
  */
 namespace xtd
 {
 
     /**
-     *  @namespace mem
      *  @brief A namespace containing tools for memory operations.
      */
     namespace mem

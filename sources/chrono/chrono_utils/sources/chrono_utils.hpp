@@ -7,9 +7,15 @@
 #include <string>
 #include <mutex>
 
+/**
+ *  @brief A root namespace of the library.
+ */
 namespace xtd
 {
 
+    /**
+     *  @brief A namespace containing tools for time operations.
+     */
     namespace chrono
     {
 

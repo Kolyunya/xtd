@@ -7,14 +7,12 @@
 #include <sys/stat.h>
 
 /**
- *  @namespace xtd
  *  @brief A root namespace of the library.
  */
 namespace xtd
 {
 
     /**
-     *  @namespace mem
      *  @brief A namespace containing tools for file system operations.
      */
     namespace file
