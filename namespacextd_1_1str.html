@@ -122,8 +122,8 @@ Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2><a name="var-members"></a>
 Variables</h2></td></tr>
-<tr class="memitem:a8d0b649c019e83b1f02367b8454143a7"><td class="memItemLeft" align="right" valign="top">static char const *const&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacextd_1_1str.html#a8d0b649c019e83b1f02367b8454143a7">error_string_to_number_conversion_failed</a> = &quot;String to number conversion failed.&quot;</td></tr>
-<tr class="memitem:a8c731a55e9b1235e437a61b728354794"><td class="memItemLeft" align="right" valign="top">static char const *const&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacextd_1_1str.html#a8c731a55e9b1235e437a61b728354794">error_number_exceeds_type_limits</a> = &quot;Number exceeds type limits.&quot;</td></tr>
+<tr class="memitem:a8b2753fb9ad20d9d5ebca509fe506389"><td class="memItemLeft" align="right" valign="top">static const char *const&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacextd_1_1str.html#a8b2753fb9ad20d9d5ebca509fe506389">error_string_to_number_conversion_failed</a> = &quot;String to number conversion failed.&quot;</td></tr>
+<tr class="memitem:aff05f59422f8e1df895eb3ebc153ac58"><td class="memItemLeft" align="right" valign="top">static const char *const&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacextd_1_1str.html#aff05f59422f8e1df895eb3ebc153ac58">error_number_exceeds_type_limits</a> = &quot;Number exceeds type limits.&quot;</td></tr>
 </table>
 <h2>Function Documentation</h2>
 <a class="anchor" id="a526a132dfcfac73b37078ead543a47c6"></a>
@@ -650,14 +650,14 @@ template&lt;typename type &gt; </div>
 <div class="line">                <span class="keywordtype">char</span>* first_character_of_string = <span class="keyword">const_cast&lt;</span><span class="keywordtype">char</span>*<span class="keyword">&gt;</span>(source_string.data());</div>
 <div class="line">                <span class="keywordflow">if</span> ( first_character_after_number == first_character_of_string )</div>
 <div class="line">                {</div>
-<div class="line">                    <span class="keywordflow">throw</span> std::runtime_error(<a class="code" href="namespacextd_1_1str.html#a8d0b649c019e83b1f02367b8454143a7">error_string_to_number_conversion_failed</a>);</div>
+<div class="line">                    <span class="keywordflow">throw</span> std::runtime_error(<a class="code" href="namespacextd_1_1str.html#a8b2753fb9ad20d9d5ebca509fe506389">error_string_to_number_conversion_failed</a>);</div>
 <div class="line">                }</div>
 <div class="line">            }</div>
 <div class="line"></div>
 <div class="line">            <span class="comment">//  The number exceeds type limits.</span></div>
 <div class="line">            <span class="keywordflow">else</span> <span class="keywordflow">if</span> ( number == HUGE_VAL || number == -HUGE_VAL )</div>
 <div class="line">            {</div>
-<div class="line">                <span class="keywordflow">throw</span> std::runtime_error(<a class="code" href="namespacextd_1_1str.html#a8c731a55e9b1235e437a61b728354794">error_number_exceeds_type_limits</a>);</div>
+<div class="line">                <span class="keywordflow">throw</span> std::runtime_error(<a class="code" href="namespacextd_1_1str.html#aff05f59422f8e1df895eb3ebc153ac58">error_number_exceeds_type_limits</a>);</div>
 <div class="line">            }</div>
 <div class="line"></div>
 <div class="line">            <span class="keywordflow">return</span> number;</div>
@@ -722,14 +722,14 @@ template&lt;typename type &gt; </div>
 <div class="line">                <span class="keywordtype">char</span>* first_character_of_string = <span class="keyword">const_cast&lt;</span><span class="keywordtype">char</span>*<span class="keyword">&gt;</span>(source_string.data());</div>
 <div class="line">                <span class="keywordflow">if</span> ( first_character_after_number == first_character_of_string )</div>
 <div class="line">                {</div>
-<div class="line">                    <span class="keywordflow">throw</span> std::runtime_error(<a class="code" href="namespacextd_1_1str.html#a8d0b649c019e83b1f02367b8454143a7">error_string_to_number_conversion_failed</a>);</div>
+<div class="line">                    <span class="keywordflow">throw</span> std::runtime_error(<a class="code" href="namespacextd_1_1str.html#a8b2753fb9ad20d9d5ebca509fe506389">error_string_to_number_conversion_failed</a>);</div>
 <div class="line">                }</div>
 <div class="line">            }</div>
 <div class="line"></div>
 <div class="line">            <span class="comment">//  The number exceeds type limits.</span></div>
 <div class="line">            <span class="keywordflow">else</span> <span class="keywordflow">if</span> ( number == HUGE_VAL || number == -HUGE_VAL )</div>
 <div class="line">            {</div>
-<div class="line">                <span class="keywordflow">throw</span> std::runtime_error(<a class="code" href="namespacextd_1_1str.html#a8c731a55e9b1235e437a61b728354794">error_number_exceeds_type_limits</a>);</div>
+<div class="line">                <span class="keywordflow">throw</span> std::runtime_error(<a class="code" href="namespacextd_1_1str.html#aff05f59422f8e1df895eb3ebc153ac58">error_number_exceeds_type_limits</a>);</div>
 <div class="line">            }</div>
 <div class="line"></div>
 <div class="line">            <span class="keywordflow">return</span> number;</div>
@@ -799,7 +799,7 @@ template&lt;typename type &gt; </div>
 <div class="line">                number == std::numeric_limits&lt;signed int&gt;::min()</div>
 <div class="line">            )</div>
 <div class="line">            {</div>
-<div class="line">                <span class="keywordflow">throw</span> std::runtime_error(<a class="code" href="namespacextd_1_1str.html#a8c731a55e9b1235e437a61b728354794">error_number_exceeds_type_limits</a>);</div>
+<div class="line">                <span class="keywordflow">throw</span> std::runtime_error(<a class="code" href="namespacextd_1_1str.html#aff05f59422f8e1df895eb3ebc153ac58">error_number_exceeds_type_limits</a>);</div>
 <div class="line">            }</div>
 <div class="line"></div>
 <div class="line">            <span class="keywordflow">return</span> number;</div>
@@ -875,7 +875,7 @@ template&lt;typename type &gt; </div>
 <div class="line">                <span class="keywordtype">char</span>* first_character_of_string = <span class="keyword">const_cast&lt;</span><span class="keywordtype">char</span>*<span class="keyword">&gt;</span>(source_string.data());</div>
 <div class="line">                <span class="keywordflow">if</span> ( first_character_after_number == first_character_of_string )</div>
 <div class="line">                {</div>
-<div class="line">                    <span class="keywordflow">throw</span> std::runtime_error(<a class="code" href="namespacextd_1_1str.html#a8d0b649c019e83b1f02367b8454143a7">error_string_to_number_conversion_failed</a>);</div>
+<div class="line">                    <span class="keywordflow">throw</span> std::runtime_error(<a class="code" href="namespacextd_1_1str.html#a8b2753fb9ad20d9d5ebca509fe506389">error_string_to_number_conversion_failed</a>);</div>
 <div class="line">                }</div>
 <div class="line">            }</div>
 <div class="line"></div>
@@ -888,7 +888,7 @@ template&lt;typename type &gt; </div>
 <div class="line">                number == std::numeric_limits&lt;signed long int&gt;::min()</div>
 <div class="line">            )</div>
 <div class="line">            {</div>
-<div class="line">                <span class="keywordflow">throw</span> std::runtime_error(<a class="code" href="namespacextd_1_1str.html#a8c731a55e9b1235e437a61b728354794">error_number_exceeds_type_limits</a>);</div>
+<div class="line">                <span class="keywordflow">throw</span> std::runtime_error(<a class="code" href="namespacextd_1_1str.html#aff05f59422f8e1df895eb3ebc153ac58">error_number_exceeds_type_limits</a>);</div>
 <div class="line">            }</div>
 <div class="line"></div>
 <div class="line">            <span class="keywordflow">return</span> number;</div>
@@ -951,14 +951,14 @@ template&lt;typename type &gt; </div>
 <div class="line">                <span class="keywordtype">char</span>* first_character_of_string = <span class="keyword">const_cast&lt;</span><span class="keywordtype">char</span>*<span class="keyword">&gt;</span>(source_string.data());</div>
 <div class="line">                <span class="keywordflow">if</span> ( first_character_after_number == first_character_of_string )</div>
 <div class="line">                {</div>
-<div class="line">                    <span class="keywordflow">throw</span> std::runtime_error(<a class="code" href="namespacextd_1_1str.html#a8d0b649c019e83b1f02367b8454143a7">error_string_to_number_conversion_failed</a>);</div>
+<div class="line">                    <span class="keywordflow">throw</span> std::runtime_error(<a class="code" href="namespacextd_1_1str.html#a8b2753fb9ad20d9d5ebca509fe506389">error_string_to_number_conversion_failed</a>);</div>
 <div class="line">                }</div>
 <div class="line">            }</div>
 <div class="line"></div>
 <div class="line">            <span class="comment">//  The number exceeds type limits.</span></div>
 <div class="line">            <span class="keywordflow">else</span> <span class="keywordflow">if</span> ( number == HUGE_VAL || number == -HUGE_VAL )</div>
 <div class="line">            {</div>
-<div class="line">                <span class="keywordflow">throw</span> std::runtime_error(<a class="code" href="namespacextd_1_1str.html#a8c731a55e9b1235e437a61b728354794">error_number_exceeds_type_limits</a>);</div>
+<div class="line">                <span class="keywordflow">throw</span> std::runtime_error(<a class="code" href="namespacextd_1_1str.html#aff05f59422f8e1df895eb3ebc153ac58">error_number_exceeds_type_limits</a>);</div>
 <div class="line">            }</div>
 <div class="line"></div>
 <div class="line">            <span class="keywordflow">return</span> number;</div>
@@ -1034,7 +1034,7 @@ template&lt;typename type &gt; </div>
 <div class="line">                <span class="keywordtype">char</span>* first_character_of_string = <span class="keyword">const_cast&lt;</span><span class="keywordtype">char</span>*<span class="keyword">&gt;</span>(source_string.data());</div>
 <div class="line">                <span class="keywordflow">if</span> ( first_character_after_number == first_character_of_string )</div>
 <div class="line">                {</div>
-<div class="line">                    <span class="keywordflow">throw</span> std::runtime_error(<a class="code" href="namespacextd_1_1str.html#a8d0b649c019e83b1f02367b8454143a7">error_string_to_number_conversion_failed</a>);</div>
+<div class="line">                    <span class="keywordflow">throw</span> std::runtime_error(<a class="code" href="namespacextd_1_1str.html#a8b2753fb9ad20d9d5ebca509fe506389">error_string_to_number_conversion_failed</a>);</div>
 <div class="line">                }</div>
 <div class="line">            }</div>
 <div class="line"></div>
@@ -1047,7 +1047,7 @@ template&lt;typename type &gt; </div>
 <div class="line">                number == std::numeric_limits&lt;signed long long int&gt;::min()</div>
 <div class="line">            )</div>
 <div class="line">            {</div>
-<div class="line">                <span class="keywordflow">throw</span> std::runtime_error(<a class="code" href="namespacextd_1_1str.html#a8c731a55e9b1235e437a61b728354794">error_number_exceeds_type_limits</a>);</div>
+<div class="line">                <span class="keywordflow">throw</span> std::runtime_error(<a class="code" href="namespacextd_1_1str.html#aff05f59422f8e1df895eb3ebc153ac58">error_number_exceeds_type_limits</a>);</div>
 <div class="line">            }</div>
 <div class="line"></div>
 <div class="line">            <span class="keywordflow">return</span> number;</div>
@@ -1057,7 +1057,7 @@ template&lt;typename type &gt; </div>
 </div>
 </div>
 <h2>Variable Documentation</h2>
-<a class="anchor" id="a8c731a55e9b1235e437a61b728354794"></a>
+<a class="anchor" id="aff05f59422f8e1df895eb3ebc153ac58"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -1065,7 +1065,7 @@ template&lt;typename type &gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">char const* const xtd::str::error_number_exceeds_type_limits = &quot;Number exceeds type limits.&quot;</td>
+          <td class="memname">const char* const xtd::str::error_number_exceeds_type_limits = &quot;Number exceeds type limits.&quot;</td>
         </tr>
       </table>
   </td>
@@ -1081,7 +1081,7 @@ template&lt;typename type &gt; </div>
 
 </div>
 </div>
-<a class="anchor" id="a8d0b649c019e83b1f02367b8454143a7"></a>
+<a class="anchor" id="a8b2753fb9ad20d9d5ebca509fe506389"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -1089,7 +1089,7 @@ template&lt;typename type &gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">char const* const xtd::str::error_string_to_number_conversion_failed = &quot;String to number conversion failed.&quot;</td>
+          <td class="memname">const char* const xtd::str::error_string_to_number_conversion_failed = &quot;String to number conversion failed.&quot;</td>
         </tr>
       </table>
   </td>
@@ -1108,7 +1108,7 @@ template&lt;typename type &gt; </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Aug 12 2014 11:30:56 for XTD by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Aug 12 2014 11:31:36 for XTD by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.1.2
 </small></address>
