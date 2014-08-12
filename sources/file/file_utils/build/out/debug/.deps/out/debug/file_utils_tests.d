@@ -1,0 +1,1 @@
+cmd_out/debug/file_utils_tests := flock out/debug/linker.lock g++ -lpthread  -o out/debug/file_utils_tests -Wl,--start-group out/debug/obj.target/file_utils_tests/../tests/sources/file_utils.o /home/kolyunya/projects/gtest/build/gtest-all.o out/debug/obj.target/libfile_utils.a -Wl,--end-group 

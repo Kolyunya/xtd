@@ -5,7 +5,7 @@
         'UNIT_STANDARD': 'c++11',
         'UNIT_SOURCES_DIR': '<(UNIT_ROOT_DIR)/sources',
         'UNIT_SOURCE_FILE': '<(UNIT_SOURCES_DIR)/<(UNIT_NAME).cpp',
-        'UNIT_TESTS_DIR': '<(UNIT_ROOT_DIR)/tests',
+        'UNIT_TESTS_DIR': '<(UNIT_ROOT_DIR)/tests/sources',
         'UNIT_TESTS_SOURCE_FILE': '<(UNIT_TESTS_DIR)/<(UNIT_NAME).cpp',
         'UNIT_TESTS_TARGET': '<(UNIT_NAME)_tests',
         'GTEST_OBJECT_FILE': '$(GTEST_HOME)/build/gtest-all.o',
