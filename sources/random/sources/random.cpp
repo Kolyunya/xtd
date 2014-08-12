@@ -9,7 +9,7 @@ namespace xtd
         void randomize ( void )
         {
 
-            // Randomize random number generator using vurent
+            //  Randomize random number generator using curent timestamp.
             std::srand(std::time(nullptr));
 
         }
@@ -17,7 +17,7 @@ namespace xtd
         int get_int ( const int minimum , const int maximum )
         {
 
-            // Validate the range
+            //  Validate the range
             if ( minimum > maximum )
             {
 
@@ -25,7 +25,7 @@ namespace xtd
 
             }
 
-            // Minimum range
+            //  Minimum range
             else if ( minimum == maximum )
             {
 
@@ -33,10 +33,10 @@ namespace xtd
 
             }
 
-            // Calculate the length of the range
+            //  Calculate the length of the range
             int range_length = maximum - minimum + 1;
 
-            // Return a random number from the range
+            //  Return a random number from the range
             return std::rand() % range_length + minimum;
 
         }
@@ -44,18 +44,14 @@ namespace xtd
         bool coin_flip ( float win_rate_percent )
         {
 
-            if ( win_rate_percent > 100 )
+            if ( win_rate_percent >= 100 )
             {
-
                 win_rate_percent = 100;
-
             }
 
-            if ( win_rate_percent < 0 )
+            if ( win_rate_percent <= 0 )
             {
-
                 win_rate_percent = 0;
-
             }
 
             int win_rate_inverted = 100 / win_rate_percent;
