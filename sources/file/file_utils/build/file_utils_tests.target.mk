@@ -46,13 +46,13 @@ CFLAGS_CC_release :=
 INCS_release := -I$(XTD_HOME)/include \
 	-I$(GTEST_HOME)/include
 
-OBJS := $(obj).target/$(TARGET)/../tests/sources/file_utils.o
+OBJS := $(obj).target/$(TARGET)/../sources/file/file_utils/tests/sources/file_utils.o
 
 # Add to the list of files we specially track dependencies for.
 all_deps += $(OBJS)
 
 # Make sure our dependencies are built before any of us.
-$(OBJS): | $(obj).target/libfile_utils.a
+$(OBJS): | $(obj).target/../sources/file/file_utils/build/libfile_utils.a
 
 # CFLAGS et al overrides must be target-local.
 # See "Target-specific Variable Values" in the GNU Make manual.
@@ -83,17 +83,13 @@ LIBS :=
 
 $(builddir)/file_utils_tests: GYP_LDFLAGS := $(LDFLAGS_$(BUILDTYPE))
 $(builddir)/file_utils_tests: LIBS := $(LIBS)
-$(builddir)/file_utils_tests: LD_INPUTS := $(OBJS) $(GTEST_HOME)/build/gtest-all.o $(obj).target/libfile_utils.a
+$(builddir)/file_utils_tests: LD_INPUTS := $(OBJS) $(GTEST_HOME)/build/gtest-all.o $(obj).target/../sources/file/file_utils/build/libfile_utils.a
 $(builddir)/file_utils_tests: TOOLSET := $(TOOLSET)
-$(builddir)/file_utils_tests: $(OBJS) $(GTEST_HOME)/build/gtest-all.o $(obj).target/libfile_utils.a FORCE_DO_CMD
+$(builddir)/file_utils_tests: $(OBJS) $(GTEST_HOME)/build/gtest-all.o $(obj).target/../sources/file/file_utils/build/libfile_utils.a FORCE_DO_CMD
 	$(call do_cmd,link)
 
 all_deps += $(builddir)/file_utils_tests
 # Add target alias
 .PHONY: file_utils_tests
 file_utils_tests: $(builddir)/file_utils_tests
-
-# Add executable to "all" target.
-.PHONY: all
-all: $(builddir)/file_utils_tests
 

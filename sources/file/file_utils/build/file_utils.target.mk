@@ -44,7 +44,7 @@ CFLAGS_CC_release :=
 
 INCS_release := -I$(XTD_HOME)/include
 
-OBJS := $(obj).target/$(TARGET)/../sources/file_utils.o
+OBJS := $(obj).target/$(TARGET)/../sources/file/file_utils/sources/file_utils.o
 
 # Add to the list of files we specially track dependencies for.
 all_deps += $(OBJS)
@@ -76,16 +76,16 @@ LDFLAGS_release :=
 
 LIBS := 
 
-$(obj).target/libfile_utils.a: GYP_LDFLAGS := $(LDFLAGS_$(BUILDTYPE))
-$(obj).target/libfile_utils.a: LIBS := $(LIBS)
-$(obj).target/libfile_utils.a: TOOLSET := $(TOOLSET)
-$(obj).target/libfile_utils.a: $(OBJS) FORCE_DO_CMD
+$(obj).target/../sources/file/file_utils/build/libfile_utils.a: GYP_LDFLAGS := $(LDFLAGS_$(BUILDTYPE))
+$(obj).target/../sources/file/file_utils/build/libfile_utils.a: LIBS := $(LIBS)
+$(obj).target/../sources/file/file_utils/build/libfile_utils.a: TOOLSET := $(TOOLSET)
+$(obj).target/../sources/file/file_utils/build/libfile_utils.a: $(OBJS) FORCE_DO_CMD
 	$(call do_cmd,alink)
 
-all_deps += $(obj).target/libfile_utils.a
+all_deps += $(obj).target/../sources/file/file_utils/build/libfile_utils.a
 # Add target alias
 .PHONY: file_utils
-file_utils: $(obj).target/libfile_utils.a
+file_utils: $(obj).target/../sources/file/file_utils/build/libfile_utils.a
 
 # Add target alias to "all" target.
 .PHONY: all
