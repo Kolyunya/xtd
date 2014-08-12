@@ -1,9 +1,0 @@
-#!/bin/bash
-
-# Only for the "master" branch
-if [ `git rev-parse --abbrev-ref HEAD` == "master" ]; then
-
-    # Push GitHub Pages branch too
-    git push origin gh-pages
-
-fi
