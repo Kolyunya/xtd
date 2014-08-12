@@ -8,5 +8,5 @@ var searchData=
   ['memory_5futils_2ehpp',['memory_utils.hpp',['../memory__utils_8hpp.html',1,'']]],
   ['memory_5futils_2etpp',['memory_utils.tpp',['../memory__utils_8tpp.html',1,'']]],
   ['method_5fptr',['method_ptr',['../classxtd_1_1fn_1_1functor.html#a964a8dd478c3fd98f256b4a3966e765f',1,'xtd::fn::functor']]],
-  ['mutex',['mutex',['../classxstd_1_1chrono_1_1timer__manager.html#afe2d386a7849d456e6fffda583bb73f2',1,'xstd::chrono::timer_manager']]]
+  ['mutex',['mutex',['../classxtd_1_1chrono_1_1timer__manager.html#a313d4ca3815a86862a2ac53c1d3c1df0',1,'xtd::chrono::timer_manager']]]
 ];

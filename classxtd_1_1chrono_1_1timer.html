@@ -417,10 +417,10 @@ template&lt;typename clock  = std::chrono::high_resolution_clock&gt; </div>
 
 <p>Definition at line <a class="el" href="timer_8hpp_source.html#l00065">65</a> of file <a class="el" href="timer_8hpp_source.html">timer.hpp</a>.</p>
 
-<p>References <a class="el" href="timer_8hpp_source.html#l00128">xtd::chrono::timer&lt; clock &gt;::check_is_ready_to_start()</a>, <a class="el" href="timer_8hpp_source.html#l00087">xtd::chrono::timer&lt; clock &gt;::event_start</a>, <a class="el" href="timer_8hpp_source.html#l00151">xtd::chrono::timer&lt; clock &gt;::is_active</a>, and <a class="el" href="timer_8hpp_source.html#l00123">xtd::chrono::timer&lt; clock &gt;::update_next_tick_time_point()</a>.</p>
+<p>References <a class="el" href="timer__manager_8hpp_source.html#l00027">xtd::chrono::timer_manager::add_timer()</a>, <a class="el" href="timer_8hpp_source.html#l00128">xtd::chrono::timer&lt; clock &gt;::check_is_ready_to_start()</a>, <a class="el" href="timer_8hpp_source.html#l00087">xtd::chrono::timer&lt; clock &gt;::event_start</a>, <a class="el" href="timer__manager_8hpp_source.html#l00019">xtd::chrono::timer_manager::get_instance()</a>, <a class="el" href="timer_8hpp_source.html#l00151">xtd::chrono::timer&lt; clock &gt;::is_active</a>, and <a class="el" href="timer_8hpp_source.html#l00123">xtd::chrono::timer&lt; clock &gt;::update_next_tick_time_point()</a>.</p>
 <div class="fragment"><div class="line">                {</div>
 <div class="line">                    this-&gt;<a class="code" href="classxtd_1_1chrono_1_1timer.html#a14f5d30b77745cb5b1326e4a083e1573">check_is_ready_to_start</a>();</div>
-<div class="line">                    timer_manager::get_instance().add_timer(<span class="keyword">this</span>);</div>
+<div class="line">                    <a class="code" href="classxtd_1_1chrono_1_1timer__manager.html#a39500a8d32d7062509b17680dea3d84a">timer_manager::get_instance</a>().<a class="code" href="classxtd_1_1chrono_1_1timer__manager.html#a366213c1dc3f317586af3f1b45784b68">add_timer</a>(<span class="keyword">this</span>);</div>
 <div class="line">                    this-&gt;<a class="code" href="classxtd_1_1chrono_1_1timer.html#ae07924648ac3cc0e05b076c7a3312616">update_next_tick_time_point</a>();</div>
 <div class="line">                    this-&gt;<a class="code" href="classxtd_1_1chrono_1_1timer.html#a2044263533caec99bebad9f337c37772">is_active</a> = <span class="keyword">true</span>;</div>
 <div class="line">                    this-&gt;<a class="code" href="classxtd_1_1chrono_1_1timer.html#abf30db7fb637f50f8ccb983095bcad34">event_start</a>.dispatch();</div>
@@ -454,12 +454,12 @@ template&lt;typename clock  = std::chrono::high_resolution_clock&gt; </div>
 
 <p>Definition at line <a class="el" href="timer_8hpp_source.html#l00074">74</a> of file <a class="el" href="timer_8hpp_source.html">timer.hpp</a>.</p>
 
-<p>References <a class="el" href="timer_8hpp_source.html#l00141">xtd::chrono::timer&lt; clock &gt;::check_is_ready_to_stop()</a>, <a class="el" href="timer_8hpp_source.html#l00093">xtd::chrono::timer&lt; clock &gt;::event_stop</a>, <a class="el" href="timer_8hpp_source.html#l00151">xtd::chrono::timer&lt; clock &gt;::is_active</a>, and <a class="el" href="timer_8hpp_source.html#l00153">xtd::chrono::timer&lt; clock &gt;::ticks_done</a>.</p>
+<p>References <a class="el" href="timer_8hpp_source.html#l00141">xtd::chrono::timer&lt; clock &gt;::check_is_ready_to_stop()</a>, <a class="el" href="timer_8hpp_source.html#l00093">xtd::chrono::timer&lt; clock &gt;::event_stop</a>, <a class="el" href="timer__manager_8hpp_source.html#l00019">xtd::chrono::timer_manager::get_instance()</a>, <a class="el" href="timer_8hpp_source.html#l00151">xtd::chrono::timer&lt; clock &gt;::is_active</a>, <a class="el" href="timer__manager_8hpp_source.html#l00035">xtd::chrono::timer_manager::remove_timer()</a>, and <a class="el" href="timer_8hpp_source.html#l00153">xtd::chrono::timer&lt; clock &gt;::ticks_done</a>.</p>
 
 <p>Referenced by <a class="el" href="timer_8hpp_source.html#l00102">xtd::chrono::timer&lt; clock &gt;::tick()</a>, and <a class="el" href="timer_8hpp_source.html#l00043">xtd::chrono::timer&lt; clock &gt;::~timer()</a>.</p>
 <div class="fragment"><div class="line">                {</div>
 <div class="line">                    this-&gt;<a class="code" href="classxtd_1_1chrono_1_1timer.html#a4f5d5a1578229cb9008ddc3c08e467d9">check_is_ready_to_stop</a>();</div>
-<div class="line">                    timer_manager::get_instance().remove_timer(<span class="keyword">this</span>);</div>
+<div class="line">                    <a class="code" href="classxtd_1_1chrono_1_1timer__manager.html#a39500a8d32d7062509b17680dea3d84a">timer_manager::get_instance</a>().<a class="code" href="classxtd_1_1chrono_1_1timer__manager.html#aa7dfa063f3157f4bf85969c337483264">remove_timer</a>(<span class="keyword">this</span>);</div>
 <div class="line">                    this-&gt;<a class="code" href="classxtd_1_1chrono_1_1timer.html#a2044263533caec99bebad9f337c37772">is_active</a> = <span class="keyword">false</span>;</div>
 <div class="line">                    this-&gt;<a class="code" href="classxtd_1_1chrono_1_1timer.html#aea73775f7eed3e47201044eb41963ddf">ticks_done</a> = 0;</div>
 <div class="line">                    this-&gt;<a class="code" href="classxtd_1_1chrono_1_1timer.html#a41089eb09b6a998a4f4015f731a2f641">event_stop</a>.dispatch();</div>
@@ -746,7 +746,7 @@ template&lt;typename clock  = std::chrono::high_resolution_clock&gt; </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Aug 12 2014 20:26:20 for XTD by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Aug 12 2014 20:28:44 for XTD by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.1.2
 </small></address>

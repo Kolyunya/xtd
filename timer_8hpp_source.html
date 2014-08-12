@@ -155,7 +155,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00065"></a><span class="lineno"><a class="code" href="classxtd_1_1chrono_1_1timer.html#ad7fed98afb41e1fdc0ac5c9c288e09bf">   65</a></span>&#160;                <span class="keywordtype">void</span> <a class="code" href="classxtd_1_1chrono_1_1timer.html#ad7fed98afb41e1fdc0ac5c9c288e09bf">start</a> ( <span class="keywordtype">void</span> )</div>
 <div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;                {</div>
 <div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;                    this-&gt;<a class="code" href="classxtd_1_1chrono_1_1timer.html#a14f5d30b77745cb5b1326e4a083e1573">check_is_ready_to_start</a>();</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;                    timer_manager::get_instance().add_timer(<span class="keyword">this</span>);</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;                    <a class="code" href="classxtd_1_1chrono_1_1timer__manager.html#a39500a8d32d7062509b17680dea3d84a">timer_manager::get_instance</a>().<a class="code" href="classxtd_1_1chrono_1_1timer__manager.html#a366213c1dc3f317586af3f1b45784b68">add_timer</a>(<span class="keyword">this</span>);</div>
 <div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;                    this-&gt;<a class="code" href="classxtd_1_1chrono_1_1timer.html#ae07924648ac3cc0e05b076c7a3312616">update_next_tick_time_point</a>();</div>
 <div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;                    this-&gt;<a class="code" href="classxtd_1_1chrono_1_1timer.html#a2044263533caec99bebad9f337c37772">is_active</a> = <span class="keyword">true</span>;</div>
 <div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;                    this-&gt;<a class="code" href="classxtd_1_1chrono_1_1timer.html#abf30db7fb637f50f8ccb983095bcad34">event_start</a>.dispatch();</div>
@@ -164,7 +164,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00074"></a><span class="lineno"><a class="code" href="classxtd_1_1chrono_1_1timer.html#ad2bea72fb6c07586fab5e19311548082">   74</a></span>&#160;                <span class="keywordtype">void</span> <a class="code" href="classxtd_1_1chrono_1_1timer.html#ad2bea72fb6c07586fab5e19311548082">stop</a> ( <span class="keywordtype">void</span> )</div>
 <div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;                {</div>
 <div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;                    this-&gt;<a class="code" href="classxtd_1_1chrono_1_1timer.html#a4f5d5a1578229cb9008ddc3c08e467d9">check_is_ready_to_stop</a>();</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;                    timer_manager::get_instance().remove_timer(<span class="keyword">this</span>);</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;                    <a class="code" href="classxtd_1_1chrono_1_1timer__manager.html#a39500a8d32d7062509b17680dea3d84a">timer_manager::get_instance</a>().<a class="code" href="classxtd_1_1chrono_1_1timer__manager.html#aa7dfa063f3157f4bf85969c337483264">remove_timer</a>(<span class="keyword">this</span>);</div>
 <div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;                    this-&gt;<a class="code" href="classxtd_1_1chrono_1_1timer.html#a2044263533caec99bebad9f337c37772">is_active</a> = <span class="keyword">false</span>;</div>
 <div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;                    this-&gt;<a class="code" href="classxtd_1_1chrono_1_1timer.html#aea73775f7eed3e47201044eb41963ddf">ticks_done</a> = 0;</div>
 <div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;                    this-&gt;<a class="code" href="classxtd_1_1chrono_1_1timer.html#a41089eb09b6a998a4f4015f731a2f641">event_stop</a>.dispatch();</div>
@@ -257,7 +257,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Aug 12 2014 20:26:20 for XTD by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Aug 12 2014 20:28:43 for XTD by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.1.2
 </small></address>

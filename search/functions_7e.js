@@ -5,5 +5,5 @@ var searchData=
   ['_7efunctor',['~functor',['../classxtd_1_1fn_1_1functor.html#a29dc0e2859140fa740a68bdd0de97116',1,'xtd::fn::functor']]],
   ['_7etimer',['~timer',['../classxtd_1_1chrono_1_1timer.html#a94c6d6bbff811e6aec1a7b4fafc5da46',1,'xtd::chrono::timer']]],
   ['_7etimer_5fbase',['~timer_base',['../classxtd_1_1chrono_1_1timer__base.html#acba1789ce85b1249d6de9defb076f074',1,'xtd::chrono::timer_base']]],
-  ['_7etimer_5fmanager',['~timer_manager',['../classxstd_1_1chrono_1_1timer__manager.html#adeca1896ee815f70ed424dd884e94b65',1,'xstd::chrono::timer_manager']]]
+  ['_7etimer_5fmanager',['~timer_manager',['../classxtd_1_1chrono_1_1timer__manager.html#a6b770cbb64e9d83304b6f5cb8d479df3',1,'xtd::chrono::timer_manager']]]
 ];
