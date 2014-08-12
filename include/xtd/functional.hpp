@@ -2,6 +2,6 @@
 #define _XTD_NAMESPACE_FUNCTIONAL_
 
 #include <functional>
-#include "./../../sources/functional/functor/functor/sources/functor.hpp"
+#include "functional/functor.hpp"
 
 #endif
