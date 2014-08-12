@@ -1,4 +1,4 @@
-#XTD – extension of the C++ standard library
+#Extension of the C++ standard library
 
 ##Description
 
