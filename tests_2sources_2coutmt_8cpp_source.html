@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<title>XTD: sources/string/string_utils/sources/string_utils.tpp File Reference</title>
+<title>XTD: sources/iostream/coutmt/tests/sources/coutmt.cpp Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -80,33 +80,38 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_eeb461dcc621089f773b50c183a7a8b9.html">sources</a></li><li class="navelem"><a class="el" href="dir_958974a34a76e9e3080c1e952edf50d2.html">string</a></li><li class="navelem"><a class="el" href="dir_6c831613ce8c9bc8dd0c99530d6eda0f.html">string_utils</a></li><li class="navelem"><a class="el" href="dir_4147e509afdb80d77b5f6f925eb0b69e.html">sources</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_eeb461dcc621089f773b50c183a7a8b9.html">sources</a></li><li class="navelem"><a class="el" href="dir_b338b7694d2797d36fe6cdfe57092b12.html">iostream</a></li><li class="navelem"><a class="el" href="dir_e26834086e8854af152c4be3d6304b7b.html">coutmt</a></li><li class="navelem"><a class="el" href="dir_e5e399ca0751cbaa7ef16d292eefdd3c.html">tests</a></li><li class="navelem"><a class="el" href="dir_147cdaf4f120d7e53cb23b515c6512bf.html">sources</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
-  <div class="summary">
-<a href="#namespaces">Namespaces</a> &#124;
-<a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
-<div class="title">string_utils.tpp File Reference</div>  </div>
+<div class="title">coutmt.cpp</div>  </div>
 </div><!--header-->
 <div class="contents">
-
-<p><a href="string__utils_8tpp_source.html">Go to the source code of this file.</a></p>
-<table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2><a name="namespaces"></a>
-Namespaces</h2></td></tr>
-<tr class="memitem:namespacextd"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacextd.html">xtd</a></td></tr>
-<tr class="memdesc:namespacextd"><td class="mdescLeft">&#160;</td><td class="mdescRight">A root namespace of the library. <br/></td></tr>
-<tr class="memitem:namespacextd_1_1str"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacextd_1_1str.html">xtd::str</a></td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2><a name="func-members"></a>
-Functions</h2></td></tr>
-<tr class="memitem:a526a132dfcfac73b37078ead543a47c6"><td class="memTemplParams" colspan="2">template&lt;typename type &gt; </td></tr>
-<tr class="memitem:a526a132dfcfac73b37078ead543a47c6"><td class="memTemplItemLeft" align="right" valign="top">std::string&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacextd_1_1str.html#a526a132dfcfac73b37078ead543a47c6">xtd::str::from</a> (type source)</td></tr>
-<tr class="memdesc:a526a132dfcfac73b37078ead543a47c6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts an object to string.  <a href="#a526a132dfcfac73b37078ead543a47c6"></a><br/></td></tr>
-</table>
-</div><!-- contents -->
+<a href="tests_2sources_2coutmt_8cpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#include &lt;gtest/gtest.h&gt;</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#include &lt;xtd/iostream.hpp&gt;</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;</div>
+<div class="line"><a name="l00004"></a><span class="lineno"><a class="code" href="tests_2sources_2coutmt_8cpp.html#a68fd6de7c6181cebd892665e3b9bcc37">    4</a></span>&#160;<a class="code" href="tests_2sources_2file__utils_8cpp.html#ab526eaa5c5958f392a16a66b1a3b9f84">TEST</a> ( coutmt_operator_out , does_not_throw )</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;{</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;    ASSERT_NO_THROW(<a class="code" href="namespacexstd.html#a1c69cb70a76dfa8ff13085c781a15f27">xstd::coutmt</a> &lt;&lt; <span class="stringliteral">&quot;Hello world!\n&quot;</span>);</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;}</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;</div>
+<div class="line"><a name="l00009"></a><span class="lineno"><a class="code" href="tests_2sources_2coutmt_8cpp.html#ae69b66eb211fa425701ec71ba23630b9">    9</a></span>&#160;<a class="code" href="tests_2sources_2file__utils_8cpp.html#ab526eaa5c5958f392a16a66b1a3b9f84">TEST</a> ( coutmt_operator_out , does_not_throw_when_passing_std_endl )</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;{</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    ASSERT_NO_THROW(<a class="code" href="namespacexstd.html#a1c69cb70a76dfa8ff13085c781a15f27">xstd::coutmt</a> &lt;&lt; std::endl);</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;}</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;</div>
+<div class="line"><a name="l00014"></a><span class="lineno"><a class="code" href="tests_2sources_2coutmt_8cpp.html#a45f058cfb8530c5b4725ea6707d0e998">   14</a></span>&#160;<a class="code" href="tests_2sources_2file__utils_8cpp.html#ab526eaa5c5958f392a16a66b1a3b9f84">TEST</a> ( coutmt_operator_out , does_not_throw_when_passing_std_endl_std_endl )</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;{</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    ASSERT_NO_THROW(<a class="code" href="namespacexstd.html#a1c69cb70a76dfa8ff13085c781a15f27">xstd::coutmt</a> &lt;&lt; std::endl &lt;&lt; std::endl);</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;}</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;</div>
+<div class="line"><a name="l00019"></a><span class="lineno"><a class="code" href="tests_2sources_2coutmt_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627">   19</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="tests_2sources_2file__utils_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627">main</a> ( <span class="keywordtype">int</span> argc , <span class="keywordtype">char</span>** argv )</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;{</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    ::testing::InitGoogleTest(&amp;argc, argv);</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <span class="keywordflow">return</span> RUN_ALL_TESTS();</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;}</div>
+</div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated on Tue Aug 12 2014 16:09:46 for XTD by &#160;<a href="http://www.doxygen.org/index.html">
