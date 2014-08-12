@@ -1,7 +1,7 @@
 namespace xtd
 {
 
-    namespace mem
+    namespace memory
     {
 
         template <typename type>

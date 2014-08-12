@@ -1,0 +1,6 @@
+#ifndef _XTD_INCLUDE_IO_
+#define _XTD_INCLUDE_IO_
+
+#include "./../../sources/io/coutmt/sources/coutmt.hpp"
+
+#endif

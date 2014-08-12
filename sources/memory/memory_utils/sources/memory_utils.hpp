@@ -12,7 +12,7 @@ namespace xtd
     /**
      *  @brief A namespace containing tools for memory operations.
      */
-    namespace mem
+    namespace memory
     {
 
         /**

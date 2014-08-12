@@ -1,7 +1,7 @@
 namespace xtd
 {
 
-    namespace str
+    namespace string
     {
 
         template <typename type>

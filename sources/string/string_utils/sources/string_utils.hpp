@@ -14,7 +14,7 @@ namespace xtd
     /**
      *  @brief A namespace containing tools for string operations.
      */
-    namespace str
+    namespace string
     {
 
         /**

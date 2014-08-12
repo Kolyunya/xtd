@@ -3,7 +3,7 @@
 namespace xtd
 {
 
-    namespace str
+    namespace string
     {
 
         signed long long int to_long_long ( const std::string& source_string , signed int number_base )

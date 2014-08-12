@@ -1,5 +1,5 @@
 #include <gtest/gtest.h>
-#include <xtd/file.hpp>
+#include <xtd/file>
 
 std::string path_to_unit_tests_data = "./../tests/data/";
 

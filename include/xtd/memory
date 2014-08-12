@@ -1,0 +1,6 @@
+#ifndef _XTD_INCLUDE_MEMORY_
+#define _XTD_INCLUDE_MEMORY_
+
+#include "./../../sources/memory/memory_utils/sources/memory_utils.hpp"
+
+#endif
