@@ -1,0 +1,1 @@
+cmd_out/debug/memory_utils_tests := flock out/debug/linker.lock g++ -lpthread  -o out/debug/memory_utils_tests -Wl,--start-group out/debug/obj.target/memory_utils_tests/../tests/memory_utils.o /home/kolyunya/projects/gtest/build/gtest-all.o out/debug/obj.target/libmemory_utils.a -Wl,--end-group 
