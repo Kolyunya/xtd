@@ -3,10 +3,7 @@
 
 #include <stdexcept>
 #include <algorithm>
-#include <vector>
 #include <sstream>
-#include <limits>
-#include <cstdlib>
 
 /**
  *  @namespace xtd
@@ -174,7 +171,7 @@ namespace xtd
 
 }
 
-//  Include templates definions
+//  Include definions of templates
 #include "string_utils.tpp"
 
-#endif  //  _XTD_STRING_UTILS_HPP_
+#endif
