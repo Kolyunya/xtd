@@ -159,9 +159,9 @@ namespace xtd
 
         bool is_fractional ( const std::string& source_string );
 
-        static char const* const error_string_to_number_conversion_failed = "String to number conversion failed.";
+        static const char* const error_string_to_number_conversion_failed = "String to number conversion failed.";
 
-        static char const* const error_number_exceeds_type_limits = "Number exceeds type limits.";
+        static const char* const error_number_exceeds_type_limits = "Number exceeds type limits.";
 
     }
 
