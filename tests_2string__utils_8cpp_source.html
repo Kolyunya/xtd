@@ -101,7 +101,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;</div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    <span class="keywordtype">int</span> number = 1052;</div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    std::string string_correct = <span class="stringliteral">&quot;1052&quot;</span>;</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    std::string string_actual = <a class="code" href="classxtd_1_1str.html#a37b003c1acec0bc1c779d30796851075" title="Converts an object to strign.">xtd::str::from</a>(number);</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    std::string string_actual = <a class="code" href="classxtd_1_1str.html#a37b003c1acec0bc1c779d30796851075" title="Converts an object to string.">xtd::str::from</a>(number);</div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;</div>
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    ASSERT_EQ ( string_correct , string_actual );</div>
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;</div>
@@ -111,7 +111,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;{</div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <span class="keywordtype">long</span> <span class="keywordtype">double</span> source_number = 123.456;</div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    std::string result_string_correct = <span class="stringliteral">&quot;123.456&quot;</span>;</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    std::string result_string_actual = <a class="code" href="classxtd_1_1str.html#a37b003c1acec0bc1c779d30796851075" title="Converts an object to strign.">xtd::str::from</a>(source_number);</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    std::string result_string_actual = <a class="code" href="classxtd_1_1str.html#a37b003c1acec0bc1c779d30796851075" title="Converts an object to string.">xtd::str::from</a>(source_number);</div>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    ASSERT_EQ ( result_string_correct , result_string_actual );</div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;}</div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;</div>
@@ -120,7 +120,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;</div>
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <span class="keywordtype">float</span> number = 1052.655;</div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    std::string string_correct = <span class="stringliteral">&quot;1052.66&quot;</span>;</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    std::string string_actual = <a class="code" href="classxtd_1_1str.html#a37b003c1acec0bc1c779d30796851075" title="Converts an object to strign.">xtd::str::from</a>(number);</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    std::string string_actual = <a class="code" href="classxtd_1_1str.html#a37b003c1acec0bc1c779d30796851075" title="Converts an object to string.">xtd::str::from</a>(number);</div>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;</div>
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    ASSERT_EQ ( string_correct , string_actual );</div>
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;</div>
@@ -376,7 +376,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;</div>
 <div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;    std::string <span class="keywordtype">string</span> = <span class="stringliteral">&quot;qwertyuiop&quot;</span>;</div>
 <div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;    std::string reversed_correct = <span class="stringliteral">&quot;poiuytrewq&quot;</span>;</div>
-<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;    std::string reversed_actual = <a class="code" href="classxtd_1_1str.html#afbf12c7921d111a0601de3d1f206850e" title="Reverses a sting.">xtd::str::reverse</a>(<span class="keywordtype">string</span>);</div>
+<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;    std::string reversed_actual = <a class="code" href="classxtd_1_1str.html#afbf12c7921d111a0601de3d1f206850e" title="Reverses a string.">xtd::str::reverse</a>(<span class="keywordtype">string</span>);</div>
 <div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;</div>
 <div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;    ASSERT_EQ ( reversed_correct , reversed_actual );</div>
 <div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;</div>
@@ -390,7 +390,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Aug 12 2014 10:13:55 for XTD by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Aug 12 2014 10:15:56 for XTD by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.1.2
 </small></address>
