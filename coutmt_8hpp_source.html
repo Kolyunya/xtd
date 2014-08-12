@@ -97,36 +97,43 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &lt;memory&gt;</span></div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &lt;mutex&gt;</span></div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;</div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="keyword">namespace </span>xstd</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="keyword">namespace </span>xtd</div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;{</div>
-<div class="line"><a name="l00012"></a><span class="lineno"><a class="code" href="classxstd_1_1coutmt__singleton.html">   12</a></span>&#160;    <span class="keyword">class </span><a class="code" href="classxstd_1_1coutmt__singleton.html">coutmt_singleton</a></div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;        :</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;            <span class="keyword">public</span> std::ostream</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    {</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;        <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;            <span class="keyword">template</span> &lt;<span class="keyword">typename</span> Type&gt;</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;            <span class="keyword">friend</span> <a class="code" href="classxstd_1_1coutmt__singleton.html">coutmt_singleton</a>&amp; <a class="code" href="classxstd_1_1coutmt__singleton.html#aae5812b8fa2d66eaaa921e864e1077d4">operator&lt;&lt; </a>( <a class="code" href="classxstd_1_1coutmt__singleton.html">coutmt_singleton</a>&amp; coutmt_singleton_instance , Type <span class="keywordtype">object</span> );</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;            <span class="keyword">friend</span> <a class="code" href="classxstd_1_1coutmt__singleton.html">coutmt_singleton</a>&amp; <a class="code" href="classxstd_1_1coutmt__singleton.html#aae5812b8fa2d66eaaa921e864e1077d4">operator&lt;&lt; </a>( <a class="code" href="classxstd_1_1coutmt__singleton.html">coutmt_singleton</a>&amp; coutmt_singleton_instance ,  std::ostream&amp;(*function_ptr)(std::ostream&amp;) );</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;            <span class="keyword">friend</span> <a class="code" href="classxstd_1_1coutmt__singleton.html">coutmt_singleton</a>&amp; <a class="code" href="classxstd_1_1coutmt__singleton.html#aae5812b8fa2d66eaaa921e864e1077d4">operator&lt;&lt; </a>( <a class="code" href="classxstd_1_1coutmt__singleton.html">coutmt_singleton</a>&amp; coutmt_singleton_instance ,  std::ios&amp;(*function_ptr)(std::ios&amp;) );</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;            <span class="keyword">friend</span> <a class="code" href="classxstd_1_1coutmt__singleton.html">coutmt_singleton</a>&amp; <a class="code" href="classxstd_1_1coutmt__singleton.html#aae5812b8fa2d66eaaa921e864e1077d4">operator&lt;&lt; </a>( <a class="code" href="classxstd_1_1coutmt__singleton.html">coutmt_singleton</a>&amp; coutmt_singleton_instance ,  std::ios_base&amp; (*function_ptr)(std::ios_base&amp;) );</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;            <span class="keyword">static</span> <a class="code" href="classxstd_1_1coutmt__singleton.html">coutmt_singleton</a>&amp; <a class="code" href="classxstd_1_1coutmt__singleton.html#a0c478170b82e253a79c51160fe7049a2">get_instance</a> ( <span class="keywordtype">void</span> );</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;            <span class="keyword">explicit</span> <a class="code" href="classxstd_1_1coutmt__singleton.html#afbf08c934b4a1c80bd18669f34456a7c">coutmt_singleton</a> ( <span class="keywordtype">void</span> ) = <span class="keywordflow">default</span>;</div>
-<div class="line"><a name="l00025"></a><span class="lineno"><a class="code" href="classxstd_1_1coutmt__singleton.html#a7e9a38b4f7d555718afbc75aaa4de628">   25</a></span>&#160;            std::mutex <a class="code" href="classxstd_1_1coutmt__singleton.html#a7e9a38b4f7d555718afbc75aaa4de628">coutmt_mutex</a>;</div>
-<div class="line"><a name="l00026"></a><span class="lineno"><a class="code" href="classxstd_1_1coutmt__singleton.html#aa00e04e689ddfbf12fff7383b465cad2">   26</a></span>&#160;            <span class="keywordtype">bool</span> <a class="code" href="classxstd_1_1coutmt__singleton.html#aa00e04e689ddfbf12fff7383b465cad2">instance_initialized</a>;</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    };</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;</div>
-<div class="line"><a name="l00029"></a><span class="lineno"><a class="code" href="namespacexstd.html#a1c69cb70a76dfa8ff13085c781a15f27">   29</a></span>&#160;    <span class="keyword">static</span> <a class="code" href="classxstd_1_1coutmt__singleton.html">coutmt_singleton</a>&amp; <a class="code" href="namespacexstd.html#a1c69cb70a76dfa8ff13085c781a15f27">coutmt</a> = <a class="code" href="classxstd_1_1coutmt__singleton.html#a0c478170b82e253a79c51160fe7049a2">coutmt_singleton::get_instance</a>();</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;}</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="comment">//  Include definions of templates</span></div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="coutmt_8tpp.html">coutmt.tpp</a>&quot;</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    <span class="keyword">namespace </span>io</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    {</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;</div>
+<div class="line"><a name="l00016"></a><span class="lineno"><a class="code" href="classxtd_1_1io_1_1coutmt__singleton.html">   16</a></span>&#160;        <span class="keyword">class </span><a class="code" href="classxtd_1_1io_1_1coutmt__singleton.html">coutmt_singleton</a></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;            :</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;                <span class="keyword">public</span> std::ostream</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;        {</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;            <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;                <span class="keyword">template</span> &lt;<span class="keyword">typename</span> Type&gt;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;                <span class="keyword">friend</span> <a class="code" href="classxtd_1_1io_1_1coutmt__singleton.html">coutmt_singleton</a>&amp; <a class="code" href="classxtd_1_1io_1_1coutmt__singleton.html#aae5812b8fa2d66eaaa921e864e1077d4">operator&lt;&lt; </a>( <a class="code" href="classxtd_1_1io_1_1coutmt__singleton.html">coutmt_singleton</a>&amp; coutmt_singleton_instance , Type <span class="keywordtype">object</span> );</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;                <span class="keyword">friend</span> <a class="code" href="classxtd_1_1io_1_1coutmt__singleton.html">coutmt_singleton</a>&amp; <a class="code" href="classxtd_1_1io_1_1coutmt__singleton.html#aae5812b8fa2d66eaaa921e864e1077d4">operator&lt;&lt; </a>( <a class="code" href="classxtd_1_1io_1_1coutmt__singleton.html">coutmt_singleton</a>&amp; coutmt_singleton_instance ,  std::ostream&amp;(*function_ptr)(std::ostream&amp;) );</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;                <span class="keyword">friend</span> <a class="code" href="classxtd_1_1io_1_1coutmt__singleton.html">coutmt_singleton</a>&amp; <a class="code" href="classxtd_1_1io_1_1coutmt__singleton.html#aae5812b8fa2d66eaaa921e864e1077d4">operator&lt;&lt; </a>( <a class="code" href="classxtd_1_1io_1_1coutmt__singleton.html">coutmt_singleton</a>&amp; coutmt_singleton_instance ,  std::ios&amp;(*function_ptr)(std::ios&amp;) );</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;                <span class="keyword">friend</span> <a class="code" href="classxtd_1_1io_1_1coutmt__singleton.html">coutmt_singleton</a>&amp; <a class="code" href="classxtd_1_1io_1_1coutmt__singleton.html#aae5812b8fa2d66eaaa921e864e1077d4">operator&lt;&lt; </a>( <a class="code" href="classxtd_1_1io_1_1coutmt__singleton.html">coutmt_singleton</a>&amp; coutmt_singleton_instance ,  std::ios_base&amp; (*function_ptr)(std::ios_base&amp;) );</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;                <span class="keyword">static</span> <a class="code" href="classxtd_1_1io_1_1coutmt__singleton.html">coutmt_singleton</a>&amp; <a class="code" href="classxtd_1_1io_1_1coutmt__singleton.html#ad7e695a244ff4290f409253bdcb670f7">get_instance</a> ( <span class="keywordtype">void</span> );</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;            <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;                <span class="keyword">explicit</span> <a class="code" href="classxtd_1_1io_1_1coutmt__singleton.html#adbb7ecc6146157eafc643c045d2ae5bc">coutmt_singleton</a> ( <span class="keywordtype">void</span> ) = <span class="keywordflow">default</span>;</div>
+<div class="line"><a name="l00029"></a><span class="lineno"><a class="code" href="classxtd_1_1io_1_1coutmt__singleton.html#a5a1f82ede834e6a95bf07831cfd2a4a1">   29</a></span>&#160;                std::mutex <a class="code" href="classxtd_1_1io_1_1coutmt__singleton.html#a5a1f82ede834e6a95bf07831cfd2a4a1">coutmt_mutex</a>;</div>
+<div class="line"><a name="l00030"></a><span class="lineno"><a class="code" href="classxtd_1_1io_1_1coutmt__singleton.html#af738e92163634974f3cfb2d2c9756b2c">   30</a></span>&#160;                <span class="keywordtype">bool</span> <a class="code" href="classxtd_1_1io_1_1coutmt__singleton.html#af738e92163634974f3cfb2d2c9756b2c">instance_initialized</a>;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        };</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;</div>
+<div class="line"><a name="l00033"></a><span class="lineno"><a class="code" href="namespacextd_1_1io.html#aa1343588861f127c76a3408e2f005a6e">   33</a></span>&#160;        <span class="keyword">static</span> <a class="code" href="classxtd_1_1io_1_1coutmt__singleton.html">coutmt_singleton</a>&amp; <a class="code" href="namespacextd_1_1io.html#aa1343588861f127c76a3408e2f005a6e">coutmt</a> = <a class="code" href="classxtd_1_1io_1_1coutmt__singleton.html#ad7e695a244ff4290f409253bdcb670f7">coutmt_singleton::get_instance</a>();</div>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    }</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;}</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="comment">//  Include definions of templates</span></div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="coutmt_8tpp.html">coutmt.tpp</a>&quot;</span></div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="preprocessor">#endif</span></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Aug 12 2014 16:14:38 for XTD by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Aug 12 2014 16:46:48 for XTD by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.1.2
 </small></address>

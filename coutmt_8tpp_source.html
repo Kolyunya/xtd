@@ -88,22 +88,27 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">coutmt.tpp</div>  </div>
 </div><!--header-->
 <div class="contents">
-<a href="coutmt_8tpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="keyword">namespace </span>xstd</div>
+<a href="coutmt_8tpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="keyword">namespace </span>xtd</div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;{</div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;</div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;    <span class="keyword">template</span> &lt;<span class="keyword">typename</span> Type&gt;</div>
-<div class="line"><a name="l00005"></a><span class="lineno"><a class="code" href="namespacexstd.html#a1e84f1aca8ea660c6b6857dd74e23095">    5</a></span>&#160;    <a class="code" href="classxstd_1_1coutmt__singleton.html">coutmt_singleton</a>&amp; <a class="code" href="namespacexstd.html#a4ca9ff5b467cc2d187627f25fe4becb9">operator&lt;&lt; </a>( <a class="code" href="classxstd_1_1coutmt__singleton.html">coutmt_singleton</a>&amp; coutmt_singleton_instance , Type <span class="keywordtype">object</span> )</div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;    {</div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;        std::lock_guard&lt;std::mutex&gt; lock_guard(coutmt_singleton_instance.<a class="code" href="classxstd_1_1coutmt__singleton.html#a7e9a38b4f7d555718afbc75aaa4de628">coutmt_mutex</a>);</div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;        std::cout &lt;&lt; object;</div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;        <span class="keywordflow">return</span> coutmt_singleton_instance;</div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    }</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;}</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;    <span class="keyword">namespace </span>io</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;    {</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;        <span class="keyword">template</span> &lt;<span class="keyword">typename</span> Type&gt;</div>
+<div class="line"><a name="l00008"></a><span class="lineno"><a class="code" href="namespacextd_1_1io.html#a375c03bc484dc0874bcf7393ecb46d57">    8</a></span>&#160;        <a class="code" href="classxtd_1_1io_1_1coutmt__singleton.html">coutmt_singleton</a>&amp; <a class="code" href="namespacextd_1_1io.html#aa7ffd70c62b3b7902b9ab3896639789a">operator&lt;&lt; </a>( <a class="code" href="classxtd_1_1io_1_1coutmt__singleton.html">coutmt_singleton</a>&amp; coutmt_singleton_instance , Type <span class="keywordtype">object</span> )</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;        {</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;            std::lock_guard&lt;std::mutex&gt; lock_guard(coutmt_singleton_instance.<a class="code" href="classxtd_1_1io_1_1coutmt__singleton.html#a5a1f82ede834e6a95bf07831cfd2a4a1">coutmt_mutex</a>);</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;            std::cout &lt;&lt; object;</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;            <span class="keywordflow">return</span> coutmt_singleton_instance;</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;        }</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    }</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;}</div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Aug 12 2014 16:14:38 for XTD by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Aug 12 2014 16:46:48 for XTD by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.1.2
 </small></address>
