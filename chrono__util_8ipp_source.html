@@ -38,6 +38,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
       <li><a href="namespaces.html"><span>Namespaces</span></a></li>
+      <li><a href="annotated.html"><span>Classes</span></a></li>
       <li class="current"><a href="files.html"><span>Files</span></a></li>
       <li>
         <div id="MSearchBox" class="MSearchBoxInactive">
@@ -60,6 +61,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow2" class="tabs2">
     <ul class="tablist">
       <li><a href="files.html"><span>File&#160;List</span></a></li>
+      <li><a href="globals.html"><span>File&#160;Members</span></a></li>
     </ul>
   </div>
 <!-- window showing the filter options -->
@@ -67,7 +69,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Friends</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -104,10 +106,10 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="comment">//</span></div>
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="comment">//  Author email: OleynikovNY@mail.ru</span></div>
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;</div>
-<div class="line"><a name="l00019"></a><span class="lineno"><a class="code" href="namespacexstd.html">   19</a></span>&#160;<span class="keyword">namespace </span>xstd</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="keyword">namespace </span>xstd</div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;{</div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;</div>
-<div class="line"><a name="l00022"></a><span class="lineno"><a class="code" href="namespacexstd_1_1chrono.html">   22</a></span>&#160;    <span class="keyword">namespace </span>chrono</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <span class="keyword">namespace </span>chrono</div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    {</div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;</div>
 <div class="line"><a name="l00025"></a><span class="lineno"><a class="code" href="namespacexstd_1_1chrono.html#af3f86d799ca227d2bf0ac8ff5a08df3b">   25</a></span>&#160;        time_t            <a class="code" href="namespacexstd_1_1chrono.html#af3f86d799ca227d2bf0ac8ff5a08df3b">time_point_to_time_t</a> ( <span class="keyword">const</span> std::chrono::time_point&lt;std::chrono::steady_clock&gt;&amp; time_point )</div>
@@ -139,7 +141,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;</div>
 <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        }</div>
 <div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;</div>
-<div class="line"><a name="l00054"></a><span class="lineno"><a class="code" href="namespacexstd_1_1chrono.html#a8ff3fa7e01f8bc7f24b89a89b53a1e2e">   54</a></span>&#160;        std::string        <a class="code" href="namespacexstd_1_1chrono.html#a8ff3fa7e01f8bc7f24b89a89b53a1e2e">time_point_to_formatted_string</a> ( <span class="keyword">const</span> std::chrono::time_point&lt;std::chrono::steady_clock&gt;&amp; time_point , <span class="keyword">const</span> std::string&amp; time_format )</div>
+<div class="line"><a name="l00054"></a><span class="lineno"><a class="code" href="namespacexstd_1_1chrono.html#a5fd95ee0963d407c39528b3f48790842">   54</a></span>&#160;        std::string        <a class="code" href="namespacexstd_1_1chrono.html#a5fd95ee0963d407c39528b3f48790842">time_point_to_formatted_string</a> ( <span class="keyword">const</span> std::chrono::time_point&lt;std::chrono::steady_clock&gt;&amp; time_point , <span class="keyword">const</span> std::string&amp; time_format )</div>
 <div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        {</div>
 <div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;</div>
 <div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;            <span class="comment">// Warning: this function is not reentrant. Thus it can not be called simultaneously in different threads.</span></div>
@@ -177,14 +179,14 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;</div>
 <div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;        }</div>
 <div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;</div>
-<div class="line"><a name="l00092"></a><span class="lineno"><a class="code" href="namespacexstd_1_1chrono.html#a4f1f0293f83947cd649cee0520b3e047">   92</a></span>&#160;        std::string        <a class="code" href="namespacexstd_1_1chrono.html#a4f1f0293f83947cd649cee0520b3e047">time_point_to_formatted_string_mt</a> ( <span class="keyword">const</span> std::chrono::time_point&lt;std::chrono::steady_clock&gt;&amp; time_point , <span class="keyword">const</span> std::string&amp; time_format )</div>
+<div class="line"><a name="l00092"></a><span class="lineno"><a class="code" href="namespacexstd_1_1chrono.html#a07cd40fda33f294f91510fe6895ce6c7">   92</a></span>&#160;        std::string        <a class="code" href="namespacexstd_1_1chrono.html#a07cd40fda33f294f91510fe6895ce6c7">time_point_to_formatted_string_mt</a> ( <span class="keyword">const</span> std::chrono::time_point&lt;std::chrono::steady_clock&gt;&amp; time_point , <span class="keyword">const</span> std::string&amp; time_format )</div>
 <div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;        {</div>
 <div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;</div>
 <div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;            <span class="keyword">static</span> std::mutex function_mutex;</div>
 <div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;</div>
 <div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;            std::lock_guard&lt;std::mutex&gt; function_lock_guard(function_mutex);</div>
 <div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;            <span class="keywordflow">return</span> <a class="code" href="namespacexstd_1_1chrono.html#a8ff3fa7e01f8bc7f24b89a89b53a1e2e">time_point_to_formatted_string</a>(time_point,time_format);</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;            <span class="keywordflow">return</span> <a class="code" href="namespacexstd_1_1chrono.html#a5fd95ee0963d407c39528b3f48790842">time_point_to_formatted_string</a>(time_point,time_format);</div>
 <div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;</div>
 <div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;        }</div>
 <div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;</div>
@@ -194,7 +196,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Aug 12 2014 10:23:47 for XTD by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Aug 12 2014 10:26:30 for XTD by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.1.2
 </small></address>

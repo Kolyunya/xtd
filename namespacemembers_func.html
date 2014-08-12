@@ -38,6 +38,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
       <li class="current"><a href="namespaces.html"><span>Namespaces</span></a></li>
+      <li><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Files</span></a></li>
       <li>
         <div id="MSearchBox" class="MSearchBoxInactive">
@@ -67,6 +68,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
     <ul class="tablist">
       <li><a href="namespacemembers.html"><span>All</span></a></li>
       <li class="current"><a href="namespacemembers_func.html"><span>Functions</span></a></li>
+      <li><a href="namespacemembers_vars.html"><span>Variables</span></a></li>
+      <li><a href="namespacemembers_type.html"><span>Typedefs</span></a></li>
     </ul>
   </div>
 </div><!-- top -->
@@ -75,7 +78,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Friends</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -93,7 +96,13 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 : <a class="el" href="namespacexstd_1_1fs.html#a5cc17beb220c440ae11af037f8ee8fb6">xstd::fs</a>
 </li>
 <li>coin_flip()
-: <a class="el" href="namespacexstd_1_1random.html#a888308b64d16079001c2ef2d4e163899">xstd::random</a>
+: <a class="el" href="namespacexstd_1_1random.html#ae59f15bad38afbe5db860719a262cd8c">xstd::random</a>
+</li>
+<li>first_value()
+: <a class="el" href="namespacexstd_1_1pp.html#aa93a8a507e9fef379bd5d05249b4522e">xstd::pp</a>
+</li>
+<li>for_each()
+: <a class="el" href="namespacexstd_1_1pp.html#aa29a2aab754d68ff365898122abea2fe">xstd::pp</a>
 </li>
 <li>get_file_contents()
 : <a class="el" href="namespacexstd_1_1fs.html#a4282f483655e6114043320236ace2485">xstd::fs</a>
@@ -105,7 +114,13 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 : <a class="el" href="namespacexstd_1_1fs.html#a3360db70ba7ae3638ad9f167661b0385">xstd::fs</a>
 </li>
 <li>get_int()
-: <a class="el" href="namespacexstd_1_1random.html#ab3dadb545288f7fd2a83635eab03408e">xstd::random</a>
+: <a class="el" href="namespacexstd_1_1random.html#a1572ab839ec96ad9a8452c859199230a">xstd::random</a>
+</li>
+<li>last_value()
+: <a class="el" href="namespacexstd_1_1pp.html#a0fbe1362608c9cc1906521a66ef46026">xstd::pp</a>
+</li>
+<li>nth_value()
+: <a class="el" href="namespacexstd_1_1pp.html#a64f472b507404fee4aad504684c76040">xstd::pp</a>
 </li>
 <li>operator&lt;&lt;()
 : <a class="el" href="namespacexstd.html#a1e84f1aca8ea660c6b6857dd74e23095">xstd</a>
@@ -120,10 +135,10 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 : <a class="el" href="namespacexstd_1_1fs.html#aaaebc4d368b5546f9c4963735020c89d">xstd::fs</a>
 </li>
 <li>time_point_to_formatted_string()
-: <a class="el" href="namespacexstd_1_1chrono.html#a8ff3fa7e01f8bc7f24b89a89b53a1e2e">xstd::chrono</a>
+: <a class="el" href="namespacexstd_1_1chrono.html#a5fd95ee0963d407c39528b3f48790842">xstd::chrono</a>
 </li>
 <li>time_point_to_formatted_string_mt()
-: <a class="el" href="namespacexstd_1_1chrono.html#a4f1f0293f83947cd649cee0520b3e047">xstd::chrono</a>
+: <a class="el" href="namespacexstd_1_1chrono.html#a07cd40fda33f294f91510fe6895ce6c7">xstd::chrono</a>
 </li>
 <li>time_point_to_time_t()
 : <a class="el" href="namespacexstd_1_1chrono.html#af3f86d799ca227d2bf0ac8ff5a08df3b">xstd::chrono</a>
@@ -141,7 +156,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Aug 12 2014 10:23:48 for XTD by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Aug 12 2014 10:26:30 for XTD by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.1.2
 </small></address>
