@@ -6,8 +6,8 @@ var searchData=
   ['randomize',['randomize',['../namespacexstd_1_1random.html#aebd951891ee8cc82c7a61482ad3dabc6',1,'xstd::random']]],
   ['remove_5flistener',['remove_listener',['../classxstd_1_1event.html#a19e40e6d6af2d565ef741ecfbfb2fda7',1,'xstd::event::remove_listener(free_listener free_listener_instance)'],['../classxstd_1_1event.html#a2ecf3e9a39708db0c28281dbb32d12da',1,'xstd::event::remove_listener(object_type *object_ptr, void(object_type::*method_ptr)(data_type...))']]],
   ['remove_5ftimer',['remove_timer',['../classxstd_1_1chrono_1_1timer__manager.html#af368bd572a757f8f78e39e4572114a84',1,'xstd::chrono::timer_manager']]],
-  ['replace',['replace',['../classxtd_1_1str.html#abf7be80d713fed6f539d666ed339641a',1,'xtd::str::replace(const std::string &amp;source_string, const std::string &amp;search_for, const std::string &amp;replace_with)'],['../classxtd_1_1str.html#aa1d0ed60a086404fcf620301626bb54a',1,'xtd::str::replace(const std::string &amp;source_string, char search_for, char replace_with)']]],
+  ['replace',['replace',['../classxtd_1_1str.html#a19a7b8aa4523c51af4b1ea70354b4d28',1,'xtd::str::replace(const std::string &amp;source_string, const std::string &amp;search_for, const std::string &amp;replace_with)'],['../classxtd_1_1str.html#afb9a79d9e09a5f30dcdc6dd68b20017e',1,'xtd::str::replace(const std::string &amp;source_string, char search_for, char replace_with)']]],
   ['requires_5ftick',['requires_tick',['../classxstd_1_1chrono_1_1timer.html#a79c070e4f1be92f8d8cf0cb62ebe0b2c',1,'xstd::chrono::timer']]],
-  ['reverse',['reverse',['../classxtd_1_1str.html#a93cda06e08625adf1709a0d117c012c0',1,'xtd::str']]],
-  ['routine',['routine',['../classxstd_1_1raii__thread__base.html#aac990e420873b2bb520e677156c37978',1,'xstd::raii_thread_base']]]
+  ['reverse',['reverse',['../classxtd_1_1str.html#afbf12c7921d111a0601de3d1f206850e',1,'xtd::str']]],
+  ['routine',['routine',['../classxstd_1_1raii__thread__base.html#af587c3be12d6a65043a338c911d69234',1,'xstd::raii_thread_base']]]
 ];

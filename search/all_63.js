@@ -10,18 +10,18 @@ var searchData=
   ['check_5fis_5fready_5fto_5fstart',['check_is_ready_to_start',['../classxstd_1_1chrono_1_1timer.html#a6088ae4c5a93946c1159122305d76535',1,'xstd::chrono::timer']]],
   ['check_5fis_5fready_5fto_5fstop',['check_is_ready_to_stop',['../classxstd_1_1chrono_1_1timer.html#a631105f997839a66fb79c7ff87d83532',1,'xstd::chrono::timer']]],
   ['chrono_5futil_2ehpp',['chrono_util.hpp',['../chrono__util_8hpp.html',1,'']]],
-  ['chrono_5futil_2eipp',['chrono_util.ipp',['../chrono__util_8ipp.html',1,'']]],
+  ['chrono_5futil_5ftests_2ecpp',['chrono_util_tests.cpp',['../chrono__util__tests_8cpp.html',1,'']]],
   ['client_5froutine',['client_routine',['../classxstd_1_1raii__thread__base.html#a6b3e160c7eb131008410a16c460b03ff',1,'xstd::raii_thread_base']]],
   ['coin_5fflip',['coin_flip',['../namespacexstd_1_1random.html#ae59f15bad38afbe5db860719a262cd8c',1,'xstd::random']]],
   ['console_5flogger',['console_logger',['../classxstd_1_1console__logger.html#a81ece8d9559e0ff0d54ad8d6cca596bc',1,'xstd::console_logger']]],
   ['console_5flogger',['console_logger',['../classxstd_1_1console__logger.html',1,'xstd']]],
   ['console_5flogger_2ehpp',['console_logger.hpp',['../console__logger_8hpp.html',1,'']]],
-  ['console_5flogger_2eipp',['console_logger.ipp',['../console__logger_8ipp.html',1,'']]],
+  ['console_5flogger_5ftests_2ecpp',['console_logger_tests.cpp',['../console__logger__tests_8cpp.html',1,'']]],
   ['coordinates_5fobject',['coordinates_object',['../classxstd_1_1point.html#a6ee0acdc7f3fdd004426279d0d7963e6',1,'xstd::point']]],
   ['coutmt',['coutmt',['../namespacexstd.html#a1c69cb70a76dfa8ff13085c781a15f27',1,'xstd']]],
   ['coutmt_2ehpp',['coutmt.hpp',['../coutmt_8hpp.html',1,'']]],
-  ['coutmt_2eipp',['coutmt.ipp',['../coutmt_8ipp.html',1,'']]],
   ['coutmt_5fmutex',['coutmt_mutex',['../classxstd_1_1coutmt__singleton.html#a7e9a38b4f7d555718afbc75aaa4de628',1,'xstd::coutmt_singleton']]],
+  ['coutmt_5fsingleton',['coutmt_singleton',['../classxstd_1_1coutmt__singleton.html',1,'xstd']]],
   ['coutmt_5fsingleton',['coutmt_singleton',['../classxstd_1_1coutmt__singleton.html#afbf08c934b4a1c80bd18669f34456a7c',1,'xstd::coutmt_singleton']]],
-  ['coutmt_5fsingleton',['coutmt_singleton',['../classxstd_1_1coutmt__singleton.html',1,'xstd']]]
+  ['coutmt_5ftests_2ecpp',['coutmt_tests.cpp',['../coutmt__tests_8cpp.html',1,'']]]
 ];
