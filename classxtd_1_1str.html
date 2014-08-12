@@ -62,7 +62,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
     <ul class="tablist">
       <li><a href="annotated.html"><span>Class&#160;List</span></a></li>
       <li><a href="classes.html"><span>Class&#160;Index</span></a></li>
-      <li><a href="hierarchy.html"><span>Class&#160;Hierarchy</span></a></li>
       <li><a href="functions.html"><span>Class&#160;Members</span></a></li>
     </ul>
   </div>
@@ -71,7 +70,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Friends</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -133,7 +132,7 @@ Static Private Attributes</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock">
-<p>Definition at line <a class="el" href="string__utils_8hpp_source.html#l00022">22</a> of file <a class="el" href="string__utils_8hpp_source.html">string_utils.hpp</a>.</p>
+<p>Definition at line <a class="el" href="string__utils_8hpp_source.html#l00019">19</a> of file <a class="el" href="string__utils_8hpp_source.html">string_utils.hpp</a>.</p>
 </div><h2>Member Function Documentation</h2>
 <a class="anchor" id="a526a132dfcfac73b37078ead543a47c6"></a>
 <div class="memitem">
@@ -545,8 +544,6 @@ template&lt;typename type &gt; </div>
 
 <p>Definition at line <a class="el" href="sources_2string__utils_8cpp_source.html#l00217">217</a> of file <a class="el" href="sources_2string__utils_8cpp_source.html">string_utils.cpp</a>.</p>
 
-<p>References <a class="el" href="parameter__pack__for__each_8hpp_source.html#l00029">xstd::pp::for_each()</a>.</p>
-
 <p>Referenced by <a class="el" href="sources_2string__utils_8cpp_source.html#l00290">split()</a>, and <a class="el" href="tests_2string__utils_8cpp_source.html#l00039">TEST()</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line"></div>
@@ -559,7 +556,7 @@ template&lt;typename type &gt; </div>
 <div class="line">        <span class="comment">//  If the delimiter is an empty string - split the source string to characters.</span></div>
 <div class="line">        <span class="keywordflow">if</span> ( delimiter_size == 0 )</div>
 <div class="line">        {</div>
-<div class="line">            <a class="code" href="namespacexstd_1_1pp.html#a55868e0a2c2057ea2ba4ee9a938b8f07">std::for_each</a></div>
+<div class="line">            std::for_each</div>
 <div class="line">            (</div>
 <div class="line">                source_string.begin(),</div>
 <div class="line">                source_string.end(),</div>
@@ -719,7 +716,7 @@ template&lt;typename type &gt; </div>
 
 <p>Definition at line <a class="el" href="sources_2string__utils_8cpp_source.html#l00141">141</a> of file <a class="el" href="sources_2string__utils_8cpp_source.html">string_utils.cpp</a>.</p>
 
-<p>References <a class="el" href="string__utils_8hpp_source.html#l00171">error_number_exceeds_type_limits</a>, and <a class="el" href="string__utils_8hpp_source.html#l00169">error_string_to_number_conversion_failed</a>.</p>
+<p>References <a class="el" href="string__utils_8hpp_source.html#l00168">error_number_exceeds_type_limits</a>, and <a class="el" href="string__utils_8hpp_source.html#l00166">error_string_to_number_conversion_failed</a>.</p>
 
 <p>Referenced by <a class="el" href="to__double_8hpp_source.html#l00001">TEST()</a>.</p>
 <div class="fragment"><div class="line">    {</div>
@@ -799,7 +796,7 @@ template&lt;typename type &gt; </div>
 
 <p>Definition at line <a class="el" href="sources_2string__utils_8cpp_source.html#l00175">175</a> of file <a class="el" href="sources_2string__utils_8cpp_source.html">string_utils.cpp</a>.</p>
 
-<p>References <a class="el" href="string__utils_8hpp_source.html#l00171">error_number_exceeds_type_limits</a>, and <a class="el" href="string__utils_8hpp_source.html#l00169">error_string_to_number_conversion_failed</a>.</p>
+<p>References <a class="el" href="string__utils_8hpp_source.html#l00168">error_number_exceeds_type_limits</a>, and <a class="el" href="string__utils_8hpp_source.html#l00166">error_string_to_number_conversion_failed</a>.</p>
 
 <p>Referenced by <a class="el" href="to__float_8hpp_source.html#l00001">TEST()</a>.</p>
 <div class="fragment"><div class="line">    {</div>
@@ -890,7 +887,7 @@ template&lt;typename type &gt; </div>
 
 <p>Definition at line <a class="el" href="sources_2string__utils_8cpp_source.html#l00086">86</a> of file <a class="el" href="sources_2string__utils_8cpp_source.html">string_utils.cpp</a>.</p>
 
-<p>References <a class="el" href="string__utils_8hpp_source.html#l00171">error_number_exceeds_type_limits</a>, and <a class="el" href="sources_2string__utils_8cpp_source.html#l00046">to_long()</a>.</p>
+<p>References <a class="el" href="string__utils_8hpp_source.html#l00168">error_number_exceeds_type_limits</a>, and <a class="el" href="sources_2string__utils_8cpp_source.html#l00046">to_long()</a>.</p>
 
 <p>Referenced by <a class="el" href="to__int_8hpp_source.html#l00001">TEST()</a>.</p>
 <div class="fragment"><div class="line">    {</div>
@@ -968,7 +965,7 @@ template&lt;typename type &gt; </div>
 
 <p>Definition at line <a class="el" href="sources_2string__utils_8cpp_source.html#l00046">46</a> of file <a class="el" href="sources_2string__utils_8cpp_source.html">string_utils.cpp</a>.</p>
 
-<p>References <a class="el" href="string__utils_8hpp_source.html#l00171">error_number_exceeds_type_limits</a>, and <a class="el" href="string__utils_8hpp_source.html#l00169">error_string_to_number_conversion_failed</a>.</p>
+<p>References <a class="el" href="string__utils_8hpp_source.html#l00168">error_number_exceeds_type_limits</a>, and <a class="el" href="string__utils_8hpp_source.html#l00166">error_string_to_number_conversion_failed</a>.</p>
 
 <p>Referenced by <a class="el" href="to__long_8hpp_source.html#l00001">TEST()</a>, and <a class="el" href="sources_2string__utils_8cpp_source.html#l00086">to_int()</a>.</p>
 <div class="fragment"><div class="line">    {</div>
@@ -1054,7 +1051,7 @@ template&lt;typename type &gt; </div>
 
 <p>Definition at line <a class="el" href="sources_2string__utils_8cpp_source.html#l00107">107</a> of file <a class="el" href="sources_2string__utils_8cpp_source.html">string_utils.cpp</a>.</p>
 
-<p>References <a class="el" href="string__utils_8hpp_source.html#l00171">error_number_exceeds_type_limits</a>, and <a class="el" href="string__utils_8hpp_source.html#l00169">error_string_to_number_conversion_failed</a>.</p>
+<p>References <a class="el" href="string__utils_8hpp_source.html#l00168">error_number_exceeds_type_limits</a>, and <a class="el" href="string__utils_8hpp_source.html#l00166">error_string_to_number_conversion_failed</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line"></div>
 <div class="line">        <span class="comment">// Function &quot;strtold&quot; will set this pointer to point to the first character after the numeric part of the original string.</span></div>
@@ -1143,7 +1140,7 @@ template&lt;typename type &gt; </div>
 
 <p>Definition at line <a class="el" href="sources_2string__utils_8cpp_source.html#l00006">6</a> of file <a class="el" href="sources_2string__utils_8cpp_source.html">string_utils.cpp</a>.</p>
 
-<p>References <a class="el" href="string__utils_8hpp_source.html#l00171">error_number_exceeds_type_limits</a>, and <a class="el" href="string__utils_8hpp_source.html#l00169">error_string_to_number_conversion_failed</a>.</p>
+<p>References <a class="el" href="string__utils_8hpp_source.html#l00168">error_number_exceeds_type_limits</a>, and <a class="el" href="string__utils_8hpp_source.html#l00166">error_string_to_number_conversion_failed</a>.</p>
 
 <p>Referenced by <a class="el" href="to__long__long_8hpp_source.html#l00001">TEST()</a>.</p>
 <div class="fragment"><div class="line">    {</div>
@@ -1206,7 +1203,7 @@ template&lt;typename type &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="string__utils_8hpp_source.html#l00171">171</a> of file <a class="el" href="string__utils_8hpp_source.html">string_utils.hpp</a>.</p>
+<p>Definition at line <a class="el" href="string__utils_8hpp_source.html#l00168">168</a> of file <a class="el" href="string__utils_8hpp_source.html">string_utils.hpp</a>.</p>
 
 <p>Referenced by <a class="el" href="sources_2string__utils_8cpp_source.html#l00141">to_double()</a>, <a class="el" href="sources_2string__utils_8cpp_source.html#l00175">to_float()</a>, <a class="el" href="sources_2string__utils_8cpp_source.html#l00086">to_int()</a>, <a class="el" href="sources_2string__utils_8cpp_source.html#l00046">to_long()</a>, <a class="el" href="sources_2string__utils_8cpp_source.html#l00107">to_long_double()</a>, and <a class="el" href="sources_2string__utils_8cpp_source.html#l00006">to_long_long()</a>.</p>
 
@@ -1230,7 +1227,7 @@ template&lt;typename type &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="string__utils_8hpp_source.html#l00169">169</a> of file <a class="el" href="string__utils_8hpp_source.html">string_utils.hpp</a>.</p>
+<p>Definition at line <a class="el" href="string__utils_8hpp_source.html#l00166">166</a> of file <a class="el" href="string__utils_8hpp_source.html">string_utils.hpp</a>.</p>
 
 <p>Referenced by <a class="el" href="sources_2string__utils_8cpp_source.html#l00141">to_double()</a>, <a class="el" href="sources_2string__utils_8cpp_source.html#l00175">to_float()</a>, <a class="el" href="sources_2string__utils_8cpp_source.html#l00046">to_long()</a>, <a class="el" href="sources_2string__utils_8cpp_source.html#l00107">to_long_double()</a>, and <a class="el" href="sources_2string__utils_8cpp_source.html#l00006">to_long_long()</a>.</p>
 
@@ -1244,7 +1241,7 @@ template&lt;typename type &gt; </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Aug 12 2014 10:28:43 for XTD by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Aug 12 2014 11:02:57 for XTD by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.1.2
 </small></address>

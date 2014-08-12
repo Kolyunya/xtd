@@ -69,7 +69,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Friends</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -80,7 +80,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_08d237fc27d4ecd563f71c5d52f2fecc.html">sources</a></li><li class="navelem"><a class="el" href="dir_ed3f187283697188d51c913e72f6a524.html">string</a></li><li class="navelem"><a class="el" href="dir_dcef30b860c29f7448b589243f6534eb.html">string_utils</a></li><li class="navelem"><a class="el" href="dir_6884c5be0f20010ad773fd1d6be2e912.html">tests</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_eeb461dcc621089f773b50c183a7a8b9.html">sources</a></li><li class="navelem"><a class="el" href="dir_958974a34a76e9e3080c1e952edf50d2.html">string</a></li><li class="navelem"><a class="el" href="dir_6c831613ce8c9bc8dd0c99530d6eda0f.html">string_utils</a></li><li class="navelem"><a class="el" href="dir_7670c2610d62d1063b6487bcafad7a37.html">tests</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -89,14 +89,14 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!--header-->
 <div class="contents">
 <a href="tests_2string__utils_8cpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#include &lt;gtest/gtest.h&gt;</span></div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#include &lt;string.hpp&gt;</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#include &lt;xtd/string.hpp&gt;</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="to__long__long_8hpp.html">to_long_long.hpp</a>&quot;</span></div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="to__long_8hpp.html">to_long.hpp</a>&quot;</span></div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="to__int_8hpp.html">to_int.hpp</a>&quot;</span></div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="to__double_8hpp.html">to_double.hpp</a>&quot;</span></div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="to__float_8hpp.html">to_float.hpp</a>&quot;</span></div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;</div>
-<div class="line"><a name="l00009"></a><span class="lineno"><a class="code" href="tests_2string__utils_8cpp.html#a85dbac707044eb39f0d8f0a015554d17">    9</a></span>&#160;<a class="code" href="chrono__util__tests_8cpp.html#a4d515f066f202870d93427c6823ebeca">TEST</a> ( integer_1052 , converts_to_string_1052 )</div>
+<div class="line"><a name="l00009"></a><span class="lineno"><a class="code" href="tests_2string__utils_8cpp.html#a85dbac707044eb39f0d8f0a015554d17">    9</a></span>&#160;<a class="code" href="tests_2string__utils_8cpp.html#a85dbac707044eb39f0d8f0a015554d17">TEST</a> ( integer_1052 , converts_to_string_1052 )</div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;{</div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;</div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    <span class="keywordtype">int</span> number = 1052;</div>
@@ -107,7 +107,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;</div>
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;}</div>
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;</div>
-<div class="line"><a name="l00020"></a><span class="lineno"><a class="code" href="tests_2string__utils_8cpp.html#a3daf732a72a6bdbc64b35e5c97fc0541">   20</a></span>&#160;<a class="code" href="chrono__util__tests_8cpp.html#a4d515f066f202870d93427c6823ebeca">TEST</a> ( from , converts_long_double_123_dot_456_to_string )</div>
+<div class="line"><a name="l00020"></a><span class="lineno"><a class="code" href="tests_2string__utils_8cpp.html#a3daf732a72a6bdbc64b35e5c97fc0541">   20</a></span>&#160;<a class="code" href="tests_2string__utils_8cpp.html#a85dbac707044eb39f0d8f0a015554d17">TEST</a> ( from , converts_long_double_123_dot_456_to_string )</div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;{</div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <span class="keywordtype">long</span> <span class="keywordtype">double</span> source_number = 123.456;</div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    std::string result_string_correct = <span class="stringliteral">&quot;123.456&quot;</span>;</div>
@@ -115,7 +115,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    ASSERT_EQ ( result_string_correct , result_string_actual );</div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;}</div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;</div>
-<div class="line"><a name="l00028"></a><span class="lineno"><a class="code" href="tests_2string__utils_8cpp.html#a8dd39d3ac8bc7a7d9d397be80aabf200">   28</a></span>&#160;<a class="code" href="chrono__util__tests_8cpp.html#a4d515f066f202870d93427c6823ebeca">TEST</a> ( float_1052_655 , converts_to_string_1052_66 )</div>
+<div class="line"><a name="l00028"></a><span class="lineno"><a class="code" href="tests_2string__utils_8cpp.html#a8dd39d3ac8bc7a7d9d397be80aabf200">   28</a></span>&#160;<a class="code" href="tests_2string__utils_8cpp.html#a85dbac707044eb39f0d8f0a015554d17">TEST</a> ( float_1052_655 , converts_to_string_1052_66 )</div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;{</div>
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;</div>
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <span class="keywordtype">float</span> number = 1052.655;</div>
@@ -126,7 +126,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;</div>
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;}</div>
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;</div>
-<div class="line"><a name="l00039"></a><span class="lineno"><a class="code" href="tests_2string__utils_8cpp.html#ac5968036ccfa38151768454c8eaacb29">   39</a></span>&#160;<a class="code" href="chrono__util__tests_8cpp.html#a4d515f066f202870d93427c6823ebeca">TEST</a> ( string_1000010001001 , splits_to_0000_000_00_by_delimiter_1 )</div>
+<div class="line"><a name="l00039"></a><span class="lineno"><a class="code" href="tests_2string__utils_8cpp.html#ac5968036ccfa38151768454c8eaacb29">   39</a></span>&#160;<a class="code" href="tests_2string__utils_8cpp.html#a85dbac707044eb39f0d8f0a015554d17">TEST</a> ( string_1000010001001 , splits_to_0000_000_00_by_delimiter_1 )</div>
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;{</div>
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;</div>
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <span class="keywordtype">char</span> delimiter = <span class="charliteral">&#39;1&#39;</span>;</div>
@@ -140,7 +140,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;</div>
 <div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;}</div>
 <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;</div>
-<div class="line"><a name="l00053"></a><span class="lineno"><a class="code" href="tests_2string__utils_8cpp.html#a42b60f414c9051c7b62fdcd619006cb0">   53</a></span>&#160;<a class="code" href="chrono__util__tests_8cpp.html#a4d515f066f202870d93427c6823ebeca">TEST</a> ( string_0100001000100100 , splits_to_0_0000_000_00_00_by_delimiter_1 )</div>
+<div class="line"><a name="l00053"></a><span class="lineno"><a class="code" href="tests_2string__utils_8cpp.html#a42b60f414c9051c7b62fdcd619006cb0">   53</a></span>&#160;<a class="code" href="tests_2string__utils_8cpp.html#a85dbac707044eb39f0d8f0a015554d17">TEST</a> ( string_0100001000100100 , splits_to_0_0000_000_00_00_by_delimiter_1 )</div>
 <div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;{</div>
 <div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;</div>
 <div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <span class="keywordtype">char</span> delimiter = <span class="charliteral">&#39;1&#39;</span>;</div>
@@ -156,7 +156,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;</div>
 <div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;}</div>
 <div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;</div>
-<div class="line"><a name="l00069"></a><span class="lineno"><a class="code" href="tests_2string__utils_8cpp.html#acec0d1d42aaebd909cc8fcf366e76400">   69</a></span>&#160;<a class="code" href="chrono__util__tests_8cpp.html#a4d515f066f202870d93427c6823ebeca">TEST</a> ( string_01_100001_10001_1001_100 , splits_to_0_0000_000_00_00_by_delimiter_1_1 )</div>
+<div class="line"><a name="l00069"></a><span class="lineno"><a class="code" href="tests_2string__utils_8cpp.html#acec0d1d42aaebd909cc8fcf366e76400">   69</a></span>&#160;<a class="code" href="tests_2string__utils_8cpp.html#a85dbac707044eb39f0d8f0a015554d17">TEST</a> ( string_01_100001_10001_1001_100 , splits_to_0_0000_000_00_00_by_delimiter_1_1 )</div>
 <div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;{</div>
 <div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;</div>
 <div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    std::string delimiter = <span class="stringliteral">&quot;1_1&quot;</span>;</div>
@@ -172,7 +172,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;</div>
 <div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;}</div>
 <div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;</div>
-<div class="line"><a name="l00085"></a><span class="lineno"><a class="code" href="tests_2string__utils_8cpp.html#a5fb6f642fa220a11611f71b7314d9cc1">   85</a></span>&#160;<a class="code" href="chrono__util__tests_8cpp.html#a4d515f066f202870d93427c6823ebeca">TEST</a> ( string_UaaaUaaUUa , splits_to_aaa_aa_a_by_delimiter_U )</div>
+<div class="line"><a name="l00085"></a><span class="lineno"><a class="code" href="tests_2string__utils_8cpp.html#a5fb6f642fa220a11611f71b7314d9cc1">   85</a></span>&#160;<a class="code" href="tests_2string__utils_8cpp.html#a85dbac707044eb39f0d8f0a015554d17">TEST</a> ( string_UaaaUaaUUa , splits_to_aaa_aa_a_by_delimiter_U )</div>
 <div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;{</div>
 <div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;</div>
 <div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    <span class="keywordtype">char</span> delimiter = <span class="charliteral">&#39;U&#39;</span>;</div>
@@ -186,7 +186,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;</div>
 <div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;}</div>
 <div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;</div>
-<div class="line"><a name="l00099"></a><span class="lineno"><a class="code" href="tests_2string__utils_8cpp.html#ae660aa6d8ef39b4d93236bb43aa3b1b8">   99</a></span>&#160;<a class="code" href="chrono__util__tests_8cpp.html#a4d515f066f202870d93427c6823ebeca">TEST</a> ( string_FOOBAR , splits_to_F_O_O_B_A_R_by_empty_delimiter )</div>
+<div class="line"><a name="l00099"></a><span class="lineno"><a class="code" href="tests_2string__utils_8cpp.html#ae660aa6d8ef39b4d93236bb43aa3b1b8">   99</a></span>&#160;<a class="code" href="tests_2string__utils_8cpp.html#a85dbac707044eb39f0d8f0a015554d17">TEST</a> ( string_FOOBAR , splits_to_F_O_O_B_A_R_by_empty_delimiter )</div>
 <div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;{</div>
 <div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;</div>
 <div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    std::string delimiter = <span class="stringliteral">&quot;&quot;</span>;</div>
@@ -203,7 +203,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;</div>
 <div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;}</div>
 <div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;</div>
-<div class="line"><a name="l00116"></a><span class="lineno"><a class="code" href="tests_2string__utils_8cpp.html#a3da314647e7ae50109683e3a22c19d5f">  116</a></span>&#160;<a class="code" href="chrono__util__tests_8cpp.html#a4d515f066f202870d93427c6823ebeca">TEST</a> ( really_long_string , causes_split_to_fail )</div>
+<div class="line"><a name="l00116"></a><span class="lineno"><a class="code" href="tests_2string__utils_8cpp.html#a3da314647e7ae50109683e3a22c19d5f">  116</a></span>&#160;<a class="code" href="tests_2string__utils_8cpp.html#a85dbac707044eb39f0d8f0a015554d17">TEST</a> ( really_long_string , causes_split_to_fail )</div>
 <div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;{</div>
 <div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;</div>
 <div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;    std::string delimiter = <span class="stringliteral">&quot; &quot;</span>;</div>
@@ -331,7 +331,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;</div>
 <div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;}</div>
 <div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;</div>
-<div class="line"><a name="l00244"></a><span class="lineno"><a class="code" href="tests_2string__utils_8cpp.html#ab24ee996f3fcd24abe01fee8b48b1668">  244</a></span>&#160;<a class="code" href="chrono__util__tests_8cpp.html#a4d515f066f202870d93427c6823ebeca">TEST</a> ( string_0101010100100001010 , transforms_into_5151515155155551515_after_replacing_0_with_5_000 )</div>
+<div class="line"><a name="l00244"></a><span class="lineno"><a class="code" href="tests_2string__utils_8cpp.html#ab24ee996f3fcd24abe01fee8b48b1668">  244</a></span>&#160;<a class="code" href="tests_2string__utils_8cpp.html#a85dbac707044eb39f0d8f0a015554d17">TEST</a> ( string_0101010100100001010 , transforms_into_5151515155155551515_after_replacing_0_with_5_000 )</div>
 <div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;{</div>
 <div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;</div>
 <div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;    <span class="keywordtype">char</span> search_for = <span class="charliteral">&#39;0&#39;</span>;</div>
@@ -344,7 +344,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;</div>
 <div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;}</div>
 <div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;</div>
-<div class="line"><a name="l00257"></a><span class="lineno"><a class="code" href="tests_2string__utils_8cpp.html#a08c5c6aee6b53cb9f8b4821fcfd94052">  257</a></span>&#160;<a class="code" href="chrono__util__tests_8cpp.html#a4d515f066f202870d93427c6823ebeca">TEST</a> ( string_0101010100100001010 , transforms_into_5151515155155551515_after_replacing_0_with_5_001 )</div>
+<div class="line"><a name="l00257"></a><span class="lineno"><a class="code" href="tests_2string__utils_8cpp.html#a08c5c6aee6b53cb9f8b4821fcfd94052">  257</a></span>&#160;<a class="code" href="tests_2string__utils_8cpp.html#a85dbac707044eb39f0d8f0a015554d17">TEST</a> ( string_0101010100100001010 , transforms_into_5151515155155551515_after_replacing_0_with_5_001 )</div>
 <div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;{</div>
 <div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;</div>
 <div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">char</span>* search_for = <span class="stringliteral">&quot;0&quot;</span>;</div>
@@ -357,7 +357,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;</div>
 <div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;}</div>
 <div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;</div>
-<div class="line"><a name="l00270"></a><span class="lineno"><a class="code" href="tests_2string__utils_8cpp.html#ae905cff001983b984303a95f3cf3f32a">  270</a></span>&#160;<a class="code" href="chrono__util__tests_8cpp.html#a4d515f066f202870d93427c6823ebeca">TEST</a> ( string_0101010100100001010 , transforms_into_5151515155155551515_after_replacing_0_with_5_002 )</div>
+<div class="line"><a name="l00270"></a><span class="lineno"><a class="code" href="tests_2string__utils_8cpp.html#ae905cff001983b984303a95f3cf3f32a">  270</a></span>&#160;<a class="code" href="tests_2string__utils_8cpp.html#a85dbac707044eb39f0d8f0a015554d17">TEST</a> ( string_0101010100100001010 , transforms_into_5151515155155551515_after_replacing_0_with_5_002 )</div>
 <div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;{</div>
 <div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;</div>
 <div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;    std::string search_for = <span class="stringliteral">&quot;0&quot;</span>;</div>
@@ -370,7 +370,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;</div>
 <div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;}</div>
 <div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;</div>
-<div class="line"><a name="l00283"></a><span class="lineno"><a class="code" href="tests_2string__utils_8cpp.html#a2de6109928200c5dea09514d01556306">  283</a></span>&#160;<a class="code" href="chrono__util__tests_8cpp.html#a4d515f066f202870d93427c6823ebeca">TEST</a> ( string_qwertyuiop , transforms_into_poiuytrewq_after_reversing )</div>
+<div class="line"><a name="l00283"></a><span class="lineno"><a class="code" href="tests_2string__utils_8cpp.html#a2de6109928200c5dea09514d01556306">  283</a></span>&#160;<a class="code" href="tests_2string__utils_8cpp.html#a85dbac707044eb39f0d8f0a015554d17">TEST</a> ( string_qwertyuiop , transforms_into_poiuytrewq_after_reversing )</div>
 <div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;{</div>
 <div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;</div>
 <div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;</div>
@@ -382,7 +382,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;</div>
 <div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;}</div>
 <div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;</div>
-<div class="line"><a name="l00295"></a><span class="lineno"><a class="code" href="tests_2string__utils_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627">  295</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="chrono__util__tests_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627">main</a> ( <span class="keywordtype">int</span> argc , <span class="keywordtype">char</span>** argv )</div>
+<div class="line"><a name="l00295"></a><span class="lineno"><a class="code" href="tests_2string__utils_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627">  295</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="tests_2string__utils_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627">main</a> ( <span class="keywordtype">int</span> argc , <span class="keywordtype">char</span>** argv )</div>
 <div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;{</div>
 <div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;    ::testing::InitGoogleTest(&amp;argc, argv);</div>
 <div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;    <span class="keywordflow">return</span> RUN_ALL_TESTS();</div>
@@ -390,7 +390,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Aug 12 2014 10:28:42 for XTD by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Aug 12 2014 11:02:57 for XTD by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.1.2
 </small></address>
