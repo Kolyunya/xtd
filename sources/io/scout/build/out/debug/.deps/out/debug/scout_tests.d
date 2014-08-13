@@ -1,0 +1,1 @@
+cmd_out/debug/scout_tests := flock out/debug/linker.lock g++ -lpthread  -o out/debug/scout_tests -Wl,--start-group out/debug/obj.target/scout_tests/../tests/sources/scout.o /home/kolyunya/projects/gtest/build/gtest-all.o out/debug/obj.target/libscout.a -Wl,--end-group 
