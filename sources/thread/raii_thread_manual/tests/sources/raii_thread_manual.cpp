@@ -3,12 +3,12 @@
 /*
 TEST ( raii_thread_constructor , does_not_throw_0 )
 {
-    xtd::raii_thread<void(*)()> foo([](){});
+    xtd::thread::raii_thread<void(*)()> foo([](){});
 }
 
 TEST ( raii_thread_constructor , does_not_throw_1 )
 {
-    xtd::raii_thread<void(*)(int),int> foo([](int){},1);
+    xtd::thread::raii_thread<void(*)(int),int> foo([](int){},1);
 }
 */
 int main ( int argc , char** argv )

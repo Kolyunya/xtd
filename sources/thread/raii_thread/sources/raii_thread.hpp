@@ -5,14 +5,21 @@
 
 namespace xtd
 {
-    class raii_thread
-        :
-            public raii_thread_base
+
+    namespace thread
     {
-        public:
-            explicit     raii_thread ( std::function<void()> client_routine );
-            virtual      ~raii_thread ( void ) noexcept override;
-    };
+
+        class raii_thread
+            :
+                public raii_thread_base
+        {
+            public:
+                explicit     raii_thread ( std::function<void()> client_routine );
+                virtual      ~raii_thread ( void ) noexcept override;
+        };
+
+    }
+
 }
 
 #endif
