@@ -1,10 +1,6 @@
 {
     'target_defaults':
     {
-        'defines':
-        [
-            'DEPTH=.',
-        ],
         'cflags':
         [
             '<@(CFLAGS_STANDARD)',
@@ -15,18 +11,18 @@
         ],
         'configurations':
         {
-            'debug':
-            {
-                'cflags':
-                [
-                    '<@(CFLAGS_DEBUG)',
-                ],
-            },
             'release':
             {
                 'cflags':
                 [
                     '<@(CFLAGS_RELEASE)',
+                ],
+            },
+            'debug':
+            {
+                'cflags':
+                [
+                    '<@(CFLAGS_DEBUG)',
                 ],
             },
         },

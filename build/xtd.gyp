@@ -13,15 +13,15 @@
         {
             'target_name': 'xtd',
             'type': 'static_library',
-            'dependencies':
+            'sources':
             [
-                './../sources/chrono/chrono_utils/build/chrono_utils.gyp:chrono_utils',
-                './../sources/file/file_utils/build/file_utils.gyp:file_utils',
-                './../sources/io/scout/build/scout.gyp:scout',
-                './../sources/memory/memory_utils/build/memory_utils.gyp:memory_utils',
-                './../sources/pubsub/event/build/event.gyp:event',
-                './../sources/random/random_utils/build/random_utils.gyp:random_utils',
-                './../sources/string/string_utils/build/string_utils.gyp:string_utils',
+                './../sources/chrono/chrono_utils/sources/chrono_utils.cpp',
+                './../sources/file/file_utils/sources/file_utils.cpp',
+                './../sources/io/scout/sources/scout.cpp',
+                './../sources/memory/memory_utils/sources/memory_utils.cpp',
+                './../sources/pubsub/event/sources/event.cpp',
+                './../sources/random/random_utils/sources/random_utils.cpp',
+                './../sources/string/string_utils/sources/string_utils.cpp',
             ],
         },
     ],
