@@ -1,7 +1,13 @@
 var searchData=
 [
-  ['file_5futils_2ecpp',['file_utils.cpp',['../sources_2file__utils_8cpp.html',1,'']]],
+  ['file',['file',['../classxtd_1_1log_1_1file__logger.html#a38d9672f0c80fa61918b3c1bd80cca7b',1,'xtd::log::file_logger']]],
+  ['file_5flogger',['file_logger',['../classxtd_1_1log_1_1file__logger.html',1,'xtd::log']]],
+  ['file_5flogger',['file_logger',['../classxtd_1_1log_1_1file__logger.html#a8736bcbdb99602e5d66a9d4d0fad161e',1,'xtd::log::file_logger']]],
+  ['file_5flogger_2ecpp',['file_logger.cpp',['../sources_2file__logger_8cpp.html',1,'']]],
+  ['file_5flogger_2ecpp',['file_logger.cpp',['../tests_2sources_2file__logger_8cpp.html',1,'']]],
+  ['file_5flogger_2ehpp',['file_logger.hpp',['../file__logger_8hpp.html',1,'']]],
   ['file_5futils_2ecpp',['file_utils.cpp',['../tests_2sources_2file__utils_8cpp.html',1,'']]],
+  ['file_5futils_2ecpp',['file_utils.cpp',['../sources_2file__utils_8cpp.html',1,'']]],
   ['file_5futils_2ehpp',['file_utils.hpp',['../file__utils_8hpp.html',1,'']]],
   ['free_5flisteners',['free_listeners',['../classxtd_1_1pubsub_1_1event.html#a5c9eb179f111b5ee2d5a40c06ba1d7de',1,'xtd::pubsub::event']]],
   ['from',['from',['../namespacextd_1_1string.html#aba3984145d5097692247842e2b40481e',1,'xtd::string']]],
