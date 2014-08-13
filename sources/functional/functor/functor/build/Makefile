@@ -313,18 +313,18 @@ $(obj).$(TOOLSET)/%.o: $(obj)/%.s FORCE_DO_CMD
 
 ifeq ($(strip $(foreach prefix,$(NO_LOAD),\
     $(findstring $(join ^,$(prefix)),\
-                 $(join ^,scout.target.mk)))),)
-  include scout.target.mk
+                 $(join ^,functor.target.mk)))),)
+  include functor.target.mk
 endif
 ifeq ($(strip $(foreach prefix,$(NO_LOAD),\
     $(findstring $(join ^,$(prefix)),\
-                 $(join ^,scout_tests.target.mk)))),)
-  include scout_tests.target.mk
+                 $(join ^,functor_tests.target.mk)))),)
+  include functor_tests.target.mk
 endif
 
 quiet_cmd_regen_makefile = ACTION Regenerating $@
 cmd_regen_makefile = /usr/bin/gyp -fmake --ignore-environment "--toplevel-dir=." "--depth=."
-Makefile: scout.gyp ../../../../system/gyp/variables.gypi ../../../../system/gyp/targets.gypi ../../../../system/gyp/includes.gypi ../../../../system/gyp/defaults.gypi
+Makefile: functor.gyp ../../../../../system/gyp/includes.gypi ../../../../../system/gyp/variables.gypi ../../../../../system/gyp/defaults.gypi ../../../../../system/gyp/targets.gypi
 	$(call do_cmd,regen_makefile)
 
 # "all" is a concatenation of the "all" targets from all the included

@@ -1,6 +1,6 @@
-cmd_out/debug/obj.target/scout_tests/../tests/sources/scout.o := g++  -I/home/kolyunya/projects/xtd/include -I/home/kolyunya/projects/gtest/include  -std=c++11 -Wall -Wextra -Werror -pedantic -pedantic-errors -Wno-unused-variable -O0 -g  -MMD -MF out/debug/.deps/out/debug/obj.target/scout_tests/../tests/sources/scout.o.d.raw  -c -o out/debug/obj.target/scout_tests/../tests/sources/scout.o ../tests/sources/scout.cpp
-out/debug/obj.target/scout_tests/../tests/sources/scout.o: \
- ../tests/sources/scout.cpp \
+cmd_out/debug/obj.target/functor_tests/../tests/sources/functor.o := g++  -I/home/kolyunya/projects/xtd/include -I/home/kolyunya/projects/gtest/include  -std=c++11 -Wall -Wextra -Werror -pedantic -pedantic-errors -Wno-unused-variable -O0 -g  -MMD -MF out/debug/.deps/out/debug/obj.target/functor_tests/../tests/sources/functor.o.d.raw  -c -o out/debug/obj.target/functor_tests/../tests/sources/functor.o ../tests/sources/functor.cpp
+out/debug/obj.target/functor_tests/../tests/sources/functor.o: \
+ ../tests/sources/functor.cpp \
  /home/kolyunya/projects/gtest/include/gtest/gtest.h \
  /home/kolyunya/projects/gtest/include/gtest/internal/gtest-internal.h \
  /home/kolyunya/projects/gtest/include/gtest/internal/gtest-port.h \
@@ -19,11 +19,13 @@ out/debug/obj.target/scout_tests/../tests/sources/scout.o: \
  /home/kolyunya/projects/gtest/include/gtest/gtest-test-part.h \
  /home/kolyunya/projects/gtest/include/gtest/gtest-typed-test.h \
  /home/kolyunya/projects/gtest/include/gtest/gtest_pred_impl.h \
- /home/kolyunya/projects/xtd/include/xtd/io.hpp \
- /home/kolyunya/projects/xtd/include/xtd/io/scout.hpp \
- /home/kolyunya/projects/xtd/include/xtd/io/./../../../sources/io/scout/sources/scout.hpp \
- /home/kolyunya/projects/xtd/include/xtd/io/./../../../sources/io/scout/sources/scout.tpp
-../tests/sources/scout.cpp:
+ /home/kolyunya/projects/xtd/include/xtd/functional.hpp \
+ /home/kolyunya/projects/xtd/include/xtd/functional/functor.hpp \
+ /home/kolyunya/projects/xtd/include/xtd/functional/./../../../sources/functional/functor/functor/sources/functor.hpp \
+ /home/kolyunya/projects/xtd/include/xtd/functional/abstract_functor.hpp \
+ /home/kolyunya/projects/xtd/include/xtd/functional/./../../../sources/functional/functor/abstract_functor/sources/abstract_functor.hpp \
+ /home/kolyunya/projects/xtd/include/xtd/functional/./../../../sources/functional/functor/functor/sources/functor.tpp
+../tests/sources/functor.cpp:
 /home/kolyunya/projects/gtest/include/gtest/gtest.h:
 /home/kolyunya/projects/gtest/include/gtest/internal/gtest-internal.h:
 /home/kolyunya/projects/gtest/include/gtest/internal/gtest-port.h:
@@ -42,7 +44,9 @@ out/debug/obj.target/scout_tests/../tests/sources/scout.o: \
 /home/kolyunya/projects/gtest/include/gtest/gtest-test-part.h:
 /home/kolyunya/projects/gtest/include/gtest/gtest-typed-test.h:
 /home/kolyunya/projects/gtest/include/gtest/gtest_pred_impl.h:
-/home/kolyunya/projects/xtd/include/xtd/io.hpp:
-/home/kolyunya/projects/xtd/include/xtd/io/scout.hpp:
-/home/kolyunya/projects/xtd/include/xtd/io/./../../../sources/io/scout/sources/scout.hpp:
-/home/kolyunya/projects/xtd/include/xtd/io/./../../../sources/io/scout/sources/scout.tpp:
+/home/kolyunya/projects/xtd/include/xtd/functional.hpp:
+/home/kolyunya/projects/xtd/include/xtd/functional/functor.hpp:
+/home/kolyunya/projects/xtd/include/xtd/functional/./../../../sources/functional/functor/functor/sources/functor.hpp:
+/home/kolyunya/projects/xtd/include/xtd/functional/abstract_functor.hpp:
+/home/kolyunya/projects/xtd/include/xtd/functional/./../../../sources/functional/functor/abstract_functor/sources/abstract_functor.hpp:
+/home/kolyunya/projects/xtd/include/xtd/functional/./../../../sources/functional/functor/functor/sources/functor.tpp:
