@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['terminate_5fflag',['terminate_flag',['../classxstd_1_1raii__thread__base.html#aaac3bfb5572d71de17cb71d7ed0bb15c',1,'xstd::raii_thread_base']]],
-  ['thread',['thread',['../classxstd_1_1raii__thread__base.html#a664b3c47514557c3047e4ee0d7d9f25f',1,'xstd::raii_thread_base']]]
+  ['terminate_5fflag',['terminate_flag',['../classxtd_1_1raii__thread__base.html#a956b5251ea513762c7c3a40779c4409e',1,'xtd::raii_thread_base']]],
+  ['thread',['thread',['../classxtd_1_1raii__thread__base.html#a5e0b886a04d751be6da18ad9ae3cd141',1,'xtd::raii_thread_base']]]
 ];

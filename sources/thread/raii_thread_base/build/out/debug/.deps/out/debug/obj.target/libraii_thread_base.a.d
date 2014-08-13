@@ -1,0 +1,1 @@
+cmd_out/debug/obj.target/libraii_thread_base.a := rm -f out/debug/obj.target/libraii_thread_base.a && ar crsT out/debug/obj.target/libraii_thread_base.a out/debug/obj.target/raii_thread_base/../sources/raii_thread_base.o
