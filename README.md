@@ -20,11 +20,11 @@ Each library unit is contained in a separate directory. Each unit directory cont
   + [GYP](http://en.wikipedia.org/wiki/GYP_(software)).
 * Library usage.
   + Set the `XTD_HOME` environment variable to the location of this library root directory.
+  + Add path to the `include` directory to your project include paths.
+  + Include required headers from the `include` directory into your source files.
   + Navigate to the `build` directory and generate library build script using `gyp --depth=.` command.
   + Compile the library using the build script generated on the previous step.
-  + Add path to the `include` directory to your project `include` paths.
-  + Include required headers from the `include` directory into your source files.
-  + Compile you project linking to the static library compiled earlier.
+  + Compile you project linking to the static library compiled on the previous step.
 
 ##Testing
 
