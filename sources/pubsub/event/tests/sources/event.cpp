@@ -1,19 +1,19 @@
 #include <gtest/gtest.h>
-#include <xtd/event.hpp>
+#include <xtd/pubsub.hpp>
 
 TEST ( event , does_not_throw_while_construction_001 )
 {
-    ASSERT_NO_THROW(delete(new xtd::event::event<>()));
+    ASSERT_NO_THROW(delete(new xtd::pubsub::event<>()));
 }
 
 TEST ( event , does_not_throw_while_construction_002 )
 {
-    ASSERT_NO_THROW(delete(new xtd::event::event<int>()));
+    ASSERT_NO_THROW(delete(new xtd::pubsub::event<int>()));
 }
 
 TEST ( event , does_not_throw_while_construction_003 )
 {
-    ASSERT_NO_THROW(delete(new xtd::event::event<int,bool,float>()));
+    ASSERT_NO_THROW(delete(new xtd::pubsub::event<int,bool,float>()));
 }
 
 int main ( int argc , char** argv )
