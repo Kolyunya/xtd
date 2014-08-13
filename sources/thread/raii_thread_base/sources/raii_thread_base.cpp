@@ -1,25 +1,27 @@
-namespace xstd
+#include "raii_thread_base.hpp"
+
+namespace xtd
 {
 
-            raii_thread_base::raii_thread_base ( std::function<void()> client_routine )
-                :
-                    terminate_flag(false),
-                    client_routine(client_routine)
+    raii_thread_base::raii_thread_base ( std::function<void()> client_routine )
+        :
+            terminate_flag(false),
+            client_routine(client_routine)
     {
 
     }
 
-            raii_thread_base::~raii_thread_base ( void ) noexcept
+    raii_thread_base::~raii_thread_base ( void ) noexcept
     {
 
     }
 
-    bool    raii_thread_base::get_is_initialized ( void ) const
+    bool raii_thread_base::get_is_initialized ( void ) const
     {
         return ( this->thread.joinable() == true );
     }
 
-    void    raii_thread_base::initialize_routine ( void )
+    void raii_thread_base::initialize_routine ( void )
     {
         std::lock_guard<std::recursive_mutex> lock(this->mutex);
         this->check_is_not_initialized();
@@ -27,7 +29,7 @@ namespace xstd
         this->thread = std::thread(raii_thread_base::routine,this);
     }
 
-    void    raii_thread_base::deinitialize_routine ( void )
+    void raii_thread_base::deinitialize_routine ( void )
     {
         std::unique_lock<std::recursive_mutex> lock(this->mutex);
         this->check_is_initialized();
@@ -49,7 +51,7 @@ namespace xstd
 
     }
 
-    void    raii_thread_base::check_is_initialized ( void ) const
+    void raii_thread_base::check_is_initialized ( void ) const
     {
         if ( this->get_is_initialized() == false )
         {
@@ -57,7 +59,7 @@ namespace xstd
         }
     }
 
-    void    raii_thread_base::check_is_not_initialized ( void ) const
+    void raii_thread_base::check_is_not_initialized ( void ) const
     {
         if ( this->get_is_initialized() == true )
         {
@@ -65,13 +67,13 @@ namespace xstd
         }
     }
 
-    void    raii_thread_base::routine ( raii_thread_base* raii_thread_base_ptr )
+    void raii_thread_base::routine ( raii_thread_base* raii_thread_base_ptr )
     {
         while ( true )
         {
             try
             {
-                //	Check if the thread is supposed to be terminated
+                //    Check if the thread is supposed to be terminated
                 std::unique_lock<std::recursive_mutex> terminate_unique_lock(raii_thread_base_ptr->mutex,std::defer_lock);
                 terminate_unique_lock.try_lock();
                 if ( raii_thread_base_ptr->terminate_flag )
@@ -79,15 +81,15 @@ namespace xstd
                     return;
                 }
 
-                //	Run client code
+                //    Run client code
                 (raii_thread_base_ptr->client_routine)();
 
-                //	Yield to other threads
+                //    Yield to other threads
                 std::this_thread::yield();
             }
             catch ( ... )
             {
-                //	Ignore errors
+                //    Ignore errors
             }
         }
 

@@ -3,6 +3,7 @@
     {
         'UNIT_ROOT_DIR': './..',
         'UNIT_STANDARD': 'c++11',
+        'UNIT_DEPENDENCIES': [],
         'UNIT_SOURCES_DIR': '<(UNIT_ROOT_DIR)/sources',
         'UNIT_SOURCE_FILE': '<(UNIT_SOURCES_DIR)/<(UNIT_NAME).cpp',
         'UNIT_TESTS_DIR': '<(UNIT_ROOT_DIR)/tests/sources',

@@ -15,6 +15,7 @@
             'dependencies':
             [
                 '<(UNIT_NAME)',
+                '<@(UNIT_DEPENDENCIES)',
             ],
             'sources':
             [
