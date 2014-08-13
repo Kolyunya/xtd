@@ -1,0 +1,1 @@
+cmd_out/debug/obj.target/libabstract_logger.a := rm -f out/debug/obj.target/libabstract_logger.a && ar crsT out/debug/obj.target/libabstract_logger.a out/debug/obj.target/abstract_logger/../sources/abstract_logger.o

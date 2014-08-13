@@ -131,7 +131,7 @@ Static Protected Member Functions</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock">
-<p>Definition at line <a class="el" href="abstract__logger_8hpp_source.html#l00013">13</a> of file <a class="el" href="abstract__logger_8hpp_source.html">abstract_logger.hpp</a>.</p>
+<p>Definition at line <a class="el" href="abstract__logger_8hpp_source.html#l00012">12</a> of file <a class="el" href="abstract__logger_8hpp_source.html">abstract_logger.hpp</a>.</p>
 </div><h2>Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="a99816116180ce982964616d83e271b4b"></a>
 <div class="memitem">
@@ -194,11 +194,9 @@ Static Protected Member Functions</h2></td></tr>
 
 <p>Referenced by <a class="el" href="tests_2sources_2console__logger_8cpp_source.html#l00010">TEST()</a>.</p>
 <div class="fragment"><div class="line">        {</div>
-<div class="line"></div>
 <div class="line">            this-&gt;<a class="code" href="classxtd_1_1log_1_1abstract__logger.html#a8b80629d60b3c46d7b939dc8c60b1bcb">log_time_stamp</a>();</div>
 <div class="line">            this-&gt;<a class="code" href="classxtd_1_1log_1_1abstract__logger.html#a13cf3d71712c25c455d62727d6a54b95">log_data</a>(data);</div>
 <div class="line">            this-&gt;<a class="code" href="classxtd_1_1log_1_1abstract__logger.html#a220b9c9182700d5a6cb43fca0ce3c496">log_new_line</a>();</div>
-<div class="line"></div>
 <div class="line">        }</div>
 </div><!-- fragment -->
 </div>
@@ -227,7 +225,7 @@ Static Protected Member Functions</h2></td></tr>
 
 <p>Implemented in <a class="el" href="classxtd_1_1log_1_1console__logger.html#a7a13bf7178586db8a1b7eff4a25cbd70">xtd::log::console_logger</a>, and <a class="el" href="classxtd_1_1log_1_1file__logger.html#a7b9d355f55973be6299129ac49c5fb0c">xtd::log::file_logger</a>.</p>
 
-<p>Referenced by <a class="el" href="abstract__logger_8cpp_source.html#l00026">log_new_line()</a>, and <a class="el" href="abstract__logger_8cpp_source.html#l00038">log_time_stamp()</a>.</p>
+<p>Referenced by <a class="el" href="abstract__logger_8cpp_source.html#l00024">log_new_line()</a>, and <a class="el" href="abstract__logger_8cpp_source.html#l00032">log_time_stamp()</a>.</p>
 
 </div>
 </div>
@@ -253,18 +251,14 @@ Static Protected Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="abstract__logger_8cpp_source.html#l00026">26</a> of file <a class="el" href="abstract__logger_8cpp_source.html">abstract_logger.cpp</a>.</p>
+<p>Definition at line <a class="el" href="abstract__logger_8cpp_source.html#l00024">24</a> of file <a class="el" href="abstract__logger_8cpp_source.html">abstract_logger.cpp</a>.</p>
 
-<p>References <a class="el" href="abstract__logger_8hpp_source.html#l00022">add_new_line</a>, and <a class="el" href="classxtd_1_1log_1_1abstract__logger.html#a13cf3d71712c25c455d62727d6a54b95">log_data()</a>.</p>
+<p>References <a class="el" href="abstract__logger_8hpp_source.html#l00021">add_new_line</a>, and <a class="el" href="classxtd_1_1log_1_1abstract__logger.html#a13cf3d71712c25c455d62727d6a54b95">log_data()</a>.</p>
 <div class="fragment"><div class="line">        {</div>
-<div class="line"></div>
 <div class="line">            <span class="keywordflow">if</span> ( this-&gt;<a class="code" href="classxtd_1_1log_1_1abstract__logger.html#a4b2e4a54c3f89061c7d503cb4930bff6">add_new_line</a> )</div>
 <div class="line">            {</div>
-<div class="line"></div>
 <div class="line">                this-&gt;<a class="code" href="classxtd_1_1log_1_1abstract__logger.html#a13cf3d71712c25c455d62727d6a54b95">log_data</a>(<span class="stringliteral">&quot;\n&quot;</span>);</div>
-<div class="line"></div>
 <div class="line">            }</div>
-<div class="line"></div>
 <div class="line">        }</div>
 </div><!-- fragment -->
 </div>
@@ -291,18 +285,14 @@ Static Protected Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="abstract__logger_8cpp_source.html#l00038">38</a> of file <a class="el" href="abstract__logger_8cpp_source.html">abstract_logger.cpp</a>.</p>
+<p>Definition at line <a class="el" href="abstract__logger_8cpp_source.html#l00032">32</a> of file <a class="el" href="abstract__logger_8cpp_source.html">abstract_logger.cpp</a>.</p>
 
-<p>References <a class="el" href="abstract__logger_8hpp_source.html#l00024">add_time_stamp</a>, <a class="el" href="classxtd_1_1log_1_1abstract__logger.html#a13cf3d71712c25c455d62727d6a54b95">log_data()</a>, and <a class="el" href="abstract__logger_8cpp_source.html#l00050">make_time_stamp()</a>.</p>
+<p>References <a class="el" href="abstract__logger_8hpp_source.html#l00023">add_time_stamp</a>, <a class="el" href="classxtd_1_1log_1_1abstract__logger.html#a13cf3d71712c25c455d62727d6a54b95">log_data()</a>, and <a class="el" href="abstract__logger_8cpp_source.html#l00040">make_time_stamp()</a>.</p>
 <div class="fragment"><div class="line">        {</div>
-<div class="line"></div>
 <div class="line">            <span class="keywordflow">if</span> ( this-&gt;<a class="code" href="classxtd_1_1log_1_1abstract__logger.html#ac754f300cc11d25199b7c90de7c77bda">add_time_stamp</a> )</div>
 <div class="line">            {</div>
-<div class="line"></div>
 <div class="line">                this-&gt;<a class="code" href="classxtd_1_1log_1_1abstract__logger.html#a13cf3d71712c25c455d62727d6a54b95">log_data</a>(<a class="code" href="classxtd_1_1log_1_1abstract__logger.html#a1efbbe2357b4afe8650dad0b3647eeee">abstract_logger::make_time_stamp</a>() + <span class="stringliteral">&quot; - &quot;</span>);</div>
-<div class="line"></div>
 <div class="line">            }</div>
-<div class="line"></div>
 <div class="line">        }</div>
 </div><!-- fragment -->
 </div>
@@ -329,18 +319,15 @@ Static Protected Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="abstract__logger_8cpp_source.html#l00050">50</a> of file <a class="el" href="abstract__logger_8cpp_source.html">abstract_logger.cpp</a>.</p>
+<p>Definition at line <a class="el" href="abstract__logger_8cpp_source.html#l00040">40</a> of file <a class="el" href="abstract__logger_8cpp_source.html">abstract_logger.cpp</a>.</p>
 
 <p>References <a class="el" href="sources_2chrono__utils_8cpp_source.html#l00038">xtd::chrono::time_point_to_formatted_string()</a>.</p>
 
-<p>Referenced by <a class="el" href="abstract__logger_8cpp_source.html#l00038">log_time_stamp()</a>.</p>
+<p>Referenced by <a class="el" href="abstract__logger_8cpp_source.html#l00032">log_time_stamp()</a>.</p>
 <div class="fragment"><div class="line">        {</div>
-<div class="line"></div>
 <div class="line">            std::chrono::time_point&lt;std::chrono::steady_clock&gt; time_current = std::chrono::steady_clock::now();</div>
 <div class="line">            std::string time_current_string = <a class="code" href="namespacextd_1_1chrono.html#a710146127a2e7f1855ca35f27427e953">xtd::chrono::time_point_to_formatted_string</a>(time_current);</div>
-<div class="line"></div>
 <div class="line">            <span class="keywordflow">return</span> time_current_string;</div>
-<div class="line"></div>
 <div class="line">        }</div>
 </div><!-- fragment -->
 </div>
@@ -356,9 +343,9 @@ Static Protected Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="abstract__logger_8hpp_source.html#l00022">22</a> of file <a class="el" href="abstract__logger_8hpp_source.html">abstract_logger.hpp</a>.</p>
+<p>Definition at line <a class="el" href="abstract__logger_8hpp_source.html#l00021">21</a> of file <a class="el" href="abstract__logger_8hpp_source.html">abstract_logger.hpp</a>.</p>
 
-<p>Referenced by <a class="el" href="abstract__logger_8cpp_source.html#l00026">log_new_line()</a>.</p>
+<p>Referenced by <a class="el" href="abstract__logger_8cpp_source.html#l00024">log_new_line()</a>.</p>
 
 </div>
 </div>
@@ -372,9 +359,9 @@ Static Protected Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="abstract__logger_8hpp_source.html#l00024">24</a> of file <a class="el" href="abstract__logger_8hpp_source.html">abstract_logger.hpp</a>.</p>
+<p>Definition at line <a class="el" href="abstract__logger_8hpp_source.html#l00023">23</a> of file <a class="el" href="abstract__logger_8hpp_source.html">abstract_logger.hpp</a>.</p>
 
-<p>Referenced by <a class="el" href="abstract__logger_8cpp_source.html#l00038">log_time_stamp()</a>.</p>
+<p>Referenced by <a class="el" href="abstract__logger_8cpp_source.html#l00032">log_time_stamp()</a>.</p>
 
 </div>
 </div>
@@ -385,7 +372,7 @@ Static Protected Member Functions</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Aug 13 2014 22:41:29 for XTD by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Aug 13 2014 23:24:58 for XTD by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.1.2
 </small></address>

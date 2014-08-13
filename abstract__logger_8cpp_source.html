@@ -106,54 +106,41 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;</div>
 <div class="line"><a name="l00017"></a><span class="lineno"><a class="code" href="classxtd_1_1log_1_1abstract__logger.html#a115152dd8d5bf53d5bf9d561d30ee188">   17</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classxtd_1_1log_1_1abstract__logger.html#a115152dd8d5bf53d5bf9d561d30ee188">abstract_logger::log</a> ( <span class="keyword">const</span> std::string&amp; data ) <span class="keyword">const</span> noexcept</div>
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;        {</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;            this-&gt;log_time_stamp();</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;            this-&gt;log_data(data);</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;            this-&gt;log_new_line();</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;            this-&gt;log_time_stamp();</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;            this-&gt;log_data(data);</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;            this-&gt;log_new_line();</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;        }</div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        }</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;</div>
-<div class="line"><a name="l00026"></a><span class="lineno"><a class="code" href="classxtd_1_1log_1_1abstract__logger.html#a220b9c9182700d5a6cb43fca0ce3c496">   26</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classxtd_1_1log_1_1abstract__logger.html#a220b9c9182700d5a6cb43fca0ce3c496">abstract_logger::log_new_line</a> ( <span class="keywordtype">void</span> ) const noexcept</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        {</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;            <span class="keywordflow">if</span> ( this-&gt;<a class="code" href="classxtd_1_1log_1_1abstract__logger.html#a4b2e4a54c3f89061c7d503cb4930bff6">add_new_line</a> )</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;            {</div>
+<div class="line"><a name="l00024"></a><span class="lineno"><a class="code" href="classxtd_1_1log_1_1abstract__logger.html#a220b9c9182700d5a6cb43fca0ce3c496">   24</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classxtd_1_1log_1_1abstract__logger.html#a220b9c9182700d5a6cb43fca0ce3c496">abstract_logger::log_new_line</a> ( <span class="keywordtype">void</span> ) const noexcept</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        {</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;            <span class="keywordflow">if</span> ( this-&gt;<a class="code" href="classxtd_1_1log_1_1abstract__logger.html#a4b2e4a54c3f89061c7d503cb4930bff6">add_new_line</a> )</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;            {</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;                this-&gt;<a class="code" href="classxtd_1_1log_1_1abstract__logger.html#a13cf3d71712c25c455d62727d6a54b95">log_data</a>(<span class="stringliteral">&quot;\n&quot;</span>);</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;            }</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        }</div>
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;                this-&gt;<a class="code" href="classxtd_1_1log_1_1abstract__logger.html#a13cf3d71712c25c455d62727d6a54b95">log_data</a>(<span class="stringliteral">&quot;\n&quot;</span>);</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;            }</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        }</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;</div>
-<div class="line"><a name="l00038"></a><span class="lineno"><a class="code" href="classxtd_1_1log_1_1abstract__logger.html#a8b80629d60b3c46d7b939dc8c60b1bcb">   38</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classxtd_1_1log_1_1abstract__logger.html#a8b80629d60b3c46d7b939dc8c60b1bcb">abstract_logger::log_time_stamp</a> ( <span class="keywordtype">void</span> ) const noexcept</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        {</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;            <span class="keywordflow">if</span> ( this-&gt;<a class="code" href="classxtd_1_1log_1_1abstract__logger.html#ac754f300cc11d25199b7c90de7c77bda">add_time_stamp</a> )</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;            {</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;                this-&gt;<a class="code" href="classxtd_1_1log_1_1abstract__logger.html#a13cf3d71712c25c455d62727d6a54b95">log_data</a>(<a class="code" href="classxtd_1_1log_1_1abstract__logger.html#a1efbbe2357b4afe8650dad0b3647eeee">abstract_logger::make_time_stamp</a>() + <span class="stringliteral">&quot; - &quot;</span>);</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;            }</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        }</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;</div>
-<div class="line"><a name="l00050"></a><span class="lineno"><a class="code" href="classxtd_1_1log_1_1abstract__logger.html#a1efbbe2357b4afe8650dad0b3647eeee">   50</a></span>&#160;        std::string <a class="code" href="classxtd_1_1log_1_1abstract__logger.html#a1efbbe2357b4afe8650dad0b3647eeee">abstract_logger::make_time_stamp</a> ( <span class="keywordtype">void</span> ) noexcept</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        {</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;            std::chrono::time_point&lt;std::chrono::steady_clock&gt; time_current = std::chrono::steady_clock::now();</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;            std::string time_current_string = <a class="code" href="namespacextd_1_1chrono.html#a710146127a2e7f1855ca35f27427e953">xtd::chrono::time_point_to_formatted_string</a>(time_current);</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;            <span class="keywordflow">return</span> time_current_string;</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        }</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    }</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;}</div>
+<div class="line"><a name="l00032"></a><span class="lineno"><a class="code" href="classxtd_1_1log_1_1abstract__logger.html#a8b80629d60b3c46d7b939dc8c60b1bcb">   32</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classxtd_1_1log_1_1abstract__logger.html#a8b80629d60b3c46d7b939dc8c60b1bcb">abstract_logger::log_time_stamp</a> ( <span class="keywordtype">void</span> ) const noexcept</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        {</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;            <span class="keywordflow">if</span> ( this-&gt;<a class="code" href="classxtd_1_1log_1_1abstract__logger.html#ac754f300cc11d25199b7c90de7c77bda">add_time_stamp</a> )</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;            {</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;                this-&gt;<a class="code" href="classxtd_1_1log_1_1abstract__logger.html#a13cf3d71712c25c455d62727d6a54b95">log_data</a>(<a class="code" href="classxtd_1_1log_1_1abstract__logger.html#a1efbbe2357b4afe8650dad0b3647eeee">abstract_logger::make_time_stamp</a>() + <span class="stringliteral">&quot; - &quot;</span>);</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;            }</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        }</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;</div>
+<div class="line"><a name="l00040"></a><span class="lineno"><a class="code" href="classxtd_1_1log_1_1abstract__logger.html#a1efbbe2357b4afe8650dad0b3647eeee">   40</a></span>&#160;        std::string <a class="code" href="classxtd_1_1log_1_1abstract__logger.html#a1efbbe2357b4afe8650dad0b3647eeee">abstract_logger::make_time_stamp</a> ( <span class="keywordtype">void</span> ) noexcept</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        {</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;            std::chrono::time_point&lt;std::chrono::steady_clock&gt; time_current = std::chrono::steady_clock::now();</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;            std::string time_current_string = <a class="code" href="namespacextd_1_1chrono.html#a710146127a2e7f1855ca35f27427e953">xtd::chrono::time_point_to_formatted_string</a>(time_current);</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;            <span class="keywordflow">return</span> time_current_string;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        }</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    }</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;}</div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Aug 13 2014 22:41:29 for XTD by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Aug 13 2014 23:24:57 for XTD by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.1.2
 </small></address>

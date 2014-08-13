@@ -1,1 +1,0 @@
-cmd_out/debug/obj.target/librandom_utils.a := rm -f out/debug/obj.target/librandom_utils.a && ar crsT out/debug/obj.target/librandom_utils.a out/debug/obj.target/random_utils/../sources/random_utils.o

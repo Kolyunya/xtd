@@ -212,11 +212,9 @@ Protected Attributes</h2></td></tr>
 
 <p>Referenced by <a class="el" href="tests_2sources_2console__logger_8cpp_source.html#l00010">TEST()</a>.</p>
 <div class="fragment"><div class="line">        {</div>
-<div class="line"></div>
 <div class="line">            this-&gt;<a class="code" href="classxtd_1_1log_1_1abstract__logger.html#a8b80629d60b3c46d7b939dc8c60b1bcb">log_time_stamp</a>();</div>
 <div class="line">            this-&gt;<a class="code" href="classxtd_1_1log_1_1abstract__logger.html#a13cf3d71712c25c455d62727d6a54b95">log_data</a>(data);</div>
 <div class="line">            this-&gt;<a class="code" href="classxtd_1_1log_1_1abstract__logger.html#a220b9c9182700d5a6cb43fca0ce3c496">log_new_line</a>();</div>
-<div class="line"></div>
 <div class="line">        }</div>
 </div><!-- fragment -->
 </div>
@@ -249,9 +247,7 @@ Protected Attributes</h2></td></tr>
 
 <p>References <a class="el" href="sources_2file__utils_8cpp_source.html#l00116">xtd::file::append_contents()</a>.</p>
 <div class="fragment"><div class="line">        {</div>
-<div class="line"></div>
 <div class="line">            <a class="code" href="namespacextd_1_1file.html#ae6238b388a2f0c4fc961de441415cdbb">xtd::file::append_contents</a>(<a class="code" href="classxtd_1_1log_1_1file__logger.html#a38d9672f0c80fa61918b3c1bd80cca7b">file</a>,data);</div>
-<div class="line"></div>
 <div class="line">        }</div>
 </div><!-- fragment -->
 </div>
@@ -278,18 +274,14 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="abstract__logger_8cpp_source.html#l00026">26</a> of file <a class="el" href="abstract__logger_8cpp_source.html">abstract_logger.cpp</a>.</p>
+<p>Definition at line <a class="el" href="abstract__logger_8cpp_source.html#l00024">24</a> of file <a class="el" href="abstract__logger_8cpp_source.html">abstract_logger.cpp</a>.</p>
 
-<p>References <a class="el" href="abstract__logger_8hpp_source.html#l00022">xtd::log::abstract_logger::add_new_line</a>, and <a class="el" href="classxtd_1_1log_1_1abstract__logger.html#a13cf3d71712c25c455d62727d6a54b95">xtd::log::abstract_logger::log_data()</a>.</p>
+<p>References <a class="el" href="abstract__logger_8hpp_source.html#l00021">xtd::log::abstract_logger::add_new_line</a>, and <a class="el" href="classxtd_1_1log_1_1abstract__logger.html#a13cf3d71712c25c455d62727d6a54b95">xtd::log::abstract_logger::log_data()</a>.</p>
 <div class="fragment"><div class="line">        {</div>
-<div class="line"></div>
 <div class="line">            <span class="keywordflow">if</span> ( this-&gt;<a class="code" href="classxtd_1_1log_1_1abstract__logger.html#a4b2e4a54c3f89061c7d503cb4930bff6">add_new_line</a> )</div>
 <div class="line">            {</div>
-<div class="line"></div>
 <div class="line">                this-&gt;<a class="code" href="classxtd_1_1log_1_1abstract__logger.html#a13cf3d71712c25c455d62727d6a54b95">log_data</a>(<span class="stringliteral">&quot;\n&quot;</span>);</div>
-<div class="line"></div>
 <div class="line">            }</div>
-<div class="line"></div>
 <div class="line">        }</div>
 </div><!-- fragment -->
 </div>
@@ -316,18 +308,14 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="abstract__logger_8cpp_source.html#l00038">38</a> of file <a class="el" href="abstract__logger_8cpp_source.html">abstract_logger.cpp</a>.</p>
+<p>Definition at line <a class="el" href="abstract__logger_8cpp_source.html#l00032">32</a> of file <a class="el" href="abstract__logger_8cpp_source.html">abstract_logger.cpp</a>.</p>
 
-<p>References <a class="el" href="abstract__logger_8hpp_source.html#l00024">xtd::log::abstract_logger::add_time_stamp</a>, <a class="el" href="classxtd_1_1log_1_1abstract__logger.html#a13cf3d71712c25c455d62727d6a54b95">xtd::log::abstract_logger::log_data()</a>, and <a class="el" href="abstract__logger_8cpp_source.html#l00050">xtd::log::abstract_logger::make_time_stamp()</a>.</p>
+<p>References <a class="el" href="abstract__logger_8hpp_source.html#l00023">xtd::log::abstract_logger::add_time_stamp</a>, <a class="el" href="classxtd_1_1log_1_1abstract__logger.html#a13cf3d71712c25c455d62727d6a54b95">xtd::log::abstract_logger::log_data()</a>, and <a class="el" href="abstract__logger_8cpp_source.html#l00040">xtd::log::abstract_logger::make_time_stamp()</a>.</p>
 <div class="fragment"><div class="line">        {</div>
-<div class="line"></div>
 <div class="line">            <span class="keywordflow">if</span> ( this-&gt;<a class="code" href="classxtd_1_1log_1_1abstract__logger.html#ac754f300cc11d25199b7c90de7c77bda">add_time_stamp</a> )</div>
 <div class="line">            {</div>
-<div class="line"></div>
 <div class="line">                this-&gt;<a class="code" href="classxtd_1_1log_1_1abstract__logger.html#a13cf3d71712c25c455d62727d6a54b95">log_data</a>(<a class="code" href="classxtd_1_1log_1_1abstract__logger.html#a1efbbe2357b4afe8650dad0b3647eeee">abstract_logger::make_time_stamp</a>() + <span class="stringliteral">&quot; - &quot;</span>);</div>
-<div class="line"></div>
 <div class="line">            }</div>
-<div class="line"></div>
 <div class="line">        }</div>
 </div><!-- fragment -->
 </div>
@@ -354,18 +342,15 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="abstract__logger_8cpp_source.html#l00050">50</a> of file <a class="el" href="abstract__logger_8cpp_source.html">abstract_logger.cpp</a>.</p>
+<p>Definition at line <a class="el" href="abstract__logger_8cpp_source.html#l00040">40</a> of file <a class="el" href="abstract__logger_8cpp_source.html">abstract_logger.cpp</a>.</p>
 
 <p>References <a class="el" href="sources_2chrono__utils_8cpp_source.html#l00038">xtd::chrono::time_point_to_formatted_string()</a>.</p>
 
-<p>Referenced by <a class="el" href="abstract__logger_8cpp_source.html#l00038">xtd::log::abstract_logger::log_time_stamp()</a>.</p>
+<p>Referenced by <a class="el" href="abstract__logger_8cpp_source.html#l00032">xtd::log::abstract_logger::log_time_stamp()</a>.</p>
 <div class="fragment"><div class="line">        {</div>
-<div class="line"></div>
 <div class="line">            std::chrono::time_point&lt;std::chrono::steady_clock&gt; time_current = std::chrono::steady_clock::now();</div>
 <div class="line">            std::string time_current_string = <a class="code" href="namespacextd_1_1chrono.html#a710146127a2e7f1855ca35f27427e953">xtd::chrono::time_point_to_formatted_string</a>(time_current);</div>
-<div class="line"></div>
 <div class="line">            <span class="keywordflow">return</span> time_current_string;</div>
-<div class="line"></div>
 <div class="line">        }</div>
 </div><!-- fragment -->
 </div>
@@ -389,9 +374,9 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="abstract__logger_8hpp_source.html#l00022">22</a> of file <a class="el" href="abstract__logger_8hpp_source.html">abstract_logger.hpp</a>.</p>
+<p>Definition at line <a class="el" href="abstract__logger_8hpp_source.html#l00021">21</a> of file <a class="el" href="abstract__logger_8hpp_source.html">abstract_logger.hpp</a>.</p>
 
-<p>Referenced by <a class="el" href="abstract__logger_8cpp_source.html#l00026">xtd::log::abstract_logger::log_new_line()</a>.</p>
+<p>Referenced by <a class="el" href="abstract__logger_8cpp_source.html#l00024">xtd::log::abstract_logger::log_new_line()</a>.</p>
 
 </div>
 </div>
@@ -413,9 +398,9 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="abstract__logger_8hpp_source.html#l00024">24</a> of file <a class="el" href="abstract__logger_8hpp_source.html">abstract_logger.hpp</a>.</p>
+<p>Definition at line <a class="el" href="abstract__logger_8hpp_source.html#l00023">23</a> of file <a class="el" href="abstract__logger_8hpp_source.html">abstract_logger.hpp</a>.</p>
 
-<p>Referenced by <a class="el" href="abstract__logger_8cpp_source.html#l00038">xtd::log::abstract_logger::log_time_stamp()</a>.</p>
+<p>Referenced by <a class="el" href="abstract__logger_8cpp_source.html#l00032">xtd::log::abstract_logger::log_time_stamp()</a>.</p>
 
 </div>
 </div>
@@ -448,7 +433,7 @@ Protected Attributes</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Aug 13 2014 22:41:29 for XTD by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Aug 13 2014 23:24:58 for XTD by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.1.2
 </small></address>
