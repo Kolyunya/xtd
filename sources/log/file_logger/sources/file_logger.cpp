@@ -16,9 +16,7 @@ namespace xtd
 
         void file_logger::log_data ( const std::string& data ) const noexcept
         {
-
             xtd::file::append_contents(file,data);
-
         }
 
     }

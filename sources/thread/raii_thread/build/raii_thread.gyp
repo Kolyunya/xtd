@@ -6,7 +6,8 @@
     'variables':
     {
         'UNIT_NAME': 'raii_thread',
-        'UNIT_IS_HEADER_ONLY': 'false',
+        'UNIT_NEEDS_COMPILING': 'true',
+        'UNIT_NEEDS_TESTING': 'true',
         'UNIT_SOURCES':
         [
             './../sources/raii_thread.hpp',

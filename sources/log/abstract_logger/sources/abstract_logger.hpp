@@ -1,7 +1,6 @@
 ﻿#ifndef _XTD_ABSTRACT_LOGGER_HPP_
 #define _XTD_ABSTRACT_LOGGER_HPP_
 
-#include <xtd/string.hpp>
 #include <xtd/chrono.hpp>
 
 namespace xtd

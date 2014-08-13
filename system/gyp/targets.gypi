@@ -2,7 +2,7 @@
     'conditions' :
     [
         [
-            'UNIT_IS_HEADER_ONLY == "false"',
+            'UNIT_NEEDS_COMPILING == "true"',
             {
                 'targets':
                 [
@@ -13,46 +13,43 @@
                         [
                             '<@(UNIT_SOURCES)',
                         ],
+                        'dependencies':
+                        [
+                            '<@(UNIT_DEPENDENCIES)',
+                        ],
                     },
                 ],
             },
         ],
-    ],
-    'targets':
-    [
-        {
-            'target_name': '<(UNIT_TESTS_TARGET)',
-            'type': 'executable',
-            'conditions' :
-            [
+        [
+            'UNIT_NEEDS_TESTING == "true"',
+            {
+                'targets':
                 [
-                    'UNIT_IS_HEADER_ONLY == "false"',
                     {
+                        'target_name': '<(UNIT_TESTS_TARGET)',
+                        'type': 'executable',
+                        'sources':
+                        [
+                            '<@(UNIT_SOURCES)',
+                            '<(UNIT_TESTS_SOURCE_FILE)',
+                            '<(GTEST_OBJECT_FILE)',
+                        ],
                         'dependencies':
                         [
-                            '<(UNIT_NAME)',
+                            '<@(UNIT_DEPENDENCIES)',
+                        ],
+                        'include_dirs':
+                        [
+                            '<(GTEST_INCLUDE_DIR)',
+                        ],
+                        'ldflags':
+                        [
+                            '-lpthread',
                         ],
                     },
                 ],
-            ],
-            'dependencies':
-            [
-                '<@(UNIT_DEPENDENCIES)',
-            ],
-            'sources':
-            [
-                '<@(UNIT_SOURCES)',
-                '<(UNIT_TESTS_SOURCE_FILE)',
-                '<(GTEST_OBJECT_FILE)',
-            ],
-            'include_dirs':
-            [
-                '<(GTEST_INCLUDE_DIR)',
-            ],
-            'ldflags':
-            [
-                '-lpthread',
-            ],
-        },
+            },
+        ],
     ],
 }

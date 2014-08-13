@@ -6,7 +6,8 @@
     'variables':
     {
         'UNIT_NAME': 'event',
-        'UNIT_IS_HEADER_ONLY': 'true',
+        'UNIT_NEEDS_COMPILING': 'false',
+        'UNIT_NEEDS_TESTING': 'true',
         'UNIT_SOURCES':
         [
             './../sources/event.hpp',

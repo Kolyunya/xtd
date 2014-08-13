@@ -21,8 +21,6 @@
                 './../sources/log/abstract_logger/sources/abstract_logger.cpp',
                 './../sources/log/console_logger/sources/console_logger.cpp',
                 './../sources/log/file_logger/sources/file_logger.cpp',
-                './../sources/memory/memory_utils/sources/memory_utils.cpp',
-                './../sources/pubsub/event/sources/event.cpp',
                 './../sources/random/random_utils/sources/random_utils.cpp',
                 './../sources/string/string_utils/sources/string_utils.cpp',
                 './../sources/thread/raii_thread_base/sources/raii_thread_base.cpp',

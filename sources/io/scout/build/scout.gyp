@@ -6,7 +6,8 @@
     'variables':
     {
         'UNIT_NAME': 'scout',
-        'UNIT_IS_HEADER_ONLY': 'false',
+        'UNIT_NEEDS_COMPILING': 'true',
+        'UNIT_NEEDS_TESTING': 'true',
         'UNIT_SOURCES':
         [
             './../sources/scout.hpp',
