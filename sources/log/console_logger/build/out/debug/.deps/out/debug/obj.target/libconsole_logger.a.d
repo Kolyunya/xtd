@@ -1,1 +1,0 @@
-cmd_out/debug/obj.target/libconsole_logger.a := rm -f out/debug/obj.target/libconsole_logger.a && ar crsT out/debug/obj.target/libconsole_logger.a out/debug/obj.target/console_logger/../sources/console_logger.o

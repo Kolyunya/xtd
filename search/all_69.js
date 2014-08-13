@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['initialize_5froutine',['initialize_routine',['../classxtd_1_1raii__thread__base.html#a4b3ddb4bb15a6221bb790c05f2160ea2',1,'xtd::raii_thread_base']]],
+  ['initialize_5froutine',['initialize_routine',['../classxtd_1_1thread_1_1raii__thread__base.html#a525958b28ef6da4947bf11ed32404bcc',1,'xtd::thread::raii_thread_base']]],
   ['instance_5finitialized',['instance_initialized',['../classxtd_1_1io_1_1scout__singleton.html#a1cc1ab6c42d3bbf48f42c2d3f2acf5e3',1,'xtd::io::scout_singleton']]],
   ['invoke',['invoke',['../classxtd_1_1functional_1_1abstract__functor.html#a45355c9792bce2acd369a01938ec5c8a',1,'xtd::functional::abstract_functor::invoke()'],['../classxtd_1_1functional_1_1functor.html#a79d36bbc3271d8b57ec15cb2badaf09e',1,'xtd::functional::functor::invoke()']]],
   ['is_5ffractional',['is_fractional',['../namespacextd_1_1string.html#a8fa629b0e865cee22710dbf4cef780a6',1,'xtd::string']]],

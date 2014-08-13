@@ -93,23 +93,28 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="keyword">namespace </span>xtd</div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;{</div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;</div>
-<div class="line"><a name="l00006"></a><span class="lineno"><a class="code" href="classxtd_1_1raii__thread.html#a85b16312362307c6fdadecd168c41a91">    6</a></span>&#160;    <a class="code" href="classxtd_1_1raii__thread.html#a85b16312362307c6fdadecd168c41a91">raii_thread::raii_thread</a> ( std::function&lt;<span class="keywordtype">void</span>()&gt; client_routine )</div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;        :</div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;            <a class="code" href="classxtd_1_1raii__thread__base.html">raii_thread_base</a>(client_routine)</div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;    {</div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;        this-&gt;<a class="code" href="classxtd_1_1raii__thread__base.html#a4b3ddb4bb15a6221bb790c05f2160ea2">initialize_routine</a>();</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    }</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;</div>
-<div class="line"><a name="l00013"></a><span class="lineno"><a class="code" href="classxtd_1_1raii__thread.html#a91afda48e65ce5a21a9e038720415b4e">   13</a></span>&#160;    <a class="code" href="classxtd_1_1raii__thread.html#a91afda48e65ce5a21a9e038720415b4e">raii_thread::~raii_thread</a> ( <span class="keywordtype">void</span> ) noexcept</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    {</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;        this-&gt;<a class="code" href="classxtd_1_1raii__thread__base.html#a3376e393788e6fbc39f628de27084991">deinitialize_routine</a>();</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    }</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;}</div>
+<div class="line"><a name="l00006"></a><span class="lineno"><a class="code" href="namespacextd_1_1thread.html">    6</a></span>&#160;    <span class="keyword">namespace </span>thread</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;    {</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;</div>
+<div class="line"><a name="l00009"></a><span class="lineno"><a class="code" href="classxtd_1_1thread_1_1raii__thread.html#ae1a20625ce3803743e38c48831c40fca">    9</a></span>&#160;        <a class="code" href="classxtd_1_1thread_1_1raii__thread.html#ae1a20625ce3803743e38c48831c40fca">raii_thread::raii_thread</a> ( std::function&lt;<span class="keywordtype">void</span>()&gt; client_routine )</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;            :</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;                <a class="code" href="classxtd_1_1thread_1_1raii__thread__base.html">raii_thread_base</a>(client_routine)</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;        {</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;            this-&gt;<a class="code" href="classxtd_1_1thread_1_1raii__thread__base.html#a525958b28ef6da4947bf11ed32404bcc">initialize_routine</a>();</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;        }</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;</div>
+<div class="line"><a name="l00016"></a><span class="lineno"><a class="code" href="classxtd_1_1thread_1_1raii__thread.html#acdf862b484bd8f09b27d8bec7f84d8ce">   16</a></span>&#160;        <a class="code" href="classxtd_1_1thread_1_1raii__thread.html#acdf862b484bd8f09b27d8bec7f84d8ce">raii_thread::~raii_thread</a> ( <span class="keywordtype">void</span> ) noexcept</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;        {</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;            this-&gt;<a class="code" href="classxtd_1_1thread_1_1raii__thread__base.html#ae829685cb5907369882714c382fe2b20">deinitialize_routine</a>();</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;        }</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    }</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;}</div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Aug 13 2014 13:13:45 for XTD by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Aug 13 2014 15:36:46 for XTD by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.1.2
 </small></address>

@@ -95,23 +95,30 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;</div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="keyword">namespace </span>xtd</div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;{</div>
-<div class="line"><a name="l00008"></a><span class="lineno"><a class="code" href="classxtd_1_1raii__thread__manual.html">    8</a></span>&#160;    <span class="keyword">class </span><a class="code" href="classxtd_1_1raii__thread__manual.html">raii_thread_manual</a></div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;        :</div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;            <span class="keyword">public</span> <a class="code" href="classxtd_1_1raii__thread__base.html">raii_thread_base</a></div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    {</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;        <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;            <span class="keyword">inline</span> <span class="keyword">explicit</span>     <a class="code" href="classxtd_1_1raii__thread__manual.html#a034766f6e89d7ddfa446b70b308c4953">raii_thread_manual</a> ( std::function&lt;<span class="keywordtype">void</span>()&gt; <a class="code" href="classxtd_1_1raii__thread__base.html#a7f9a2249a30e31cde73808ef59a70be1">client_routine</a> );</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;            <span class="keyword">inline</span> <span class="keyword">virtual</span>      <a class="code" href="classxtd_1_1raii__thread__manual.html#a0e7b1c9bed5c02c5897c494a25d5b03b">~raii_thread_manual</a> ( <span class="keywordtype">void</span> ) noexcept <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;            <span class="keyword">inline</span> <span class="keywordtype">void</span>         <a class="code" href="classxtd_1_1raii__thread__manual.html#af1ffca5529e9a2d942dbf9a03c539b47">start</a> ( <span class="keywordtype">void</span> );</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;            <span class="keyword">inline</span> <span class="keywordtype">void</span>         <a class="code" href="classxtd_1_1raii__thread__manual.html#afaf986ad60205ad9584d79f0504cfdda">stop</a> ( <span class="keywordtype">void</span> );</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    };</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;}</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;    <span class="keyword">namespace </span>thread</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    {</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;</div>
+<div class="line"><a name="l00012"></a><span class="lineno"><a class="code" href="classxtd_1_1thread_1_1raii__thread__manual.html">   12</a></span>&#160;        <span class="keyword">class </span><a class="code" href="classxtd_1_1thread_1_1raii__thread__manual.html">raii_thread_manual</a></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;            :</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;                <span class="keyword">public</span> <a class="code" href="classxtd_1_1thread_1_1raii__thread__base.html">raii_thread_base</a></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;        {</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;            <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;                <span class="keyword">inline</span> <span class="keyword">explicit</span>     <a class="code" href="classxtd_1_1thread_1_1raii__thread__manual.html#a4185e00d847f258149c214c0918d5e4b">raii_thread_manual</a> ( std::function&lt;<span class="keywordtype">void</span>()&gt; <a class="code" href="classxtd_1_1thread_1_1raii__thread__base.html#a0582c043e86d72dca84be3013470b38e">client_routine</a> );</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;                <span class="keyword">inline</span> <span class="keyword">virtual</span>      <a class="code" href="classxtd_1_1thread_1_1raii__thread__manual.html#aec84acc9d599f93c718ef15a00163a1f">~raii_thread_manual</a> ( <span class="keywordtype">void</span> ) noexcept <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;                <span class="keyword">inline</span> <span class="keywordtype">void</span>         <a class="code" href="classxtd_1_1thread_1_1raii__thread__manual.html#a63d829f8499c553dff9eda3503c4b70f">start</a> ( <span class="keywordtype">void</span> );</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;                <span class="keyword">inline</span> <span class="keywordtype">void</span>         <a class="code" href="classxtd_1_1thread_1_1raii__thread__manual.html#a314635d99e099bfc877cc8672f94ad44">stop</a> ( <span class="keywordtype">void</span> );</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;        };</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    }</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;}</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="preprocessor">#endif</span></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Aug 13 2014 13:13:45 for XTD by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Aug 13 2014 15:36:46 for XTD by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.1.2
 </small></address>
