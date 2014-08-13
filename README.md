@@ -19,8 +19,7 @@ Each library unit is contained in a separate directory. Each unit directory cont
   + C++11 compatible compiler.
   + [GYP](http://en.wikipedia.org/wiki/GYP_(software)).
 * Library usage.
-  + Set `XTD_HOME` environment variable to the location of this library root directory.
-  + Set `GYP_GENERATORS` environment variable to value(s) corresponding you compiler(s). Options should be separated by a comma. Available options are `make`, `msvs`, `ninja`, `scons`, `eclipse` and others.
+  + Set the `XTD_HOME` environment variable to the location of this library root directory.
   + Navigate to the `build` directory and generate library build script using `gyp --depth=.` command.
   + Compile the library using the build script generated on the previous step.
   + Add path to the `include` directory to your project `include` paths.
