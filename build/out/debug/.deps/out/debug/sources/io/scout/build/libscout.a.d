@@ -1,1 +1,0 @@
-cmd_out/debug/obj.target/../sources/io/scout/build/libscout.a := rm -f out/debug/obj.target/../sources/io/scout/build/libscout.a && ar crsT out/debug/obj.target/../sources/io/scout/build/libscout.a out/debug/obj.target/scout/../sources/io/scout/sources/scout.o
