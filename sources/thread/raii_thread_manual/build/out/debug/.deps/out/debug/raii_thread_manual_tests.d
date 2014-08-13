@@ -1,1 +1,0 @@
-cmd_out/debug/raii_thread_manual_tests := flock out/debug/linker.lock g++ -lpthread  -o out/debug/raii_thread_manual_tests -Wl,--start-group out/debug/obj.target/raii_thread_manual_tests/../tests/sources/raii_thread_manual.o /home/kolyunya/projects/gtest/build/gtest-all.o out/debug/obj.target/libraii_thread_manual.a -Wl,--end-group 
