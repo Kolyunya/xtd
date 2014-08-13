@@ -5,6 +5,6 @@
     ],
     'variables':
     {
-        'UNIT_NAME': 'coutmt',
+        'UNIT_NAME': 'scout',
     },
 }
