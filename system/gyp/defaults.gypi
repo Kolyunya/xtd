@@ -1,6 +1,10 @@
 {
     'target_defaults':
     {
+        'defines':
+        [
+            'DEPTH=.',
+        ],
         'cflags':
         [
             '<@(CFLAGS_STANDARD)',
