@@ -14,10 +14,10 @@ namespace xtd
                 public raii_thread_base
         {
             public:
-                inline explicit     raii_thread_manual ( std::function<void()> client_routine );
-                inline virtual      ~raii_thread_manual ( void ) noexcept override;
-                inline void         start ( void );
-                inline void         stop ( void );
+                explicit raii_thread_manual ( std::function<void()> client_routine );
+                virtual ~raii_thread_manual ( void ) noexcept override;
+                void start ( void );
+                void stop ( void );
         };
 
     }
