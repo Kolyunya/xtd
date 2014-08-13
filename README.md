@@ -19,7 +19,7 @@ Each library unit is contained in a separate directory. Each unit directory cont
   + C++11 compatible compiler.
   + [GYP](http://en.wikipedia.org/wiki/GYP_(software)) program.
 
-### Usage.
+### Usage
   + Set the `XTD_HOME` environment variable to the location of this library root directory.
   + Add path to the `include` directory to your project include paths.
   + Include required headers from the `include` directory into your source files.
