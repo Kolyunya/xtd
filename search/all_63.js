@@ -6,13 +6,5 @@ var searchData=
   ['chrono_5futils_2ecpp',['chrono_utils.cpp',['../sources_2chrono__utils_8cpp.html',1,'']]],
   ['chrono_5futils_2ecpp',['chrono_utils.cpp',['../tests_2sources_2chrono__utils_8cpp.html',1,'']]],
   ['chrono_5futils_2ehpp',['chrono_utils.hpp',['../chrono__utils_8hpp.html',1,'']]],
-  ['coin_5fflip',['coin_flip',['../namespacextd_1_1random.html#a078c9cabf9b614876e5b1bc387349ed9',1,'xtd::random']]],
-  ['coutmt',['coutmt',['../namespacextd_1_1io.html#aa1343588861f127c76a3408e2f005a6e',1,'xtd::io']]],
-  ['coutmt_2ecpp',['coutmt.cpp',['../tests_2sources_2coutmt_8cpp.html',1,'']]],
-  ['coutmt_2ecpp',['coutmt.cpp',['../sources_2coutmt_8cpp.html',1,'']]],
-  ['coutmt_2ehpp',['coutmt.hpp',['../coutmt_8hpp.html',1,'']]],
-  ['coutmt_2etpp',['coutmt.tpp',['../coutmt_8tpp.html',1,'']]],
-  ['coutmt_5fmutex',['coutmt_mutex',['../classxtd_1_1io_1_1coutmt__singleton.html#a5a1f82ede834e6a95bf07831cfd2a4a1',1,'xtd::io::coutmt_singleton']]],
-  ['coutmt_5fsingleton',['coutmt_singleton',['../classxtd_1_1io_1_1coutmt__singleton.html#adbb7ecc6146157eafc643c045d2ae5bc',1,'xtd::io::coutmt_singleton::coutmt_singleton(void)'],['../classxtd_1_1io_1_1coutmt__singleton.html#aa6d80448664af984aa77e94829ccd479',1,'xtd::io::coutmt_singleton::coutmt_singleton(const coutmt_singleton &amp;)'],['../classxtd_1_1io_1_1coutmt__singleton.html#a3653de7219e1d415921ebe72d051318c',1,'xtd::io::coutmt_singleton::coutmt_singleton(const coutmt_singleton &amp;&amp;)']]],
-  ['coutmt_5fsingleton',['coutmt_singleton',['../classxtd_1_1io_1_1coutmt__singleton.html',1,'xtd::io']]]
+  ['coin_5fflip',['coin_flip',['../namespacextd_1_1random.html#a078c9cabf9b614876e5b1bc387349ed9',1,'xtd::random']]]
 ];
