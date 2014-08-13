@@ -1,4 +1,4 @@
-#Extension of the C++ standard library
+#[Extension of the C++ standard library](http://kolyunya.github.io/xtd/namespacextd.html)
 
 ##Description
 
