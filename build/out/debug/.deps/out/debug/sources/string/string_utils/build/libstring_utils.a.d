@@ -1,0 +1,1 @@
+cmd_out/debug/obj.target/../sources/string/string_utils/build/libstring_utils.a := rm -f out/debug/obj.target/../sources/string/string_utils/build/libstring_utils.a && ar crsT out/debug/obj.target/../sources/string/string_utils/build/libstring_utils.a out/debug/obj.target/string_utils/../sources/string/string_utils/sources/string_utils.o
