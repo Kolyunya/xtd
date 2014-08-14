@@ -20,7 +20,7 @@
             '-Werror',
             '-pedantic',
             '-pedantic-errors',
-            '-Wno-unused-variable',
+            '-fpic',
         ],
         'CFLAGS_DEBUG':
         [

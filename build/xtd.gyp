@@ -12,7 +12,7 @@
     [
         {
             'target_name': 'xtd',
-            'type': 'static_library',
+            'type': 'shared_library',
             'sources':
             [
                 './../sources/chrono/chrono_utils/sources/chrono_utils.cpp',
