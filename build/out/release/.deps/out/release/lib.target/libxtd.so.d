@@ -1,1 +1,0 @@
-cmd_out/release/lib.target/libxtd.so := ln -f "out/release/obj.target/libxtd.so" "out/release/lib.target/libxtd.so" 2>/dev/null || (rm -rf "out/release/lib.target/libxtd.so" && cp -af "out/release/obj.target/libxtd.so" "out/release/lib.target/libxtd.so")
