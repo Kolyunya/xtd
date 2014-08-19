@@ -434,7 +434,7 @@ Protected Attributes</h2></td></tr>
 <div class="line">            {</div>
 <div class="line">                <span class="keywordflow">try</span></div>
 <div class="line">                {</div>
-<div class="line">                    <span class="comment">//    Check if the thread is supposed to be terminated</span></div>
+<div class="line">                    <span class="comment">//  Check if the thread is supposed to be terminated</span></div>
 <div class="line">                    std::unique_lock&lt;std::recursive_mutex&gt; terminate_unique_lock(raii_thread_base_ptr-&gt;mutex,std::defer_lock);</div>
 <div class="line">                    terminate_unique_lock.try_lock();</div>
 <div class="line">                    <span class="keywordflow">if</span> ( raii_thread_base_ptr-&gt;terminate_flag )</div>
@@ -442,7 +442,7 @@ Protected Attributes</h2></td></tr>
 <div class="line">                        <span class="keywordflow">return</span>;</div>
 <div class="line">                    }</div>
 <div class="line"></div>
-<div class="line">                    <span class="comment">//    Run client code</span></div>
+<div class="line">                    <span class="comment">//  Run client code</span></div>
 <div class="line">                    (raii_thread_base_ptr-&gt;client_routine)();</div>
 <div class="line"></div>
 <div class="line">                    <span class="comment">//    Yield to other threads</span></div>
@@ -450,7 +450,7 @@ Protected Attributes</h2></td></tr>
 <div class="line">                }</div>
 <div class="line">                <span class="keywordflow">catch</span> ( ... )</div>
 <div class="line">                {</div>
-<div class="line">                    <span class="comment">//    Ignore errors</span></div>
+<div class="line">                    <span class="comment">//  Ignore errors</span></div>
 <div class="line">                }</div>
 <div class="line">            }</div>
 <div class="line"></div>
@@ -610,7 +610,7 @@ Protected Attributes</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Aug 14 2014 13:29:27 for XTD by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Aug 19 2014 17:08:00 for XTD by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.1.2
 </small></address>

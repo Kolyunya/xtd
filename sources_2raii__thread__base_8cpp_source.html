@@ -166,7 +166,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;            {</div>
 <div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;                <span class="keywordflow">try</span></div>
 <div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;                {</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;                    <span class="comment">//    Check if the thread is supposed to be terminated</span></div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;                    <span class="comment">//  Check if the thread is supposed to be terminated</span></div>
 <div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;                    std::unique_lock&lt;std::recursive_mutex&gt; terminate_unique_lock(raii_thread_base_ptr-&gt;<a class="code" href="classxtd_1_1thread_1_1raii__thread__base.html#a2fda582e4d094863cb85735fb4f18fc7">mutex</a>,std::defer_lock);</div>
 <div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;                    terminate_unique_lock.try_lock();</div>
 <div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;                    <span class="keywordflow">if</span> ( raii_thread_base_ptr-&gt;<a class="code" href="classxtd_1_1thread_1_1raii__thread__base.html#a83595d0a15690b7a6ad3d35f6eae1556">terminate_flag</a> )</div>
@@ -174,7 +174,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;                        <span class="keywordflow">return</span>;</div>
 <div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;                    }</div>
 <div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;                    <span class="comment">//    Run client code</span></div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;                    <span class="comment">//  Run client code</span></div>
 <div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;                    (raii_thread_base_ptr-&gt;<a class="code" href="classxtd_1_1thread_1_1raii__thread__base.html#a0582c043e86d72dca84be3013470b38e">client_routine</a>)();</div>
 <div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;</div>
 <div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;                    <span class="comment">//    Yield to other threads</span></div>
@@ -182,7 +182,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;                }</div>
 <div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;                <span class="keywordflow">catch</span> ( ... )</div>
 <div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;                {</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;                    <span class="comment">//    Ignore errors</span></div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;                    <span class="comment">//  Ignore errors</span></div>
 <div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;                }</div>
 <div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;            }</div>
 <div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;</div>
@@ -194,7 +194,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Aug 14 2014 13:29:27 for XTD by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Aug 19 2014 17:08:00 for XTD by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.1.2
 </small></address>
