@@ -23,7 +23,7 @@ namespace xtd
                 void check_is_initialized ( void ) const;
                 void check_is_not_initialized ( void ) const;
                 static void routine ( raii_thread_base* raii_thread_base_ptr );
-                bool                        terminate_flag;
+                bool terminate_flag;
                 std::function<void()> client_routine;
                 std::thread thread;
                 std::recursive_mutex mutex;

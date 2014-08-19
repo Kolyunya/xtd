@@ -76,7 +76,7 @@ namespace xtd
             {
                 try
                 {
-                    //    Check if the thread is supposed to be terminated
+                    //  Check if the thread is supposed to be terminated
                     std::unique_lock<std::recursive_mutex> terminate_unique_lock(raii_thread_base_ptr->mutex,std::defer_lock);
                     terminate_unique_lock.try_lock();
                     if ( raii_thread_base_ptr->terminate_flag )
@@ -84,7 +84,7 @@ namespace xtd
                         return;
                     }
 
-                    //    Run client code
+                    //  Run client code
                     (raii_thread_base_ptr->client_routine)();
 
                     //    Yield to other threads
@@ -92,7 +92,7 @@ namespace xtd
                 }
                 catch ( ... )
                 {
-                    //    Ignore errors
+                    //  Ignore errors
                 }
             }
 
